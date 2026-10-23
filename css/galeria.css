@@ -1,0 +1,47 @@
+/* Solo para la galería: maquetación del catálogo y estados forzados (hover/focus) para documentarlos.
+   No se porta a la app. */
+.gal { max-width: 1200px; margin: 0 auto; padding: var(--s-10) var(--s-8) var(--s-16); }
+.gal-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-6); padding-bottom: var(--s-6); border-bottom: 1px solid var(--line-ink); }
+.gal-head .lede { margin-top: var(--s-3); }
+.gal-toc { display: flex; flex-wrap: wrap; gap: var(--s-1) var(--s-4); margin-top: var(--s-5); font-size: var(--fs-14); }
+.gal-sec { padding-top: var(--s-12); }
+.gal-sec > h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: var(--fw-bold); letter-spacing: var(--tracking-tight); }
+.gal-sec > p { margin-top: var(--s-1); color: var(--text-muted); font-size: var(--fs-14); max-width: 80ch; }
+.gal-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-6) var(--s-8); margin-top: var(--s-5); }
+.gal-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.gal-item { min-width: 0; }
+.gal-label { display: block; margin-bottom: var(--s-2); font-size: var(--fs-13); color: var(--text-muted); }
+.gal-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3); margin-top: var(--s-4); }
+.gal-row > .gal-label { width: 120px; margin: 0; flex: none; }
+.gal-frame { position: relative; margin-top: var(--s-4); border: 1px solid var(--line-strong); border-radius: var(--radius-lg); overflow: hidden; background: var(--bg); }
+.gal-frame--pad { padding: var(--s-6); }
+.gal-frame--muted { background: var(--overlay); padding: var(--s-8); display: grid; justify-items: center; }
+.gal-frame iframe { display: block; width: 100%; border: 0; }
+.gal-table { width: 100%; border-collapse: collapse; margin-top: var(--s-4); font-size: var(--fs-14); }
+.gal-table th, .gal-table td { text-align: left; padding: var(--s-2) var(--s-3) var(--s-2) 0; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.gal-table th { font-size: var(--fs-13); color: var(--text-muted); font-weight: var(--fw-semibold); }
+.gal-table code { font-size: var(--fs-13); color: var(--text-2); }
+.swatch { display: inline-block; width: 28px; height: 28px; border-radius: 6px; box-shadow: inset 0 0 0 1px rgb(15 27 45 / .14); vertical-align: middle; }
+.type-row { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: var(--s-4); align-items: baseline; padding: var(--s-3) 0; border-bottom: 1px solid var(--line); }
+.type-row code { font-size: var(--fs-13); color: var(--text-muted); }
+.space-bar { display: inline-block; height: 12px; background: var(--accent-line); border-radius: 2px; vertical-align: middle; }
+.gal-static .modal, .gal-static .drawer, .gal-static .toast-region { position: relative; inset: auto; left: auto; top: auto; transform: none; z-index: auto; }
+.gal-static .drawer { width: 100%; max-width: 520px; height: 520px; margin-left: auto; }
+.gal-static .modal { max-height: none; }
+.gal-static .menu { position: static; }
+/* estados forzados para documentación */
+.btn--primary.is-hover { background: var(--accent-hover); }
+.btn--primary.is-active { background: var(--accent-active); }
+.btn--secondary.is-hover { background: var(--bg-hover); border-color: var(--text-2); }
+.btn--danger.is-hover { background: var(--danger-hover); border-color: var(--danger); }
+.btn--ghost.is-hover { background: var(--bg-hover); color: var(--ink); }
+.input.is-hover, .select.is-hover { border-color: var(--text-2); }
+.is-focus { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.input.is-focus { border-color: var(--accent); }
+.combo.is-focus { border-color: var(--accent); }
+.radio-card.is-focus { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.nav-item.is-hover, .table tr.is-hover { background: var(--bg-muted); }
+@media (max-width: 900px) { .gal-grid, .gal-grid--3 { grid-template-columns: minmax(0, 1fr); } .gal { padding: var(--s-6) var(--s-4); } }
+.gal-static .viewer__inner { position: static; height: auto; }
+.gal-static .sidebar__inner { position: static; height: 640px; }
+.tabs__tab.is-focus { outline-offset: -2px; }

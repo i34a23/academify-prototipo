@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="es-CL" class="has-cta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<title>Elige tu programa · Instituto Demo</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body class="is-public">
+<!--SPRITE-->
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="pub-head pub-head--sticky">
+  <div class="pub-head__inner">
+    <img src="../assets/academify-logo.svg" alt="academify" width="115" height="26" fetchpriority="high" translate="no">
+    <p class="pub-head__inst">Instituto Demo<span class="pub-head__process">Postulación Admisión 2027</span></p>
+    <a class="pub-head__help link" href="mailto:admision@institutodemo.cl">{{i20:mail}}<span class="pub-head__help-long">admision@institutodemo.cl</span><span class="pub-head__help-short">Ayuda</span></a>
+  </div>
+  <div class="pub-head__steps pub-narrow-only">
+    <nav class="steps pub-head__steps-inner" aria-label="Avance de la postulación">
+      <div class="steps__row">
+        <span class="steps__now" id="paso-actual">Paso 1 de 4: Programa</span>
+        <span>Sigue: tus datos</span>
+      </div>
+      <div class="steps__bars" role="img" aria-labelledby="paso-actual"><span class="is-now"></span><span></span><span></span><span></span></div>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido" class="pub-main">
+  <div data-estado="elegido" data-estado-label="Programa elegido">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Programa</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Tus datos</span><span class="journey__when">Paso 2 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Paso 3 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Elige tu programa</h1>
+        <p class="lede">Toma unos 5 minutos en total. Ten a mano tu cédula, tus certificados y una foto tipo carnet.</p>
+        <form action="pub-03-tus-datos.html" method="post" novalidate>
+        <fieldset class="section">
+          <legend>Vía de admisión</legend>
+          <p class="field__hint">Elige la que corresponde a tu situación. Según la vía te pedimos distintos documentos.</p>
+          <div class="radio-stack">
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="REGULAR" checked><span class="radio-card__text"><span class="radio-card__title">Regular</span><span class="radio-card__desc">Ingresas a primer año de la carrera, desde el inicio.</span></span></label>
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="EXTRAORDINARIA"><span class="radio-card__text"><span class="radio-card__title">Extraordinaria</span><span class="radio-card__desc">Ya aprobaste asignaturas en otra institución de educación superior y quieres convalidarlas. Te pediremos tu concentración de notas.</span></span></label>
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="PROSECUCION"><span class="radio-card__text"><span class="radio-card__title">Prosecución de estudios</span><span class="radio-card__desc">Tienes un título profesional y/o grado y quieres continuar tus estudios. Te pediremos tu certificado de título profesional y/o grado.</span></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="section">
+          <legend>Qué quieres estudiar</legend>
+          <div class="field">
+            <label class="field__label" for="a-carrera">Carrera</label>
+            <select class="select" id="a-carrera" autocomplete="off" name="programa"><option value="">Elige tu carrera</option><option value="AUD">Auditoría</option><option value="DER">Derecho</option><option value="ICOM">Ingeniería Comercial</option><option value="LEDU">Programa LEDU (nombre según catálogo)</option><option value="PSI" selected>Psicología</option><option value="TSO">Trabajo Social</option></select>
+          </div>
+          <div class="form-grid">
+          <fieldset class="fieldgroup">
+            <legend class="field__label">Jornada</legend>
+            <div class="radio-row"><label class="radio-card"><input class="radio-card__input" type="radio" name="jornada" value="Diurna" checked> Diurna</label><label class="radio-card"><input class="radio-card__input" type="radio" name="jornada" value="Vespertina"> Vespertina</label></div>
+          </fieldset>
+          <fieldset class="fieldgroup">
+            <legend class="field__label">Modalidad</legend>
+            <div class="radio-row"><label class="radio-card"><input class="radio-card__input" type="radio" name="modalidad" value="Presencial" checked aria-describedby="a-modalidad-hint"> Presencial</label></div>
+            <p class="field__hint" id="a-modalidad-hint">Psicología se imparte solo en modalidad presencial.</p>
+          </fieldset>
+          </div>
+        </fieldset>
+        <section class="block cost" aria-labelledby="h-costo-PSI">
+          <div class="block__head"><h2 class="block__title" id="h-costo-PSI">Cuánto cuesta</h2><span class="block__tag">Psicología, 2027</span></div>
+          <table class="ledger">
+            <caption class="sr-only">Valores 2027 de Psicología</caption>
+            <thead><tr><th scope="col">Concepto</th><th scope="col" class="num">Valor</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Matrícula<span class="ledger__sub">Se paga una vez, al matricularte</span></th><td class="num" data-label="Valor">$108.900</td></tr>
+              <tr><th scope="row">Arancel anual<span class="ledger__sub">En 10 cuotas de $380.000</span></th><td class="num" data-label="Valor">$3.800.000</td></tr>
+            </tbody>
+          </table>
+          <p class="cost__note">Si tienes un convenio o un código de descuento, lo aplicas en el paso 4. Los valores quedan fijos en tu contrato.</p>
+        </section>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: completas tus datos.</strong> Ten a mano tu cédula de identidad.</p>
+          <div class="cta-bar__actions cta-bar__actions--single">
+          <a class="btn btn--primary" href="pub-03-tus-datos.html">Continuar a tus datos</a>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div data-estado="sin-elegir" data-estado-label="Sin elegir">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Programa</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Tus datos</span><span class="journey__when">Paso 2 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Paso 3 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum"><p>Cuando elijas tu carrera, aquí verás el resumen de tu postulación.</p></div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Elige tu programa</h1>
+        <p class="lede">Toma unos 5 minutos en total. Ten a mano tu cédula, tus certificados y una foto tipo carnet.</p>
+        <form action="pub-03-tus-datos.html" method="post" novalidate>
+        <fieldset class="section">
+          <legend>Vía de admisión</legend>
+          <p class="field__hint">Elige la que corresponde a tu situación. Según la vía te pedimos distintos documentos.</p>
+          <div class="radio-stack">
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="REGULAR"><span class="radio-card__text"><span class="radio-card__title">Regular</span><span class="radio-card__desc">Ingresas a primer año de la carrera, desde el inicio.</span></span></label>
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="EXTRAORDINARIA"><span class="radio-card__text"><span class="radio-card__title">Extraordinaria</span><span class="radio-card__desc">Ya aprobaste asignaturas en otra institución de educación superior y quieres convalidarlas. Te pediremos tu concentración de notas.</span></span></label>
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="PROSECUCION"><span class="radio-card__text"><span class="radio-card__title">Prosecución de estudios</span><span class="radio-card__desc">Tienes un título profesional y/o grado y quieres continuar tus estudios. Te pediremos tu certificado de título profesional y/o grado.</span></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="section">
+          <legend>Qué quieres estudiar</legend>
+          <div class="field">
+            <label class="field__label" for="b-carrera">Carrera</label>
+            <select class="select" id="b-carrera" autocomplete="off" name="programa" disabled aria-describedby="b-carrera-wait"><option>Elige primero la vía de admisión</option></select>
+            <p class="note" id="b-carrera-wait">{{i:info}}<span>Elige primero la vía: así te mostramos solo las carreras que la ofrecen.</span></p>
+          </div>
+          <p class="note">{{i:info}}<span>Las jornadas y modalidades aparecen cuando eliges la carrera.</span></p>
+        </fieldset>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: completas tus datos.</strong> Ten a mano tu cédula de identidad.</p>
+          <div class="cta-bar__actions cta-bar__actions--single">
+          <a class="btn btn--primary" href="pub-03-tus-datos.html">Continuar a tus datos</a>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div data-estado="autoseleccion" data-estado-label="Autoselección (una sola opción)">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Programa</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Tus datos</span><span class="journey__when">Paso 2 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Paso 3 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Auditoría</p>
+          <p>Vespertina, a distancia</p>
+          <p>Vía prosecución de estudios</p>
+          
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Elige tu programa</h1>
+        <p class="lede">Toma unos 5 minutos en total. Ten a mano tu cédula, tus certificados y una foto tipo carnet.</p>
+        <form action="pub-03-tus-datos.html" method="post" novalidate>
+        <fieldset class="section">
+          <legend>Vía de admisión</legend>
+          <p class="field__hint">Elige la que corresponde a tu situación. Según la vía te pedimos distintos documentos.</p>
+          <div class="radio-stack">
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="REGULAR"><span class="radio-card__text"><span class="radio-card__title">Regular</span><span class="radio-card__desc">Ingresas a primer año de la carrera, desde el inicio.</span></span></label>
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="EXTRAORDINARIA"><span class="radio-card__text"><span class="radio-card__title">Extraordinaria</span><span class="radio-card__desc">Ya aprobaste asignaturas en otra institución de educación superior y quieres convalidarlas. Te pediremos tu concentración de notas.</span></span></label>
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="PROSECUCION" checked><span class="radio-card__text"><span class="radio-card__title">Prosecución de estudios</span><span class="radio-card__desc">Tienes un título profesional y/o grado y quieres continuar tus estudios. Te pediremos tu certificado de título profesional y/o grado.</span></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="section">
+          <legend>Qué quieres estudiar</legend>
+          <div class="field">
+            <label class="field__label" for="c-carrera">Carrera</label>
+            <select class="select" id="c-carrera" autocomplete="off" name="programa"><option value="">Elige tu carrera</option><option value="AUD" selected>Auditoría</option><option value="TSO">Trabajo Social</option></select>
+          </div>
+          <div class="form-grid">
+          <fieldset class="fieldgroup">
+            <legend class="field__label">Jornada</legend>
+            <div class="radio-row"><label class="radio-card"><input class="radio-card__input" type="radio" name="jornada" value="Vespertina" checked aria-describedby="c-jornada-hint"> Vespertina</label></div>
+            <p class="field__hint" id="c-jornada-hint">Auditoría se imparte solo en jornada vespertina.</p>
+          </fieldset>
+          <fieldset class="fieldgroup">
+            <legend class="field__label">Modalidad</legend>
+            <div class="radio-row"><label class="radio-card"><input class="radio-card__input" type="radio" name="modalidad" value="A distancia" checked aria-describedby="c-modalidad-hint"> A distancia</label></div>
+            <p class="field__hint" id="c-modalidad-hint">Auditoría se imparte solo en modalidad a distancia.</p>
+          </fieldset>
+          </div>
+        </fieldset>
+        <section class="block cost" aria-labelledby="h-costo-AUD">
+          <div class="block__head"><h2 class="block__title" id="h-costo-AUD">Cuánto cuesta</h2><span class="block__tag">Auditoría, 2027</span></div>
+          <table class="ledger">
+            <caption class="sr-only">Valores 2027 de Auditoría</caption>
+            <thead><tr><th scope="col">Concepto</th><th scope="col" class="num">Valor</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Matrícula<span class="ledger__sub">Se paga una vez, al matricularte</span></th><td class="num" data-label="Valor">$108.900</td></tr>
+              <tr><th scope="row">Arancel anual<span class="ledger__sub">En 10 cuotas de $190.000</span></th><td class="num" data-label="Valor">$1.900.000</td></tr>
+            </tbody>
+          </table>
+          <p class="cost__note">Si tienes un convenio o un código de descuento, lo aplicas en el paso 4. Los valores quedan fijos en tu contrato.</p>
+        </section>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: completas tus datos.</strong> Ten a mano tu cédula de identidad.</p>
+          <div class="cta-bar__actions cta-bar__actions--single">
+          <a class="btn btn--primary" href="pub-03-tus-datos.html">Continuar a tus datos</a>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div data-estado="no-disponible" data-estado-label="Carrera no disponible en la vía">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Programa</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Tus datos</span><span class="journey__when">Paso 2 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Paso 3 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum"><p>Cuando elijas tu carrera, aquí verás el resumen de tu postulación.</p></div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Elige tu programa</h1>
+        <p class="lede">Toma unos 5 minutos en total. Ten a mano tu cédula, tus certificados y una foto tipo carnet.</p>
+        <form action="pub-03-tus-datos.html" method="post" novalidate>
+        <fieldset class="section">
+          <legend>Vía de admisión</legend>
+          <p class="field__hint">Elige la que corresponde a tu situación. Según la vía te pedimos distintos documentos.</p>
+          <div class="radio-stack">
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="REGULAR"><span class="radio-card__text"><span class="radio-card__title">Regular</span><span class="radio-card__desc">Ingresas a primer año de la carrera, desde el inicio.</span></span></label>
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="EXTRAORDINARIA"><span class="radio-card__text"><span class="radio-card__title">Extraordinaria</span><span class="radio-card__desc">Ya aprobaste asignaturas en otra institución de educación superior y quieres convalidarlas. Te pediremos tu concentración de notas.</span></span></label>
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="PROSECUCION" checked><span class="radio-card__text"><span class="radio-card__title">Prosecución de estudios</span><span class="radio-card__desc">Tienes un título profesional y/o grado y quieres continuar tus estudios. Te pediremos tu certificado de título profesional y/o grado.</span></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="section">
+          <legend>Qué quieres estudiar</legend>
+          <div class="alert alert--warning" role="status">
+            {{i20:info}}
+            <div><p class="alert__title">Psicología no se imparte en la vía prosecución de estudios</p><p class="alert__body">La quitamos de tu selección. Elige otra carrera o vuelve a la vía regular o extraordinaria.</p></div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="d-carrera">Carrera</label>
+            <select class="select" id="d-carrera" autocomplete="off" name="programa"><option value="">Elige tu carrera</option><option value="AUD">Auditoría</option><option value="TSO">Trabajo Social</option></select>
+          </div>
+          <p class="note">{{i:info}}<span>Las jornadas y modalidades aparecen cuando eliges la carrera.</span></p>
+        </fieldset>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: completas tus datos.</strong> Ten a mano tu cédula de identidad.</p>
+          <div class="cta-bar__actions cta-bar__actions--single">
+          <a class="btn btn--primary" href="pub-03-tus-datos.html">Continuar a tus datos</a>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div data-estado="cargando" data-estado-label="Cargando carreras">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Programa</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Tus datos</span><span class="journey__when">Paso 2 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Paso 3 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum"><p>Cuando elijas tu carrera, aquí verás el resumen de tu postulación.</p></div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Elige tu programa</h1>
+        <p class="lede">Toma unos 5 minutos en total. Ten a mano tu cédula, tus certificados y una foto tipo carnet.</p>
+        <form action="pub-03-tus-datos.html" method="post" novalidate>
+        <fieldset class="section">
+          <legend>Vía de admisión</legend>
+          <p class="field__hint">Elige la que corresponde a tu situación. Según la vía te pedimos distintos documentos.</p>
+          <div class="radio-stack">
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="REGULAR" checked><span class="radio-card__text"><span class="radio-card__title">Regular</span><span class="radio-card__desc">Ingresas a primer año de la carrera, desde el inicio.</span></span></label>
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="EXTRAORDINARIA"><span class="radio-card__text"><span class="radio-card__title">Extraordinaria</span><span class="radio-card__desc">Ya aprobaste asignaturas en otra institución de educación superior y quieres convalidarlas. Te pediremos tu concentración de notas.</span></span></label>
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="PROSECUCION"><span class="radio-card__text"><span class="radio-card__title">Prosecución de estudios</span><span class="radio-card__desc">Tienes un título profesional y/o grado y quieres continuar tus estudios. Te pediremos tu certificado de título profesional y/o grado.</span></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="section">
+          <legend>Qué quieres estudiar</legend>
+          <div class="field">
+            <label class="field__label" for="e-carrera">Carrera</label>
+            <select class="select" id="e-carrera" autocomplete="off" name="programa" disabled aria-busy="true" aria-describedby="e-carrera-wait"><option>Cargando carreras…</option></select>
+            <p class="note" id="e-carrera-wait" role="status">{{i:clock}}<span>Cargando las carreras de la vía regular…</span></p>
+          </div>
+          <p class="note">{{i:info}}<span>Las jornadas y modalidades aparecen cuando eliges la carrera.</span></p>
+        </fieldset>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: completas tus datos.</strong> Ten a mano tu cédula de identidad.</p>
+          <div class="cta-bar__actions cta-bar__actions--single">
+          <a class="btn btn--primary" href="pub-03-tus-datos.html">Continuar a tus datos</a>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div data-estado="error-carga" data-estado-label="Error de carga">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Programa</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Tus datos</span><span class="journey__when">Paso 2 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Paso 3 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum"><p>Cuando elijas tu carrera, aquí verás el resumen de tu postulación.</p></div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Elige tu programa</h1>
+        <p class="lede">Toma unos 5 minutos en total. Ten a mano tu cédula, tus certificados y una foto tipo carnet.</p>
+        <form action="pub-03-tus-datos.html" method="post" novalidate>
+        <fieldset class="section">
+          <legend>Vía de admisión</legend>
+          <p class="field__hint">Elige la que corresponde a tu situación. Según la vía te pedimos distintos documentos.</p>
+          <div class="radio-stack">
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="REGULAR" checked><span class="radio-card__text"><span class="radio-card__title">Regular</span><span class="radio-card__desc">Ingresas a primer año de la carrera, desde el inicio.</span></span></label>
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="EXTRAORDINARIA"><span class="radio-card__text"><span class="radio-card__title">Extraordinaria</span><span class="radio-card__desc">Ya aprobaste asignaturas en otra institución de educación superior y quieres convalidarlas. Te pediremos tu concentración de notas.</span></span></label>
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="PROSECUCION"><span class="radio-card__text"><span class="radio-card__title">Prosecución de estudios</span><span class="radio-card__desc">Tienes un título profesional y/o grado y quieres continuar tus estudios. Te pediremos tu certificado de título profesional y/o grado.</span></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="section">
+          <legend>Qué quieres estudiar</legend>
+          <div class="alert alert--error" role="alert">
+            {{i20:wifi-off}}
+            <div>
+              <p class="alert__title">No pudimos cargar las carreras</p>
+              <p class="alert__body">Puede ser un problema de conexión. Lo que elegiste se mantiene.</p>
+              <div class="alert__actions"><button class="btn btn--secondary btn--sm" type="button">{{i:refresh}}Reintentar</button></div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: completas tus datos.</strong> Ten a mano tu cédula de identidad.</p>
+          <div class="cta-bar__actions cta-bar__actions--single">
+          <a class="btn btn--primary" href="pub-03-tus-datos.html">Continuar a tus datos</a>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div data-estado="falta-elegir" data-estado-label="Falta elegir (al continuar)">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Programa</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Tus datos</span><span class="journey__when">Paso 2 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Paso 3 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum"><p>Cuando elijas tu carrera, aquí verás el resumen de tu postulación.</p></div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Elige tu programa</h1>
+        <p class="lede">Toma unos 5 minutos en total. Ten a mano tu cédula, tus certificados y una foto tipo carnet.</p>
+        <form action="pub-03-tus-datos.html" method="post" novalidate>
+          <p class="sr-only" role="alert">Hay 1 dato por completar: carrera.</p>
+        <fieldset class="section">
+          <legend>Vía de admisión</legend>
+          <p class="field__hint">Elige la que corresponde a tu situación. Según la vía te pedimos distintos documentos.</p>
+          <div class="radio-stack">
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="REGULAR" checked><span class="radio-card__text"><span class="radio-card__title">Regular</span><span class="radio-card__desc">Ingresas a primer año de la carrera, desde el inicio.</span></span></label>
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="EXTRAORDINARIA"><span class="radio-card__text"><span class="radio-card__title">Extraordinaria</span><span class="radio-card__desc">Ya aprobaste asignaturas en otra institución de educación superior y quieres convalidarlas. Te pediremos tu concentración de notas.</span></span></label>
+            <label class="radio-card radio-card--desc"><input class="radio-card__input" type="radio" name="via" value="PROSECUCION"><span class="radio-card__text"><span class="radio-card__title">Prosecución de estudios</span><span class="radio-card__desc">Tienes un título profesional y/o grado y quieres continuar tus estudios. Te pediremos tu certificado de título profesional y/o grado.</span></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="section">
+          <legend>Qué quieres estudiar</legend>
+          <div class="field">
+            <label class="field__label" for="g-carrera">Carrera</label>
+            <select class="select" id="g-carrera" autocomplete="off" name="programa" aria-invalid="true" aria-describedby="g-carrera-error"><option value="">Elige tu carrera</option><option value="AUD">Auditoría</option><option value="DER">Derecho</option><option value="ICOM">Ingeniería Comercial</option><option value="LEDU">Programa LEDU (nombre según catálogo)</option><option value="PSI">Psicología</option><option value="TSO">Trabajo Social</option></select>
+            <p class="field__error" id="g-carrera-error">{{i:alert}}<span>Elige la carrera a la que postulas.</span></p>
+          </div>
+          <p class="note">{{i:info}}<span>Las jornadas y modalidades aparecen cuando eliges la carrera.</span></p>
+        </fieldset>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: completas tus datos.</strong> Ten a mano tu cédula de identidad.</p>
+          <div class="cta-bar__actions cta-bar__actions--single">
+          <a class="btn btn--primary" href="pub-03-tus-datos.html">Continuar a tus datos</a>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="pub-foot">
+  <div class="pub-foot__inner">
+    <span>Instituto Demo, Admisión 2027</span>
+    <span class="credit">Powered by <span translate="no">Ticnology</span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></span>
+  </div>
+</footer>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

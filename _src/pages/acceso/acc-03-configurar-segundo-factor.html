@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F7F8FA">
+<title>Configurar segundo factor · academify</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<!--SPRITE-->
+<div class="auth" data-estado="contrasena" data-estado-label="Paso 1: contraseña">
+  <a class="skip-link" href="#contenido-contrasena">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-contrasena">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-contrasena">
+      <h1 class="auth__title" id="t-contrasena" tabindex="-1">Configura tu segundo factor</h1>
+      <p class="auth__lede">Es obligatorio para usar Academify. Necesitas una aplicación autenticadora en tu teléfono, por ejemplo Google Authenticator, Microsoft Authenticator o 1Password.</p>
+      <p class="auth__who">Cuenta: <strong translate="no">matias.correa@institutodemo.cl</strong></p>
+      <ol class="setup" aria-label="Pasos para configurar el segundo factor">
+        <li class="setup__step" aria-current="step">
+          <span class="mark mark--yours" aria-hidden="true"></span>
+          <div>
+            <h2 class="setup__title">Confirma tu contraseña<span class="sr-only">, te toca a ti</span></h2>
+          <div class="setup__body">
+            <form class="form-stack" action="?estado=pasos" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="pw-contrasena">Tu contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw-contrasena" name="password" type="password" autocomplete="current-password" spellcheck="false" autocapitalize="none">
+          <button class="pw__toggle" type="button" aria-controls="pw-contrasena" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+              <div class="btn-row"><button class="btn btn--primary" type="submit">Continuar</button></div>
+            </form>
+          </div>
+          </div>
+        </li>
+        <li class="setup__step is-future">
+          <span class="mark" aria-hidden="true"></span>
+          <div>
+            <h2 class="setup__title">Escanea el código con tu aplicación<span class="sr-only"></span></h2>
+          </div>
+        </li>
+        <li class="setup__step is-future">
+          <span class="mark" aria-hidden="true"></span>
+          <div>
+            <h2 class="setup__title">Guarda tus códigos de recuperación<span class="sr-only"></span></h2>
+          </div>
+        </li>
+        <li class="setup__step is-future">
+          <span class="mark" aria-hidden="true"></span>
+          <div>
+            <h2 class="setup__title">Confirma con un código<span class="sr-only"></span></h2>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="contrasena-error" data-estado-label="Contraseña incorrecta">
+  <a class="skip-link" href="#contenido-contrasena-error">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-contrasena-error">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-contrasena-error">
+      <h1 class="auth__title" id="t-contrasena-error" tabindex="-1">Configura tu segundo factor</h1>
+      <p class="auth__lede">Es obligatorio para usar Academify. Necesitas una aplicación autenticadora en tu teléfono, por ejemplo Google Authenticator, Microsoft Authenticator o 1Password.</p>
+      <p class="auth__who">Cuenta: <strong translate="no">matias.correa@institutodemo.cl</strong></p>
+      <ol class="setup" aria-label="Pasos para configurar el segundo factor">
+        <li class="setup__step" aria-current="step">
+          <span class="mark mark--yours" aria-hidden="true"></span>
+          <div>
+            <h2 class="setup__title">Confirma tu contraseña<span class="sr-only">, te toca a ti</span></h2>
+          <div class="setup__body">
+            <form class="form-stack" action="?estado=pasos" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="pw-contrasena-error">Tu contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw-contrasena-error" name="password" type="password" autocomplete="current-password" spellcheck="false" autocapitalize="none" aria-invalid="true" aria-describedby="pw-contrasena-error-error">
+          <button class="pw__toggle" type="button" aria-controls="pw-contrasena-error" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+        <p class="field__error" id="pw-contrasena-error-error">{{i:alert}}<span>La contraseña no es correcta. Es la misma con la que acabas de ingresar.</span></p>
+      </div>
+              <div class="btn-row"><button class="btn btn--primary" type="submit">Continuar</button></div>
+            </form>
+          </div>
+          </div>
+        </li>
+        <li class="setup__step is-future">
+          <span class="mark" aria-hidden="true"></span>
+          <div>
+            <h2 class="setup__title">Escanea el código con tu aplicación<span class="sr-only"></span></h2>
+          </div>
+        </li>
+        <li class="setup__step is-future">
+          <span class="mark" aria-hidden="true"></span>
+          <div>
+            <h2 class="setup__title">Guarda tus códigos de recuperación<span class="sr-only"></span></h2>
+          </div>
+        </li>
+        <li class="setup__step is-future">
+          <span class="mark" aria-hidden="true"></span>
+          <div>
+            <h2 class="setup__title">Confirma con un código<span class="sr-only"></span></h2>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="pasos" data-estado-label="Pasos 2 a 4, sin marcar">
+  <a class="skip-link" href="#contenido-pasos">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-pasos">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel auth__panel--wide" aria-labelledby="t-pasos">
+      <h1 class="auth__title" id="t-pasos" tabindex="-1">Configura tu segundo factor</h1>
+      <p class="auth__lede">Es obligatorio para usar Academify. Necesitas una aplicación autenticadora en tu teléfono, por ejemplo Google Authenticator, Microsoft Authenticator o 1Password.</p>
+      <p class="auth__who">Cuenta: <strong translate="no">matias.correa@institutodemo.cl</strong></p>
+      <ol class="setup" aria-label="Pasos para configurar el segundo factor">
+        <li class="setup__step is-done">
+          <span class="mark mark--done" aria-hidden="true">{{i:check}}</span>
+          <div>
+            <h2 class="setup__title">Confirma tu contraseña<span class="sr-only">, hecho</span></h2><p class="setup__note">Contraseña confirmada</p>
+          </div>
+        </li>
+        <li class="setup__step" aria-current="step">
+          <span class="mark mark--yours" aria-hidden="true"></span>
+          <div>
+            <h2 class="setup__title">Escanea el código con tu aplicación<span class="sr-only">, te toca a ti</span></h2>
+          <div class="setup__body">
+            <div class="setup__pair">
+              <figure class="qr"><svg viewBox="-2 -2 33 33" role="img" aria-label="Código QR para agregar Academify a tu aplicación autenticadora (muestra)" shape-rendering="crispEdges"><path fill="currentColor" d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM9 0h1v1h-1zM12 0h1v1h-1zM15 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM25 0h1v1h-1zM26 0h1v1h-1zM27 0h1v1h-1zM28 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM10 1h1v1h-1zM12 1h1v1h-1zM14 1h1v1h-1zM16 1h1v1h-1zM18 1h1v1h-1zM19 1h1v1h-1zM20 1h1v1h-1zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM16 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM25 2h1v1h-1zM26 2h1v1h-1zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM12 3h1v1h-1zM14 3h1v1h-1zM16 3h1v1h-1zM17 3h1v1h-1zM18 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM25 3h1v1h-1zM26 3h1v1h-1zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM8 4h1v1h-1zM11 4h1v1h-1zM12 4h1v1h-1zM13 4h1v1h-1zM14 4h1v1h-1zM15 4h1v1h-1zM16 4h1v1h-1zM18 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM25 4h1v1h-1zM26 4h1v1h-1zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1zM16 5h1v1h-1zM20 5h1v1h-1zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM25 6h1v1h-1zM26 6h1v1h-1zM27 6h1v1h-1zM28 6h1v1h-1zM9 7h1v1h-1zM12 7h1v1h-1zM14 7h1v1h-1zM20 7h1v1h-1zM0 8h1v1h-1zM4 8h1v1h-1zM5 8h1v1h-1zM6 8h1v1h-1zM7 8h1v1h-1zM8 8h1v1h-1zM9 8h1v1h-1zM12 8h1v1h-1zM17 8h1v1h-1zM20 8h1v1h-1zM21 8h1v1h-1zM24 8h1v1h-1zM25 8h1v1h-1zM26 8h1v1h-1zM27 8h1v1h-1zM28 8h1v1h-1zM0 9h1v1h-1zM1 9h1v1h-1zM3 9h1v1h-1zM7 9h1v1h-1zM8 9h1v1h-1zM9 9h1v1h-1zM10 9h1v1h-1zM11 9h1v1h-1zM15 9h1v1h-1zM16 9h1v1h-1zM19 9h1v1h-1zM21 9h1v1h-1zM22 9h1v1h-1zM26 9h1v1h-1zM1 10h1v1h-1zM3 10h1v1h-1zM6 10h1v1h-1zM10 10h1v1h-1zM15 10h1v1h-1zM16 10h1v1h-1zM17 10h1v1h-1zM19 10h1v1h-1zM22 10h1v1h-1zM23 10h1v1h-1zM26 10h1v1h-1zM2 11h1v1h-1zM4 11h1v1h-1zM9 11h1v1h-1zM12 11h1v1h-1zM14 11h1v1h-1zM16 11h1v1h-1zM19 11h1v1h-1zM23 11h1v1h-1zM25 11h1v1h-1zM28 11h1v1h-1zM0 12h1v1h-1zM6 12h1v1h-1zM7 12h1v1h-1zM10 12h1v1h-1zM11 12h1v1h-1zM12 12h1v1h-1zM15 12h1v1h-1zM19 12h1v1h-1zM21 12h1v1h-1zM0 13h1v1h-1zM1 13h1v1h-1zM9 13h1v1h-1zM15 13h1v1h-1zM16 13h1v1h-1zM19 13h1v1h-1zM26 13h1v1h-1zM3 14h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM7 14h1v1h-1zM8 14h1v1h-1zM9 14h1v1h-1zM11 14h1v1h-1zM15 14h1v1h-1zM16 14h1v1h-1zM18 14h1v1h-1zM19 14h1v1h-1zM21 14h1v1h-1zM22 14h1v1h-1zM24 14h1v1h-1zM27 14h1v1h-1zM0 15h1v1h-1zM1 15h1v1h-1zM7 15h1v1h-1zM9 15h1v1h-1zM11 15h1v1h-1zM14 15h1v1h-1zM15 15h1v1h-1zM17 15h1v1h-1zM19 15h1v1h-1zM25 15h1v1h-1zM3 16h1v1h-1zM4 16h1v1h-1zM5 16h1v1h-1zM6 16h1v1h-1zM7 16h1v1h-1zM8 16h1v1h-1zM10 16h1v1h-1zM11 16h1v1h-1zM13 16h1v1h-1zM14 16h1v1h-1zM15 16h1v1h-1zM18 16h1v1h-1zM19 16h1v1h-1zM20 16h1v1h-1zM23 16h1v1h-1zM24 16h1v1h-1zM26 16h1v1h-1zM28 16h1v1h-1zM0 17h1v1h-1zM4 17h1v1h-1zM8 17h1v1h-1zM9 17h1v1h-1zM11 17h1v1h-1zM17 17h1v1h-1zM18 17h1v1h-1zM26 17h1v1h-1zM28 17h1v1h-1zM2 18h1v1h-1zM4 18h1v1h-1zM6 18h1v1h-1zM10 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM15 18h1v1h-1zM16 18h1v1h-1zM19 18h1v1h-1zM23 18h1v1h-1zM24 18h1v1h-1zM25 18h1v1h-1zM26 18h1v1h-1zM27 18h1v1h-1zM28 18h1v1h-1zM1 19h1v1h-1zM3 19h1v1h-1zM4 19h1v1h-1zM5 19h1v1h-1zM15 19h1v1h-1zM17 19h1v1h-1zM19 19h1v1h-1zM24 19h1v1h-1zM25 19h1v1h-1zM28 19h1v1h-1zM1 20h1v1h-1zM2 20h1v1h-1zM3 20h1v1h-1zM5 20h1v1h-1zM6 20h1v1h-1zM7 20h1v1h-1zM8 20h1v1h-1zM10 20h1v1h-1zM12 20h1v1h-1zM13 20h1v1h-1zM18 20h1v1h-1zM19 20h1v1h-1zM22 20h1v1h-1zM26 20h1v1h-1zM28 20h1v1h-1zM8 21h1v1h-1zM9 21h1v1h-1zM10 21h1v1h-1zM12 21h1v1h-1zM13 21h1v1h-1zM19 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM0 22h1v1h-1zM1 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM5 22h1v1h-1zM6 22h1v1h-1zM9 22h1v1h-1zM10 22h1v1h-1zM15 22h1v1h-1zM16 22h1v1h-1zM18 22h1v1h-1zM19 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM23 22h1v1h-1zM26 22h1v1h-1zM27 22h1v1h-1zM28 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM9 23h1v1h-1zM15 23h1v1h-1zM17 23h1v1h-1zM19 23h1v1h-1zM24 23h1v1h-1zM28 23h1v1h-1zM0 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM6 24h1v1h-1zM10 24h1v1h-1zM12 24h1v1h-1zM13 24h1v1h-1zM15 24h1v1h-1zM19 24h1v1h-1zM20 24h1v1h-1zM22 24h1v1h-1zM24 24h1v1h-1zM27 24h1v1h-1zM28 24h1v1h-1zM0 25h1v1h-1zM2 25h1v1h-1zM3 25h1v1h-1zM4 25h1v1h-1zM6 25h1v1h-1zM11 25h1v1h-1zM12 25h1v1h-1zM19 25h1v1h-1zM23 25h1v1h-1zM28 25h1v1h-1zM0 26h1v1h-1zM2 26h1v1h-1zM3 26h1v1h-1zM4 26h1v1h-1zM6 26h1v1h-1zM9 26h1v1h-1zM10 26h1v1h-1zM14 26h1v1h-1zM20 26h1v1h-1zM24 26h1v1h-1zM26 26h1v1h-1zM27 26h1v1h-1zM28 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM8 27h1v1h-1zM10 27h1v1h-1zM13 27h1v1h-1zM15 27h1v1h-1zM17 27h1v1h-1zM18 27h1v1h-1zM19 27h1v1h-1zM21 27h1v1h-1zM24 27h1v1h-1zM25 27h1v1h-1zM27 27h1v1h-1zM0 28h1v1h-1zM1 28h1v1h-1zM2 28h1v1h-1zM3 28h1v1h-1zM4 28h1v1h-1zM5 28h1v1h-1zM6 28h1v1h-1zM8 28h1v1h-1zM10 28h1v1h-1zM11 28h1v1h-1zM12 28h1v1h-1zM13 28h1v1h-1zM15 28h1v1h-1zM20 28h1v1h-1zM21 28h1v1h-1zM25 28h1v1h-1z"/></svg><figcaption class="qr__caption">Muestra, no escanear</figcaption></figure>
+              <div class="secret">
+                <p class="field__hint">En la aplicación, elige «Agregar cuenta» y escanea el código. Aparecerá como <strong translate="no">Academify (matias.correa@institutodemo.cl)</strong>.</p>
+                <p class="secret__label" id="secret-l-pasos">¿No puedes escanear? Escribe esta clave:</p>
+                <p class="secret__value" aria-labelledby="secret-l-pasos" translate="no">JBSW Y3DP EHPK 3PXP K4ZT QWES 2RDA MFRG</p>
+                <div class="btn-row"><button class="btn btn--secondary btn--sm" type="button">{{i:copy}}Copiar clave</button></div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </li>
+        <li class="setup__step is-future">
+          <span class="mark" aria-hidden="true"></span>
+          <div>
+            <h2 class="setup__title">Guarda tus códigos de recuperación<span class="sr-only"></span></h2>
+          <div class="setup__body">
+            <p class="field__hint">Te sirven para entrar si pierdes el teléfono. Cada uno funciona una sola vez y no los volveremos a mostrar.</p>
+            <ol class="codes" aria-label="Códigos de recuperación"><li class="codes__item" translate="no">7KQ2M-X9D4P</li><li class="codes__item" translate="no">R3T8W-B6N2C</li><li class="codes__item" translate="no">H5J9L-Q2V7K</li><li class="codes__item" translate="no">D8F3S-M4X6T</li><li class="codes__item" translate="no">P2W7N-K9R3H</li><li class="codes__item" translate="no">C6V4B-T8J2Q</li><li class="codes__item" translate="no">L9M3D-W5P7F</li><li class="codes__item" translate="no">X4K8R-H2C6N</li><li class="codes__item" translate="no">B7Q5T-V3L9M</li><li class="codes__item" translate="no">N2H6J-F8D4W</li></ol>
+            <div class="btn-row">
+              <button class="btn btn--secondary btn--sm" type="button">{{i:copy}}Copiar códigos</button>
+              <button class="btn btn--secondary btn--sm" type="button">{{i:download}}Descargar (.txt, 1&nbsp;KB)</button>
+            </div>
+            <label class="check"><input class="check__box" type="checkbox" name="guardados" id="saved-pasos"> Guardé mis códigos en un lugar seguro</label>
+          </div>
+          </div>
+        </li>
+        <li class="setup__step is-future">
+          <span class="mark" aria-hidden="true"></span>
+          <div>
+            <h2 class="setup__title">Confirma con un código<span class="sr-only"></span></h2>
+          <div class="setup__body">
+            <form class="form-stack" action="?estado=activado" method="get" novalidate>
+              <div class="field">
+                <label class="field__label" for="code-pasos">Código de 6 dígitos que muestra la aplicación</label>
+                <input class="input otp" id="code-pasos" name="code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" spellcheck="false">
+              </div>
+              <div class="btn-row"><button class="btn btn--primary" type="submit" aria-disabled="true" aria-describedby="why-pasos">Activar segundo factor</button><p class="decision__why" id="why-pasos">{{i:info}}Para activar, marca «Guardé mis códigos en un lugar seguro».</p></div>
+            </form>
+          </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="listo" data-estado-label="Listo para activar">
+  <a class="skip-link" href="#contenido-listo">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-listo">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel auth__panel--wide" aria-labelledby="t-listo">
+      <h1 class="auth__title" id="t-listo" tabindex="-1">Configura tu segundo factor</h1>
+      <p class="auth__lede">Es obligatorio para usar Academify. Necesitas una aplicación autenticadora en tu teléfono, por ejemplo Google Authenticator, Microsoft Authenticator o 1Password.</p>
+      <p class="auth__who">Cuenta: <strong translate="no">matias.correa@institutodemo.cl</strong></p>
+      <ol class="setup" aria-label="Pasos para configurar el segundo factor">
+        <li class="setup__step is-done">
+          <span class="mark mark--done" aria-hidden="true">{{i:check}}</span>
+          <div>
+            <h2 class="setup__title">Confirma tu contraseña<span class="sr-only">, hecho</span></h2><p class="setup__note">Contraseña confirmada</p>
+          </div>
+        </li>
+        <li class="setup__step is-done">
+          <span class="mark mark--done" aria-hidden="true">{{i:check}}</span>
+          <div>
+            <h2 class="setup__title">Escanea el código con tu aplicación<span class="sr-only">, hecho</span></h2>
+          <div class="setup__body">
+            <div class="setup__pair">
+              <figure class="qr"><svg viewBox="-2 -2 33 33" role="img" aria-label="Código QR para agregar Academify a tu aplicación autenticadora (muestra)" shape-rendering="crispEdges"><path fill="currentColor" d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM9 0h1v1h-1zM12 0h1v1h-1zM15 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM25 0h1v1h-1zM26 0h1v1h-1zM27 0h1v1h-1zM28 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM10 1h1v1h-1zM12 1h1v1h-1zM14 1h1v1h-1zM16 1h1v1h-1zM18 1h1v1h-1zM19 1h1v1h-1zM20 1h1v1h-1zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM16 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM25 2h1v1h-1zM26 2h1v1h-1zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM12 3h1v1h-1zM14 3h1v1h-1zM16 3h1v1h-1zM17 3h1v1h-1zM18 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM25 3h1v1h-1zM26 3h1v1h-1zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM8 4h1v1h-1zM11 4h1v1h-1zM12 4h1v1h-1zM13 4h1v1h-1zM14 4h1v1h-1zM15 4h1v1h-1zM16 4h1v1h-1zM18 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM25 4h1v1h-1zM26 4h1v1h-1zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1zM16 5h1v1h-1zM20 5h1v1h-1zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM25 6h1v1h-1zM26 6h1v1h-1zM27 6h1v1h-1zM28 6h1v1h-1zM9 7h1v1h-1zM12 7h1v1h-1zM14 7h1v1h-1zM20 7h1v1h-1zM0 8h1v1h-1zM4 8h1v1h-1zM5 8h1v1h-1zM6 8h1v1h-1zM7 8h1v1h-1zM8 8h1v1h-1zM9 8h1v1h-1zM12 8h1v1h-1zM17 8h1v1h-1zM20 8h1v1h-1zM21 8h1v1h-1zM24 8h1v1h-1zM25 8h1v1h-1zM26 8h1v1h-1zM27 8h1v1h-1zM28 8h1v1h-1zM0 9h1v1h-1zM1 9h1v1h-1zM3 9h1v1h-1zM7 9h1v1h-1zM8 9h1v1h-1zM9 9h1v1h-1zM10 9h1v1h-1zM11 9h1v1h-1zM15 9h1v1h-1zM16 9h1v1h-1zM19 9h1v1h-1zM21 9h1v1h-1zM22 9h1v1h-1zM26 9h1v1h-1zM1 10h1v1h-1zM3 10h1v1h-1zM6 10h1v1h-1zM10 10h1v1h-1zM15 10h1v1h-1zM16 10h1v1h-1zM17 10h1v1h-1zM19 10h1v1h-1zM22 10h1v1h-1zM23 10h1v1h-1zM26 10h1v1h-1zM2 11h1v1h-1zM4 11h1v1h-1zM9 11h1v1h-1zM12 11h1v1h-1zM14 11h1v1h-1zM16 11h1v1h-1zM19 11h1v1h-1zM23 11h1v1h-1zM25 11h1v1h-1zM28 11h1v1h-1zM0 12h1v1h-1zM6 12h1v1h-1zM7 12h1v1h-1zM10 12h1v1h-1zM11 12h1v1h-1zM12 12h1v1h-1zM15 12h1v1h-1zM19 12h1v1h-1zM21 12h1v1h-1zM0 13h1v1h-1zM1 13h1v1h-1zM9 13h1v1h-1zM15 13h1v1h-1zM16 13h1v1h-1zM19 13h1v1h-1zM26 13h1v1h-1zM3 14h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM7 14h1v1h-1zM8 14h1v1h-1zM9 14h1v1h-1zM11 14h1v1h-1zM15 14h1v1h-1zM16 14h1v1h-1zM18 14h1v1h-1zM19 14h1v1h-1zM21 14h1v1h-1zM22 14h1v1h-1zM24 14h1v1h-1zM27 14h1v1h-1zM0 15h1v1h-1zM1 15h1v1h-1zM7 15h1v1h-1zM9 15h1v1h-1zM11 15h1v1h-1zM14 15h1v1h-1zM15 15h1v1h-1zM17 15h1v1h-1zM19 15h1v1h-1zM25 15h1v1h-1zM3 16h1v1h-1zM4 16h1v1h-1zM5 16h1v1h-1zM6 16h1v1h-1zM7 16h1v1h-1zM8 16h1v1h-1zM10 16h1v1h-1zM11 16h1v1h-1zM13 16h1v1h-1zM14 16h1v1h-1zM15 16h1v1h-1zM18 16h1v1h-1zM19 16h1v1h-1zM20 16h1v1h-1zM23 16h1v1h-1zM24 16h1v1h-1zM26 16h1v1h-1zM28 16h1v1h-1zM0 17h1v1h-1zM4 17h1v1h-1zM8 17h1v1h-1zM9 17h1v1h-1zM11 17h1v1h-1zM17 17h1v1h-1zM18 17h1v1h-1zM26 17h1v1h-1zM28 17h1v1h-1zM2 18h1v1h-1zM4 18h1v1h-1zM6 18h1v1h-1zM10 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM15 18h1v1h-1zM16 18h1v1h-1zM19 18h1v1h-1zM23 18h1v1h-1zM24 18h1v1h-1zM25 18h1v1h-1zM26 18h1v1h-1zM27 18h1v1h-1zM28 18h1v1h-1zM1 19h1v1h-1zM3 19h1v1h-1zM4 19h1v1h-1zM5 19h1v1h-1zM15 19h1v1h-1zM17 19h1v1h-1zM19 19h1v1h-1zM24 19h1v1h-1zM25 19h1v1h-1zM28 19h1v1h-1zM1 20h1v1h-1zM2 20h1v1h-1zM3 20h1v1h-1zM5 20h1v1h-1zM6 20h1v1h-1zM7 20h1v1h-1zM8 20h1v1h-1zM10 20h1v1h-1zM12 20h1v1h-1zM13 20h1v1h-1zM18 20h1v1h-1zM19 20h1v1h-1zM22 20h1v1h-1zM26 20h1v1h-1zM28 20h1v1h-1zM8 21h1v1h-1zM9 21h1v1h-1zM10 21h1v1h-1zM12 21h1v1h-1zM13 21h1v1h-1zM19 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM0 22h1v1h-1zM1 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM5 22h1v1h-1zM6 22h1v1h-1zM9 22h1v1h-1zM10 22h1v1h-1zM15 22h1v1h-1zM16 22h1v1h-1zM18 22h1v1h-1zM19 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM23 22h1v1h-1zM26 22h1v1h-1zM27 22h1v1h-1zM28 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM9 23h1v1h-1zM15 23h1v1h-1zM17 23h1v1h-1zM19 23h1v1h-1zM24 23h1v1h-1zM28 23h1v1h-1zM0 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM6 24h1v1h-1zM10 24h1v1h-1zM12 24h1v1h-1zM13 24h1v1h-1zM15 24h1v1h-1zM19 24h1v1h-1zM20 24h1v1h-1zM22 24h1v1h-1zM24 24h1v1h-1zM27 24h1v1h-1zM28 24h1v1h-1zM0 25h1v1h-1zM2 25h1v1h-1zM3 25h1v1h-1zM4 25h1v1h-1zM6 25h1v1h-1zM11 25h1v1h-1zM12 25h1v1h-1zM19 25h1v1h-1zM23 25h1v1h-1zM28 25h1v1h-1zM0 26h1v1h-1zM2 26h1v1h-1zM3 26h1v1h-1zM4 26h1v1h-1zM6 26h1v1h-1zM9 26h1v1h-1zM10 26h1v1h-1zM14 26h1v1h-1zM20 26h1v1h-1zM24 26h1v1h-1zM26 26h1v1h-1zM27 26h1v1h-1zM28 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM8 27h1v1h-1zM10 27h1v1h-1zM13 27h1v1h-1zM15 27h1v1h-1zM17 27h1v1h-1zM18 27h1v1h-1zM19 27h1v1h-1zM21 27h1v1h-1zM24 27h1v1h-1zM25 27h1v1h-1zM27 27h1v1h-1zM0 28h1v1h-1zM1 28h1v1h-1zM2 28h1v1h-1zM3 28h1v1h-1zM4 28h1v1h-1zM5 28h1v1h-1zM6 28h1v1h-1zM8 28h1v1h-1zM10 28h1v1h-1zM11 28h1v1h-1zM12 28h1v1h-1zM13 28h1v1h-1zM15 28h1v1h-1zM20 28h1v1h-1zM21 28h1v1h-1zM25 28h1v1h-1z"/></svg><figcaption class="qr__caption">Muestra, no escanear</figcaption></figure>
+              <div class="secret">
+                <p class="field__hint">En la aplicación, elige «Agregar cuenta» y escanea el código. Aparecerá como <strong translate="no">Academify (matias.correa@institutodemo.cl)</strong>.</p>
+                <p class="secret__label" id="secret-l-listo">¿No puedes escanear? Escribe esta clave:</p>
+                <p class="secret__value" aria-labelledby="secret-l-listo" translate="no">JBSW Y3DP EHPK 3PXP K4ZT QWES 2RDA MFRG</p>
+                <div class="btn-row"><button class="btn btn--secondary btn--sm" type="button">{{i:copy}}Copiar clave</button></div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </li>
+        <li class="setup__step is-done">
+          <span class="mark mark--done" aria-hidden="true">{{i:check}}</span>
+          <div>
+            <h2 class="setup__title">Guarda tus códigos de recuperación<span class="sr-only">, hecho</span></h2>
+          <div class="setup__body">
+            <p class="field__hint">Te sirven para entrar si pierdes el teléfono. Cada uno funciona una sola vez y no los volveremos a mostrar.</p>
+            <ol class="codes" aria-label="Códigos de recuperación"><li class="codes__item" translate="no">7KQ2M-X9D4P</li><li class="codes__item" translate="no">R3T8W-B6N2C</li><li class="codes__item" translate="no">H5J9L-Q2V7K</li><li class="codes__item" translate="no">D8F3S-M4X6T</li><li class="codes__item" translate="no">P2W7N-K9R3H</li><li class="codes__item" translate="no">C6V4B-T8J2Q</li><li class="codes__item" translate="no">L9M3D-W5P7F</li><li class="codes__item" translate="no">X4K8R-H2C6N</li><li class="codes__item" translate="no">B7Q5T-V3L9M</li><li class="codes__item" translate="no">N2H6J-F8D4W</li></ol>
+            <div class="btn-row">
+              <button class="btn btn--secondary btn--sm" type="button">{{i:copy}}Copiar códigos</button>
+              <button class="btn btn--secondary btn--sm" type="button">{{i:download}}Descargar (.txt, 1&nbsp;KB)</button>
+            </div>
+            <label class="check"><input class="check__box" type="checkbox" name="guardados" id="saved-listo" checked> Guardé mis códigos en un lugar seguro</label>
+          </div>
+          </div>
+        </li>
+        <li class="setup__step" aria-current="step">
+          <span class="mark mark--yours" aria-hidden="true"></span>
+          <div>
+            <h2 class="setup__title">Confirma con un código<span class="sr-only">, te toca a ti</span></h2>
+          <div class="setup__body">
+            <form class="form-stack" action="?estado=activado" method="get" novalidate>
+              <div class="field">
+                <label class="field__label" for="code-listo">Código de 6 dígitos que muestra la aplicación</label>
+                <input class="input otp" id="code-listo" name="code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" spellcheck="false" value="482913">
+              </div>
+              <div class="btn-row"><button class="btn btn--primary" type="submit">Activar segundo factor</button></div>
+            </form>
+          </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="codigo-error" data-estado-label="Código incorrecto">
+  <a class="skip-link" href="#contenido-codigo-error">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-codigo-error">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel auth__panel--wide" aria-labelledby="t-codigo-error">
+      <h1 class="auth__title" id="t-codigo-error" tabindex="-1">Configura tu segundo factor</h1>
+      <p class="auth__lede">Es obligatorio para usar Academify. Necesitas una aplicación autenticadora en tu teléfono, por ejemplo Google Authenticator, Microsoft Authenticator o 1Password.</p>
+      <p class="auth__who">Cuenta: <strong translate="no">matias.correa@institutodemo.cl</strong></p>
+      <ol class="setup" aria-label="Pasos para configurar el segundo factor">
+        <li class="setup__step is-done">
+          <span class="mark mark--done" aria-hidden="true">{{i:check}}</span>
+          <div>
+            <h2 class="setup__title">Confirma tu contraseña<span class="sr-only">, hecho</span></h2><p class="setup__note">Contraseña confirmada</p>
+          </div>
+        </li>
+        <li class="setup__step is-done">
+          <span class="mark mark--done" aria-hidden="true">{{i:check}}</span>
+          <div>
+            <h2 class="setup__title">Escanea el código con tu aplicación<span class="sr-only">, hecho</span></h2>
+          <div class="setup__body">
+            <div class="setup__pair">
+              <figure class="qr"><svg viewBox="-2 -2 33 33" role="img" aria-label="Código QR para agregar Academify a tu aplicación autenticadora (muestra)" shape-rendering="crispEdges"><path fill="currentColor" d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM9 0h1v1h-1zM12 0h1v1h-1zM15 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM25 0h1v1h-1zM26 0h1v1h-1zM27 0h1v1h-1zM28 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM10 1h1v1h-1zM12 1h1v1h-1zM14 1h1v1h-1zM16 1h1v1h-1zM18 1h1v1h-1zM19 1h1v1h-1zM20 1h1v1h-1zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM16 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM25 2h1v1h-1zM26 2h1v1h-1zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM12 3h1v1h-1zM14 3h1v1h-1zM16 3h1v1h-1zM17 3h1v1h-1zM18 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM25 3h1v1h-1zM26 3h1v1h-1zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM8 4h1v1h-1zM11 4h1v1h-1zM12 4h1v1h-1zM13 4h1v1h-1zM14 4h1v1h-1zM15 4h1v1h-1zM16 4h1v1h-1zM18 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM25 4h1v1h-1zM26 4h1v1h-1zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1zM16 5h1v1h-1zM20 5h1v1h-1zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM25 6h1v1h-1zM26 6h1v1h-1zM27 6h1v1h-1zM28 6h1v1h-1zM9 7h1v1h-1zM12 7h1v1h-1zM14 7h1v1h-1zM20 7h1v1h-1zM0 8h1v1h-1zM4 8h1v1h-1zM5 8h1v1h-1zM6 8h1v1h-1zM7 8h1v1h-1zM8 8h1v1h-1zM9 8h1v1h-1zM12 8h1v1h-1zM17 8h1v1h-1zM20 8h1v1h-1zM21 8h1v1h-1zM24 8h1v1h-1zM25 8h1v1h-1zM26 8h1v1h-1zM27 8h1v1h-1zM28 8h1v1h-1zM0 9h1v1h-1zM1 9h1v1h-1zM3 9h1v1h-1zM7 9h1v1h-1zM8 9h1v1h-1zM9 9h1v1h-1zM10 9h1v1h-1zM11 9h1v1h-1zM15 9h1v1h-1zM16 9h1v1h-1zM19 9h1v1h-1zM21 9h1v1h-1zM22 9h1v1h-1zM26 9h1v1h-1zM1 10h1v1h-1zM3 10h1v1h-1zM6 10h1v1h-1zM10 10h1v1h-1zM15 10h1v1h-1zM16 10h1v1h-1zM17 10h1v1h-1zM19 10h1v1h-1zM22 10h1v1h-1zM23 10h1v1h-1zM26 10h1v1h-1zM2 11h1v1h-1zM4 11h1v1h-1zM9 11h1v1h-1zM12 11h1v1h-1zM14 11h1v1h-1zM16 11h1v1h-1zM19 11h1v1h-1zM23 11h1v1h-1zM25 11h1v1h-1zM28 11h1v1h-1zM0 12h1v1h-1zM6 12h1v1h-1zM7 12h1v1h-1zM10 12h1v1h-1zM11 12h1v1h-1zM12 12h1v1h-1zM15 12h1v1h-1zM19 12h1v1h-1zM21 12h1v1h-1zM0 13h1v1h-1zM1 13h1v1h-1zM9 13h1v1h-1zM15 13h1v1h-1zM16 13h1v1h-1zM19 13h1v1h-1zM26 13h1v1h-1zM3 14h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM7 14h1v1h-1zM8 14h1v1h-1zM9 14h1v1h-1zM11 14h1v1h-1zM15 14h1v1h-1zM16 14h1v1h-1zM18 14h1v1h-1zM19 14h1v1h-1zM21 14h1v1h-1zM22 14h1v1h-1zM24 14h1v1h-1zM27 14h1v1h-1zM0 15h1v1h-1zM1 15h1v1h-1zM7 15h1v1h-1zM9 15h1v1h-1zM11 15h1v1h-1zM14 15h1v1h-1zM15 15h1v1h-1zM17 15h1v1h-1zM19 15h1v1h-1zM25 15h1v1h-1zM3 16h1v1h-1zM4 16h1v1h-1zM5 16h1v1h-1zM6 16h1v1h-1zM7 16h1v1h-1zM8 16h1v1h-1zM10 16h1v1h-1zM11 16h1v1h-1zM13 16h1v1h-1zM14 16h1v1h-1zM15 16h1v1h-1zM18 16h1v1h-1zM19 16h1v1h-1zM20 16h1v1h-1zM23 16h1v1h-1zM24 16h1v1h-1zM26 16h1v1h-1zM28 16h1v1h-1zM0 17h1v1h-1zM4 17h1v1h-1zM8 17h1v1h-1zM9 17h1v1h-1zM11 17h1v1h-1zM17 17h1v1h-1zM18 17h1v1h-1zM26 17h1v1h-1zM28 17h1v1h-1zM2 18h1v1h-1zM4 18h1v1h-1zM6 18h1v1h-1zM10 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM15 18h1v1h-1zM16 18h1v1h-1zM19 18h1v1h-1zM23 18h1v1h-1zM24 18h1v1h-1zM25 18h1v1h-1zM26 18h1v1h-1zM27 18h1v1h-1zM28 18h1v1h-1zM1 19h1v1h-1zM3 19h1v1h-1zM4 19h1v1h-1zM5 19h1v1h-1zM15 19h1v1h-1zM17 19h1v1h-1zM19 19h1v1h-1zM24 19h1v1h-1zM25 19h1v1h-1zM28 19h1v1h-1zM1 20h1v1h-1zM2 20h1v1h-1zM3 20h1v1h-1zM5 20h1v1h-1zM6 20h1v1h-1zM7 20h1v1h-1zM8 20h1v1h-1zM10 20h1v1h-1zM12 20h1v1h-1zM13 20h1v1h-1zM18 20h1v1h-1zM19 20h1v1h-1zM22 20h1v1h-1zM26 20h1v1h-1zM28 20h1v1h-1zM8 21h1v1h-1zM9 21h1v1h-1zM10 21h1v1h-1zM12 21h1v1h-1zM13 21h1v1h-1zM19 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM0 22h1v1h-1zM1 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM5 22h1v1h-1zM6 22h1v1h-1zM9 22h1v1h-1zM10 22h1v1h-1zM15 22h1v1h-1zM16 22h1v1h-1zM18 22h1v1h-1zM19 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM23 22h1v1h-1zM26 22h1v1h-1zM27 22h1v1h-1zM28 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM9 23h1v1h-1zM15 23h1v1h-1zM17 23h1v1h-1zM19 23h1v1h-1zM24 23h1v1h-1zM28 23h1v1h-1zM0 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM6 24h1v1h-1zM10 24h1v1h-1zM12 24h1v1h-1zM13 24h1v1h-1zM15 24h1v1h-1zM19 24h1v1h-1zM20 24h1v1h-1zM22 24h1v1h-1zM24 24h1v1h-1zM27 24h1v1h-1zM28 24h1v1h-1zM0 25h1v1h-1zM2 25h1v1h-1zM3 25h1v1h-1zM4 25h1v1h-1zM6 25h1v1h-1zM11 25h1v1h-1zM12 25h1v1h-1zM19 25h1v1h-1zM23 25h1v1h-1zM28 25h1v1h-1zM0 26h1v1h-1zM2 26h1v1h-1zM3 26h1v1h-1zM4 26h1v1h-1zM6 26h1v1h-1zM9 26h1v1h-1zM10 26h1v1h-1zM14 26h1v1h-1zM20 26h1v1h-1zM24 26h1v1h-1zM26 26h1v1h-1zM27 26h1v1h-1zM28 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM8 27h1v1h-1zM10 27h1v1h-1zM13 27h1v1h-1zM15 27h1v1h-1zM17 27h1v1h-1zM18 27h1v1h-1zM19 27h1v1h-1zM21 27h1v1h-1zM24 27h1v1h-1zM25 27h1v1h-1zM27 27h1v1h-1zM0 28h1v1h-1zM1 28h1v1h-1zM2 28h1v1h-1zM3 28h1v1h-1zM4 28h1v1h-1zM5 28h1v1h-1zM6 28h1v1h-1zM8 28h1v1h-1zM10 28h1v1h-1zM11 28h1v1h-1zM12 28h1v1h-1zM13 28h1v1h-1zM15 28h1v1h-1zM20 28h1v1h-1zM21 28h1v1h-1zM25 28h1v1h-1z"/></svg><figcaption class="qr__caption">Muestra, no escanear</figcaption></figure>
+              <div class="secret">
+                <p class="field__hint">En la aplicación, elige «Agregar cuenta» y escanea el código. Aparecerá como <strong translate="no">Academify (matias.correa@institutodemo.cl)</strong>.</p>
+                <p class="secret__label" id="secret-l-codigo-error">¿No puedes escanear? Escribe esta clave:</p>
+                <p class="secret__value" aria-labelledby="secret-l-codigo-error" translate="no">JBSW Y3DP EHPK 3PXP K4ZT QWES 2RDA MFRG</p>
+                <div class="btn-row"><button class="btn btn--secondary btn--sm" type="button">{{i:copy}}Copiar clave</button></div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </li>
+        <li class="setup__step is-done">
+          <span class="mark mark--done" aria-hidden="true">{{i:check}}</span>
+          <div>
+            <h2 class="setup__title">Guarda tus códigos de recuperación<span class="sr-only">, hecho</span></h2>
+          <div class="setup__body">
+            <p class="field__hint">Te sirven para entrar si pierdes el teléfono. Cada uno funciona una sola vez y no los volveremos a mostrar.</p>
+            <ol class="codes" aria-label="Códigos de recuperación"><li class="codes__item" translate="no">7KQ2M-X9D4P</li><li class="codes__item" translate="no">R3T8W-B6N2C</li><li class="codes__item" translate="no">H5J9L-Q2V7K</li><li class="codes__item" translate="no">D8F3S-M4X6T</li><li class="codes__item" translate="no">P2W7N-K9R3H</li><li class="codes__item" translate="no">C6V4B-T8J2Q</li><li class="codes__item" translate="no">L9M3D-W5P7F</li><li class="codes__item" translate="no">X4K8R-H2C6N</li><li class="codes__item" translate="no">B7Q5T-V3L9M</li><li class="codes__item" translate="no">N2H6J-F8D4W</li></ol>
+            <div class="btn-row">
+              <button class="btn btn--secondary btn--sm" type="button">{{i:copy}}Copiar códigos</button>
+              <button class="btn btn--secondary btn--sm" type="button">{{i:download}}Descargar (.txt, 1&nbsp;KB)</button>
+            </div>
+            <label class="check"><input class="check__box" type="checkbox" name="guardados" id="saved-codigo-error" checked> Guardé mis códigos en un lugar seguro</label>
+          </div>
+          </div>
+        </li>
+        <li class="setup__step" aria-current="step">
+          <span class="mark mark--yours" aria-hidden="true"></span>
+          <div>
+            <h2 class="setup__title">Confirma con un código<span class="sr-only">, te toca a ti</span></h2>
+          <div class="setup__body">
+            <form class="form-stack" action="?estado=activado" method="get" novalidate>
+              <div class="field">
+                <label class="field__label" for="code-codigo-error">Código de 6 dígitos que muestra la aplicación</label>
+                <input class="input otp" id="code-codigo-error" name="code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" spellcheck="false" value="482931" aria-invalid="true" aria-describedby="code-codigo-error-error">
+                <p class="field__error" id="code-codigo-error-error">{{i:alert}}<span>El código no es correcto. Revisa que la hora del teléfono esté al día y escribe el código que se ve ahora.</span></p>
+              </div>
+              <div class="btn-row"><button class="btn btn--primary" type="submit">Activar segundo factor</button></div>
+            </form>
+          </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="activando" data-estado-label="Activando">
+  <a class="skip-link" href="#contenido-activando">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-activando">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel auth__panel--wide" aria-labelledby="t-activando">
+      <h1 class="auth__title" id="t-activando" tabindex="-1">Configura tu segundo factor</h1>
+      <p class="auth__lede">Es obligatorio para usar Academify. Necesitas una aplicación autenticadora en tu teléfono, por ejemplo Google Authenticator, Microsoft Authenticator o 1Password.</p>
+      <p class="auth__who">Cuenta: <strong translate="no">matias.correa@institutodemo.cl</strong></p>
+      <ol class="setup" aria-label="Pasos para configurar el segundo factor">
+        <li class="setup__step is-done">
+          <span class="mark mark--done" aria-hidden="true">{{i:check}}</span>
+          <div>
+            <h2 class="setup__title">Confirma tu contraseña<span class="sr-only">, hecho</span></h2><p class="setup__note">Contraseña confirmada</p>
+          </div>
+        </li>
+        <li class="setup__step is-done">
+          <span class="mark mark--done" aria-hidden="true">{{i:check}}</span>
+          <div>
+            <h2 class="setup__title">Escanea el código con tu aplicación<span class="sr-only">, hecho</span></h2>
+          <div class="setup__body">
+            <div class="setup__pair">
+              <figure class="qr"><svg viewBox="-2 -2 33 33" role="img" aria-label="Código QR para agregar Academify a tu aplicación autenticadora (muestra)" shape-rendering="crispEdges"><path fill="currentColor" d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM9 0h1v1h-1zM12 0h1v1h-1zM15 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM25 0h1v1h-1zM26 0h1v1h-1zM27 0h1v1h-1zM28 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM10 1h1v1h-1zM12 1h1v1h-1zM14 1h1v1h-1zM16 1h1v1h-1zM18 1h1v1h-1zM19 1h1v1h-1zM20 1h1v1h-1zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM11 2h1v1h-1zM12 2h1v1h-1zM16 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM25 2h1v1h-1zM26 2h1v1h-1zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM9 3h1v1h-1zM10 3h1v1h-1zM12 3h1v1h-1zM14 3h1v1h-1zM16 3h1v1h-1zM17 3h1v1h-1zM18 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM25 3h1v1h-1zM26 3h1v1h-1zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM8 4h1v1h-1zM11 4h1v1h-1zM12 4h1v1h-1zM13 4h1v1h-1zM14 4h1v1h-1zM15 4h1v1h-1zM16 4h1v1h-1zM18 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM25 4h1v1h-1zM26 4h1v1h-1zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM9 5h1v1h-1zM10 5h1v1h-1zM16 5h1v1h-1zM20 5h1v1h-1zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM25 6h1v1h-1zM26 6h1v1h-1zM27 6h1v1h-1zM28 6h1v1h-1zM9 7h1v1h-1zM12 7h1v1h-1zM14 7h1v1h-1zM20 7h1v1h-1zM0 8h1v1h-1zM4 8h1v1h-1zM5 8h1v1h-1zM6 8h1v1h-1zM7 8h1v1h-1zM8 8h1v1h-1zM9 8h1v1h-1zM12 8h1v1h-1zM17 8h1v1h-1zM20 8h1v1h-1zM21 8h1v1h-1zM24 8h1v1h-1zM25 8h1v1h-1zM26 8h1v1h-1zM27 8h1v1h-1zM28 8h1v1h-1zM0 9h1v1h-1zM1 9h1v1h-1zM3 9h1v1h-1zM7 9h1v1h-1zM8 9h1v1h-1zM9 9h1v1h-1zM10 9h1v1h-1zM11 9h1v1h-1zM15 9h1v1h-1zM16 9h1v1h-1zM19 9h1v1h-1zM21 9h1v1h-1zM22 9h1v1h-1zM26 9h1v1h-1zM1 10h1v1h-1zM3 10h1v1h-1zM6 10h1v1h-1zM10 10h1v1h-1zM15 10h1v1h-1zM16 10h1v1h-1zM17 10h1v1h-1zM19 10h1v1h-1zM22 10h1v1h-1zM23 10h1v1h-1zM26 10h1v1h-1zM2 11h1v1h-1zM4 11h1v1h-1zM9 11h1v1h-1zM12 11h1v1h-1zM14 11h1v1h-1zM16 11h1v1h-1zM19 11h1v1h-1zM23 11h1v1h-1zM25 11h1v1h-1zM28 11h1v1h-1zM0 12h1v1h-1zM6 12h1v1h-1zM7 12h1v1h-1zM10 12h1v1h-1zM11 12h1v1h-1zM12 12h1v1h-1zM15 12h1v1h-1zM19 12h1v1h-1zM21 12h1v1h-1zM0 13h1v1h-1zM1 13h1v1h-1zM9 13h1v1h-1zM15 13h1v1h-1zM16 13h1v1h-1zM19 13h1v1h-1zM26 13h1v1h-1zM3 14h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM7 14h1v1h-1zM8 14h1v1h-1zM9 14h1v1h-1zM11 14h1v1h-1zM15 14h1v1h-1zM16 14h1v1h-1zM18 14h1v1h-1zM19 14h1v1h-1zM21 14h1v1h-1zM22 14h1v1h-1zM24 14h1v1h-1zM27 14h1v1h-1zM0 15h1v1h-1zM1 15h1v1h-1zM7 15h1v1h-1zM9 15h1v1h-1zM11 15h1v1h-1zM14 15h1v1h-1zM15 15h1v1h-1zM17 15h1v1h-1zM19 15h1v1h-1zM25 15h1v1h-1zM3 16h1v1h-1zM4 16h1v1h-1zM5 16h1v1h-1zM6 16h1v1h-1zM7 16h1v1h-1zM8 16h1v1h-1zM10 16h1v1h-1zM11 16h1v1h-1zM13 16h1v1h-1zM14 16h1v1h-1zM15 16h1v1h-1zM18 16h1v1h-1zM19 16h1v1h-1zM20 16h1v1h-1zM23 16h1v1h-1zM24 16h1v1h-1zM26 16h1v1h-1zM28 16h1v1h-1zM0 17h1v1h-1zM4 17h1v1h-1zM8 17h1v1h-1zM9 17h1v1h-1zM11 17h1v1h-1zM17 17h1v1h-1zM18 17h1v1h-1zM26 17h1v1h-1zM28 17h1v1h-1zM2 18h1v1h-1zM4 18h1v1h-1zM6 18h1v1h-1zM10 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM15 18h1v1h-1zM16 18h1v1h-1zM19 18h1v1h-1zM23 18h1v1h-1zM24 18h1v1h-1zM25 18h1v1h-1zM26 18h1v1h-1zM27 18h1v1h-1zM28 18h1v1h-1zM1 19h1v1h-1zM3 19h1v1h-1zM4 19h1v1h-1zM5 19h1v1h-1zM15 19h1v1h-1zM17 19h1v1h-1zM19 19h1v1h-1zM24 19h1v1h-1zM25 19h1v1h-1zM28 19h1v1h-1zM1 20h1v1h-1zM2 20h1v1h-1zM3 20h1v1h-1zM5 20h1v1h-1zM6 20h1v1h-1zM7 20h1v1h-1zM8 20h1v1h-1zM10 20h1v1h-1zM12 20h1v1h-1zM13 20h1v1h-1zM18 20h1v1h-1zM19 20h1v1h-1zM22 20h1v1h-1zM26 20h1v1h-1zM28 20h1v1h-1zM8 21h1v1h-1zM9 21h1v1h-1zM10 21h1v1h-1zM12 21h1v1h-1zM13 21h1v1h-1zM19 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM0 22h1v1h-1zM1 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM5 22h1v1h-1zM6 22h1v1h-1zM9 22h1v1h-1zM10 22h1v1h-1zM15 22h1v1h-1zM16 22h1v1h-1zM18 22h1v1h-1zM19 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM23 22h1v1h-1zM26 22h1v1h-1zM27 22h1v1h-1zM28 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM9 23h1v1h-1zM15 23h1v1h-1zM17 23h1v1h-1zM19 23h1v1h-1zM24 23h1v1h-1zM28 23h1v1h-1zM0 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM6 24h1v1h-1zM10 24h1v1h-1zM12 24h1v1h-1zM13 24h1v1h-1zM15 24h1v1h-1zM19 24h1v1h-1zM20 24h1v1h-1zM22 24h1v1h-1zM24 24h1v1h-1zM27 24h1v1h-1zM28 24h1v1h-1zM0 25h1v1h-1zM2 25h1v1h-1zM3 25h1v1h-1zM4 25h1v1h-1zM6 25h1v1h-1zM11 25h1v1h-1zM12 25h1v1h-1zM19 25h1v1h-1zM23 25h1v1h-1zM28 25h1v1h-1zM0 26h1v1h-1zM2 26h1v1h-1zM3 26h1v1h-1zM4 26h1v1h-1zM6 26h1v1h-1zM9 26h1v1h-1zM10 26h1v1h-1zM14 26h1v1h-1zM20 26h1v1h-1zM24 26h1v1h-1zM26 26h1v1h-1zM27 26h1v1h-1zM28 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM8 27h1v1h-1zM10 27h1v1h-1zM13 27h1v1h-1zM15 27h1v1h-1zM17 27h1v1h-1zM18 27h1v1h-1zM19 27h1v1h-1zM21 27h1v1h-1zM24 27h1v1h-1zM25 27h1v1h-1zM27 27h1v1h-1zM0 28h1v1h-1zM1 28h1v1h-1zM2 28h1v1h-1zM3 28h1v1h-1zM4 28h1v1h-1zM5 28h1v1h-1zM6 28h1v1h-1zM8 28h1v1h-1zM10 28h1v1h-1zM11 28h1v1h-1zM12 28h1v1h-1zM13 28h1v1h-1zM15 28h1v1h-1zM20 28h1v1h-1zM21 28h1v1h-1zM25 28h1v1h-1z"/></svg><figcaption class="qr__caption">Muestra, no escanear</figcaption></figure>
+              <div class="secret">
+                <p class="field__hint">En la aplicación, elige «Agregar cuenta» y escanea el código. Aparecerá como <strong translate="no">Academify (matias.correa@institutodemo.cl)</strong>.</p>
+                <p class="secret__label" id="secret-l-activando">¿No puedes escanear? Escribe esta clave:</p>
+                <p class="secret__value" aria-labelledby="secret-l-activando" translate="no">JBSW Y3DP EHPK 3PXP K4ZT QWES 2RDA MFRG</p>
+                <div class="btn-row"><button class="btn btn--secondary btn--sm" type="button">{{i:copy}}Copiar clave</button></div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </li>
+        <li class="setup__step is-done">
+          <span class="mark mark--done" aria-hidden="true">{{i:check}}</span>
+          <div>
+            <h2 class="setup__title">Guarda tus códigos de recuperación<span class="sr-only">, hecho</span></h2>
+          <div class="setup__body">
+            <p class="field__hint">Te sirven para entrar si pierdes el teléfono. Cada uno funciona una sola vez y no los volveremos a mostrar.</p>
+            <ol class="codes" aria-label="Códigos de recuperación"><li class="codes__item" translate="no">7KQ2M-X9D4P</li><li class="codes__item" translate="no">R3T8W-B6N2C</li><li class="codes__item" translate="no">H5J9L-Q2V7K</li><li class="codes__item" translate="no">D8F3S-M4X6T</li><li class="codes__item" translate="no">P2W7N-K9R3H</li><li class="codes__item" translate="no">C6V4B-T8J2Q</li><li class="codes__item" translate="no">L9M3D-W5P7F</li><li class="codes__item" translate="no">X4K8R-H2C6N</li><li class="codes__item" translate="no">B7Q5T-V3L9M</li><li class="codes__item" translate="no">N2H6J-F8D4W</li></ol>
+            <div class="btn-row">
+              <button class="btn btn--secondary btn--sm" type="button">{{i:copy}}Copiar códigos</button>
+              <button class="btn btn--secondary btn--sm" type="button">{{i:download}}Descargar (.txt, 1&nbsp;KB)</button>
+            </div>
+            <label class="check"><input class="check__box" type="checkbox" name="guardados" id="saved-activando" checked> Guardé mis códigos en un lugar seguro</label>
+          </div>
+          </div>
+        </li>
+        <li class="setup__step" aria-current="step">
+          <span class="mark mark--yours" aria-hidden="true"></span>
+          <div>
+            <h2 class="setup__title">Confirma con un código<span class="sr-only">, te toca a ti</span></h2>
+          <div class="setup__body">
+            <form class="form-stack" action="?estado=activado" method="get" novalidate>
+              <div class="field">
+                <label class="field__label" for="code-activando">Código de 6 dígitos que muestra la aplicación</label>
+                <input class="input otp" id="code-activando" name="code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" spellcheck="false" value="482913">
+              </div>
+              <div class="btn-row"><button class="btn btn--primary" type="submit" aria-busy="true">Activando…</button><p class="sr-only" role="status">Activando segundo factor…</p></div>
+            </form>
+          </div>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="activado" data-estado-label="Activado">
+  <a class="skip-link" href="#contenido-activado">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-activado">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-activado">
+      <span class="auth__icon tile tile--md tile--done" aria-hidden="true">{{i20:shield}}</span>
+      <h1 class="auth__title" id="t-activado" tabindex="-1">Segundo factor activado</h1>
+      <p class="auth__lede">Desde ahora, cada vez que ingreses te pediremos el código de tu aplicación. Guarda tus códigos de recuperación fuera del teléfono.</p>
+      <div class="auth__actions"><a class="btn btn--primary btn--block" href="../vendedor/ven-01-postulaciones.html">Ir a Postulaciones</a></div>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="ya-configurado" data-estado-label="Ya configurado">
+  <a class="skip-link" href="#contenido-ya-configurado">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-ya-configurado">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-ya-configurado">
+      <span class="auth__icon tile tile--md tile--done" aria-hidden="true">{{i20:shield}}</span>
+      <h1 class="auth__title" id="t-ya-configurado" tabindex="-1">Tu segundo factor ya está activo</h1>
+      <p class="auth__lede">Ya lo configuraste en esta cuenta. Si cambiaste de teléfono o perdiste tus códigos, pídele a la persona administradora que restablezca tu acceso.</p>
+      <div class="auth__actions"><a class="btn btn--primary btn--block" href="../vendedor/ven-01-postulaciones.html">Ir a Postulaciones</a></div>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

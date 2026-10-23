@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<title>Abriendo tu postulación · Instituto Demo</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body class="is-public">
+<!--SPRITE-->
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="pub-head">
+  <div class="pub-head__inner">
+    <img src="../assets/academify-logo.svg" alt="academify" width="115" height="26" fetchpriority="high" translate="no">
+    <p class="pub-head__inst">Instituto Demo<span class="pub-head__process">Postulación Admisión 2027</span></p>
+    <a class="pub-head__help link" href="mailto:admision@institutodemo.cl">{{i20:mail}}<span class="pub-head__help-long">admision@institutodemo.cl</span><span class="pub-head__help-short">Ayuda</span></a>
+  </div>
+</header>
+
+<main id="contenido" class="pub-main">
+<div data-estado="abriendo" data-estado-label="Abriendo">
+  <section class="status" aria-labelledby="t1" role="status" aria-live="polite">
+    <span class="status__icon tile tile--system" aria-hidden="true">{{i20:hourglass}}</span>
+    <h1 class="page-title" id="t1">Abriendo tu postulación…</h1>
+    <p class="status__body">Estamos verificando tu enlace. Toma unos segundos.</p>
+  </section>
+</div>
+<div data-estado="invalido" data-estado-label="Enlace no válido">
+  <section class="status" aria-labelledby="t2">
+    <span class="status__icon tile tile--applicant" aria-hidden="true">{{i20:unlink}}</span>
+    <h1 class="page-title" id="t2">El enlace ya no es válido</h1>
+    <p class="status__body">Pudo vencer, usarse o ser reemplazado por uno más nuevo. Si te llegó otro correo nuestro, abre el enlace más reciente.</p>
+    <p class="status__body">Si necesitas uno nuevo, escríbenos y te lo enviamos. Tus datos y documentos siguen guardados.</p>
+    <div class="status__actions btn-row"><a class="btn btn--secondary" href="mailto:admision@institutodemo.cl?subject=Necesito%20un%20enlace%20nuevo">{{i:mail}}Pedir un enlace nuevo</a></div>
+    <p class="help-foot">{{i:mail}}<span>¿Tienes dudas? Escríbenos a <a class="link" href="mailto:admision@institutodemo.cl">admision@institutodemo.cl</a>.</span></p>
+  </section>
+</div>
+<div data-estado="usado" data-estado-label="Ya se usó">
+  <section class="status" aria-labelledby="t3">
+    <span class="status__icon tile tile--applicant" aria-hidden="true">{{i20:unlink}}</span>
+    <h1 class="page-title" id="t3">Tu enlace ya se usó</h1>
+    <p class="status__body">Es probable que se haya usado en el intento anterior, que no alcanzó a cargar por un problema de conexión. Por seguridad, cada enlace sirve una sola vez.</p>
+    <p class="status__body">Escríbenos y te enviamos uno nuevo. Tus datos y documentos siguen guardados.</p>
+    <div class="status__actions btn-row"><a class="btn btn--secondary" href="mailto:admision@institutodemo.cl?subject=Necesito%20un%20enlace%20nuevo">{{i:mail}}Pedir un enlace nuevo</a></div>
+    <p class="help-foot">{{i:mail}}<span>¿Tienes dudas? Escríbenos a <a class="link" href="mailto:admision@institutodemo.cl">admision@institutodemo.cl</a>.</span></p>
+  </section>
+</div>
+<div data-estado="temporal" data-estado-label="No se pudo abrir">
+  <section class="status" aria-labelledby="t4">
+    <span class="status__icon tile tile--error" aria-hidden="true">{{i20:wifi-off}}</span>
+    <h1 class="page-title" id="t4">No pudimos abrir tu enlace</h1>
+    <p class="status__body">Puede ser un problema temporal de conexión. Inténtalo de nuevo en unos segundos; el enlace sigue siendo válido.</p>
+    <div class="status__actions btn-row"><button class="btn btn--primary" type="button">{{i:refresh}}Reintentar</button></div>
+    <p class="help-foot">{{i:mail}}<span>¿Tienes dudas? Escríbenos a <a class="link" href="mailto:admision@institutodemo.cl">admision@institutodemo.cl</a>.</span></p>
+  </section>
+</div>
+
+</main>
+
+<footer class="pub-foot">
+  <div class="pub-foot__inner">
+    <span>Instituto Demo, Admisión 2027</span>
+    <span class="credit">Powered by <span translate="no">Ticnology</span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></span>
+  </div>
+</footer>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

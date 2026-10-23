@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<title>Contrato firmado · Instituto Demo</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body class="is-public">
+<!--SPRITE-->
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="pub-head">
+  <div class="pub-head__inner">
+    <img src="../assets/academify-logo.svg" alt="academify" width="115" height="26" fetchpriority="high" translate="no">
+    <p class="pub-head__inst">Instituto Demo<span class="pub-head__process">Postulación Admisión 2027</span></p>
+    <a class="pub-head__help link" href="mailto:admision@institutodemo.cl">{{i20:mail}}<span class="pub-head__help-long">admision@institutodemo.cl</span><span class="pub-head__help-short">Ayuda</span></a>
+  </div>
+</header>
+
+<main id="contenido" class="pub-main">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Firmaste tu contrato</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te toca pagar la matrícula, $108.900.</strong> Con ese pago tu postulación pasa a validación académica.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-now"></span><span></span><span></span></span><span>Etapa 6 de 8</span><a class="link" href="#recorrido">Ver tu recorrido</a></p>
+      <section class="block" aria-labelledby="h-firmado">
+        <div class="block__head"><h2 class="block__title" id="h-firmado">Contrato firmado</h2><span class="badge badge--done">{{i14:check}}Firmado</span></div>
+        <dl class="kv">
+          <dt>Contrato</dt><dd>Servicios educacionales 2027</dd>
+          <dt>Versión</dt><dd>1</dd>
+          <dt>Firmado</dt><dd class="tnum">19-10-2026, 11:05</dd>
+          <dt>Folio</dt><dd class="tnum" translate="no">2026-000104</dd>
+        </dl>
+        <div class="btn-row block">
+          <a class="btn btn--secondary" href="/api/publico/contrato/versiones/v1/pdf?descargar=1&amp;firmado=1">{{i:download}}Descargar contrato <span class="pdf__meta">(PDF, 212&nbsp;KB)</span></a>
+        </div>
+        <p class="total__fine terms__note">{{i:mail}}<span>Te enviamos una copia del contrato y la constancia de firma a ja•••@correo.cl. Puede tardar unos minutos en llegar.</span></p>
+      </section>
+      <div class="task-foot">
+        <div class="btn-row"><a class="btn btn--primary btn--lg" href="pub-16-pago.html">{{i20:card}}Ir a pagar la matrícula</a></div>
+        <p class="note">{{i:shield}}<span>Pagas en el sitio de <span translate="no">Transbank</span> con débito, crédito o prepago. Adelantar cuotas es opcional.</span></p>
+      </div>
+      <h2 class="section__title total__after">Qué pasa después</h2>
+      <ol class="handoff"><li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú pagas la matrícula</strong> con <span translate="no">Webpay</span> y recibes tu comprobante.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión valida</strong> tus documentos académicos.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> cuando quedes matriculado.</span></li></ol>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido">
+      <h2 class="journey__title" id="recorrido">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Enviada el 09-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Aceptados el 13-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">15-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Versión 1, 16-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">19-10-2026, 11:05</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Ahora, te toca a ti</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Javiera Fuentes Tapia</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">123-8</span></dd><dt class="sr-only">Programa</dt><dd>Trabajo Social, vespertina, a distancia</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000104</span></dd></dl>
+    </aside>
+  </div>
+</main>
+
+<footer class="pub-foot">
+  <div class="pub-foot__inner">
+    <span>Instituto Demo, Admisión 2027</span>
+    <span class="credit">Powered by <span translate="no">Ticnology</span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></span>
+  </div>
+</footer>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

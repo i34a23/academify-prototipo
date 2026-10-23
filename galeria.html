@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FFFFFF">
+<title>Sistema de diseño · academify</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/theme.css">
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/galeria.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="i-pencil" viewBox="0 0 24 24"><path d="M21.17 6.81a1 1 0 0 0-3.98-3.98L3.84 16.17a2 2 0 0 0-.5.83l-1.32 4.35a.5.5 0 0 0 .62.62l4.35-1.32a2 2 0 0 0 .83-.5z"/><path d="m15 5 4 4"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+<symbol id="i-triangle" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+<symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-chev-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-chev-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+<symbol id="i-chev-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+<symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+<symbol id="i-panel" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></symbol>
+<symbol id="i-inbox" viewBox="0 0 24 24"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></symbol>
+<symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+<symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+<symbol id="i-id" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M5 16c.6-1.5 1.8-2 3-2s2.4.5 3 2"/><path d="M14 10h5"/><path d="M14 14h3"/></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+<symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+<symbol id="i-zoom-in" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></symbol>
+<symbol id="i-zoom-out" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6"/></symbol>
+<symbol id="i-rotate" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-dashboard" viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M10.27 21a2 2 0 0 0 3.46 0"/><path d="M3.26 15.33A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.67C19.41 13.96 18 12.5 18 8A6 6 0 0 0 6 8c0 4.5-1.41 5.96-2.74 7.33"/></symbol>
+<symbol id="i-grad" viewBox="0 0 24 24"><path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+<symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.7 8.7a2.43 2.43 0 0 0 3.42 0l6.58-6.58a2.43 2.43 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5"/></symbol>
+<symbol id="i-server" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></symbol>
+<symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></symbol>
+<symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.53a2 2 0 0 1-.21.9L4.72 20.55A1 1 0 0 0 5.62 22h12.76a1 1 0 0 0 .9-1.45l-5.07-10.12a2 2 0 0 1-.21-.9V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></symbol>
+<symbol id="i-more" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></symbol>
+<symbol id="i-keyboard" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/><path d="M18 8h.01"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/><path d="M7 16h10"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M8.5 16.43a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 4.18-2.65"/><path d="M19 12.86a10 10 0 0 0-2.18-1.42"/><path d="M22 8.82a15 15 0 0 0-11.29-3.76"/><path d="M5 12.86a10 10 0 0 1 5.17-2.69"/><path d="m2 2 20 20"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M14.54 21.69a.5.5 0 0 0 .94-.03l6.5-19a.5.5 0 0 0-.64-.64l-19 6.5a.5.5 0 0 0-.03.94l7.93 3.18a2 2 0 0 1 1.11 1.11z"/><path d="m21.85 2.15-10.94 10.94"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+</svg>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<div class="env-banner" role="note"><svg class="i" aria-hidden="true"><use href="#i-flask"/></svg>Entorno de prueba: los pagos y correos no son reales. Esta banda solo aparece fuera de producción.</div>
+<main id="contenido" class="gal">
+  <header class="gal-head">
+    <div>
+      <img src="assets/academify-logo.svg" alt="academify" width="177" height="40" translate="no">
+      <h1 class="page-title" style="margin-top:24px">Sistema de diseño</h1>
+      <p class="lede">Tokens y componentes para las 58 pantallas de Admisión 2027. Dirección operativa: la interfaz dice quién mueve cada caso, desde cuándo y con qué tecla. El rombo de la «i» marca «te toca a ti» y no se usa para nada más.</p>
+      <nav class="gal-toc" aria-label="Secciones de la galería">
+        <a class="link" href="#marca">Marca</a><a class="link" href="#color">Color</a><a class="link" href="#estados">Estados</a><a class="link" href="#tipo">Tipografía</a><a class="link" href="#forma">Forma y movimiento</a><a class="link" href="#botones">Botones</a><a class="link" href="#campos">Campos</a><a class="link" href="#subida">Subida</a><a class="link" href="#publico">Marco público</a><a class="link" href="#shell">Shell del equipo</a><a class="link" href="#tablas">Tablas</a><a class="link" href="#filtros">Filtros</a><a class="link" href="#etapas">Etapas</a><a class="link" href="#visor">Visor</a><a class="link" href="#montos">Montos</a><a class="link" href="#datos">KPI y barras</a><a class="link" href="#feedback">Avisos</a><a class="link" href="#vacio">Vacío y carga</a><a class="link" href="#dialogos">Diálogos</a><a class="link" href="#historial">Historial</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MARCA -->
+  <section class="gal-sec" id="marca" aria-labelledby="h-marca">
+    <h2 id="h-marca">Marca</h2>
+    <p>Wordmark sin recolorear, con ancho y alto explícitos: 24 px en la sidebar, 26 px en el marco público, 40 px en acceso. El rombo azul es el único gesto propio.</p>
+    <div class="gal-grid gal-grid--3">
+      <div class="gal-item"><span class="gal-label">Sidebar, 24 px</span><img src="assets/academify-logo.svg" alt="academify" width="106" height="24" translate="no"></div>
+      <div class="gal-item"><span class="gal-label">Marco público, 26 px</span><img src="assets/academify-logo.svg" alt="academify" width="115" height="26" translate="no"></div>
+      <div class="gal-item"><span class="gal-label">Crédito, una vez por marco, 12 px</span><span class="credit">Powered by <span translate="no">Ticnology</span><img class="credit__icon" src="assets/ticnology-icono.svg" alt="" width="14" height="14"></span></div>
+    </div>
+    <table class="gal-table">
+      <caption class="sr-only">Usos permitidos del rombo</caption>
+      <thead><tr><th scope="col">Dónde va el rombo</th><th scope="col">Muestra</th><th scope="col">Dónde no va</th></tr></thead>
+      <tbody>
+        <tr><td>Badge cuando el actor es quien mira</td><td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span></td><td>Viñetas, decoración, encabezados</td></tr>
+        <tr><td>Encabezado de grupo «Te toca a ti» en bandejas</td><td><span class="table__group-inner"><span class="rombo" aria-hidden="true"></span><strong>Te toca a ti</strong> <span class="table__group-count">2</span></span></td><td>Contadores de la sidebar (usan color y texto)</td></tr>
+        <tr><td>Contador de la pestaña con casos tuyos</td><td><span class="tabs__count tabs__count--yours"><span class="rombo rombo--sm" aria-hidden="true"></span>2</span></td><td>Líneas que no son un turno</td></tr>
+        <tr><td>Etapa o paso donde actúa quien mira (forma de turno)</td><td><span class="mark mark--yours" aria-hidden="true"></span> rombo, <span class="mark" aria-hidden="true"></span> otro, <span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span> hecho</td><td>Como ícono de marca suelto</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- COLOR -->
+  <section class="gal-sec" id="color" aria-labelledby="h-color">
+    <h2 id="h-color">Color</h2>
+    <p>Primitivos teñidos al navy de la marca; los componentes leen solo semánticos. Contrastes WCAG 2.x calculados.</p>
+    <table class="gal-table">
+      <caption class="sr-only">Tokens semánticos de color con su contraste</caption>
+      <thead><tr><th scope="col"></th><th scope="col">Token</th><th scope="col">Primitivo</th><th scope="col">Hex</th><th scope="col">Uso</th><th scope="col" class="num">Contraste</th></tr></thead>
+      <tbody>
+        <tr><td><span class="swatch" style="background:var(--ink)"></span></td><td><code>--ink</code></td><td><code>--navy-950</code></td><td class="tnum">#0F1B2D</td><td>Texto principal, wordmark, total</td><td class="tnum">17,28:1</td></tr>
+        <tr><td><span class="swatch" style="background:var(--text-2)"></span></td><td><code>--text-2</code></td><td><code>--navy-700</code></td><td class="tnum">#3B4658</td><td>Datos, celdas</td><td class="tnum">9,53:1</td></tr>
+        <tr><td><span class="swatch" style="background:var(--text-muted)"></span></td><td><code>--text-muted</code></td><td><code>--navy-600</code></td><td class="tnum">#505B6D</td><td>Ayudas, metadatos, encabezados de tabla</td><td class="tnum">6,87:1; 6,46:1 en subtle</td></tr>
+        <tr><td><span class="swatch" style="background:var(--text-subtle)"></span></td><td><code>--text-subtle</code>, <code>--text-disabled</code></td><td><code>--navy-500</code></td><td class="tnum">#5E6A7D</td><td>Placeholder, texto deshabilitado</td><td class="tnum">5,48:1; 4,93:1 en muted</td></tr>
+        <tr><td><span class="swatch" style="background:var(--line-control)"></span></td><td><code>--line-control</code></td><td><code>--navy-400</code></td><td class="tnum">#7A8597</td><td>Contorno de todo control</td><td class="tnum">3,73:1; 3,36:1 en muted</td></tr>
+        <tr><td><span class="swatch" style="background:var(--line-strong)"></span></td><td><code>--line-strong</code></td><td><code>--navy-200</code></td><td class="tnum">#CDD3DC</td><td>Divisor de grupo, kbd (decorativo)</td><td class="tnum">no aplica</td></tr>
+        <tr><td><span class="swatch" style="background:var(--line)"></span></td><td><code>--line</code></td><td><code>--navy-100</code></td><td class="tnum">#E3E7EC</td><td>Divisor entre filas (decorativo)</td><td class="tnum">no aplica</td></tr>
+        <tr><td><span class="swatch" style="background:var(--bg-subtle)"></span></td><td><code>--bg-subtle</code></td><td><code>--navy-25</code></td><td class="tnum">#F7F8FA</td><td>Sidebar, cabecera de tabla, visor</td><td class="tnum">fondo</td></tr>
+        <tr><td><span class="swatch" style="background:var(--bg-muted)"></span></td><td><code>--bg-muted</code></td><td><code>--navy-50</code></td><td class="tnum">#F1F3F6</td><td>Hover, skeleton, deshabilitado</td><td class="tnum">fondo</td></tr>
+        <tr><td><span class="swatch" style="background:var(--accent)"></span></td><td><code>--accent</code>, <code>--focus-ring</code>, <code>--brand-mark</code></td><td><code>--blue-600</code></td><td class="tnum">#1D4ED8</td><td>Acción, foco, rombo</td><td class="tnum">6,70:1</td></tr>
+        <tr><td><span class="swatch" style="background:var(--accent-hover)"></span></td><td><code>--accent-hover</code></td><td><code>--blue-700</code></td><td class="tnum">#1A3FB0</td><td>Hover de acción</td><td class="tnum">8,82:1</td></tr>
+        <tr><td><span class="swatch" style="background:var(--danger)"></span></td><td><code>--danger</code></td><td><code>--red-700</code></td><td class="tnum">#B42318</td><td>Cierre y error (nunca urgencia)</td><td class="tnum">6,57:1</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ESTADOS -->
+  <section class="gal-sec" id="estados" aria-labelledby="h-estados">
+    <h2 id="h-estados">Estados canónicos de la postulación</h2>
+    <p>Un estado, un nombre, un color, un actor. El color dice quién debe actuar y el icono lo confirma. Si el actor es quien mira, el punto pasa a rombo. Urgencia: tinta + reloj + texto, nunca rojo.</p>
+    <table class="gal-table">
+      <caption class="sr-only">Tabla canónica de estados</caption>
+      <thead><tr><th scope="col">Valor</th><th scope="col">Píldora</th><th scope="col">Visto por el actor</th><th scope="col">Pestaña</th><th scope="col">Etapa</th><th scope="col">Actor</th><th scope="col">Grupo y tokens</th></tr></thead>
+      <tbody>
+        <tr><td><code>borrador</code></td><td><span class="badge badge--draft"><svg class="i" aria-hidden="true"><use href="#i-pencil"/></svg>Borrador</span></td><td>—</td><td>Borradores</td><td>Venta</td><td>Postulante o vendedor</td><td><code>--state-draft-*</code> 8,58:1</td></tr>
+        <tr><td><code>enviada</code></td><td><span class="badge badge--team"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Por revisar</span></td><td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar</span></td><td>Por revisar</td><td>Venta</td><td>Vendedor</td><td><code>--state-team-*</code> 6,03:1</td></tr>
+        <tr><td><code>observada</code></td><td><span class="badge badge--applicant"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Observada</span></td><td>—</td><td>Observadas</td><td>Venta</td><td>Postulante</td><td><code>--state-applicant-*</code> 6,46:1</td></tr>
+        <tr><td><code>aprobada</code></td><td><span class="badge badge--system"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>Aprobada</span></td><td>—</td><td>Aprobadas</td><td>Contrato y firma</td><td>Sistema</td><td><code>--state-system-*</code> 8,58:1</td></tr>
+        <tr><td><code>por_firmar</code></td><td><span class="badge badge--applicant"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Por firmar</span></td><td>—</td><td>Por firmar</td><td>Contrato y firma</td><td>Postulante</td><td><code>--state-applicant-*</code></td></tr>
+        <tr><td><code>por_pagar</code></td><td><span class="badge badge--applicant"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Por pagar</span></td><td>—</td><td>Por pagar</td><td>Pago</td><td>Postulante</td><td><code>--state-applicant-*</code></td></tr>
+        <tr><td><code>por_validar</code></td><td><span class="badge badge--team"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Por validar</span></td><td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por validar</span></td><td>Por validar</td><td>Validación académica</td><td>Validador</td><td><code>--state-team-*</code></td></tr>
+        <tr><td><code>matriculada</code></td><td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Matriculado</span></td><td>—</td><td>Matriculados</td><td>Matriculado</td><td>Nadie</td><td><code>--state-done-*</code> 6,76:1</td></tr>
+        <tr><td><code>rechazada</code></td><td><span class="badge badge--closed"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>Rechazada</span></td><td>—</td><td>Rechazadas</td><td>—</td><td>Nadie</td><td><code>--state-closed-*</code> 6,01:1</td></tr>
+      </tbody>
+    </table>
+    <h3 class="section-head__title" style="margin-top:32px">Entidades secundarias</h3>
+    <table class="gal-table">
+      <caption class="sr-only">Estados de documento, contrato, pago, correo y usuario</caption>
+      <thead><tr><th scope="col">Entidad</th><th scope="col">Equipo</th><th scope="col">Postulante</th></tr></thead>
+      <tbody>
+        <tr><td>Documento</td><td><span class="badge badge--system"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>En análisis</span> <span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar</span> <span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span> <span class="badge badge--applicant"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Observado</span> <span class="badge badge--error"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>Rechazado por seguridad</span> <span class="badge badge--applicant"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Entrega posterior</span></td><td><span class="badge badge--system"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>Recibido, revisando seguridad</span> <span class="badge badge--applicant"><span class="rombo" aria-hidden="true"></span>Debes corregirlo</span> <span class="badge badge--error"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>No pudimos aceptar este archivo</span></td></tr>
+        <tr><td>Contrato</td><td><span class="badge badge--system"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>En preparación</span> <span class="badge badge--applicant"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Por firmar</span> <span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Firmado</span> <span class="badge badge--error"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>Error al generar</span></td><td>Mismos textos</td></tr>
+        <tr><td>Pago</td><td><span class="badge badge--system"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>En proceso</span> <span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Pagado</span> <span class="badge badge--error"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>Rechazado</span> <span class="badge badge--error"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>Anulado</span> <span class="badge badge--error"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>Tiempo agotado</span> <span class="badge badge--system"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>Confirmando resultado</span></td><td>Concepto sin intento: <span class="badge badge--applicant"><span class="rombo" aria-hidden="true"></span>Por pagar</span></td></tr>
+        <tr><td>Correo</td><td><span class="badge badge--system"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>En cola</span> <span class="badge badge--system"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>Enviando</span> <span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Enviado</span> <span class="badge badge--error"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>Fallido</span></td><td>—</td></tr>
+        <tr><td>Usuario (sin paleta de actor)</td><td><span class="badge badge--plain"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg>Activo</span> <span class="badge badge--plain"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg>Bloqueado hasta las 14:35</span> <span class="badge badge--plain"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>Desactivado</span> <span class="badge badge--plain"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg>Invitación pendiente</span></td><td>—</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- TIPO -->
+  <section class="gal-sec" id="tipo" aria-labelledby="h-tipo">
+    <h2 id="h-tipo">Tipografía</h2>
+    <p>Figtree variable autoalojada, una sola familia. Numerales tabulares en montos, folios, RUT y fechas. Contraste por peso: 800 títulos, 600 nombres, 400 texto. Nada bajo 12 px. El contexto <code>.is-public</code> sube cuerpo, etiqueta, ayuda e input a 16/16/14/16.</p>
+    <div class="type-row"><code>--fs-display 30 / 800</code><span style="font-size:var(--fs-display);font-weight:800;letter-spacing:-.01em">Paga tu matrícula</span></div>
+    <div class="type-row"><code>--fs-h1 28 / 800</code><span style="font-size:var(--fs-h1);font-weight:800;letter-spacing:-.01em">Postulaciones</span></div>
+    <div class="type-row"><code>--fs-h2 20 / 700</code><span style="font-size:var(--fs-h2);font-weight:700">Documentos</span></div>
+    <div class="type-row"><code>--fs-h3 18 / 700</code><span style="font-size:var(--fs-h3);font-weight:700">Cédula de identidad, anverso</span></div>
+    <div class="type-row"><code>--fs-16 / 400 público</code><span style="font-size:16px">Escríbelos tal como aparecen en tu cédula de identidad.</span></div>
+    <div class="type-row"><code>--fs-15 / 400 equipo</code><span style="font-size:15px">11 postulaciones en Admisión 2027, más 1 borrador.</span></div>
+    <div class="type-row"><code>--fs-14 / 600 etiqueta, celda</code><span style="font-size:14px;font-weight:600">Correo electrónico</span></div>
+    <div class="type-row"><code>--fs-13 / 500 ayuda, error</code><span style="font-size:13px;color:var(--text-muted)">Con o sin puntos. Si termina en K, escríbela.</span></div>
+    <div class="type-row"><code>--fs-12 / 600 kbd, meta</code><span style="font-size:12px;color:var(--text-muted)">Powered by Ticnology <span class="tnum">2026-000102 $1.966.250</span></span></div>
+  </section>
+
+  <!-- FORMA -->
+  <section class="gal-sec" id="forma" aria-labelledby="h-forma">
+    <h2 id="h-forma">Espacio, forma, elevación y movimiento</h2>
+    <div class="gal-grid">
+      <table class="gal-table">
+        <caption class="sr-only">Escala de espacio</caption>
+        <thead><tr><th scope="col">Token</th><th scope="col">px</th><th scope="col"></th></tr></thead>
+        <tbody>
+          <tr><td><code>--s-1</code></td><td>4</td><td><span class="space-bar" style="width:4px"></span></td></tr>
+          <tr><td><code>--s-2</code></td><td>8</td><td><span class="space-bar" style="width:8px"></span></td></tr>
+          <tr><td><code>--s-3</code></td><td>12</td><td><span class="space-bar" style="width:12px"></span></td></tr>
+          <tr><td><code>--s-4</code></td><td>16</td><td><span class="space-bar" style="width:16px"></span></td></tr>
+          <tr><td><code>--s-6</code></td><td>24</td><td><span class="space-bar" style="width:24px"></span></td></tr>
+          <tr><td><code>--s-8</code></td><td>32</td><td><span class="space-bar" style="width:32px"></span></td></tr>
+          <tr><td><code>--s-12</code></td><td>48</td><td><span class="space-bar" style="width:48px"></span></td></tr>
+          <tr><td><code>--s-16</code></td><td>64</td><td><span class="space-bar" style="width:64px"></span></td></tr>
+        </tbody>
+      </table>
+      <table class="gal-table">
+        <caption class="sr-only">Forma, controles, movimiento, capas y breakpoints</caption>
+        <tbody>
+          <tr><th scope="row">Radios</th><td>4 kbd, 8 control, 12 contenedor, pill badge</td></tr>
+          <tr><th scope="row">Controles</th><td>44 escritorio, 48 público y táctil, 36 chico (solo escritorio)</td></tr>
+          <tr><th scope="row">Filas</th><td>40 compacta (default del equipo), 52 cómoda</td></tr>
+          <tr><th scope="row">Elevación</th><td><code>--elev-1</code> menú, <code>--elev-2</code> modal y toast, <code>--elev-3</code> drawer y visor; tinta navy con alfa</td></tr>
+          <tr><th scope="row">Movimiento</th><td>120 ms feedback, 200 ms drawer y modal, <code>cubic-bezier(.2,0,0,1)</code>; reduce a 1 ms con <code>prefers-reduced-motion</code></td></tr>
+          <tr><th scope="row">Capas</th><td>sticky 10, CTA 20, drawer 40, modal 50, toast 60, skip link 100</td></tr>
+          <tr><th scope="row">Breakpoints</th><td>≤ 640 móvil, 641–1024 sidebar colapsada y visor como diálogo, ≥ 1025 completa</td></tr>
+          <tr><th scope="row">Contenedores</th><td>Público 1080 (formulario 640), equipo hasta 1320, visor 520</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- BOTONES -->
+  <section class="gal-sec" id="botones" aria-labelledby="h-btn">
+    <h2 id="h-btn">Botones</h2>
+    <p>Verbo que dice qué pasa, sin flechas. Deshabilitado con <code>aria-disabled</code> y motivo visible al lado. En carga, el texto cambia a «…ando…» y conserva el ancho.</p>
+    <div class="gal-row"><span class="gal-label">Primario</span><button class="btn btn--primary" type="button">Aprobar venta</button><button class="btn btn--primary is-hover" type="button">Hover</button><button class="btn btn--primary is-active" type="button">Activo</button><button class="btn btn--primary is-focus" type="button">Foco</button><button class="btn btn--primary" type="button" aria-busy="true">Guardando…</button><button class="btn btn--primary" type="button" aria-disabled="true" aria-describedby="why1">Aprobar venta</button><span class="decision__why" id="why1"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg>Para aprobar, acepta los 3 documentos por revisar.</span></div>
+    <div class="gal-row"><span class="gal-label">Secundario</span><button class="btn btn--secondary" type="button"><svg class="i" aria-hidden="true"><use href="#i-link"/></svg>Copiar enlace a esta vista</button><button class="btn btn--secondary is-hover" type="button">Hover</button><button class="btn btn--secondary is-focus" type="button">Foco</button><button class="btn btn--secondary" type="button" disabled>Deshabilitado</button></div>
+    <div class="gal-row"><span class="gal-label">Peligro</span><button class="btn btn--danger" type="button">Rechazar</button><button class="btn btn--danger is-hover" type="button">Hover</button><button class="btn btn--danger is-focus" type="button">Foco</button></div>
+    <div class="gal-row"><span class="gal-label">Fantasma y enlace</span><button class="btn btn--ghost" type="button">Cancelar</button><button class="btn btn--ghost is-hover" type="button">Hover</button><button class="btn btn--ghost btn--icon" type="button" aria-label="Cerrar"><svg class="i i--20" aria-hidden="true"><use href="#i-x"/></svg></button><button class="btn btn--link" type="button">Pagar solo la matrícula, $37.026</button></div>
+    <div class="gal-row"><span class="gal-label">Tamaños</span><button class="btn btn--secondary btn--sm" type="button">Chico 36</button><button class="btn btn--secondary" type="button">Normal 44</button><button class="btn btn--primary btn--lg" type="button"><svg class="i i--20" aria-hidden="true"><use href="#i-card"/></svg>Grande 52: Pagar $430.276 con Webpay</button></div>
+  </section>
+
+  <!-- CAMPOS -->
+  <section class="gal-sec" id="campos" aria-labelledby="h-campos">
+    <h2 id="h-campos">Campos</h2>
+    <p>Label visible y asociado, <code>name</code>, <code>autocomplete</code>, <code>inputmode</code>. Error enganchado a <code>aria-invalid</code> + <code>aria-describedby</code>: borde de 2 px, icono y texto. Foco 2 px azul con offset; los compuestos lo pintan con <code>:focus-within</code>.</p>
+    <form class="gal-grid gal-grid--3" action="#" onsubmit="return false">
+      <div class="field"><label class="field__label" for="g1">Por defecto</label><input class="input" id="g1" name="g1" autocomplete="off" placeholder="Ej.: Camila Andrea…"></div>
+      <div class="field"><label class="field__label" for="g2">Hover</label><input class="input is-hover" id="g2" name="g2" autocomplete="off" value="Camila Andrea"></div>
+      <div class="field"><label class="field__label" for="g3">Foco</label><input class="input is-focus" id="g3" name="g3" autocomplete="off" value="Camila Andrea"></div>
+      <div class="field"><label class="field__label" for="g4">RUT con error</label><input class="input input--code" id="g4" name="rut" autocomplete="off" spellcheck="false" autocapitalize="characters" value="20.345.128-7" aria-invalid="true" aria-describedby="g4e"><p class="field__error" id="g4e"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg><span>Este RUT no es válido: el dígito después del guion no coincide.</span></p></div>
+      <div class="field"><label class="field__label" for="g5">Deshabilitado</label><input class="input" id="g5" name="g5" disabled value="Elige primero la región" aria-describedby="g5h"><p class="field__hint" id="g5h">Se habilita al elegir la región.</p></div>
+      <div class="field"><label class="field__label" for="g6">Solo lectura</label><input class="input tnum" id="g6" name="g6" readonly value="2026-000102" translate="no"></div>
+      <div class="field"><label class="field__label" for="g7">Select</label><select class="select" id="g7" name="region" autocomplete="address-level1"><option>Metropolitana de Santiago</option><option>Valparaíso</option></select></div>
+      <div class="field"><label class="field__label" for="g8">Celular</label><div class="combo"><span class="combo__prefix" aria-hidden="true">+56</span><input class="combo__input tnum" id="g8" name="celular" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="9 1234 5678…"></div></div>
+      <div class="field"><label class="field__label" for="g9">Celular, foco</label><div class="combo is-focus"><span class="combo__prefix" aria-hidden="true">+56</span><input class="combo__input tnum" id="g9" name="celular2" type="tel" inputmode="tel" autocomplete="off" value="9 6123 4587"></div></div>
+      <fieldset class="fieldgroup"><legend class="field__label">Fecha de nacimiento</legend><div class="date3"><div class="field"><label class="field__label" for="gd">Día</label><input class="input tnum" id="gd" name="bd" inputmode="numeric" autocomplete="bday-day" value="14"></div><div class="field"><label class="field__label" for="gm">Mes</label><input class="input tnum" id="gm" name="bm" inputmode="numeric" autocomplete="bday-month" value="05"></div><div class="field"><label class="field__label" for="ga">Año</label><input class="input tnum" id="ga" name="by" inputmode="numeric" autocomplete="bday-year" value="2009" aria-invalid="true" aria-describedby="gae"></div></div><p class="field__error" id="gae"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg><span>Debes tener 18 años o más para postular.</span></p></fieldset>
+      <div class="field"><label class="field__label" for="g10">Mensaje para el postulante</label><textarea class="textarea" id="g10" name="mensaje" autocomplete="off" aria-describedby="g10c">La concentración de notas llegó sin la página 2.</textarea><span class="field__count" id="g10c">49 de 500</span></div>
+      <div class="field"><span class="field__label" id="lbl-nac">Radio-card</span><div class="radio-row" role="radiogroup" aria-labelledby="lbl-nac"><label class="radio-card"><input class="radio-card__input" type="radio" name="nac" checked> Chilena</label><label class="radio-card is-focus"><input class="radio-card__input" type="radio" name="nac"> Extranjera</label></div></div>
+    </form>
+    <div class="gal-grid">
+      <div>
+        <label class="check"><input class="check__box" type="checkbox" checked> <span>Declaro que los datos y documentos son verdaderos.</span></label>
+        <label class="check"><input class="check__box" type="checkbox" disabled> <span>Checkbox deshabilitado</span></label>
+      </div>
+      <div class="error-summary" role="alert" tabindex="-1">
+        <p class="error-summary__title">Hay 4 datos por corregir</p>
+        <ul><li><a class="link" href="#g4">RUT</a></li><li><a class="link" href="#ga">Fecha de nacimiento</a></li><li><a class="link" href="#g8">Celular</a></li><li><a class="link" href="#g7">Comuna</a></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBIDA -->
+  <section class="gal-sec is-public" id="subida" aria-labelledby="h-subida">
+    <h2 id="h-subida">Subida de documento</h2>
+    <p>Una fila por requisito. JPG, PNG o PDF hasta 10&nbsp;MB; la foto solo imagen. El estado se anuncia en una región viva.</p>
+    <div class="upload upload--empty"><span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-upload"/></svg></span><div><p class="upload__name">Fotografía tipo carnet</p><p class="upload__meta">JPG o PNG, hasta 10&nbsp;MB</p></div><label class="btn btn--secondary upload__pick">Elegir archivo<input class="upload__file" type="file" accept="image/jpeg,image/png"></label></div>
+    <div class="upload"><span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-upload"/></svg></span><div><p class="upload__name">Cédula de identidad, anverso</p><p class="upload__status" role="status">Subiendo cedula.jpg: 64&nbsp;%</p></div><button class="btn btn--ghost btn--sm" type="button">Cancelar</button><div class="upload__progress" aria-hidden="true"><span style="width:64%"></span></div></div>
+    <div class="upload upload--scanning"><span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-shield"/></svg></span><div><p class="upload__name">Cédula de identidad, reverso</p><p class="upload__status"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>Recibido, revisando seguridad</p></div><span></span></div>
+    <div class="upload upload--ready"><span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check"/></svg></span><div><p class="upload__name">Licencia de enseñanza media</p><p class="upload__status"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Listo: licencia.pdf, 820&nbsp;KB</p></div><button class="btn btn--secondary btn--sm" type="button">Reemplazar</button></div>
+    <div class="upload upload--error"><span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-alert"/></svg></span><div><p class="upload__name">Fotografía tipo carnet</p><p class="upload__status"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>La foto debe ser JPG o PNG. Elige otro archivo.</p></div><button class="btn btn--secondary btn--sm" type="button">Elegir otro</button></div>
+    <div class="upload upload--later"><span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-clock"/></svg></span><div><p class="upload__name">Licencia de enseñanza media</p><p class="upload__status">La entregarás después. Te la pediremos por correo.</p></div><button class="btn btn--link" type="button">Subirla ahora</button></div>
+  </section>
+
+  <!-- PÚBLICO -->
+  <section class="gal-sec" id="publico" aria-labelledby="h-pub">
+    <h2 id="h-pub">Marco público, stepper y recorrido</h2>
+    <p>Ranura de institución junto al wordmark, ayuda con el correo visible, crédito en el pie. Formulario: stepper de 4 pasos con «Sigue». Post-envío: «Tu recorrido» vertical en escritorio y resumen «Etapa N de 8» en móvil.</p>
+    <div class="gal-frame">
+      <header class="pub-head"><div class="pub-head__inner"><img src="assets/academify-logo.svg" alt="academify" width="115" height="26" translate="no"><p class="pub-head__inst">Instituto Demo<span class="pub-head__process">Postulación Admisión 2027</span></p><a class="pub-head__help link" href="mailto:admision@institutodemo.cl"><svg class="i i--20" aria-hidden="true"><use href="#i-mail"/></svg><span class="pub-head__help-long">admision@institutodemo.cl</span></a></div></header>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-frame is-public"><nav class="steps" aria-label="Avance de la postulación (ejemplo)"><div class="steps__row"><span class="steps__now">Paso 2 de 4: Tus datos</span><span>Sigue: documentos</span></div><div class="steps__bars" role="img" aria-label="Paso 2 de 4"><span class="is-done"></span><span class="is-now"></span><span></span><span></span></div></nav>
+        <div class="cta-bar" style="position:static;margin:0"><p class="cta-bar__next"><strong>Después: subes tus documentos.</strong> Ten a mano tu cédula.</p><div class="cta-bar__actions"><a class="btn btn--secondary" href="#publico">Volver</a><button class="btn btn--primary" type="button">Continuar a documentos</button></div></div>
+      </div>
+      <div class="gal-frame gal-frame--pad">
+        <ol class="journey" aria-label="Recorrido (ejemplo)">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">17-10-2026 18:42</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Ahora, te toca a ti</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        </ol>
+        <p class="journey-sum" style="display:flex"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-now"></span><span></span><span></span></span><span>Etapa 6 de 8</span><a class="link" href="#publico">Ver tu recorrido</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHELL -->
+  <section class="gal-sec" id="shell" aria-labelledby="h-shell">
+    <h2 id="h-shell">Shell del equipo</h2>
+    <p>Una sola sidebar para todas las pantallas del equipo, con tres estados: completa (≥ 1025), colapsada a iconos (641–1024, sin logo para no separar el rombo del wordmark) y drawer (≤ 640, con barra superior). Ítem activo con <code>aria-current="page"</code>; contadores con texto accesible. Abajo, la sidebar de Administración con sus grupos.</p>
+    <div class="gal-grid">
+      <div class="gal-frame gal-static" style="max-width:240px">
+        <aside class="sidebar" aria-label="Navegación de Administración (ejemplo)"><div class="sidebar__inner">
+          <div class="sidebar__brand"><div class="sidebar__head"><img class="sidebar__brand-logo" src="assets/academify-logo.svg" alt="academify" width="106" height="24" translate="no"><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Contraer navegación" aria-expanded="true"><svg class="i" aria-hidden="true"><use href="#i-panel"/></svg></button></div><p class="sidebar__inst"><strong>Instituto Demo</strong>Admisión 2027</p></div>
+          <nav class="sidebar__nav" aria-label="Secciones (ejemplo)">
+            <a class="nav-item" href="#shell" aria-current="page"><svg class="i i--20" aria-hidden="true"><use href="#i-dashboard"/></svg><span class="nav-item__label">Panel</span></a>
+            <a class="nav-item" href="#shell"><svg class="i i--20" aria-hidden="true"><use href="#i-bell"/></svg><span class="nav-item__label">Alertas</span><span class="nav-item__count">3<span class="sr-only"> alertas</span></span></a>
+            <a class="nav-item is-hover" href="#shell"><svg class="i i--20" aria-hidden="true"><use href="#i-inbox"/></svg><span class="nav-item__label">Postulaciones</span><span class="nav-item__count">11</span></a>
+            <a class="nav-item" href="#shell"><svg class="i i--20" aria-hidden="true"><use href="#i-grad"/></svg><span class="nav-item__label">Matrículas</span></a>
+            <a class="nav-item" href="#shell"><svg class="i i--20" aria-hidden="true"><use href="#i-badge-check"/></svg><span class="nav-item__label">Por validar</span><span class="nav-item__count nav-item__count--yours">1<span class="sr-only"> te toca a ti</span></span></a>
+            <p class="sidebar__group">Catálogo y equipo</p>
+            <a class="nav-item" href="#shell"><svg class="i i--20" aria-hidden="true"><use href="#i-book"/></svg><span class="nav-item__label">Programas</span></a>
+            <a class="nav-item" href="#shell"><svg class="i i--20" aria-hidden="true"><use href="#i-tag"/></svg><span class="nav-item__label">Descuentos</span></a>
+            <a class="nav-item" href="#shell"><svg class="i i--20" aria-hidden="true"><use href="#i-users"/></svg><span class="nav-item__label">Usuarios</span></a>
+          </nav>
+          <div class="sidebar__foot"><button class="user" type="button" aria-haspopup="menu" aria-expanded="false"><span class="user__avatar" aria-hidden="true">PH</span><span class="user__text"><span class="user__name">Paula Henríquez Lagos</span><span class="user__role">Administración</span></span><svg class="i" aria-hidden="true"><use href="#i-chev-down"/></svg></button><p class="credit">Powered by <span translate="no">Ticnology</span><img class="credit__icon" src="assets/ticnology-icono.svg" alt="" width="14" height="14"></p></div>
+        </div></aside>
+      </div>
+      <div class="gal-item">
+        <span class="gal-label">Menú de usuario abierto</span>
+        <ul class="menu" role="menu" aria-label="Cuenta de Paula Henríquez">
+          <li role="none"><button class="menu__item" role="menuitem" type="button"><svg class="i" aria-hidden="true"><use href="#i-keyboard"/></svg>Atajos de teclado<span class="menu__meta">Activados</span></button></li>
+          <li role="none"><button class="menu__item" role="menuitem" type="button"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Segundo factor<span class="menu__meta">Activo</span></button></li>
+          <li role="none" class="menu__sep"></li>
+          <li role="none"><button class="menu__item menu__item--danger" role="menuitem" type="button"><svg class="i" aria-hidden="true"><use href="#i-logout"/></svg>Cerrar sesión</button></li>
+        </ul>
+        <span class="gal-label" style="margin-top:24px">Tablet 900 px: colapsada</span>
+        <div class="gal-frame"><iframe src="pilotos/p3-bandeja.html" title="Bandeja a 900 px con sidebar colapsada" width="900" height="300" loading="lazy" style="width:900px;max-width:none;transform:scale(.6);transform-origin:0 0;height:300px;margin-bottom:-120px"></iframe></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABLAS -->
+  <section class="gal-sec" id="tablas" aria-labelledby="h-tablas">
+    <h2 id="h-tablas">Tablas</h2>
+    <p>Compacta 40 px por defecto en bandejas, una línea por fila; cómoda 52 px en fichas. Grupo por turno, fila cursor con borde azul, cifras a la derecha, <code>caption</code> y <code>scope</code>. En móvil se apilan sin ocultar columnas (ver pilotos a 390 px).</p>
+    <div class="table-wrap" style="margin-top:16px">
+      <table class="table">
+        <caption class="sr-only">Ejemplo compacto</caption>
+        <thead><tr><th scope="col">Folio</th><th scope="col">Postulante</th><th scope="col">Estado</th><th scope="col">Siguiente acción</th><th scope="col" class="num" aria-sort="descending">Esperando</th></tr></thead>
+        <tbody>
+          <tr class="table__group"><th scope="rowgroup" colspan="5"><span class="table__group-inner"><span class="rombo" aria-hidden="true"></span>Te toca a ti <span class="table__group-count">1</span></span></th></tr>
+          <tr class="is-cursor"><td class="folio">2026-000102</td><td class="cell-main">Benjamín Soto Valenzuela</td><td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar</span></td><td><a class="next next--yours" href="#tablas">Revisar 3 documentos</a></td><td class="num"><span class="wait wait--over"><svg class="i i--14" aria-hidden="true"><use href="#i-clock"/></svg>hace 3 días</span></td></tr>
+          <tr class="table__group"><th scope="rowgroup" colspan="5"><span class="table__group-inner">Esperando a otros <span class="table__group-count">2</span></span></th></tr>
+          <tr class="is-hover"><td class="folio">2026-000104</td><td class="cell-main">Javiera Fuentes Tapia</td><td><span class="badge badge--applicant"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Por firmar</span></td><td><span class="next"><span class="next__who">Javiera</span> firma el contrato</span></td><td class="num"><span class="wait"><svg class="i i--14" aria-hidden="true"><use href="#i-clock"/></svg>hace 3 días</span></td></tr>
+          <tr><td class="folio">2026-000110</td><td class="cell-main">Carlos Ramírez Quintero</td><td><span class="badge badge--system"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>Aprobada</span></td><td><span class="next"><span class="next__who">Sistema</span> prepara el contrato</span></td><td class="num"><span class="wait"><svg class="i i--14" aria-hidden="true"><use href="#i-clock"/></svg>hoy</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="section-head__title" style="margin-top:32px">Matriz de Matrículas: primera columna fija y pista de scroll</h3>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Matriz de matrículas, desplázate horizontalmente">
+      <table class="table table--matrix density-comfy" style="min-width:1100px">
+        <caption class="sr-only">Casos por etapa</caption>
+        <thead><tr><th scope="col">Postulante</th><th scope="col">Venta</th><th scope="col">Contrato y firma</th><th scope="col">Pago</th><th scope="col">Validación académica</th><th scope="col">Matriculado</th><th scope="col" class="num">En la etapa</th></tr></thead>
+        <tbody>
+          <tr><th scope="row" class="cell-main">Diego Tapia Muñoz</th><td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Cumplida</span></td><td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Cumplida</span></td><td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Pagado</span></td><td><span class="badge badge--team"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Por validar</span></td><td><span class="muted">Aún no</span></td><td class="num">1 día</td></tr>
+          <tr><th scope="row" class="cell-main">Francisca Herrera Silva</th><td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Cumplida</span></td><td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Cumplida</span></td><td><span class="badge badge--plain"><svg class="i" aria-hidden="true"><use href="#i-minus"/></svg>Sin cobro, convenio</span></td><td><span class="muted">Aún no</span></td><td><span class="muted">Aún no</span></td><td class="num">2 días</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="scroll-hint"><svg class="i" aria-hidden="true"><use href="#i-chev-right"/></svg>Desliza para ver más etapas</p>
+  </section>
+
+  <!-- FILTROS -->
+  <section class="gal-sec" id="filtros" aria-labelledby="h-filtros">
+    <h2 id="h-filtros">Pestañas, filtros, segmentos y toolbar</h2>
+    <p>Todo estado de vista vive en la URL (<code>?estado=&amp;programa=&amp;densidad=</code>). Pestañas de estado como enlaces con <code>aria-current</code>; segmentos con <code>aria-pressed</code>.</p>
+    <nav class="tabs" aria-label="Pestañas (ejemplo)" style="margin-top:16px"><a class="tabs__tab" href="#filtros" aria-current="page">Todas <span class="tabs__count">11</span></a><a class="tabs__tab" href="#filtros">Por revisar <span class="tabs__count tabs__count--yours"><span class="rombo rombo--sm" aria-hidden="true"></span>2<span class="sr-only">, te tocan a ti</span></span></a><a class="tabs__tab is-focus" href="#filtros">Observadas <span class="tabs__count">1</span></a><a class="tabs__tab" href="#filtros">Aprobadas <span class="tabs__count">2</span></a></nav>
+    <div class="toolbar">
+      <div class="search"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg><label class="sr-only" for="gq">Buscar</label><input class="input" id="gq" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Buscar por nombre, RUT o folio…"><kbd class="kbd" aria-hidden="true">/</kbd></div>
+      <button class="filter" type="button" aria-haspopup="listbox" aria-expanded="false">Programa <span class="filter__value">Todos</span><svg class="i" aria-hidden="true"><use href="#i-chev-down"/></svg></button>
+      <button class="filter filter--active" type="button" aria-haspopup="listbox" aria-expanded="false">Jornada <span class="filter__value">Vespertina</span><svg class="i" aria-hidden="true"><use href="#i-chev-down"/></svg></button>
+      <button class="filter" type="button" aria-haspopup="listbox" aria-expanded="true">Etapa <span class="filter__value">Abierto</span><svg class="i" aria-hidden="true"><use href="#i-chev-down"/></svg></button>
+      <div class="toolbar__end"><div class="seg" role="group" aria-label="Densidad"><button class="seg__opt" type="button" aria-pressed="true">Compacta</button><button class="seg__opt" type="button" aria-pressed="false">Cómoda</button></div></div>
+    </div>
+    <div class="pagination"><span class="pagination__info">Mostrando 1–25 de 48</span><button class="btn btn--secondary btn--sm" type="button" disabled>Anterior</button><button class="btn btn--secondary btn--sm" type="button">Siguiente</button><button class="btn btn--ghost btn--sm" type="button">Cargar más</button></div>
+  </section>
+
+  <!-- ETAPAS -->
+  <section class="gal-sec" id="etapas" aria-labelledby="h-etapas">
+    <h2 id="h-etapas">Etapas del caso y relevo</h2>
+    <p>Cinco etapas con forma de turno y microcopy por etapa. Debajo, el relevo en texto: quién mueve ahora y quién después.</p>
+    <ol class="stages" aria-label="Etapas (ejemplo, caso por firmar visto por el vendedor)">
+      <li class="stages__item is-done"><span class="stages__track"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span class="stages__line"></span></span><span class="stages__name">Venta</span><span class="stages__note">Aprobada el 15-10-2026</span></li>
+      <li class="stages__item" aria-current="step"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Contrato y firma</span><span class="stages__note">Le toca a Javiera</span></li>
+      <li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Pago</span><span class="stages__note">Matrícula $108.900</span></li>
+      <li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Validación</span><span class="stages__note">Después del pago</span></li>
+      <li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Matriculado</span><span class="stages__note">Al validar</span></li>
+    </ol>
+    <dl class="relay"><dt>Ahora</dt><dd><strong>Javiera firma el contrato</strong> versión 1, publicado el 16-10-2026.</dd><dt>Después</dt><dd><strong>Javiera paga la matrícula</strong>; luego validación académica.</dd></dl>
+  </section>
+
+  <!-- VISOR -->
+  <section class="gal-sec" id="visor" aria-labelledby="h-visor">
+    <h2 id="h-visor">Visor documental</h2>
+    <p>Segunda columna en escritorio; diálogo lateral en ≤ 1024 (<code>role="dialog"</code>, <code>aria-modal</code>, fondo <code>inert</code>, foco atrapado y devuelto). Las decisiones Aceptar y Observar viven solo aquí. Atajos de una tecla solo con el foco en el visor y desactivables (WCAG 2.1.4).</p>
+    <div class="gal-frame gal-static" style="max-width:520px">
+      <section class="viewer" aria-labelledby="gv-t"><div class="viewer__inner">
+        <header class="viewer__head"><div class="viewer__title"><h3 class="viewer__name" id="gv-t">Concentración de notas</h3><p class="viewer__meta">notas.pdf, 340&nbsp;KB, página 1 de 3</p></div><span class="viewer__pos">1 de 1 por revisar</span><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Cerrar visor"><svg class="i i--20" aria-hidden="true"><use href="#i-x"/></svg></button></header>
+        <div class="viewer__compare">
+          <h4 class="viewer__compare-title">Compara con lo que declaró</h4>
+          <dl class="compare">
+            <div class="compare__row"><dt>Nombres</dt><dd>Valentina Paz</dd><span class="compare__ok"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg>Coincide</span></div>
+            <div class="compare__row"><dt>Páginas</dt><dd>3 de 4</dd><span class="compare__diff"><svg class="i i--14" aria-hidden="true"><use href="#i-x"/></svg>Falta 1</span></div>
+          </dl>
+        </div>
+        <footer><div class="viewer__actions"><span class="viewer__nav"><button class="btn btn--secondary btn--icon" type="button" aria-label="Documento anterior" disabled><svg class="i" aria-hidden="true"><use href="#i-chev-left"/></svg></button><button class="btn btn--secondary btn--icon" type="button" aria-label="Documento siguiente"><svg class="i" aria-hidden="true"><use href="#i-chev-right"/></svg></button></span><button class="btn btn--secondary" type="button">Observar</button><button class="btn btn--primary" type="button">Aceptar y ver el siguiente</button></div>
+        <p class="viewer__legend"><span class="shortcuts__item"><kbd class="kbd">A</kbd> aceptar</span><span class="shortcuts__item"><kbd class="kbd">O</kbd> observar</span><span class="shortcuts__item"><kbd class="kbd">Esc</kbd> cerrar</span></p></footer>
+      </div></section>
+    </div>
+  </section>
+
+  <!-- MONTOS -->
+  <section class="gal-sec is-public" id="montos" aria-labelledby="h-montos">
+    <h2 id="h-montos">Montos</h2>
+    <p>Lo obligatorio, fijo y con candado; lo opcional, con control − / + y una pista no interactiva. El total es un renglón de libro contable, con región viva.</p>
+    <div class="gal-grid">
+      <div>
+        <div class="line-item"><span class="line-item__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-lock"/></svg></span><div><p class="line-item__name">Matrícula 2027</p><p class="line-item__desc">Convenio CARABINEROS: 100&nbsp;%.</p></div><p class="line-item__amount"><span class="line-item__was">$108.900</span>$0</p></div>
+        <div class="qty-row"><div class="qty" role="group" aria-label="Cuotas a adelantar"><button class="qty__btn" type="button" aria-label="Una cuota menos" disabled><svg class="i i--20" aria-hidden="true"><use href="#i-minus"/></svg></button><output class="qty__val">0</output><button class="qty__btn" type="button" aria-label="Una cuota más"><svg class="i i--20" aria-hidden="true"><use href="#i-plus"/></svg></button></div><p class="qty-row__text">Sin cuotas adelantadas.</p></div>
+        <div class="track"><div class="track__bar" aria-hidden="true"><span class="is-paid"></span><span class="is-paid"></span><span class="is-in"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><p class="track__text">Pagadas 1 y 2, adelantas la 3. Quedan 7.</p></div>
+      </div>
+      <div>
+        <dl class="total__rows"><dt>Matrícula</dt><dd>$37.026</dd><dt>Cuota 1 del arancel</dt><dd>$196.625</dd></dl>
+        <p class="total__sum"><span class="total__label">Total a pagar hoy</span><span class="total__amount" aria-live="polite">$233.651</span></p>
+        <ol class="handoff"><li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú pagas</strong> con <span translate="no">Webpay</span>.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión valida</strong> tus documentos académicos.</span></li></ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPI -->
+  <section class="gal-sec" id="datos" aria-labelledby="h-datos">
+    <h2 id="h-datos">KPI y barras</h2>
+    <p>KPI en una franja con divisores, sin tarjetas. Barras enlazadas a la bandeja filtrada; el color es el del actor y el texto lo nombra. Totales del dataset semilla.</p>
+    <dl class="kpis" style="margin-top:16px">
+      <div class="kpi"><dt class="kpi__label">Postulaciones</dt><dd class="kpi__value">12</dd><dd class="kpi__note">11 enviadas y 1 borrador</dd></div>
+      <div class="kpi"><dt class="kpi__label">En revisión</dt><dd class="kpi__value">3</dd><dd class="kpi__note">2 por revisar, 1 observada</dd></div>
+      <div class="kpi"><dt class="kpi__label">En firma y pago</dt><dd class="kpi__value">3</dd><dd class="kpi__note">1 por firmar, 2 por pagar</dd></div>
+      <div class="kpi"><dt class="kpi__label">Matriculados</dt><dd class="kpi__value">1</dd><dd class="kpi__note">1 por validar</dd></div>
+      <div class="kpi"><dt class="kpi__label">Recaudado en línea</dt><dd class="kpi__value">$597.800</dd><dd class="kpi__note">2 pagos autorizados</dd></div>
+    </dl>
+    <ul class="bars" style="margin-top:24px;max-width:640px" aria-label="Dónde están los casos">
+      <li><a class="bars__row" href="#datos"><span class="bars__label">Por revisar<span class="sr-only">, espera al equipo</span></span><span class="bars__track" aria-hidden="true"><span class="bars__fill bars__fill--team" style="width:100%"></span></span><span class="bars__value">2</span></a></li>
+      <li><a class="bars__row" href="#datos"><span class="bars__label">Por pagar<span class="sr-only">, espera al postulante</span></span><span class="bars__track" aria-hidden="true"><span class="bars__fill bars__fill--applicant" style="width:100%"></span></span><span class="bars__value">2</span></a></li>
+      <li><a class="bars__row" href="#datos"><span class="bars__label">Aprobadas<span class="sr-only">, en curso</span></span><span class="bars__track" aria-hidden="true"><span class="bars__fill" style="width:100%"></span></span><span class="bars__value">2</span></a></li>
+      <li><a class="bars__row" href="#datos"><span class="bars__label">Matriculados</span><span class="bars__track" aria-hidden="true"><span class="bars__fill bars__fill--done" style="width:50%"></span></span><span class="bars__value">1</span></a></li>
+    </ul>
+  </section>
+
+  <!-- AVISOS -->
+  <section class="gal-sec" id="feedback" aria-labelledby="h-fb">
+    <h2 id="h-fb">Alertas en línea, toast y banda de entorno</h2>
+    <p>La alerta va junto a la acción que falló y dice qué hacer. El toast confirma acciones del equipo con <code>aria-live="polite"</code> y «Deshacer» si es reversible.</p>
+    <div class="gal-grid">
+      <div class="form-stack">
+        <div class="alert alert--info"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><div><p class="alert__title">El contrato se está preparando</p><p class="alert__body">Te avisamos por correo cuando esté listo para firmar.</p></div></div>
+        <div class="alert alert--warning"><svg class="i" aria-hidden="true"><use href="#i-triangle"/></svg><div><p class="alert__title">La licencia está en entrega posterior</p><p class="alert__body">Puedes matricular igual; queda registrado en la bitácora.</p></div></div>
+        <div class="alert alert--error" role="alert"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg><div><p class="alert__title">Las condiciones cambiaron</p><p class="alert__body">El arancel de Ingeniería Comercial pasó de $3.025.000 a $3.100.000. Revisa los valores actuales antes de aprobar.</p><div class="alert__actions"><button class="btn btn--secondary btn--sm" type="button">Revisé los datos actuales</button></div></div></div>
+        <div class="alert alert--success"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg><div><p class="alert__title">Recibimos tu documento</p><p class="alert__body">Lo revisamos y te avisamos por correo. No tienes otros pendientes.</p></div></div>
+      </div>
+      <div class="gal-static">
+        <div class="toast-region" aria-live="polite">
+          <div class="toast"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>Cédula, anverso aceptada</span><button class="toast__action" type="button">Deshacer</button></div>
+          <div class="toast"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg><span>Observaciones enviadas a Valentina</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VACÍO -->
+  <section class="gal-sec" id="vacio" aria-labelledby="h-vacio">
+    <h2 id="h-vacio">Vacío, carga y error de carga</h2>
+    <div class="gal-grid gal-grid--3">
+      <div class="empty"><span class="empty__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-inbox"/></svg></span><p class="empty__title">Aún no hay postulaciones</p><p class="empty__body">Crea una ficha o comparte el formulario de postulación.</p><div class="btn-row"><a class="btn btn--primary btn--sm" href="#vacio"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg>Nueva ficha</a></div></div>
+      <div class="empty"><span class="empty__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-search"/></svg></span><p class="empty__title">No hay resultados para estos filtros</p><p class="empty__body">Programa: Derecho. Jornada: vespertina.</p><div class="btn-row"><button class="btn btn--secondary btn--sm" type="button">Limpiar filtros</button></div></div>
+      <div>
+        <div role="status" class="sr-only">Cargando…</div>
+        <div class="form-stack" aria-hidden="true" style="gap:12px;padding-top:40px">
+          <span class="skeleton skeleton--lg" style="width:60%"></span><span class="skeleton" style="width:90%"></span><span class="skeleton" style="width:80%"></span><span class="skeleton skeleton--pill"></span>
+        </div>
+        <div class="load-error"><svg class="i" aria-hidden="true"><use href="#i-wifi-off"/></svg><span>No pudimos actualizar; mostramos los datos de las 15:40.</span><button class="btn btn--secondary btn--sm" type="button">Reintentar</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIÁLOGOS -->
+  <section class="gal-sec" id="dialogos" aria-labelledby="h-dlg">
+    <h2 id="h-dlg">Modal y drawer: un único patrón</h2>
+    <p>Foco inicial en el título, trampa de Tab, Esc, retorno al origen, <code>aria-labelledby</code>, fondo <code>inert</code>, body bloqueado y <code>overscroll-behavior: contain</code>. En móvil el modal se vuelve hoja inferior.</p>
+    <div class="gal-frame gal-frame--muted gal-static">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="gm-t">
+        <div class="modal__head"><h3 class="modal__title" id="gm-t" tabindex="-1">Observar concentración de notas</h3><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Cerrar"><svg class="i i--20" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+        <div class="modal__body">
+          <div class="field"><label class="field__label" for="gm-m">Motivo</label><select class="select" id="gm-m" name="motivo"><option>Faltan páginas</option><option>No se lee completo</option><option>Documento vencido</option><option>No corresponde al documento pedido</option><option>Otro</option></select></div>
+          <div class="field"><label class="field__label" for="gm-x">Mensaje para Valentina <span class="field__opt">(una línea)</span></label><input class="input" id="gm-x" name="mensaje" autocomplete="off" value="Falta la página 2 de 4." aria-describedby="gm-h"><p class="field__hint" id="gm-h">Sin enlaces, correos ni números largos. Se envía junto con las demás observaciones en un solo correo.</p></div>
+        </div>
+        <div class="modal__foot"><button class="btn btn--ghost" type="button">Cancelar</button><button class="btn btn--primary" type="button">Observar documento</button></div>
+      </div>
+    </div>
+    <div class="gal-frame gal-static" style="margin-top:24px">
+      <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="gdw-t">
+        <header class="drawer__head"><div style="flex:1"><h3 class="drawer__title" id="gdw-t" tabindex="-1">Diego Tapia Muñoz</h3><p class="viewer__meta">Folio 2026-000107, Auditoría</p></div><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Caso anterior"><svg class="i" aria-hidden="true"><use href="#i-chev-left"/></svg></button><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Caso siguiente"><svg class="i" aria-hidden="true"><use href="#i-chev-right"/></svg></button><button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Cerrar detalle"><svg class="i i--20" aria-hidden="true"><use href="#i-x"/></svg></button></header>
+        <div class="drawer__body">
+          <nav class="tabs" aria-label="Etapas del caso"><a class="tabs__tab" href="#dialogos">Venta</a><a class="tabs__tab" href="#dialogos">Contrato</a><a class="tabs__tab" href="#dialogos" aria-current="page">Pago</a><a class="tabs__tab" href="#dialogos">Validación</a></nav>
+          <dl class="kv" style="margin-top:16px"><dt>Comprometido</dt><dd>$2.008.900</dd><dt>Pagado</dt><dd>$488.900</dd><dt class="kv__strong">Saldo</dt><dd class="kv__strong">$1.520.000</dd><dt>Orden de compra</dt><dd translate="no">ADMk3f9q2m7x1c8v4b6n0p5r2t</dd><dt>Autorización y tarjeta</dt><dd>1213, terminada en 6623</dd></dl>
+        </div>
+        <footer class="drawer__foot"><a class="btn btn--secondary" href="#dialogos">Abrir la ficha completa</a></footer>
+      </aside>
+    </div>
+  </section>
+
+  <!-- HISTORIAL -->
+  <section class="gal-sec" id="historial" aria-labelledby="h-hist">
+    <h2 id="h-hist">Historial, kbd</h2>
+    <div class="gal-grid">
+      <ol class="timeline">
+        <li class="timeline__day">18-10-2026</li>
+        <li class="timeline__item"><time class="timeline__time" datetime="2026-10-18T10:12">10:12</time><span>Matrícula confirmada<span class="timeline__who">Rodrigo Fuentealba, Validador</span></span></li>
+        <li class="timeline__item"><time class="timeline__time" datetime="2026-10-18T10:12">10:12</time><span>Correo «Quedaste matriculada» enviado<span class="timeline__who">Sistema</span></span></li>
+        <li class="timeline__day">17-10-2026</li>
+        <li class="timeline__item"><time class="timeline__time" datetime="2026-10-17T18:42">18:42</time><span>Contrato versión 1 firmado<span class="timeline__who">Fernanda, postulante</span></span></li>
+      </ol>
+      <div class="shortcuts"><span class="shortcuts__item"><kbd class="kbd">J</kbd><kbd class="kbd">K</kbd> moverte</span><span class="shortcuts__item"><kbd class="kbd">↵</kbd> abrir</span><span class="shortcuts__item"><kbd class="kbd">/</kbd> buscar</span><span class="shortcuts__item"><kbd class="kbd">Esc</kbd> cerrar</span></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

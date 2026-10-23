@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F7F8FA">
+<title>Verificar segundo factor · academify</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<!--SPRITE-->
+<div class="auth" data-estado="inicial" data-estado-label="Código de la app">
+  <a class="skip-link" href="#contenido-inicial">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-inicial">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-inicial">
+      <h1 class="auth__title" id="t-inicial" tabindex="-1">Ingresa tu código</h1>
+      <p class="auth__lede">Abre tu aplicación autenticadora y escribe el código de 6 dígitos de Academify. Cambia cada 30 segundos.</p>
+      <p class="auth__who">Ingresando como <strong translate="no">paula.henriquez@institutodemo.cl</strong>. <a class="link" href="acc-01-ingresar.html">Usar otra cuenta</a></p>
+      <form class="auth__form" action="../admin/adm-01-panel.html" method="get" novalidate>
+        <div class="field">
+          <label class="field__label" for="code-inicial">Código de 6 dígitos</label>
+          <input class="input otp" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" id="code-inicial" name="code" type="text" autocomplete="one-time-code" spellcheck="false" autofocus>
+        </div>
+
+        <div class="auth__actions">
+          <button class="btn btn--primary btn--block" type="submit">Verificar</button>
+          <p class="auth__alt"><a class="btn btn--link" href="?estado=recuperacion">{{i:key}}Usar un código de recuperación</a></p>
+        </div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Perdiste el teléfono y tus códigos de recuperación? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="verificando" data-estado-label="Verificando">
+  <a class="skip-link" href="#contenido-verificando">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-verificando">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-verificando">
+      <h1 class="auth__title" id="t-verificando" tabindex="-1">Ingresa tu código</h1>
+      <p class="auth__lede">Abre tu aplicación autenticadora y escribe el código de 6 dígitos de Academify. Cambia cada 30 segundos.</p>
+      <p class="auth__who">Ingresando como <strong translate="no">paula.henriquez@institutodemo.cl</strong>. <a class="link" href="acc-01-ingresar.html">Usar otra cuenta</a></p>
+      <form class="auth__form" action="../admin/adm-01-panel.html" method="get" novalidate>
+        <div class="field">
+          <label class="field__label" for="code-verificando">Código de 6 dígitos</label>
+          <input class="input otp" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" id="code-verificando" name="code" type="text" autocomplete="one-time-code" spellcheck="false" value="482913">
+        </div>
+
+        <div class="auth__actions">
+          <button class="btn btn--primary btn--block" type="submit" aria-busy="true">Verificando…</button>
+          <p class="auth__alt"><a class="btn btn--link" href="?estado=recuperacion">{{i:key}}Usar un código de recuperación</a></p>
+        </div>
+        <p class="sr-only" role="status">Verificando…</p>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Perdiste el teléfono y tus códigos de recuperación? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="incorrecto" data-estado-label="Código incorrecto">
+  <a class="skip-link" href="#contenido-incorrecto">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-incorrecto">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-incorrecto">
+      <h1 class="auth__title" id="t-incorrecto" tabindex="-1">Ingresa tu código</h1>
+      <p class="auth__lede">Abre tu aplicación autenticadora y escribe el código de 6 dígitos de Academify. Cambia cada 30 segundos.</p>
+      <p class="auth__who">Ingresando como <strong translate="no">paula.henriquez@institutodemo.cl</strong>. <a class="link" href="acc-01-ingresar.html">Usar otra cuenta</a></p>
+      <form class="auth__form" action="../admin/adm-01-panel.html" method="get" novalidate>
+        <div class="field">
+          <label class="field__label" for="code-incorrecto">Código de 6 dígitos</label>
+          <input class="input otp" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" id="code-incorrecto" name="code" type="text" autocomplete="one-time-code" spellcheck="false" value="482931" aria-invalid="true" aria-describedby="code-incorrecto-error">
+          <p class="field__error" id="code-incorrecto-error">{{i:alert}}<span>El código no es correcto. Revisa que la hora del teléfono esté al día y escribe el código que se ve ahora.</span></p>
+        </div>
+
+        <div class="auth__actions">
+          <button class="btn btn--primary btn--block" type="submit">Verificar</button>
+          <p class="auth__alt"><a class="btn btn--link" href="?estado=recuperacion">{{i:key}}Usar un código de recuperación</a></p>
+        </div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Perdiste el teléfono y tus códigos de recuperación? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="ya-usado" data-estado-label="Código ya usado">
+  <a class="skip-link" href="#contenido-ya-usado">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-ya-usado">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-ya-usado">
+      <h1 class="auth__title" id="t-ya-usado" tabindex="-1">Ingresa tu código</h1>
+      <p class="auth__lede">Abre tu aplicación autenticadora y escribe el código de 6 dígitos de Academify. Cambia cada 30 segundos.</p>
+      <p class="auth__who">Ingresando como <strong translate="no">paula.henriquez@institutodemo.cl</strong>. <a class="link" href="acc-01-ingresar.html">Usar otra cuenta</a></p>
+      <form class="auth__form" action="../admin/adm-01-panel.html" method="get" novalidate>
+        <div class="field">
+          <label class="field__label" for="code-ya-usado">Código de 6 dígitos</label>
+          <input class="input otp" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" id="code-ya-usado" name="code" type="text" autocomplete="one-time-code" spellcheck="false" value="482913" aria-invalid="true" aria-describedby="code-ya-usado-error">
+          <p class="field__error" id="code-ya-usado-error">{{i:alert}}<span>Ese código ya se usó. Espera el siguiente: cambia cada 30 segundos.</span></p>
+        </div>
+
+        <div class="auth__actions">
+          <button class="btn btn--primary btn--block" type="submit">Verificar</button>
+          <p class="auth__alt"><a class="btn btn--link" href="?estado=recuperacion">{{i:key}}Usar un código de recuperación</a></p>
+        </div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Perdiste el teléfono y tus códigos de recuperación? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="recuperacion" data-estado-label="Código de recuperación">
+  <a class="skip-link" href="#contenido-recuperacion">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-recuperacion">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-recuperacion">
+      <h1 class="auth__title" id="t-recuperacion" tabindex="-1">Usa un código de recuperación</h1>
+      <p class="auth__lede">Escribe uno de los 10 códigos que guardaste al configurar el segundo factor. Cada código sirve una sola vez.</p>
+      <p class="auth__who">Ingresando como <strong translate="no">paula.henriquez@institutodemo.cl</strong>. <a class="link" href="acc-01-ingresar.html">Usar otra cuenta</a></p>
+      <form class="auth__form" action="../admin/adm-01-panel.html" method="get" novalidate>
+        <div class="field">
+          <label class="field__label" for="code-recuperacion">Código de recuperación</label>
+          <input class="input otp otp--recovery" inputmode="text" autocapitalize="characters" placeholder="Ej.: 7KQ2M-X9D4P…" id="code-recuperacion" name="code" type="text" autocomplete="one-time-code" spellcheck="false" aria-describedby="code-recuperacion-hint">
+          <p class="field__hint" id="code-recuperacion-hint">Con o sin guion.</p>
+        </div>
+
+        <div class="auth__actions">
+          <button class="btn btn--primary btn--block" type="submit">Verificar</button>
+          <p class="auth__alt"><a class="btn btn--link" href="?estado=inicial">{{i:smartphone}}Usar la aplicación autenticadora</a></p>
+        </div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Perdiste el teléfono y tus códigos de recuperación? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="recuperacion-invalida" data-estado-label="Recuperación inválida">
+  <a class="skip-link" href="#contenido-recuperacion-invalida">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-recuperacion-invalida">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-recuperacion-invalida">
+      <h1 class="auth__title" id="t-recuperacion-invalida" tabindex="-1">Usa un código de recuperación</h1>
+      <p class="auth__lede">Escribe uno de los 10 códigos que guardaste al configurar el segundo factor. Cada código sirve una sola vez.</p>
+      <p class="auth__who">Ingresando como <strong translate="no">paula.henriquez@institutodemo.cl</strong>. <a class="link" href="acc-01-ingresar.html">Usar otra cuenta</a></p>
+      <form class="auth__form" action="../admin/adm-01-panel.html" method="get" novalidate>
+        <div class="field">
+          <label class="field__label" for="code-recuperacion-invalida">Código de recuperación</label>
+          <input class="input otp otp--recovery" inputmode="text" autocapitalize="characters" placeholder="Ej.: 7KQ2M-X9D4P…" id="code-recuperacion-invalida" name="code" type="text" autocomplete="one-time-code" spellcheck="false" value="7KQ2M-X9D4B" aria-invalid="true" aria-describedby="code-recuperacion-invalida-error code-recuperacion-invalida-hint">
+          <p class="field__error" id="code-recuperacion-invalida-error">{{i:alert}}<span>Ese código de recuperación no es válido. Revisa que lo hayas copiado completo.</span></p>
+          <p class="field__hint" id="code-recuperacion-invalida-hint">Con o sin guion.</p>
+        </div>
+
+        <div class="auth__actions">
+          <button class="btn btn--primary btn--block" type="submit">Verificar</button>
+          <p class="auth__alt"><a class="btn btn--link" href="?estado=inicial">{{i:smartphone}}Usar la aplicación autenticadora</a></p>
+        </div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Perdiste el teléfono y tus códigos de recuperación? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="recuperacion-usada" data-estado-label="Recuperación ya usada">
+  <a class="skip-link" href="#contenido-recuperacion-usada">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-recuperacion-usada">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-recuperacion-usada">
+      <h1 class="auth__title" id="t-recuperacion-usada" tabindex="-1">Usa un código de recuperación</h1>
+      <p class="auth__lede">Escribe uno de los 10 códigos que guardaste al configurar el segundo factor. Cada código sirve una sola vez.</p>
+      <p class="auth__who">Ingresando como <strong translate="no">paula.henriquez@institutodemo.cl</strong>. <a class="link" href="acc-01-ingresar.html">Usar otra cuenta</a></p>
+      <form class="auth__form" action="../admin/adm-01-panel.html" method="get" novalidate>
+        <div class="field">
+          <label class="field__label" for="code-recuperacion-usada">Código de recuperación</label>
+          <input class="input otp otp--recovery" inputmode="text" autocapitalize="characters" placeholder="Ej.: 7KQ2M-X9D4P…" id="code-recuperacion-usada" name="code" type="text" autocomplete="one-time-code" spellcheck="false" value="7KQ2M-X9D4P" aria-invalid="true" aria-describedby="code-recuperacion-usada-error code-recuperacion-usada-hint">
+          <p class="field__error" id="code-recuperacion-usada-error">{{i:alert}}<span>Ese código de recuperación ya se usó. Prueba con otro de tu lista.</span></p>
+          <p class="field__hint" id="code-recuperacion-usada-hint">Con o sin guion.</p>
+        </div>
+
+        <div class="auth__actions">
+          <button class="btn btn--primary btn--block" type="submit">Verificar</button>
+          <p class="auth__alt"><a class="btn btn--link" href="?estado=inicial">{{i:smartphone}}Usar la aplicación autenticadora</a></p>
+        </div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Perdiste el teléfono y tus códigos de recuperación? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="demasiados" data-estado-label="Demasiados intentos">
+  <a class="skip-link" href="#contenido-demasiados">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-demasiados">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-demasiados">
+      <h1 class="auth__title" id="t-demasiados" tabindex="-1">Ingresa tu código</h1>
+      <p class="auth__lede">Abre tu aplicación autenticadora y escribe el código de 6 dígitos de Academify. Cambia cada 30 segundos.</p>
+      <p class="auth__who">Ingresando como <strong translate="no">paula.henriquez@institutodemo.cl</strong>. <a class="link" href="acc-01-ingresar.html">Usar otra cuenta</a></p>
+      <form class="auth__form" action="../admin/adm-01-panel.html" method="get" novalidate>
+        <div class="field">
+          <label class="field__label" for="code-demasiados">Código de 6 dígitos</label>
+          <input class="input otp" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" id="code-demasiados" name="code" type="text" autocomplete="one-time-code" spellcheck="false">
+        </div>
+        <div class="alert alert--error" role="alert">{{i20:clock}}<div><p class="alert__title">Demasiados intentos</p><p class="alert__body">Espera un minuto y vuelve a intentarlo con el código que muestre tu aplicación en ese momento.</p></div></div>
+        <div class="auth__actions">
+          <button class="btn btn--primary btn--block" type="submit">Verificar</button>
+          <p class="auth__alt"><a class="btn btn--link" href="?estado=recuperacion">{{i:key}}Usar un código de recuperación</a></p>
+        </div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Perdiste el teléfono y tus códigos de recuperación? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

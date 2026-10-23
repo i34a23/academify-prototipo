@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F7F8FA">
+<title>Activar cuenta · academify</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<!--SPRITE-->
+<div class="auth" data-estado="inicial" data-estado-label="Inicial">
+  <a class="skip-link" href="#contenido-inicial">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-inicial">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-inicial">
+      <h1 class="auth__title" id="t-inicial" tabindex="-1">Activa tu cuenta</h1>
+      <p class="auth__lede">Crea una contraseña de al menos 15 caracteres. Una frase larga es más segura y fácil de recordar; también puedes usar tu gestor de contraseñas.</p>
+      <form class="auth__form" action="?estado=activada" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="pw1-inicial">Contraseña nueva</label>
+        <div class="pw">
+          <input class="input" id="pw1-inicial" name="new-password" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none" aria-describedby="req-inicial" minlength="15" maxlength="128">
+          <button class="pw__toggle" type="button" aria-controls="pw1-inicial" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <ul class="pw-rules" id="req-inicial" aria-live="polite">
+          <li class="pw-rules__item">{{i14:minus}}<span>Entre 15 y 128 caracteres</span></li>
+          <li class="pw-rules__item">{{i14:minus}}<span>Sin el nombre de la institución ni la palabra «academify»</span></li>
+          <li class="pw-rules__item">{{i14:minus}}<span>Que no sea común ni repetitiva, como «aaaa» o «123456»</span></li>
+        </ul>
+      <div class="field">
+        <label class="field__label" for="pw2-inicial">Repite la contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw2-inicial" name="new-password-2" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none">
+          <button class="pw__toggle" type="button" aria-controls="pw2-inicial" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit">Activar cuenta</button></div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>El enlace de activación dura 72 horas y sirve una vez. Si no funciona, pídele uno nuevo a la persona administradora.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="escribiendo" data-estado-label="Escribiendo">
+  <a class="skip-link" href="#contenido-escribiendo">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-escribiendo">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-escribiendo">
+      <h1 class="auth__title" id="t-escribiendo" tabindex="-1">Activa tu cuenta</h1>
+      <p class="auth__lede">Crea una contraseña de al menos 15 caracteres. Una frase larga es más segura y fácil de recordar; también puedes usar tu gestor de contraseñas.</p>
+      <form class="auth__form" action="?estado=activada" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="pw1-escribiendo">Contraseña nueva</label>
+        <div class="pw">
+          <input class="input" id="pw1-escribiendo" name="new-password" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none" value="mi-frase" aria-describedby="req-escribiendo" minlength="15" maxlength="128">
+          <button class="pw__toggle" type="button" aria-controls="pw1-escribiendo" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <ul class="pw-rules" id="req-escribiendo" aria-live="polite">
+          <li class="pw-rules__item">{{i14:minus}}<span>Entre 15 y 128 caracteres <span class="tnum">(llevas 9)</span></span></li>
+          <li class="pw-rules__item">{{i14:minus}}<span>Sin el nombre de la institución ni la palabra «academify»</span></li>
+          <li class="pw-rules__item">{{i14:minus}}<span>Que no sea común ni repetitiva, como «aaaa» o «123456»</span></li>
+        </ul>
+      <div class="field">
+        <label class="field__label" for="pw2-escribiendo">Repite la contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw2-escribiendo" name="new-password-2" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none">
+          <button class="pw__toggle" type="button" aria-controls="pw2-escribiendo" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit">Activar cuenta</button></div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>El enlace de activación dura 72 horas y sirve una vez. Si no funciona, pídele uno nuevo a la persona administradora.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="corta" data-estado-label="Contraseña corta">
+  <a class="skip-link" href="#contenido-corta">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-corta">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-corta">
+      <h1 class="auth__title" id="t-corta" tabindex="-1">Activa tu cuenta</h1>
+      <p class="auth__lede">Crea una contraseña de al menos 15 caracteres. Una frase larga es más segura y fácil de recordar; también puedes usar tu gestor de contraseñas.</p>
+      <form class="auth__form" action="?estado=activada" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="pw1-corta">Contraseña nueva</label>
+        <div class="pw">
+          <input class="input" id="pw1-corta" name="new-password" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none" value="invierno-27" aria-invalid="true" aria-describedby="pw1-corta-error req-corta" minlength="15" maxlength="128">
+          <button class="pw__toggle" type="button" aria-controls="pw1-corta" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+        <p class="field__error" id="pw1-corta-error">{{i:alert}}<span>La contraseña debe tener al menos 15 caracteres. Llevas 11.</span></p>
+      </div>
+        <ul class="pw-rules" id="req-corta" aria-live="polite">
+          <li class="pw-rules__item">{{i14:minus}}<span>Entre 15 y 128 caracteres <span class="tnum">(llevas 11)</span></span></li>
+          <li class="pw-rules__item">{{i14:minus}}<span>Sin el nombre de la institución ni la palabra «academify»</span></li>
+          <li class="pw-rules__item">{{i14:minus}}<span>Que no sea común ni repetitiva, como «aaaa» o «123456»</span></li>
+        </ul>
+      <div class="field">
+        <label class="field__label" for="pw2-corta">Repite la contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw2-corta" name="new-password-2" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none" value="invierno-27">
+          <button class="pw__toggle" type="button" aria-controls="pw2-corta" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit">Activar cuenta</button></div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>El enlace de activación dura 72 horas y sirve una vez. Si no funciona, pídele uno nuevo a la persona administradora.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="no-coinciden" data-estado-label="No coinciden">
+  <a class="skip-link" href="#contenido-no-coinciden">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-no-coinciden">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-no-coinciden">
+      <h1 class="auth__title" id="t-no-coinciden" tabindex="-1">Activa tu cuenta</h1>
+      <p class="auth__lede">Crea una contraseña de al menos 15 caracteres. Una frase larga es más segura y fácil de recordar; también puedes usar tu gestor de contraseñas.</p>
+      <form class="auth__form" action="?estado=activada" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="pw1-no-coinciden">Contraseña nueva</label>
+        <div class="pw">
+          <input class="input" id="pw1-no-coinciden" name="new-password" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none" value="cafe con leche en la mañana" aria-describedby="req-no-coinciden" minlength="15" maxlength="128">
+          <button class="pw__toggle" type="button" aria-controls="pw1-no-coinciden" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <ul class="pw-rules" id="req-no-coinciden" aria-live="polite">
+          <li class="pw-rules__item is-done">{{i14:check}}<span>Entre 15 y 128 caracteres <span class="tnum">(llevas 28)</span><span class="sr-only">: cumple</span></span></li>
+          <li class="pw-rules__item">{{i14:minus}}<span>Sin el nombre de la institución ni la palabra «academify»</span></li>
+          <li class="pw-rules__item">{{i14:minus}}<span>Que no sea común ni repetitiva, como «aaaa» o «123456»</span></li>
+        </ul>
+      <div class="field">
+        <label class="field__label" for="pw2-no-coinciden">Repite la contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw2-no-coinciden" name="new-password-2" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none" value="cafe con leche en la manana" aria-invalid="true" aria-describedby="pw2-no-coinciden-error">
+          <button class="pw__toggle" type="button" aria-controls="pw2-no-coinciden" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+        <p class="field__error" id="pw2-no-coinciden-error">{{i:alert}}<span>Las contraseñas no coinciden. Vuelve a escribir la segunda.</span></p>
+      </div>
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit">Activar cuenta</button></div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>El enlace de activación dura 72 horas y sirve una vez. Si no funciona, pídele uno nuevo a la persona administradora.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="comun" data-estado-label="Contraseña común">
+  <a class="skip-link" href="#contenido-comun">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-comun">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-comun">
+      <h1 class="auth__title" id="t-comun" tabindex="-1">Activa tu cuenta</h1>
+      <p class="auth__lede">Crea una contraseña de al menos 15 caracteres. Una frase larga es más segura y fácil de recordar; también puedes usar tu gestor de contraseñas.</p>
+      <form class="auth__form" action="?estado=activada" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="pw1-comun">Contraseña nueva</label>
+        <div class="pw">
+          <input class="input" id="pw1-comun" name="new-password" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none" value="contraseña123456" aria-invalid="true" aria-describedby="pw1-comun-error req-comun" minlength="15" maxlength="128">
+          <button class="pw__toggle" type="button" aria-controls="pw1-comun" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+        <p class="field__error" id="pw1-comun-error">{{i:alert}}<span>Esa contraseña es demasiado común. Prueba con una frase de varias palabras que no sea una cita conocida.</span></p>
+      </div>
+        <ul class="pw-rules" id="req-comun" aria-live="polite">
+          <li class="pw-rules__item is-done">{{i14:check}}<span>Entre 15 y 128 caracteres <span class="tnum">(llevas 16)</span><span class="sr-only">: cumple</span></span></li>
+          <li class="pw-rules__item">{{i14:minus}}<span>Sin el nombre de la institución ni la palabra «academify»</span></li>
+          <li class="pw-rules__item" aria-invalid="true">{{i14:x}}<span>Que no sea común ni repetitiva, como «aaaa» o «123456»</span></li>
+        </ul>
+      <div class="field">
+        <label class="field__label" for="pw2-comun">Repite la contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw2-comun" name="new-password-2" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none" value="contraseña123456">
+          <button class="pw__toggle" type="button" aria-controls="pw2-comun" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit">Activar cuenta</button></div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>El enlace de activación dura 72 horas y sirve una vez. Si no funciona, pídele uno nuevo a la persona administradora.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="institucion" data-estado-label="Con palabras de la institución">
+  <a class="skip-link" href="#contenido-institucion">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-institucion">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-institucion">
+      <h1 class="auth__title" id="t-institucion" tabindex="-1">Activa tu cuenta</h1>
+      <p class="auth__lede">Crea una contraseña de al menos 15 caracteres. Una frase larga es más segura y fácil de recordar; también puedes usar tu gestor de contraseñas.</p>
+      <form class="auth__form" action="?estado=activada" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="pw1-institucion">Contraseña nueva</label>
+        <div class="pw">
+          <input class="input" id="pw1-institucion" name="new-password" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none" value="institutodemo-admision" aria-invalid="true" aria-describedby="pw1-institucion-error req-institucion" minlength="15" maxlength="128">
+          <button class="pw__toggle" type="button" aria-controls="pw1-institucion" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+        <p class="field__error" id="pw1-institucion-error">{{i:alert}}<span>La contraseña no puede contener palabras del sistema o de la institución, como «academify» o «Instituto Demo».</span></p>
+      </div>
+        <ul class="pw-rules" id="req-institucion" aria-live="polite">
+          <li class="pw-rules__item is-done">{{i14:check}}<span>Entre 15 y 128 caracteres <span class="tnum">(llevas 21)</span><span class="sr-only">: cumple</span></span></li>
+          <li class="pw-rules__item" aria-invalid="true">{{i14:x}}<span>Sin el nombre de la institución ni la palabra «academify»</span></li>
+          <li class="pw-rules__item">{{i14:minus}}<span>Que no sea común ni repetitiva, como «aaaa» o «123456»</span></li>
+        </ul>
+      <div class="field">
+        <label class="field__label" for="pw2-institucion">Repite la contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw2-institucion" name="new-password-2" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none" value="institutodemo-admision">
+          <button class="pw__toggle" type="button" aria-controls="pw2-institucion" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit">Activar cuenta</button></div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>El enlace de activación dura 72 horas y sirve una vez. Si no funciona, pídele uno nuevo a la persona administradora.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="repetitiva" data-estado-label="Repetitiva">
+  <a class="skip-link" href="#contenido-repetitiva">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-repetitiva">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-repetitiva">
+      <h1 class="auth__title" id="t-repetitiva" tabindex="-1">Activa tu cuenta</h1>
+      <p class="auth__lede">Crea una contraseña de al menos 15 caracteres. Una frase larga es más segura y fácil de recordar; también puedes usar tu gestor de contraseñas.</p>
+      <form class="auth__form" action="?estado=activada" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="pw1-repetitiva">Contraseña nueva</label>
+        <div class="pw">
+          <input class="input" id="pw1-repetitiva" name="new-password" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none" value="aaaaaaaaaaaaaaaaaa" aria-invalid="true" aria-describedby="pw1-repetitiva-error req-repetitiva" minlength="15" maxlength="128">
+          <button class="pw__toggle" type="button" aria-controls="pw1-repetitiva" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+        <p class="field__error" id="pw1-repetitiva-error">{{i:alert}}<span>La contraseña es demasiado repetitiva. Evita repetir el mismo carácter o una secuencia.</span></p>
+      </div>
+        <ul class="pw-rules" id="req-repetitiva" aria-live="polite">
+          <li class="pw-rules__item is-done">{{i14:check}}<span>Entre 15 y 128 caracteres <span class="tnum">(llevas 18)</span><span class="sr-only">: cumple</span></span></li>
+          <li class="pw-rules__item">{{i14:minus}}<span>Sin el nombre de la institución ni la palabra «academify»</span></li>
+          <li class="pw-rules__item" aria-invalid="true">{{i14:x}}<span>Que no sea común ni repetitiva, como «aaaa» o «123456»</span></li>
+        </ul>
+      <div class="field">
+        <label class="field__label" for="pw2-repetitiva">Repite la contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw2-repetitiva" name="new-password-2" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none" value="aaaaaaaaaaaaaaaaaa">
+          <button class="pw__toggle" type="button" aria-controls="pw2-repetitiva" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit">Activar cuenta</button></div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>El enlace de activación dura 72 horas y sirve una vez. Si no funciona, pídele uno nuevo a la persona administradora.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="activando" data-estado-label="Activando">
+  <a class="skip-link" href="#contenido-activando">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-activando">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-activando">
+      <h1 class="auth__title" id="t-activando" tabindex="-1">Activa tu cuenta</h1>
+      <p class="auth__lede">Crea una contraseña de al menos 15 caracteres. Una frase larga es más segura y fácil de recordar; también puedes usar tu gestor de contraseñas.</p>
+      <form class="auth__form" action="?estado=activada" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="pw1-activando">Contraseña nueva</label>
+        <div class="pw">
+          <input class="input" id="pw1-activando" name="new-password" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none" value="cafe con leche en la mañana" aria-describedby="req-activando" minlength="15" maxlength="128">
+          <button class="pw__toggle" type="button" aria-controls="pw1-activando" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <ul class="pw-rules" id="req-activando" aria-live="polite">
+          <li class="pw-rules__item is-done">{{i14:check}}<span>Entre 15 y 128 caracteres <span class="tnum">(llevas 28)</span><span class="sr-only">: cumple</span></span></li>
+          <li class="pw-rules__item">{{i14:minus}}<span>Sin el nombre de la institución ni la palabra «academify»</span></li>
+          <li class="pw-rules__item">{{i14:minus}}<span>Que no sea común ni repetitiva, como «aaaa» o «123456»</span></li>
+        </ul>
+      <div class="field">
+        <label class="field__label" for="pw2-activando">Repite la contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw2-activando" name="new-password-2" type="password" autocomplete="new-password" spellcheck="false" autocapitalize="none" value="cafe con leche en la mañana">
+          <button class="pw__toggle" type="button" aria-controls="pw2-activando" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit" aria-busy="true">Activando…</button><p class="sr-only" role="status">Activando tu cuenta…</p></div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>El enlace de activación dura 72 horas y sirve una vez. Si no funciona, pídele uno nuevo a la persona administradora.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="activada" data-estado-label="Activada">
+  <a class="skip-link" href="#contenido-activada">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-activada">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-activada">
+      <span class="auth__icon tile tile--md tile--done" aria-hidden="true">{{i20:check}}</span>
+      <h1 class="auth__title" id="t-activada" tabindex="-1">Cuenta activada</h1>
+      <p class="auth__lede">Ya puedes ingresar con tu correo y la contraseña que creaste.</p>
+      <ol class="handoff" aria-label="Qué pasa después">
+        <li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Ingresas con tu correo y tu contraseña.</strong><span class="sr-only"> Te toca a ti.</span></span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Configuras tu segundo factor.</strong> Academify te lo pide en el primer ingreso; ten a mano tu teléfono con una aplicación autenticadora.</span></li>
+      </ol>
+      <div class="auth__actions"><a class="btn btn--primary btn--block" href="acc-01-ingresar.html">{{i:log-in}}Ingresar</a></div>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="incompleto" data-estado-label="Enlace incompleto">
+  <a class="skip-link" href="#contenido-incompleto">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-incompleto">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-incompleto">
+      <span class="auth__icon tile tile--md tile--applicant" aria-hidden="true">{{i20:link}}</span>
+      <h1 class="auth__title" id="t-incompleto" tabindex="-1">Este enlace está incompleto</h1>
+      <p class="auth__lede">Usa el enlace completo que te entregó la persona administradora. Si lo copiaste a mano, revisa que no falte el final.</p>
+      <div class="auth__actions"></div>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="invalido" data-estado-label="Enlace no válido o usado">
+  <a class="skip-link" href="#contenido-invalido">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-invalido">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-invalido">
+      <span class="auth__icon tile tile--md tile--error" aria-hidden="true">{{i20:x}}</span>
+      <h1 class="auth__title" id="t-invalido" tabindex="-1">Este enlace ya no sirve</h1>
+      <p class="auth__lede">Puede que ya lo hayas usado, que haya vencido (dura 72 horas) o que la persona administradora haya generado uno nuevo. Pídele un enlace de activación nuevo.</p>
+      <p class="auth__lede">Si ya activaste tu cuenta, ingresa con tu correo y contraseña.</p>
+      <div class="auth__actions"><a class="btn btn--secondary btn--block" href="acc-01-ingresar.html">Ir a ingresar</a></div>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

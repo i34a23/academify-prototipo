@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<title>Corrige tus documentos · Instituto Demo</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body class="is-public">
+<!--SPRITE-->
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="pub-head">
+  <div class="pub-head__inner">
+    <img src="../assets/academify-logo.svg" alt="academify" width="115" height="26" fetchpriority="high" translate="no">
+    <p class="pub-head__inst">Instituto Demo<span class="pub-head__process">Postulación Admisión 2027</span></p>
+    <a class="pub-head__help link" href="mailto:admision@institutodemo.cl">{{i20:mail}}<span class="pub-head__help-long">admision@institutodemo.cl</span><span class="pub-head__help-short">Ayuda</span></a>
+  </div>
+</header>
+
+<main id="contenido" class="pub-main">
+<div data-estado="por-corregir" data-estado-label="Por corregir">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Corrige tus documentos</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te toca corregir 2 documentos.</strong> Revisamos tu postulación y necesitamos que vuelvas a subirlos.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-now"></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span>Etapa 2 de 8</span><a class="link" href="#recorrido">Ver tu recorrido</a></p>
+      <div class="prog-line"><p class="prog-line__text"><strong>Derecho</strong>Vespertina, presencial, vía extraordinaria</p></div>
+      
+      <form action="/publico/documentos" method="post" enctype="multipart/form-data" novalidate>
+      <section class="block" aria-labelledby="h-ped">
+        <div class="block__head"><h2 class="block__title" id="h-ped">Lo que te pedimos</h2><span class="block__tag">0 de 2 recibidos</span></div>
+        
+        <ul class="req-list">
+          <li class="upload upload--later" id="p-conc">
+            <span class="upload__icon" aria-hidden="true">{{i20:file-text}}</span>
+            <div>
+              <p class="upload__name">Concentración de notas</p>
+              <p class="upload__status">{{i:clock}}Debes corregirlo</p><p class="req-list__reason"><strong>Motivo:</strong> Faltan páginas.</p><p class="quote">«Sube las dos páginas en un solo archivo.»<span class="quote__who">Mensaje de admisión, 17-10-2026</span></p><p class="upload__meta">JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Elegir archivo<input class="upload__file" type="file" name="concentracion_notas" accept="image/jpeg,image/png,application/pdf" aria-label="Elegir archivo para Concentración de notas"></label>
+          </li>
+          <li class="upload upload--later" id="p-ced">
+            <span class="upload__icon" aria-hidden="true">{{i20:id}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (reverso)</p>
+              <p class="upload__status">{{i:clock}}Debes corregirlo</p><p class="req-list__reason"><strong>Motivo:</strong> No se lee completo.</p><p class="quote">«La foto quedó con reflejo; tómala con luz pareja.»<span class="quote__who">Mensaje de admisión, 17-10-2026</span></p><p class="upload__meta">JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Elegir archivo<input class="upload__file" type="file" name="cedula_reverso" accept="image/jpeg,image/png,application/pdf" aria-label="Elegir archivo para Cédula de identidad (reverso)"></label>
+          </li>
+        </ul>
+        <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos.</span></p>
+      </section>
+      </form>
+      <h2 class="section__title total__after">Qué pasa después</h2>
+      <ol class="handoff"><li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú subes cada documento</strong> con su botón. Puedes hacerlo de a uno.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión los revisa</strong> cuando estén todos.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> si está todo bien o si falta algo.</span></li></ol>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido">
+      <h2 class="journey__title" id="recorrido">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Enviada el 11-10-2026</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Ahora, corriges 2 documentos</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Te avisamos por correo</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">En línea, con tu cédula</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Con <span translate="no">Webpay</span></span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Valentina Muñoz Contreras</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">543-0</span></dd><dt class="sr-only">Programa</dt><dd>Derecho, vespertina, presencial</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000103</span></dd></dl>
+    </aside>
+  </div>
+</div>
+<div data-estado="listo" data-estado-label="Archivo elegido">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Corrige tus documentos</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te toca corregir 2 documentos.</strong> Revisamos tu postulación y necesitamos que vuelvas a subirlos.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-now"></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span>Etapa 2 de 8</span><a class="link" href="#recorrido--listo">Ver tu recorrido</a></p>
+      <div class="prog-line"><p class="prog-line__text"><strong>Derecho</strong>Vespertina, presencial, vía extraordinaria</p></div>
+      
+      <form action="/publico/documentos" method="post" enctype="multipart/form-data" novalidate>
+      <section class="block" aria-labelledby="h-ped--listo">
+        <div class="block__head"><h2 class="block__title" id="h-ped--listo">Lo que te pedimos</h2><span class="block__tag">0 de 2 recibidos</span></div>
+        
+        <ul class="req-list">
+          <li class="upload upload--ready" id="p-conc--listo">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Concentración de notas</p>
+              <p class="upload__status">{{i:check}}Listo para enviar: concentracion-notas.pdf, 1,2&nbsp;MB</p><p class="req-list__reason"><strong>Motivo:</strong> Faltan páginas.</p><p class="quote">«Sube las dos páginas en un solo archivo.»<span class="quote__who">Mensaje de admisión, 17-10-2026</span></p><p class="req-list__change"><button class="btn btn--link" type="button" aria-label="Cambiar archivo de Concentración de notas">Cambiar archivo</button></p>
+            </div>
+            <button class="btn btn--primary btn--sm" type="submit" aria-label="Enviar Concentración de notas">Enviar documento</button>
+          </li>
+          <li class="upload upload--later" id="p-ced--listo">
+            <span class="upload__icon" aria-hidden="true">{{i20:id}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (reverso)</p>
+              <p class="upload__status">{{i:clock}}Debes corregirlo</p><p class="req-list__reason"><strong>Motivo:</strong> No se lee completo.</p><p class="quote">«La foto quedó con reflejo; tómala con luz pareja.»<span class="quote__who">Mensaje de admisión, 17-10-2026</span></p><p class="upload__meta">JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Elegir archivo<input class="upload__file" type="file" name="cedula_reverso" accept="image/jpeg,image/png,application/pdf" aria-label="Elegir archivo para Cédula de identidad (reverso)"></label>
+          </li>
+        </ul>
+        <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos.</span></p>
+      </section>
+      </form>
+      <h2 class="section__title total__after">Qué pasa después</h2>
+      <ol class="handoff"><li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú subes cada documento</strong> con su botón. Puedes hacerlo de a uno.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión los revisa</strong> cuando estén todos.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> si está todo bien o si falta algo.</span></li></ol>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido--listo">
+      <h2 class="journey__title" id="recorrido--listo">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Enviada el 11-10-2026</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Ahora, corriges 2 documentos</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Te avisamos por correo</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">En línea, con tu cédula</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Con <span translate="no">Webpay</span></span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Valentina Muñoz Contreras</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">543-0</span></dd><dt class="sr-only">Programa</dt><dd>Derecho, vespertina, presencial</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000103</span></dd></dl>
+    </aside>
+  </div>
+</div>
+<div data-estado="reintentar" data-estado-label="Elige otro archivo">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Corrige tus documentos</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te toca corregir 2 documentos.</strong> Revisamos tu postulación y necesitamos que vuelvas a subirlos.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-now"></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span>Etapa 2 de 8</span><a class="link" href="#recorrido--reintentar">Ver tu recorrido</a></p>
+      <div class="prog-line"><p class="prog-line__text"><strong>Derecho</strong>Vespertina, presencial, vía extraordinaria</p></div>
+      
+      <form action="/publico/documentos" method="post" enctype="multipart/form-data" novalidate>
+      <section class="block" aria-labelledby="h-ped--reintentar">
+        <div class="block__head"><h2 class="block__title" id="h-ped--reintentar">Lo que te pedimos</h2><span class="block__tag">0 de 2 recibidos</span></div>
+        
+        <ul class="req-list">
+          <li class="upload upload--error" id="p-conc--reintentar">
+            <span class="upload__icon" aria-hidden="true">{{i20:shield}}</span>
+            <div>
+              <p class="upload__name">Concentración de notas</p>
+              <p class="upload__status">{{i:x}}No pudimos aceptar este archivo</p><p class="req-list__reason">No pudimos aceptar el archivo anterior por seguridad. Elige otro archivo.</p><p class="upload__meta">JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Elegir otro archivo<input class="upload__file" type="file" name="concentracion_notas" accept="image/jpeg,image/png,application/pdf" aria-label="Elegir otro archivo para Concentración de notas"></label>
+          </li>
+          <li class="upload upload--later" id="p-ced--reintentar">
+            <span class="upload__icon" aria-hidden="true">{{i20:id}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (reverso)</p>
+              <p class="upload__status">{{i:clock}}Debes corregirlo</p><p class="req-list__reason"><strong>Motivo:</strong> No se lee completo.</p><p class="quote">«La foto quedó con reflejo; tómala con luz pareja.»<span class="quote__who">Mensaje de admisión, 17-10-2026</span></p><p class="upload__meta">JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Elegir archivo<input class="upload__file" type="file" name="cedula_reverso" accept="image/jpeg,image/png,application/pdf" aria-label="Elegir archivo para Cédula de identidad (reverso)"></label>
+          </li>
+        </ul>
+        <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos.</span></p>
+      </section>
+      </form>
+      <h2 class="section__title total__after">Qué pasa después</h2>
+      <ol class="handoff"><li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú subes cada documento</strong> con su botón. Puedes hacerlo de a uno.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión los revisa</strong> cuando estén todos.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> si está todo bien o si falta algo.</span></li></ol>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido--reintentar">
+      <h2 class="journey__title" id="recorrido--reintentar">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Enviada el 11-10-2026</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Ahora, corriges 2 documentos</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Te avisamos por correo</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">En línea, con tu cédula</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Con <span translate="no">Webpay</span></span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Valentina Muñoz Contreras</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">543-0</span></dd><dt class="sr-only">Programa</dt><dd>Derecho, vespertina, presencial</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000103</span></dd></dl>
+    </aside>
+  </div>
+</div>
+<div data-estado="error" data-estado-label="Archivo no válido">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Corrige tus documentos</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te toca corregir 2 documentos.</strong> Revisamos tu postulación y necesitamos que vuelvas a subirlos.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-now"></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span>Etapa 2 de 8</span><a class="link" href="#recorrido--error">Ver tu recorrido</a></p>
+      <div class="prog-line"><p class="prog-line__text"><strong>Derecho</strong>Vespertina, presencial, vía extraordinaria</p></div>
+      
+      <form action="/publico/documentos" method="post" enctype="multipart/form-data" novalidate>
+      <section class="block" aria-labelledby="h-ped--error">
+        <div class="block__head"><h2 class="block__title" id="h-ped--error">Lo que te pedimos</h2><span class="block__tag">0 de 2 recibidos</span></div>
+        
+        <ul class="req-list">
+          <li class="upload upload--error" id="p-conc--error">
+            <span class="upload__icon" aria-hidden="true">{{i20:alert}}</span>
+            <div>
+              <p class="upload__name">Concentración de notas</p>
+              <p class="upload__status" id="conc-err">{{i:x}}Solo se aceptan archivos JPG, PNG o PDF.</p><p class="req-list__reason"><strong>Motivo:</strong> Faltan páginas.</p><p class="quote">«Sube las dos páginas en un solo archivo.»<span class="quote__who">Mensaje de admisión, 17-10-2026</span></p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Elegir otro archivo<input class="upload__file" type="file" name="concentracion_notas" accept="image/jpeg,image/png,application/pdf" aria-label="Elegir otro archivo para Concentración de notas"></label>
+          </li>
+          <li class="upload upload--later" id="p-ced--error">
+            <span class="upload__icon" aria-hidden="true">{{i20:id}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (reverso)</p>
+              <p class="upload__status">{{i:clock}}Debes corregirlo</p><p class="req-list__reason"><strong>Motivo:</strong> No se lee completo.</p><p class="quote">«La foto quedó con reflejo; tómala con luz pareja.»<span class="quote__who">Mensaje de admisión, 17-10-2026</span></p><p class="upload__meta">JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Elegir archivo<input class="upload__file" type="file" name="cedula_reverso" accept="image/jpeg,image/png,application/pdf" aria-label="Elegir archivo para Cédula de identidad (reverso)"></label>
+          </li>
+        </ul>
+        <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos.</span></p>
+      </section>
+      </form>
+      <h2 class="section__title total__after">Qué pasa después</h2>
+      <ol class="handoff"><li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú subes cada documento</strong> con su botón. Puedes hacerlo de a uno.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión los revisa</strong> cuando estén todos.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> si está todo bien o si falta algo.</span></li></ol>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido--error">
+      <h2 class="journey__title" id="recorrido--error">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Enviada el 11-10-2026</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Ahora, corriges 2 documentos</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Te avisamos por correo</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">En línea, con tu cédula</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Con <span translate="no">Webpay</span></span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Valentina Muñoz Contreras</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">543-0</span></dd><dt class="sr-only">Programa</dt><dd>Derecho, vespertina, presencial</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000103</span></dd></dl>
+    </aside>
+  </div>
+</div>
+<div data-estado="analisis" data-estado-label="Revisando el archivo">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Corrige tus documentos</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te toca corregir 2 documentos.</strong> Revisamos tu postulación y necesitamos que vuelvas a subirlos.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-now"></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span>Etapa 2 de 8</span><a class="link" href="#recorrido--analisis">Ver tu recorrido</a></p>
+      <div class="prog-line"><p class="prog-line__text"><strong>Derecho</strong>Vespertina, presencial, vía extraordinaria</p></div>
+      
+      <form action="/publico/documentos" method="post" enctype="multipart/form-data" novalidate>
+      <section class="block" aria-labelledby="h-ped--analisis">
+        <div class="block__head"><h2 class="block__title" id="h-ped--analisis">Lo que te pedimos</h2><span class="block__tag">0 de 2 recibidos</span></div>
+        <div class="task-live"><p class="stamp" role="status" aria-live="polite">{{i:refresh}}Revisando la seguridad de 1 archivo. La lista se actualiza sola.</p></div>
+        <ul class="req-list">
+          <li class="upload upload--scanning" id="p-conc--analisis">
+            <span class="upload__icon" aria-hidden="true">{{i20:shield}}</span>
+            <div>
+              <p class="upload__name">Concentración de notas</p>
+              <p class="upload__status">{{i:refresh}}Recibido, revisando seguridad</p><p class="req-list__reason">Ya no puedes cambiarlo desde aquí.</p>
+            </div>
+            <span></span>
+          </li>
+          <li class="upload upload--later" id="p-ced--analisis">
+            <span class="upload__icon" aria-hidden="true">{{i20:id}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (reverso)</p>
+              <p class="upload__status">{{i:clock}}Debes corregirlo</p><p class="req-list__reason"><strong>Motivo:</strong> No se lee completo.</p><p class="quote">«La foto quedó con reflejo; tómala con luz pareja.»<span class="quote__who">Mensaje de admisión, 17-10-2026</span></p><p class="upload__meta">JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Elegir archivo<input class="upload__file" type="file" name="cedula_reverso" accept="image/jpeg,image/png,application/pdf" aria-label="Elegir archivo para Cédula de identidad (reverso)"></label>
+          </li>
+        </ul>
+        <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos.</span></p>
+      </section>
+      </form>
+      <h2 class="section__title total__after">Qué pasa después</h2>
+      <ol class="handoff"><li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú subes cada documento</strong> con su botón. Puedes hacerlo de a uno.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión los revisa</strong> cuando estén todos.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> si está todo bien o si falta algo.</span></li></ol>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido--analisis">
+      <h2 class="journey__title" id="recorrido--analisis">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Enviada el 11-10-2026</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Ahora, corriges 2 documentos</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Te avisamos por correo</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">En línea, con tu cédula</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Con <span translate="no">Webpay</span></span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Valentina Muñoz Contreras</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">543-0</span></dd><dt class="sr-only">Programa</dt><dd>Derecho, vespertina, presencial</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000103</span></dd></dl>
+    </aside>
+  </div>
+</div>
+<div data-estado="uno-recibido" data-estado-label="1 recibido">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Corrige tus documentos</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te queda 1 documento por corregir.</strong> El otro ya lo recibimos.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-now"></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span>Etapa 2 de 8</span><a class="link" href="#recorrido--uno-recibido">Ver tu recorrido</a></p>
+      <div class="prog-line"><p class="prog-line__text"><strong>Derecho</strong>Vespertina, presencial, vía extraordinaria</p></div>
+      
+      <form action="/publico/documentos" method="post" enctype="multipart/form-data" novalidate>
+      <section class="block" aria-labelledby="h-ped--uno-recibido">
+        <div class="block__head"><h2 class="block__title" id="h-ped--uno-recibido">Lo que te pedimos</h2><span class="block__tag">1 de 2 recibidos</span></div>
+        
+        <ul class="req-list">
+          <li class="upload upload--ready" id="p-conc--uno-recibido">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Concentración de notas</p>
+              <p class="upload__status">{{i:check}}Recibido</p><p class="req-list__reason">Admisión lo revisará junto con el resto.</p>
+            </div>
+            <span></span>
+          </li>
+          <li class="upload upload--later" id="p-ced--uno-recibido">
+            <span class="upload__icon" aria-hidden="true">{{i20:id}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (reverso)</p>
+              <p class="upload__status">{{i:clock}}Debes corregirlo</p><p class="req-list__reason"><strong>Motivo:</strong> No se lee completo.</p><p class="quote">«La foto quedó con reflejo; tómala con luz pareja.»<span class="quote__who">Mensaje de admisión, 17-10-2026</span></p><p class="upload__meta">JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Elegir archivo<input class="upload__file" type="file" name="cedula_reverso" accept="image/jpeg,image/png,application/pdf" aria-label="Elegir archivo para Cédula de identidad (reverso)"></label>
+          </li>
+        </ul>
+        <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos.</span></p>
+      </section>
+      </form>
+      <h2 class="section__title total__after">Qué pasa después</h2>
+      <ol class="handoff"><li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú subes cada documento</strong> con su botón. Puedes hacerlo de a uno.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión los revisa</strong> cuando estén todos.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> si está todo bien o si falta algo.</span></li></ol>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido--uno-recibido">
+      <h2 class="journey__title" id="recorrido--uno-recibido">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Enviada el 11-10-2026</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Ahora, corriges 1 documento</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Te avisamos por correo</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">En línea, con tu cédula</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Con <span translate="no">Webpay</span></span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Valentina Muñoz Contreras</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">543-0</span></dd><dt class="sr-only">Programa</dt><dd>Derecho, vespertina, presencial</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000103</span></dd></dl>
+    </aside>
+  </div>
+</div>
+<div data-estado="todos" data-estado-label="Todos recibidos">
+  <section class="status" aria-labelledby="t13">
+    <span class="status__icon tile tile--done" aria-hidden="true">{{i20:file-check}}</span>
+    <h1 class="page-title" id="t13">Recibimos todo lo que pedimos</h1>
+    <p class="status__body">Gracias. Admisión revisará tus 2 documentos y te avisará por correo a va•••@correo.cl.</p>
+    <dl class="kv status__kv"><dt>Concentración de notas</dt><dd class="tnum">Recibido<br>19-10-2026, 10:12</dd><dt>Cédula de identidad (reverso)</dt><dd class="tnum">Recibido<br>19-10-2026, 10:15</dd></dl>
+    <h2 class="status__sub">Qué pasa después</h2>
+    <ol class="handoff"><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión revisa</strong> los documentos corregidos.</span></li><li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> cuando aprobemos tu postulación o si falta algo.</span></li></ol>
+    <p class="status__body">Ya puedes cerrar esta página.</p>
+    <p class="help-foot">{{i:mail}}<span>¿Tienes dudas? Escríbenos a <a class="link" href="mailto:admision@institutodemo.cl">admision@institutodemo.cl</a>.</span></p>
+  </section>
+</div>
+<div data-estado="no-disponible" data-estado-label="Enlace no disponible">
+  <section class="status" aria-labelledby="t14">
+    <span class="status__icon tile" aria-hidden="true">{{i20:unlink}}</span>
+    <h1 class="page-title" id="t14">Este enlace ya no está disponible</h1>
+    <p class="status__body">Pudo usarse, vencer o reemplazarse por uno más nuevo. Si llegó otro correo nuestro, usa el enlace más reciente.</p>
+    <p class="help-foot">{{i:mail}}<span>¿Tienes dudas? Escríbenos a <a class="link" href="mailto:admision@institutodemo.cl">admision@institutodemo.cl</a>.</span></p>
+  </section>
+</div>
+<div data-estado="vencido" data-estado-label="Acceso vencido">
+  <section class="status" aria-labelledby="t15">
+    <span class="status__icon tile tile--applicant" aria-hidden="true">{{i20:clock}}</span>
+    <h1 class="page-title" id="t15">Tu acceso venció</h1>
+    <p class="status__body">Por seguridad, el acceso desde el enlace del correo dura 60 minutos. Lo que ya subiste o firmaste quedó guardado.</p>
+    <p class="status__body">Para seguir, escríbenos y te enviamos un enlace nuevo.</p>
+    <div class="status__actions btn-row"><a class="btn btn--secondary" href="mailto:admision@institutodemo.cl?subject=Necesito%20un%20enlace%20nuevo">{{i:mail}}Pedir un enlace nuevo</a></div>
+    <p class="help-foot">{{i:mail}}<span>¿Tienes dudas? Escríbenos a <a class="link" href="mailto:admision@institutodemo.cl">admision@institutodemo.cl</a>.</span></p>
+  </section>
+</div>
+<div data-estado="cargando" data-estado-label="Cargando">
+  <section class="status" aria-busy="true">
+    <div role="status" class="sr-only">Cargando…</div>
+    <span class="skeleton status__skel-icon"></span>
+    <span class="skeleton skeleton--lg status__skel-title"></span>
+    <span class="skeleton skeleton--w80"></span>
+    <span class="skeleton skeleton--w60"></span>
+    <p class="status__body" aria-hidden="true">Cargando…</p>
+  </section>
+</div>
+
+</main>
+
+<footer class="pub-foot">
+  <div class="pub-foot__inner">
+    <span>Instituto Demo, Admisión 2027</span>
+    <span class="credit">Powered by <span translate="no">Ticnology</span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></span>
+  </div>
+</footer>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

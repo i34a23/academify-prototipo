@@ -1,0 +1,23 @@
+/* Chrome SOLO del prototipo (selector de estados). No se porta a la app.
+   Se distingue a propósito del sistema: borde punteado y fuente del sistema. */
+.proto-bar {
+  position: fixed; left: 12px; bottom: 12px; z-index: 2147483000;
+  max-width: min(560px, calc(100vw - 24px));
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 8px 10px; border: 1px dashed #6B7280; border-radius: 10px;
+  background: rgba(255, 255, 255, .96); box-shadow: 0 4px 16px rgba(15, 27, 45, .14);
+  font: 500 12px/1.3 ui-sans-serif, system-ui, sans-serif; color: #111827;
+}
+.proto-bar__title { margin: 0; padding: 6px 2px; font-weight: 700; white-space: nowrap; }
+.proto-bar__list { display: flex; flex-wrap: wrap; gap: 4px; max-height: 30vh; overflow: auto; }
+.proto-bar__btn, .proto-bar__hide {
+  min-height: 28px; padding: 4px 8px; border: 1px solid #D1D5DB; border-radius: 6px;
+  background: #fff; color: inherit; font: inherit; cursor: pointer;
+}
+.proto-bar__btn[aria-pressed="true"] { background: #111827; border-color: #111827; color: #fff; }
+.proto-bar__btn:focus-visible, .proto-bar__hide:focus-visible { outline: 2px solid #1D4ED8; outline-offset: 2px; }
+.proto-bar__hide { margin-left: auto; color: #4B5563; }
+.proto-bar.is-min .proto-bar__list, .proto-bar.is-min .proto-bar__title { display: none; }
+@media print { .proto-bar { display: none; } }
+/* vistas embebidas de EQ-01: el selector de estados no se repite dentro de los iframes */
+.is-embedded .proto-bar { display: none; }

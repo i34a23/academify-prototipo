@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F7F8FA">
+<title>Ingresar · academify</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<!--SPRITE-->
+<div class="auth" data-estado="inicial" data-estado-label="Inicial">
+  <a class="skip-link" href="#contenido-inicial">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-inicial">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-inicial">
+      <h1 class="auth__title" id="t-inicial" tabindex="-1">Ingresa a tu cuenta</h1>
+      <p class="auth__lede">Acceso para el equipo de admisión.</p>
+      <form class="auth__form" action="acc-02-verificar-segundo-factor.html" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="email-inicial">Correo</label>
+        <input class="input" id="email-inicial" name="email" type="email" inputmode="email" autocomplete="username" spellcheck="false" autocapitalize="none" placeholder="nombre@institutodemo.cl…">
+      </div>
+      <div class="field">
+        <label class="field__label" for="pw-inicial">Contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw-inicial" name="password" type="password" autocomplete="current-password" spellcheck="false" autocapitalize="none">
+          <button class="pw__toggle" type="button" aria-controls="pw-inicial" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit">Ingresar</button></div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Olvidaste tu contraseña? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="enviando" data-estado-label="Enviando">
+  <a class="skip-link" href="#contenido-enviando">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-enviando">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-enviando">
+      <h1 class="auth__title" id="t-enviando" tabindex="-1">Ingresa a tu cuenta</h1>
+      <p class="auth__lede">Acceso para el equipo de admisión.</p>
+      <form class="auth__form" action="acc-02-verificar-segundo-factor.html" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="email-enviando">Correo</label>
+        <input class="input" id="email-enviando" name="email" type="email" inputmode="email" autocomplete="username" spellcheck="false" autocapitalize="none" placeholder="nombre@institutodemo.cl…" value="paula.henriquez@institutodemo.cl">
+      </div>
+      <div class="field">
+        <label class="field__label" for="pw-enviando">Contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw-enviando" name="password" type="password" autocomplete="current-password" spellcheck="false" autocapitalize="none" value="frase-larga-de-prueba">
+          <button class="pw__toggle" type="button" aria-controls="pw-enviando" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit" aria-busy="true">Ingresando…</button></div>
+      <p class="sr-only" role="status">Ingresando…</p>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Olvidaste tu contraseña? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="invalidas" data-estado-label="Credenciales inválidas">
+  <a class="skip-link" href="#contenido-invalidas">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-invalidas">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-invalidas">
+      <h1 class="auth__title" id="t-invalidas" tabindex="-1">Ingresa a tu cuenta</h1>
+      <p class="auth__lede">Acceso para el equipo de admisión.</p>
+      <form class="auth__form" action="acc-02-verificar-segundo-factor.html" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="email-invalidas">Correo</label>
+        <input class="input" id="email-invalidas" name="email" type="email" inputmode="email" autocomplete="username" spellcheck="false" autocapitalize="none" placeholder="nombre@institutodemo.cl…" value="paula.henriquez@institutodemo.cl">
+      </div>
+      <div class="field">
+        <label class="field__label" for="pw-invalidas">Contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw-invalidas" name="password" type="password" autocomplete="current-password" spellcheck="false" autocapitalize="none">
+          <button class="pw__toggle" type="button" aria-controls="pw-invalidas" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <div class="alert alert--error" role="alert">{{i20:alert}}<div><p class="alert__title">Correo o contraseña incorrectos.</p><p class="alert__body">Revisa los dos y vuelve a intentarlo. Si sigue sin funcionar, pídele a la persona administradora que restablezca tu acceso.</p></div></div>
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit">Ingresar</button></div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Olvidaste tu contraseña? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="bloqueada" data-estado-label="Cuenta bloqueada">
+  <a class="skip-link" href="#contenido-bloqueada">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-bloqueada">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-bloqueada">
+      <h1 class="auth__title" id="t-bloqueada" tabindex="-1">Ingresa a tu cuenta</h1>
+      <p class="auth__lede">Acceso para el equipo de admisión.</p>
+      <form class="auth__form" action="acc-02-verificar-segundo-factor.html" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="email-bloqueada">Correo</label>
+        <input class="input" id="email-bloqueada" name="email" type="email" inputmode="email" autocomplete="username" spellcheck="false" autocapitalize="none" placeholder="nombre@institutodemo.cl…" value="daniela.vergara@institutodemo.cl">
+      </div>
+      <div class="field">
+        <label class="field__label" for="pw-bloqueada">Contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw-bloqueada" name="password" type="password" autocomplete="current-password" spellcheck="false" autocapitalize="none">
+          <button class="pw__toggle" type="button" aria-controls="pw-bloqueada" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <div class="alert alert--error" role="alert">{{i20:lock}}<div><p class="alert__title">Tu cuenta está bloqueada hasta las 14:35</p><p class="alert__body">Hubo 10 intentos con contraseña incorrecta en 15 minutos. Te enviamos un correo con el aviso. Si necesitas entrar antes, pídele a la persona administradora que la desbloquee.</p></div></div>
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit">Ingresar</button></div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Olvidaste tu contraseña? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="bloqueada-sin-hora" data-estado-label="Bloqueada sin hora">
+  <a class="skip-link" href="#contenido-bloqueada-sin-hora">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-bloqueada-sin-hora">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-bloqueada-sin-hora">
+      <h1 class="auth__title" id="t-bloqueada-sin-hora" tabindex="-1">Ingresa a tu cuenta</h1>
+      <p class="auth__lede">Acceso para el equipo de admisión.</p>
+      <form class="auth__form" action="acc-02-verificar-segundo-factor.html" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="email-bloqueada-sin-hora">Correo</label>
+        <input class="input" id="email-bloqueada-sin-hora" name="email" type="email" inputmode="email" autocomplete="username" spellcheck="false" autocapitalize="none" placeholder="nombre@institutodemo.cl…" value="daniela.vergara@institutodemo.cl">
+      </div>
+      <div class="field">
+        <label class="field__label" for="pw-bloqueada-sin-hora">Contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw-bloqueada-sin-hora" name="password" type="password" autocomplete="current-password" spellcheck="false" autocapitalize="none">
+          <button class="pw__toggle" type="button" aria-controls="pw-bloqueada-sin-hora" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <div class="alert alert--error" role="alert">{{i20:lock}}<div><p class="alert__title">Tu cuenta está bloqueada por unos minutos</p><p class="alert__body">Hubo demasiados intentos con contraseña incorrecta. Espera unos minutos y vuelve a intentarlo, o pídele a la persona administradora que la desbloquee.</p></div></div>
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit">Ingresar</button></div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Olvidaste tu contraseña? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="sin-institucion" data-estado-label="Sin institución activa">
+  <a class="skip-link" href="#contenido-sin-institucion">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-sin-institucion">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-sin-institucion">
+      <h1 class="auth__title" id="t-sin-institucion" tabindex="-1">Ingresa a tu cuenta</h1>
+      <p class="auth__lede">Acceso para el equipo de admisión.</p>
+      <form class="auth__form" action="acc-02-verificar-segundo-factor.html" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="email-sin-institucion">Correo</label>
+        <input class="input" id="email-sin-institucion" name="email" type="email" inputmode="email" autocomplete="username" spellcheck="false" autocapitalize="none" placeholder="nombre@institutodemo.cl…" value="jorge.castillo@institutodemo.cl">
+      </div>
+      <div class="field">
+        <label class="field__label" for="pw-sin-institucion">Contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw-sin-institucion" name="password" type="password" autocomplete="current-password" spellcheck="false" autocapitalize="none">
+          <button class="pw__toggle" type="button" aria-controls="pw-sin-institucion" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <div class="alert alert--warning" role="alert">{{i20:user-x}}<div><p class="alert__title">Tu cuenta no tiene una institución activa</p><p class="alert__body">Tu correo y tu contraseña son correctos, pero la cuenta no está asignada a ninguna institución activa. Pídele a la persona administradora que revise tu acceso.</p></div></div>
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit">Ingresar</button></div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Olvidaste tu contraseña? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<div class="auth" data-estado="sin-conexion" data-estado-label="Sin conexión">
+  <a class="skip-link" href="#contenido-sin-conexion">Saltar al contenido</a>
+  <span hidden></span>
+  <main class="auth__main" id="contenido-sin-conexion">
+    <img class="auth__logo" src="../assets/academify-logo.svg" alt="academify" width="176" height="40" translate="no" fetchpriority="high">
+    <section class="auth__panel" aria-labelledby="t-sin-conexion">
+      <h1 class="auth__title" id="t-sin-conexion" tabindex="-1">Ingresa a tu cuenta</h1>
+      <p class="auth__lede">Acceso para el equipo de admisión.</p>
+      <form class="auth__form" action="acc-02-verificar-segundo-factor.html" method="get" novalidate>
+      <div class="field">
+        <label class="field__label" for="email-sin-conexion">Correo</label>
+        <input class="input" id="email-sin-conexion" name="email" type="email" inputmode="email" autocomplete="username" spellcheck="false" autocapitalize="none" placeholder="nombre@institutodemo.cl…" value="paula.henriquez@institutodemo.cl">
+      </div>
+      <div class="field">
+        <label class="field__label" for="pw-sin-conexion">Contraseña</label>
+        <div class="pw">
+          <input class="input" id="pw-sin-conexion" name="password" type="password" autocomplete="current-password" spellcheck="false" autocapitalize="none" value="frase-larga-de-prueba">
+          <button class="pw__toggle" type="button" aria-controls="pw-sin-conexion" aria-pressed="false">{{i:eye}}Mostrar<span class="sr-only"> contraseña</span></button>
+        </div>
+      </div>
+        <div class="alert alert--error" role="alert">{{i20:wifi-off}}<div><p class="alert__title">No pudimos conectar con Academify</p><p class="alert__body">Revisa tu conexión y vuelve a intentarlo. Lo que escribiste sigue aquí.</p></div></div>
+        <div class="auth__actions"><button class="btn btn--primary btn--block" type="submit">Ingresar</button></div>
+      </form>
+      <p class="help-foot">{{i:help}}<span>¿Olvidaste tu contraseña? Pídele a la persona administradora que restablezca tu acceso.</span></p>
+    </section>
+  </main>
+  <footer class="auth__foot"><p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p></footer>
+</div>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

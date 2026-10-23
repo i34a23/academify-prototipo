@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="es-CL" class="has-cta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<title>Paga tu matrícula · Instituto Demo</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body class="is-public">
+<!--SPRITE-->
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="pub-head">
+  <div class="pub-head__inner">
+    <img src="../assets/academify-logo.svg" alt="academify" width="115" height="26" fetchpriority="high" translate="no">
+    <p class="pub-head__inst">Instituto Demo<span class="pub-head__process">Postulación Admisión 2027</span></p>
+    <a class="pub-head__help link" href="mailto:admision@institutodemo.cl">{{i20:mail}}<span class="pub-head__help-long">admision@institutodemo.cl</span><span class="pub-head__help-short">Ayuda</span></a>
+  </div>
+</header>
+
+<main id="contenido" class="pub-main">
+  <div class="pub-layout" data-estado="nada-pagado" data-estado-label="Nada pagado">
+    <div class="pub-task">
+      <h1 class="page-title">Paga tu matrícula</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te toca pagar la matrícula.</strong> Con ese pago tu postulación pasa a validación académica. Adelantar cuotas es opcional.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-now"></span><span></span><span></span></span><span>Etapa 6 de 8</span><a class="link" href="#recorrido-nada-pagado">Ver tu recorrido</a></p>
+      <section class="block" aria-labelledby="h-oblig-nada-pagado">
+        <div class="block__head"><h2 class="block__title" id="h-oblig-nada-pagado">Matrícula</h2><span class="block__tag">Obligatoria</span></div>
+        <div class="line-item">
+          <span class="line-item__icon" aria-hidden="true">{{i20:lock}}</span>
+          <div>
+            <p class="line-item__name">Matrícula 2027</p>
+            <p class="line-item__desc">Va siempre en este pago. Convenio CENCO: 66&nbsp;% de descuento, <span class="tnum">$71.874</span>.</p>
+          </div>
+          <p class="line-item__amount"><span class="line-item__was"><span class="sr-only">Valor sin convenio: </span>$108.900</span><span class="sr-only">Pagas: </span>$37.026</p>
+        </div>
+      </section>
+      <section class="block" aria-labelledby="h-opc-nada-pagado">
+        <div class="block__head"><h2 class="block__title" id="h-opc-nada-pagado">Adelantar cuotas del arancel</h2><span class="block__tag">Opcional</span></div>
+        <div class="qty-row">
+          <div class="qty" role="group" aria-labelledby="h-opc-nada-pagado">
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota menos">{{i20:minus}}</button>
+            <output class="qty__val" aria-live="polite">2</output>
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota más">{{i20:plus}}</button>
+          </div>
+          <p class="qty-row__text"><strong>2 de 10 cuotas</strong> de <span class="tnum">$196.625</span>. Se pagan en orden desde la primera.</p>
+        </div>
+        <div class="track">
+          <div class="track__bar" aria-hidden="true"><span class="is-in"></span><span class="is-in"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <p class="track__text">Adelantas las cuotas 1 y 2. Quedan 8 en tu estado de cuenta.</p>
+        </div>
+      </section>
+      <section class="total" aria-labelledby="h-total-nada-pagado">
+        <h2 class="sr-only" id="h-total-nada-pagado">Total a pagar hoy</h2>
+        <dl class="total__rows"><dt>Matrícula</dt><dd>$37.026</dd><dt>Cuotas 1 y 2 del arancel</dt><dd>$393.250</dd></dl>
+      </section>
+      <div class="pay-bar">
+        <p class="total__sum"><span class="total__label">Total a pagar hoy</span><span class="total__amount" aria-live="polite" aria-atomic="true">$430.276</span></p>
+        <!-- En la app: POST /publico/pago { cuotas } y luego /api/publico/pago/:id/ir. En el prototipo enlaza a PUB-17. -->
+        <form action="pub-17-webpay.html" method="get">
+          <button class="btn btn--primary btn--lg btn--block" type="submit">{{i20:card}}<span>Pagar $430.276 con <span translate="no">Webpay</span></span></button>
+        </form>
+      </div>
+      <div class="total__actions">
+        <button class="btn btn--link" type="button">Pagar solo la matrícula, $37.026</button>
+        <p class="total__fine">{{i:shield}}<span>Pagas en el sitio de <span translate="no">Transbank</span> con débito, crédito o prepago. No vemos ni guardamos los datos de tu tarjeta.</span></p>
+      </div>
+      <h3 class="section__title total__after">Qué pasa después</h3>
+      <ol class="handoff">
+        <li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú pagas</strong> y vuelves aquí con tu comprobante. También te lo enviamos a ma•••@correo.cl.</span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión valida</strong> tus documentos académicos.</span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> cuando quedes matriculado.</span></li>
+      </ol>
+      <section class="block" aria-labelledby="h-comp-nada-pagado">
+        <div class="block__head"><h2 class="block__title" id="h-comp-nada-pagado">Tus compromisos 2027</h2><span class="block__tag">Contrato firmado, versión 1</span></div>
+        <table class="ledger">
+          <caption class="sr-only">Compromisos del año: valor, convenio, a pagar y pagado</caption>
+          <thead><tr><th scope="col">Concepto</th><th scope="col" class="num">Valor</th><th scope="col" class="num">Convenio CENCO</th><th scope="col" class="num">A pagar</th><th scope="col" class="num">Pagado</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Matrícula<span class="ledger__sub">Se paga al matricularte</span></th><td class="num" data-label="Valor">$108.900</td><td class="num" data-label="Convenio CENCO">−$71.874</td><td class="num" data-label="A pagar">$37.026</td><td class="num" data-label="Pagado">$0</td></tr>
+            <tr><th scope="row">Arancel anual<span class="ledger__sub">10 cuotas de $196.625</span></th><td class="num" data-label="Valor">$3.025.000</td><td class="num" data-label="Convenio CENCO">−$1.058.750</td><td class="num" data-label="A pagar">$1.966.250</td><td class="num" data-label="Pagado">$0</td></tr>
+          </tbody>
+        </table>
+        <p class="track__text">Aún no tienes pagos. Cuando pagues, aquí verás cada comprobante.</p>
+      </section>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido-nada-pagado">
+      <h2 class="journey__title" id="recorrido-nada-pagado">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Enviada el 12-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Aceptados el 14-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">15-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Versión 1, 16-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">17-10-2026 18:42</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Ahora, te toca a ti</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who">
+        <dt class="sr-only">Postulante</dt><dd class="who__name">Matías Pérez Gutiérrez</dd>
+        <dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">432-7</span></dd>
+        <dt class="sr-only">Programa</dt><dd>Ingeniería Comercial, diurna, a distancia</dd>
+        <dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000105</span></dd>
+      </dl>
+    </aside>
+  </div>
+  <div class="pub-layout" data-estado="solo-matricula" data-estado-label="Sin cuotas (total cambia)">
+    <div class="pub-task">
+      <h1 class="page-title">Paga tu matrícula</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te toca pagar la matrícula.</strong> Con ese pago tu postulación pasa a validación académica. Adelantar cuotas es opcional.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-now"></span><span></span><span></span></span><span>Etapa 6 de 8</span><a class="link" href="#recorrido-solo-matricula">Ver tu recorrido</a></p>
+      <section class="block" aria-labelledby="h-oblig-solo-matricula">
+        <div class="block__head"><h2 class="block__title" id="h-oblig-solo-matricula">Matrícula</h2><span class="block__tag">Obligatoria</span></div>
+        <div class="line-item">
+          <span class="line-item__icon" aria-hidden="true">{{i20:lock}}</span>
+          <div>
+            <p class="line-item__name">Matrícula 2027</p>
+            <p class="line-item__desc">Va siempre en este pago. Convenio CENCO: 66&nbsp;% de descuento, <span class="tnum">$71.874</span>.</p>
+          </div>
+          <p class="line-item__amount"><span class="line-item__was"><span class="sr-only">Valor sin convenio: </span>$108.900</span><span class="sr-only">Pagas: </span>$37.026</p>
+        </div>
+      </section>
+      <section class="block" aria-labelledby="h-opc-solo-matricula">
+        <div class="block__head"><h2 class="block__title" id="h-opc-solo-matricula">Adelantar cuotas del arancel</h2><span class="block__tag">Opcional</span></div>
+        <div class="qty-row">
+          <div class="qty" role="group" aria-labelledby="h-opc-solo-matricula">
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota menos" disabled>{{i20:minus}}</button>
+            <output class="qty__val" aria-live="polite">0</output>
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota más">{{i20:plus}}</button>
+          </div>
+          <p class="qty-row__text"><strong>Sin cuotas adelantadas.</strong> Cada cuota es de <span class="tnum">$196.625</span>.</p>
+        </div>
+        <div class="track">
+          <div class="track__bar" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <p class="track__text">No adelantas cuotas. Quedan 10 en tu estado de cuenta.</p>
+        </div>
+      </section>
+      <section class="total" aria-labelledby="h-total-solo-matricula">
+        <h2 class="sr-only" id="h-total-solo-matricula">Total a pagar hoy</h2>
+        <dl class="total__rows"><dt>Matrícula</dt><dd>$37.026</dd></dl>
+      </section>
+      <div class="pay-bar">
+        <p class="total__sum"><span class="total__label">Total a pagar hoy</span><span class="total__amount" aria-live="polite" aria-atomic="true">$37.026</span></p>
+        <!-- En la app: POST /publico/pago { cuotas } y luego /api/publico/pago/:id/ir. En el prototipo enlaza a PUB-17. -->
+        <form action="pub-17-webpay.html" method="get">
+          <button class="btn btn--primary btn--lg btn--block" type="submit">{{i20:card}}<span>Pagar $37.026 con <span translate="no">Webpay</span></span></button>
+        </form><p class="sr-only" aria-live="polite" aria-atomic="true">Total a pagar hoy: $37.026. Solo la matrícula.</p>
+      </div>
+      <div class="total__actions">
+        <p class="total__fine">{{i:shield}}<span>Pagas en el sitio de <span translate="no">Transbank</span> con débito, crédito o prepago. No vemos ni guardamos los datos de tu tarjeta.</span></p>
+      </div>
+      <h3 class="section__title total__after">Qué pasa después</h3>
+      <ol class="handoff">
+        <li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú pagas</strong> y vuelves aquí con tu comprobante. También te lo enviamos a ma•••@correo.cl.</span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión valida</strong> tus documentos académicos.</span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> cuando quedes matriculado.</span></li>
+      </ol>
+      <section class="block" aria-labelledby="h-comp-solo-matricula">
+        <div class="block__head"><h2 class="block__title" id="h-comp-solo-matricula">Tus compromisos 2027</h2><span class="block__tag">Contrato firmado, versión 1</span></div>
+        <table class="ledger">
+          <caption class="sr-only">Compromisos del año: valor, convenio, a pagar y pagado</caption>
+          <thead><tr><th scope="col">Concepto</th><th scope="col" class="num">Valor</th><th scope="col" class="num">Convenio CENCO</th><th scope="col" class="num">A pagar</th><th scope="col" class="num">Pagado</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Matrícula<span class="ledger__sub">Se paga al matricularte</span></th><td class="num" data-label="Valor">$108.900</td><td class="num" data-label="Convenio CENCO">−$71.874</td><td class="num" data-label="A pagar">$37.026</td><td class="num" data-label="Pagado">$0</td></tr>
+            <tr><th scope="row">Arancel anual<span class="ledger__sub">10 cuotas de $196.625</span></th><td class="num" data-label="Valor">$3.025.000</td><td class="num" data-label="Convenio CENCO">−$1.058.750</td><td class="num" data-label="A pagar">$1.966.250</td><td class="num" data-label="Pagado">$0</td></tr>
+          </tbody>
+        </table>
+        <p class="track__text">Aún no tienes pagos. Cuando pagues, aquí verás cada comprobante.</p>
+      </section>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido-solo-matricula">
+      <h2 class="journey__title" id="recorrido-solo-matricula">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Enviada el 12-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Aceptados el 14-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">15-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Versión 1, 16-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">17-10-2026 18:42</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Ahora, te toca a ti</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who">
+        <dt class="sr-only">Postulante</dt><dd class="who__name">Matías Pérez Gutiérrez</dd>
+        <dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">432-7</span></dd>
+        <dt class="sr-only">Programa</dt><dd>Ingeniería Comercial, diurna, a distancia</dd>
+        <dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000105</span></dd>
+      </dl>
+    </aside>
+  </div>
+  <div class="pub-layout" data-estado="todas-cuotas" data-estado-label="Todas las cuotas">
+    <div class="pub-task">
+      <h1 class="page-title">Paga tu matrícula</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te toca pagar la matrícula.</strong> Con ese pago tu postulación pasa a validación académica. Adelantar cuotas es opcional.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-now"></span><span></span><span></span></span><span>Etapa 6 de 8</span><a class="link" href="#recorrido-todas-cuotas">Ver tu recorrido</a></p>
+      <section class="block" aria-labelledby="h-oblig-todas-cuotas">
+        <div class="block__head"><h2 class="block__title" id="h-oblig-todas-cuotas">Matrícula</h2><span class="block__tag">Obligatoria</span></div>
+        <div class="line-item">
+          <span class="line-item__icon" aria-hidden="true">{{i20:lock}}</span>
+          <div>
+            <p class="line-item__name">Matrícula 2027</p>
+            <p class="line-item__desc">Va siempre en este pago. Convenio CENCO: 66&nbsp;% de descuento, <span class="tnum">$71.874</span>.</p>
+          </div>
+          <p class="line-item__amount"><span class="line-item__was"><span class="sr-only">Valor sin convenio: </span>$108.900</span><span class="sr-only">Pagas: </span>$37.026</p>
+        </div>
+      </section>
+      <section class="block" aria-labelledby="h-opc-todas-cuotas">
+        <div class="block__head"><h2 class="block__title" id="h-opc-todas-cuotas">Adelantar cuotas del arancel</h2><span class="block__tag">Opcional</span></div>
+        <div class="qty-row">
+          <div class="qty" role="group" aria-labelledby="h-opc-todas-cuotas" aria-describedby="qty-why-todas-cuotas">
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota menos">{{i20:minus}}</button>
+            <output class="qty__val" aria-live="polite">10</output>
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota más" disabled>{{i20:plus}}</button>
+          </div>
+          <p class="qty-row__text"><strong>10 de 10 cuotas</strong> de <span class="tnum">$196.625</span>. Se pagan en orden desde la primera.</p>
+        </div>
+          <p class="note" id="qty-why-todas-cuotas">{{i:info}}<span>Ya elegiste las 10 cuotas del arancel.</span></p>
+        <div class="track">
+          <div class="track__bar" aria-hidden="true"><span class="is-in"></span><span class="is-in"></span><span class="is-in"></span><span class="is-in"></span><span class="is-in"></span><span class="is-in"></span><span class="is-in"></span><span class="is-in"></span><span class="is-in"></span><span class="is-in"></span></div>
+          <p class="track__text">Adelantas las cuotas 1 a 10. No quedan cuotas pendientes.</p>
+        </div>
+      </section>
+      <section class="total" aria-labelledby="h-total-todas-cuotas">
+        <h2 class="sr-only" id="h-total-todas-cuotas">Total a pagar hoy</h2>
+        <dl class="total__rows"><dt>Matrícula</dt><dd>$37.026</dd><dt>Cuotas 1 a 10 del arancel</dt><dd>$1.966.250</dd></dl>
+      </section>
+      <div class="pay-bar">
+        <p class="total__sum"><span class="total__label">Total a pagar hoy</span><span class="total__amount" aria-live="polite" aria-atomic="true">$2.003.276</span></p>
+        <!-- En la app: POST /publico/pago { cuotas } y luego /api/publico/pago/:id/ir. En el prototipo enlaza a PUB-17. -->
+        <form action="pub-17-webpay.html" method="get">
+          <button class="btn btn--primary btn--lg btn--block" type="submit">{{i20:card}}<span>Pagar $2.003.276 con <span translate="no">Webpay</span></span></button>
+        </form><p class="sr-only" aria-live="polite" aria-atomic="true">Total a pagar hoy: $2.003.276. Matrícula y cuotas 1 a 10.</p>
+      </div>
+      <div class="total__actions">
+        <button class="btn btn--link" type="button">Pagar solo la matrícula, $37.026</button>
+        <p class="total__fine">{{i:shield}}<span>Pagas en el sitio de <span translate="no">Transbank</span> con débito, crédito o prepago. No vemos ni guardamos los datos de tu tarjeta.</span></p>
+      </div>
+      <h3 class="section__title total__after">Qué pasa después</h3>
+      <ol class="handoff">
+        <li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú pagas</strong> y vuelves aquí con tu comprobante. También te lo enviamos a ma•••@correo.cl.</span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión valida</strong> tus documentos académicos.</span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> cuando quedes matriculado.</span></li>
+      </ol>
+      <section class="block" aria-labelledby="h-comp-todas-cuotas">
+        <div class="block__head"><h2 class="block__title" id="h-comp-todas-cuotas">Tus compromisos 2027</h2><span class="block__tag">Contrato firmado, versión 1</span></div>
+        <table class="ledger">
+          <caption class="sr-only">Compromisos del año: valor, convenio, a pagar y pagado</caption>
+          <thead><tr><th scope="col">Concepto</th><th scope="col" class="num">Valor</th><th scope="col" class="num">Convenio CENCO</th><th scope="col" class="num">A pagar</th><th scope="col" class="num">Pagado</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Matrícula<span class="ledger__sub">Se paga al matricularte</span></th><td class="num" data-label="Valor">$108.900</td><td class="num" data-label="Convenio CENCO">−$71.874</td><td class="num" data-label="A pagar">$37.026</td><td class="num" data-label="Pagado">$0</td></tr>
+            <tr><th scope="row">Arancel anual<span class="ledger__sub">10 cuotas de $196.625</span></th><td class="num" data-label="Valor">$3.025.000</td><td class="num" data-label="Convenio CENCO">−$1.058.750</td><td class="num" data-label="A pagar">$1.966.250</td><td class="num" data-label="Pagado">$0</td></tr>
+          </tbody>
+        </table>
+        <p class="track__text">Aún no tienes pagos. Cuando pagues, aquí verás cada comprobante.</p>
+      </section>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido-todas-cuotas">
+      <h2 class="journey__title" id="recorrido-todas-cuotas">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Enviada el 12-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Aceptados el 14-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">15-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Versión 1, 16-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">17-10-2026 18:42</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Ahora, te toca a ti</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who">
+        <dt class="sr-only">Postulante</dt><dd class="who__name">Matías Pérez Gutiérrez</dd>
+        <dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">432-7</span></dd>
+        <dt class="sr-only">Programa</dt><dd>Ingeniería Comercial, diurna, a distancia</dd>
+        <dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000105</span></dd>
+      </dl>
+    </aside>
+  </div>
+  <div class="pub-layout" data-estado="iniciando" data-estado-label="Preparando el pago">
+    <div class="pub-task">
+      <h1 class="page-title">Paga tu matrícula</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te toca pagar la matrícula.</strong> Con ese pago tu postulación pasa a validación académica. Adelantar cuotas es opcional.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-now"></span><span></span><span></span></span><span>Etapa 6 de 8</span><a class="link" href="#recorrido-iniciando">Ver tu recorrido</a></p>
+      <section class="block" aria-labelledby="h-oblig-iniciando">
+        <div class="block__head"><h2 class="block__title" id="h-oblig-iniciando">Matrícula</h2><span class="block__tag">Obligatoria</span></div>
+        <div class="line-item">
+          <span class="line-item__icon" aria-hidden="true">{{i20:lock}}</span>
+          <div>
+            <p class="line-item__name">Matrícula 2027</p>
+            <p class="line-item__desc">Va siempre en este pago. Convenio CENCO: 66&nbsp;% de descuento, <span class="tnum">$71.874</span>.</p>
+          </div>
+          <p class="line-item__amount"><span class="line-item__was"><span class="sr-only">Valor sin convenio: </span>$108.900</span><span class="sr-only">Pagas: </span>$37.026</p>
+        </div>
+      </section>
+      <section class="block" aria-labelledby="h-opc-iniciando">
+        <div class="block__head"><h2 class="block__title" id="h-opc-iniciando">Adelantar cuotas del arancel</h2><span class="block__tag">Opcional</span></div>
+        <div class="qty-row">
+          <div class="qty" role="group" aria-labelledby="h-opc-iniciando">
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota menos" disabled>{{i20:minus}}</button>
+            <output class="qty__val" aria-live="polite">2</output>
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota más" disabled>{{i20:plus}}</button>
+          </div>
+          <p class="qty-row__text"><strong>2 de 10 cuotas</strong> de <span class="tnum">$196.625</span>. Se pagan en orden desde la primera.</p>
+        </div>
+        <div class="track">
+          <div class="track__bar" aria-hidden="true"><span class="is-in"></span><span class="is-in"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <p class="track__text">Adelantas las cuotas 1 y 2. Quedan 8 en tu estado de cuenta.</p>
+        </div>
+      </section>
+      <section class="total" aria-labelledby="h-total-iniciando">
+        <h2 class="sr-only" id="h-total-iniciando">Total a pagar hoy</h2>
+        <dl class="total__rows"><dt>Matrícula</dt><dd>$37.026</dd><dt>Cuotas 1 y 2 del arancel</dt><dd>$393.250</dd></dl>
+      </section>
+      <div class="pay-bar">
+        <p class="total__sum"><span class="total__label">Total a pagar hoy</span><span class="total__amount" aria-live="polite" aria-atomic="true">$430.276</span></p>
+        <!-- En la app: POST /publico/pago { cuotas } y luego /api/publico/pago/:id/ir. En el prototipo enlaza a PUB-17. -->
+        <form action="pub-17-webpay.html" method="get">
+          <button class="btn btn--primary btn--lg btn--block" type="submit" aria-busy="true">Preparando tu pago…</button>
+        </form>
+      </div>
+      <div class="total__actions">
+        <p class="total__fine">{{i:shield}}<span>Pagas en el sitio de <span translate="no">Transbank</span> con débito, crédito o prepago. No vemos ni guardamos los datos de tu tarjeta.</span></p>
+      </div>
+      <h3 class="section__title total__after">Qué pasa después</h3>
+      <ol class="handoff">
+        <li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú pagas</strong> y vuelves aquí con tu comprobante. También te lo enviamos a ma•••@correo.cl.</span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión valida</strong> tus documentos académicos.</span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> cuando quedes matriculado.</span></li>
+      </ol>
+      <section class="block" aria-labelledby="h-comp-iniciando">
+        <div class="block__head"><h2 class="block__title" id="h-comp-iniciando">Tus compromisos 2027</h2><span class="block__tag">Contrato firmado, versión 1</span></div>
+        <table class="ledger">
+          <caption class="sr-only">Compromisos del año: valor, convenio, a pagar y pagado</caption>
+          <thead><tr><th scope="col">Concepto</th><th scope="col" class="num">Valor</th><th scope="col" class="num">Convenio CENCO</th><th scope="col" class="num">A pagar</th><th scope="col" class="num">Pagado</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Matrícula<span class="ledger__sub">Se paga al matricularte</span></th><td class="num" data-label="Valor">$108.900</td><td class="num" data-label="Convenio CENCO">−$71.874</td><td class="num" data-label="A pagar">$37.026</td><td class="num" data-label="Pagado">$0</td></tr>
+            <tr><th scope="row">Arancel anual<span class="ledger__sub">10 cuotas de $196.625</span></th><td class="num" data-label="Valor">$3.025.000</td><td class="num" data-label="Convenio CENCO">−$1.058.750</td><td class="num" data-label="A pagar">$1.966.250</td><td class="num" data-label="Pagado">$0</td></tr>
+          </tbody>
+        </table>
+        <p class="track__text">Aún no tienes pagos. Cuando pagues, aquí verás cada comprobante.</p>
+      </section>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido-iniciando">
+      <h2 class="journey__title" id="recorrido-iniciando">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Enviada el 12-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Aceptados el 14-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">15-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Versión 1, 16-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">17-10-2026 18:42</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Ahora, te toca a ti</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who">
+        <dt class="sr-only">Postulante</dt><dd class="who__name">Matías Pérez Gutiérrez</dd>
+        <dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">432-7</span></dd>
+        <dt class="sr-only">Programa</dt><dd>Ingeniería Comercial, diurna, a distancia</dd>
+        <dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000105</span></dd>
+      </dl>
+    </aside>
+  </div>
+  <div class="pub-layout" data-estado="error-inicio" data-estado-label="No se pudo iniciar">
+    <div class="pub-task">
+      <h1 class="page-title">Paga tu matrícula</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te toca pagar la matrícula.</strong> Con ese pago tu postulación pasa a validación académica. Adelantar cuotas es opcional.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-now"></span><span></span><span></span></span><span>Etapa 6 de 8</span><a class="link" href="#recorrido-error-inicio">Ver tu recorrido</a></p>
+      <section class="block" aria-labelledby="h-oblig-error-inicio">
+        <div class="block__head"><h2 class="block__title" id="h-oblig-error-inicio">Matrícula</h2><span class="block__tag">Obligatoria</span></div>
+        <div class="line-item">
+          <span class="line-item__icon" aria-hidden="true">{{i20:lock}}</span>
+          <div>
+            <p class="line-item__name">Matrícula 2027</p>
+            <p class="line-item__desc">Va siempre en este pago. Convenio CENCO: 66&nbsp;% de descuento, <span class="tnum">$71.874</span>.</p>
+          </div>
+          <p class="line-item__amount"><span class="line-item__was"><span class="sr-only">Valor sin convenio: </span>$108.900</span><span class="sr-only">Pagas: </span>$37.026</p>
+        </div>
+      </section>
+      <section class="block" aria-labelledby="h-opc-error-inicio">
+        <div class="block__head"><h2 class="block__title" id="h-opc-error-inicio">Adelantar cuotas del arancel</h2><span class="block__tag">Opcional</span></div>
+        <div class="qty-row">
+          <div class="qty" role="group" aria-labelledby="h-opc-error-inicio">
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota menos">{{i20:minus}}</button>
+            <output class="qty__val" aria-live="polite">2</output>
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota más">{{i20:plus}}</button>
+          </div>
+          <p class="qty-row__text"><strong>2 de 10 cuotas</strong> de <span class="tnum">$196.625</span>. Se pagan en orden desde la primera.</p>
+        </div>
+        <div class="track">
+          <div class="track__bar" aria-hidden="true"><span class="is-in"></span><span class="is-in"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <p class="track__text">Adelantas las cuotas 1 y 2. Quedan 8 en tu estado de cuenta.</p>
+        </div>
+      </section>
+      <section class="total" aria-labelledby="h-total-error-inicio">
+        <h2 class="sr-only" id="h-total-error-inicio">Total a pagar hoy</h2>
+        <dl class="total__rows"><dt>Matrícula</dt><dd>$37.026</dd><dt>Cuotas 1 y 2 del arancel</dt><dd>$393.250</dd></dl>
+      </section>
+      <div class="pay-bar">
+        <p class="total__sum"><span class="total__label">Total a pagar hoy</span><span class="total__amount" aria-live="polite" aria-atomic="true">$430.276</span></p>
+        <!-- En la app: POST /publico/pago { cuotas } y luego /api/publico/pago/:id/ir. En el prototipo enlaza a PUB-17. -->
+        <form action="pub-17-webpay.html" method="get">
+          <button class="btn btn--primary btn--lg btn--block" type="submit">{{i20:card}}<span>Pagar $430.276 con <span translate="no">Webpay</span></span></button>
+        </form>
+      </div>
+      <div class="total__actions">
+        <p class="note note--error" role="alert">{{i:alert}}<span>No pudimos iniciar el pago con <span translate="no">Webpay</span>. No se hizo ningún cargo: inténtalo de nuevo en unos minutos.</span></p>
+        <button class="btn btn--link" type="button">Pagar solo la matrícula, $37.026</button>
+        <p class="total__fine">{{i:shield}}<span>Pagas en el sitio de <span translate="no">Transbank</span> con débito, crédito o prepago. No vemos ni guardamos los datos de tu tarjeta.</span></p>
+      </div>
+      <h3 class="section__title total__after">Qué pasa después</h3>
+      <ol class="handoff">
+        <li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú pagas</strong> y vuelves aquí con tu comprobante. También te lo enviamos a ma•••@correo.cl.</span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión valida</strong> tus documentos académicos.</span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> cuando quedes matriculado.</span></li>
+      </ol>
+      <section class="block" aria-labelledby="h-comp-error-inicio">
+        <div class="block__head"><h2 class="block__title" id="h-comp-error-inicio">Tus compromisos 2027</h2><span class="block__tag">Contrato firmado, versión 1</span></div>
+        <table class="ledger">
+          <caption class="sr-only">Compromisos del año: valor, convenio, a pagar y pagado</caption>
+          <thead><tr><th scope="col">Concepto</th><th scope="col" class="num">Valor</th><th scope="col" class="num">Convenio CENCO</th><th scope="col" class="num">A pagar</th><th scope="col" class="num">Pagado</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Matrícula<span class="ledger__sub">Se paga al matricularte</span></th><td class="num" data-label="Valor">$108.900</td><td class="num" data-label="Convenio CENCO">−$71.874</td><td class="num" data-label="A pagar">$37.026</td><td class="num" data-label="Pagado">$0</td></tr>
+            <tr><th scope="row">Arancel anual<span class="ledger__sub">10 cuotas de $196.625</span></th><td class="num" data-label="Valor">$3.025.000</td><td class="num" data-label="Convenio CENCO">−$1.058.750</td><td class="num" data-label="A pagar">$1.966.250</td><td class="num" data-label="Pagado">$0</td></tr>
+          </tbody>
+        </table>
+        <p class="track__text">Aún no tienes pagos. Cuando pagues, aquí verás cada comprobante.</p>
+      </section>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido-error-inicio">
+      <h2 class="journey__title" id="recorrido-error-inicio">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Enviada el 12-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Aceptados el 14-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">15-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Versión 1, 16-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">17-10-2026 18:42</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Ahora, te toca a ti</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who">
+        <dt class="sr-only">Postulante</dt><dd class="who__name">Matías Pérez Gutiérrez</dd>
+        <dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">432-7</span></dd>
+        <dt class="sr-only">Programa</dt><dd>Ingeniería Comercial, diurna, a distancia</dd>
+        <dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000105</span></dd>
+      </dl>
+    </aside>
+  </div>
+  <div class="pub-layout" data-estado="en-curso" data-estado-label="Pago en curso">
+    <div class="pub-task">
+      <h1 class="page-title">Paga tu matrícula</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te toca pagar la matrícula.</strong> Con ese pago tu postulación pasa a validación académica. Adelantar cuotas es opcional.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-now"></span><span></span><span></span></span><span>Etapa 6 de 8</span><a class="link" href="#recorrido-en-curso">Ver tu recorrido</a></p>
+      <div class="alert alert--warning flow-gap" role="status">
+        {{i20:clock}}
+        <div>
+          <p class="alert__title">Tienes un pago en curso por <span class="tnum">$430.276</span></p>
+          <p class="alert__body">Lo iniciaste el 19-10-2026 a las 10:12. Si ya pagaste en <span translate="no">Webpay</span>, consulta el estado antes de pagar de nuevo.</p>
+          <div class="alert__actions btn-row"><a class="btn btn--secondary btn--sm" href="pub-18-resultado-pago.html?estado=incierto">{{i:refresh}}<span>Consultar estado</span></a></div>
+        </div>
+      </div>
+      <section class="block" aria-labelledby="h-oblig-en-curso">
+        <div class="block__head"><h2 class="block__title" id="h-oblig-en-curso">Matrícula</h2><span class="block__tag">Obligatoria</span></div>
+        <div class="line-item">
+          <span class="line-item__icon" aria-hidden="true">{{i20:lock}}</span>
+          <div>
+            <p class="line-item__name">Matrícula 2027</p>
+            <p class="line-item__desc">Va siempre en este pago. Convenio CENCO: 66&nbsp;% de descuento, <span class="tnum">$71.874</span>.</p>
+          </div>
+          <p class="line-item__amount"><span class="line-item__was"><span class="sr-only">Valor sin convenio: </span>$108.900</span><span class="sr-only">Pagas: </span>$37.026</p>
+        </div>
+      </section>
+      <section class="block" aria-labelledby="h-opc-en-curso">
+        <div class="block__head"><h2 class="block__title" id="h-opc-en-curso">Adelantar cuotas del arancel</h2><span class="block__tag">Opcional</span></div>
+        <div class="qty-row">
+          <div class="qty" role="group" aria-labelledby="h-opc-en-curso">
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota menos" disabled>{{i20:minus}}</button>
+            <output class="qty__val" aria-live="polite">2</output>
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota más" disabled>{{i20:plus}}</button>
+          </div>
+          <p class="qty-row__text"><strong>2 de 10 cuotas</strong> de <span class="tnum">$196.625</span>. Se pagan en orden desde la primera.</p>
+        </div>
+        <div class="track">
+          <div class="track__bar" aria-hidden="true"><span class="is-in"></span><span class="is-in"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <p class="track__text">Adelantas las cuotas 1 y 2. Quedan 8 en tu estado de cuenta.</p>
+        </div>
+      </section>
+      <section class="total" aria-labelledby="h-total-en-curso">
+        <h2 class="sr-only" id="h-total-en-curso">Total a pagar hoy</h2>
+        <dl class="total__rows"><dt>Matrícula</dt><dd>$37.026</dd><dt>Cuotas 1 y 2 del arancel</dt><dd>$393.250</dd></dl>
+      </section>
+      <div class="pay-bar">
+        <p class="total__sum"><span class="total__label">Total a pagar hoy</span><span class="total__amount" aria-live="polite" aria-atomic="true">$430.276</span></p>
+        <!-- En la app: POST /publico/pago { cuotas } y luego /api/publico/pago/:id/ir. En el prototipo enlaza a PUB-17. -->
+        <form action="pub-17-webpay.html" method="get">
+          <button class="btn btn--primary btn--lg btn--block" type="submit" disabled aria-describedby="pay-why-en-curso">{{i20:card}}<span>Pagar $430.276 con <span translate="no">Webpay</span></span></button>
+        </form>
+      </div>
+      <div class="total__actions">
+        <p class="note" id="pay-why-en-curso">{{i:info}}<span>Para pagar de nuevo, primero consulta el estado del pago en curso.</span></p>
+        <p class="total__fine">{{i:shield}}<span>Pagas en el sitio de <span translate="no">Transbank</span> con débito, crédito o prepago. No vemos ni guardamos los datos de tu tarjeta.</span></p>
+      </div>
+      <h3 class="section__title total__after">Qué pasa después</h3>
+      <ol class="handoff">
+        <li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú pagas</strong> y vuelves aquí con tu comprobante. También te lo enviamos a ma•••@correo.cl.</span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión valida</strong> tus documentos académicos.</span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> cuando quedes matriculado.</span></li>
+      </ol>
+      <section class="block" aria-labelledby="h-comp-en-curso">
+        <div class="block__head"><h2 class="block__title" id="h-comp-en-curso">Tus compromisos 2027</h2><span class="block__tag">Contrato firmado, versión 1</span></div>
+        <table class="ledger">
+          <caption class="sr-only">Compromisos del año: valor, convenio, a pagar y pagado</caption>
+          <thead><tr><th scope="col">Concepto</th><th scope="col" class="num">Valor</th><th scope="col" class="num">Convenio CENCO</th><th scope="col" class="num">A pagar</th><th scope="col" class="num">Pagado</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Matrícula<span class="ledger__sub">Se paga al matricularte</span></th><td class="num" data-label="Valor">$108.900</td><td class="num" data-label="Convenio CENCO">−$71.874</td><td class="num" data-label="A pagar">$37.026</td><td class="num" data-label="Pagado">$0</td></tr>
+            <tr><th scope="row">Arancel anual<span class="ledger__sub">10 cuotas de $196.625</span></th><td class="num" data-label="Valor">$3.025.000</td><td class="num" data-label="Convenio CENCO">−$1.058.750</td><td class="num" data-label="A pagar">$1.966.250</td><td class="num" data-label="Pagado">$0</td></tr>
+          </tbody>
+        </table>
+        <p class="track__text">Aún no tienes pagos. Cuando pagues, aquí verás cada comprobante.</p>
+      </section>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido-en-curso">
+      <h2 class="journey__title" id="recorrido-en-curso">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Enviada el 12-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Aceptados el 14-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">15-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Versión 1, 16-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">17-10-2026 18:42</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Ahora, te toca a ti</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who">
+        <dt class="sr-only">Postulante</dt><dd class="who__name">Matías Pérez Gutiérrez</dd>
+        <dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">432-7</span></dd>
+        <dt class="sr-only">Programa</dt><dd>Ingeniería Comercial, diurna, a distancia</dd>
+        <dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000105</span></dd>
+      </dl>
+    </aside>
+  </div>
+  <div class="pub-layout" data-estado="consulta-pendiente" data-estado-label="Consulta sin resultado aún">
+    <div class="pub-task">
+      <h1 class="page-title">Paga tu matrícula</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te toca pagar la matrícula.</strong> Con ese pago tu postulación pasa a validación académica. Adelantar cuotas es opcional.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-now"></span><span></span><span></span></span><span>Etapa 6 de 8</span><a class="link" href="#recorrido-consulta-pendiente">Ver tu recorrido</a></p>
+      <div class="alert alert--warning flow-gap" role="status">
+        {{i20:clock}}
+        <div>
+          <p class="alert__title">Tienes un pago en curso por <span class="tnum">$430.276</span></p>
+          <p class="alert__body">Lo iniciaste el 19-10-2026 a las 10:12. Si ya pagaste en <span translate="no">Webpay</span>, consulta el estado antes de pagar de nuevo.</p>
+          <div class="alert__actions btn-row"><a class="btn btn--secondary btn--sm" href="pub-18-resultado-pago.html?estado=incierto">{{i:refresh}}<span>Consultar estado</span></a><span class="note">{{i:info}}<span>El pago todavía se está procesando. Vuelve a consultar en un minuto.</span></span></div>
+        </div>
+      </div>
+      <section class="block" aria-labelledby="h-oblig-consulta-pendiente">
+        <div class="block__head"><h2 class="block__title" id="h-oblig-consulta-pendiente">Matrícula</h2><span class="block__tag">Obligatoria</span></div>
+        <div class="line-item">
+          <span class="line-item__icon" aria-hidden="true">{{i20:lock}}</span>
+          <div>
+            <p class="line-item__name">Matrícula 2027</p>
+            <p class="line-item__desc">Va siempre en este pago. Convenio CENCO: 66&nbsp;% de descuento, <span class="tnum">$71.874</span>.</p>
+          </div>
+          <p class="line-item__amount"><span class="line-item__was"><span class="sr-only">Valor sin convenio: </span>$108.900</span><span class="sr-only">Pagas: </span>$37.026</p>
+        </div>
+      </section>
+      <section class="block" aria-labelledby="h-opc-consulta-pendiente">
+        <div class="block__head"><h2 class="block__title" id="h-opc-consulta-pendiente">Adelantar cuotas del arancel</h2><span class="block__tag">Opcional</span></div>
+        <div class="qty-row">
+          <div class="qty" role="group" aria-labelledby="h-opc-consulta-pendiente">
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota menos" disabled>{{i20:minus}}</button>
+            <output class="qty__val" aria-live="polite">2</output>
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota más" disabled>{{i20:plus}}</button>
+          </div>
+          <p class="qty-row__text"><strong>2 de 10 cuotas</strong> de <span class="tnum">$196.625</span>. Se pagan en orden desde la primera.</p>
+        </div>
+        <div class="track">
+          <div class="track__bar" aria-hidden="true"><span class="is-in"></span><span class="is-in"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <p class="track__text">Adelantas las cuotas 1 y 2. Quedan 8 en tu estado de cuenta.</p>
+        </div>
+      </section>
+      <section class="total" aria-labelledby="h-total-consulta-pendiente">
+        <h2 class="sr-only" id="h-total-consulta-pendiente">Total a pagar hoy</h2>
+        <dl class="total__rows"><dt>Matrícula</dt><dd>$37.026</dd><dt>Cuotas 1 y 2 del arancel</dt><dd>$393.250</dd></dl>
+      </section>
+      <div class="pay-bar">
+        <p class="total__sum"><span class="total__label">Total a pagar hoy</span><span class="total__amount" aria-live="polite" aria-atomic="true">$430.276</span></p>
+        <!-- En la app: POST /publico/pago { cuotas } y luego /api/publico/pago/:id/ir. En el prototipo enlaza a PUB-17. -->
+        <form action="pub-17-webpay.html" method="get">
+          <button class="btn btn--primary btn--lg btn--block" type="submit" disabled aria-describedby="pay-why-consulta-pendiente">{{i20:card}}<span>Pagar $430.276 con <span translate="no">Webpay</span></span></button>
+        </form>
+      </div>
+      <div class="total__actions">
+        <p class="note" id="pay-why-consulta-pendiente">{{i:info}}<span>Para pagar de nuevo, primero consulta el estado del pago en curso.</span></p>
+        <p class="total__fine">{{i:shield}}<span>Pagas en el sitio de <span translate="no">Transbank</span> con débito, crédito o prepago. No vemos ni guardamos los datos de tu tarjeta.</span></p>
+      </div>
+      <h3 class="section__title total__after">Qué pasa después</h3>
+      <ol class="handoff">
+        <li class="handoff__item"><span class="mark mark--yours" aria-hidden="true"></span><span><strong>Tú pagas</strong> y vuelves aquí con tu comprobante. También te lo enviamos a ma•••@correo.cl.</span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Admisión valida</strong> tus documentos académicos.</span></li>
+        <li class="handoff__item"><span class="mark" aria-hidden="true"></span><span><strong>Te avisamos por correo</strong> cuando quedes matriculado.</span></li>
+      </ol>
+      <section class="block" aria-labelledby="h-comp-consulta-pendiente">
+        <div class="block__head"><h2 class="block__title" id="h-comp-consulta-pendiente">Tus compromisos 2027</h2><span class="block__tag">Contrato firmado, versión 1</span></div>
+        <table class="ledger">
+          <caption class="sr-only">Compromisos del año: valor, convenio, a pagar y pagado</caption>
+          <thead><tr><th scope="col">Concepto</th><th scope="col" class="num">Valor</th><th scope="col" class="num">Convenio CENCO</th><th scope="col" class="num">A pagar</th><th scope="col" class="num">Pagado</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Matrícula<span class="ledger__sub">Se paga al matricularte</span></th><td class="num" data-label="Valor">$108.900</td><td class="num" data-label="Convenio CENCO">−$71.874</td><td class="num" data-label="A pagar">$37.026</td><td class="num" data-label="Pagado">$0</td></tr>
+            <tr><th scope="row">Arancel anual<span class="ledger__sub">10 cuotas de $196.625</span></th><td class="num" data-label="Valor">$3.025.000</td><td class="num" data-label="Convenio CENCO">−$1.058.750</td><td class="num" data-label="A pagar">$1.966.250</td><td class="num" data-label="Pagado">$0</td></tr>
+          </tbody>
+        </table>
+        <p class="track__text">Aún no tienes pagos. Cuando pagues, aquí verás cada comprobante.</p>
+      </section>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido-consulta-pendiente">
+      <h2 class="journey__title" id="recorrido-consulta-pendiente">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Enviada el 12-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Aceptados el 14-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">15-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Versión 1, 16-10-2026</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">17-10-2026 18:42</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Ahora, te toca a ti</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who">
+        <dt class="sr-only">Postulante</dt><dd class="who__name">Matías Pérez Gutiérrez</dd>
+        <dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">432-7</span></dd>
+        <dt class="sr-only">Programa</dt><dd>Ingeniería Comercial, diurna, a distancia</dd>
+        <dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000105</span></dd>
+      </dl>
+    </aside>
+  </div>
+  <div class="pub-layout" data-estado="matricula-pagada" data-estado-label="Matrícula pagada, con comprobante">
+    <div class="pub-task">
+      <h1 class="page-title">Tu estado financiero</h1>
+      <p class="turn"><span class="mark" aria-hidden="true"></span><span><strong>Admisión valida tus documentos académicos.</strong> Tu matrícula ya está pagada. Si quieres, puedes adelantar más cuotas del arancel.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-done"></span><span class="is-now"></span><span></span></span><span>Etapa 7 de 8</span><a class="link" href="#recorrido-matricula-pagada">Ver tu recorrido</a></p>
+
+      <section class="block" aria-labelledby="h-oblig-matricula-pagada">
+        <div class="block__head"><h2 class="block__title" id="h-oblig-matricula-pagada">Matrícula</h2><span class="badge badge--done">{{i:check}}Pagado</span></div>
+        <div class="line-item">
+          <span class="line-item__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="line-item__name">Matrícula 2027</p>
+            <p class="line-item__desc">Pagada el 17-10-2026 con <span translate="no">Webpay</span>.</p>
+          </div>
+          <p class="line-item__amount">$108.900</p>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="h-opc-matricula-pagada">
+        <div class="block__head"><h2 class="block__title" id="h-opc-matricula-pagada">Adelantar cuotas del arancel</h2><span class="block__tag">Opcional</span></div>
+        <div class="qty-row">
+          <div class="qty" role="group" aria-labelledby="h-opc-matricula-pagada">
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota menos">{{i20:minus}}</button>
+            <output class="qty__val" aria-live="polite">1</output>
+            <button class="qty__btn" type="button" aria-label="Adelantar una cuota más">{{i20:plus}}</button>
+          </div>
+          <p class="qty-row__text"><strong>1 de 8 cuotas</strong> de <span class="tnum">$190.000</span>. Se pagan en orden desde la cuota 3.</p>
+        </div>
+        <div class="track">
+          <div class="track__bar" aria-hidden="true"><span class="is-paid"></span><span class="is-paid"></span><span class="is-in"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <p class="track__text">Pagaste las cuotas 1 y 2. Adelantas la cuota 3. Quedan 7 en tu estado de cuenta.</p>
+        </div>
+      </section>
+      <section class="total" aria-labelledby="h-total-matricula-pagada">
+        <h2 class="sr-only" id="h-total-matricula-pagada">Total a pagar hoy</h2>
+        <dl class="total__rows"><dt>Cuota 3 del arancel</dt><dd>$190.000</dd></dl>
+      </section>
+      <div class="pay-bar">
+        <p class="total__sum"><span class="total__label">Total a pagar hoy</span><span class="total__amount" aria-live="polite" aria-atomic="true">$190.000</span></p>
+        <form action="pub-17-webpay.html" method="get">
+          <button class="btn btn--primary btn--lg btn--block" type="submit">{{i20:card}}<span>Pagar $190.000 con <span translate="no">Webpay</span></span></button>
+        </form>
+      </div>
+      <div class="total__actions">
+        <p class="total__fine">{{i:info}}<span>Adelantar cuotas no cambia la validación: admisión ya tiene tu matrícula pagada.</span></p>
+      </div>
+
+      <section class="block" aria-labelledby="h-rec-matricula-pagada">
+        <div class="block__head"><h2 class="block__title" id="h-rec-matricula-pagada">Comprobantes de pago</h2><span class="block__tag">1 pago</span></div>
+        <table class="ledger">
+          <caption class="sr-only">Pagos aprobados con Webpay: detalle, fecha, orden de compra, autorización y monto</caption>
+          <thead><tr><th scope="col">Detalle</th><th scope="col" class="num">Monto</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Matrícula y cuotas 1 y 2<span class="ledger__sub tnum">17-10-2026 19:05</span><span class="ledger__sub">Orden de compra <span class="ref-code" translate="no">ADMk3f9q2m7x1c8v4b6n0p5r2t</span>, autorización <span class="tnum" translate="no">1213</span></span></th><td class="num" data-label="Monto">$488.900</td></tr>
+          </tbody>
+        </table>
+        <p class="track__text">Es el comprobante de la transacción de <span translate="no">Webpay</span>. Te lo enviamos también a di•••@correo.cl.</p>
+      </section>
+
+      <section class="block" aria-labelledby="h-comp-matricula-pagada">
+        <div class="block__head"><h2 class="block__title" id="h-comp-matricula-pagada">Tus compromisos 2027</h2><span class="block__tag">Contrato firmado, versión 1</span></div>
+        <table class="ledger">
+          <caption class="sr-only">Compromisos del año: valor, a pagar, pagado y saldo</caption>
+          <thead><tr><th scope="col">Concepto</th><th scope="col" class="num">A pagar</th><th scope="col" class="num">Pagado</th><th scope="col" class="num">Saldo</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Matrícula<span class="ledger__sub">Sin beneficio</span></th><td class="num" data-label="A pagar">$108.900</td><td class="num" data-label="Pagado">$108.900</td><td class="num" data-label="Saldo">$0</td></tr>
+            <tr><th scope="row">Arancel anual<span class="ledger__sub">10 cuotas de $190.000</span></th><td class="num" data-label="A pagar">$1.900.000</td><td class="num" data-label="Pagado">$380.000</td><td class="num" data-label="Saldo">$1.520.000</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <p class="flow-gap"><a class="link" href="pub-15-contrato-firmado.html">Ver tu contrato firmado</a></p>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido-matricula-pagada">
+      <h2 class="journey__title" id="recorrido-matricula-pagada">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Postulas</span><span class="journey__when">Listo</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Listo</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Listo</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Listo</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">Listo</span></span></li>
+        <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Pagaste el 17-10-2026</span></span></li>
+        <li class="journey__step" aria-current="step"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Ahora, lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who">
+        <dt class="sr-only">Postulante</dt><dd class="who__name">Diego Tapia Muñoz</dd>
+        <dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">210-K</span></dd>
+        <dt class="sr-only">Programa</dt><dd>Auditoría, vespertina, a distancia, prosecución de estudios</dd>
+        <dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000107</span></dd>
+      </dl>
+    </aside>
+  </div>
+  <div class="pub-layout" data-estado="cargando" data-estado-label="Cargando">
+    <div class="pub-task">
+      <h1 class="page-title">Paga tu matrícula</h1>
+      <p class="lede" role="status">Cargando tu estado financiero…</p>
+      <div class="pay-skel" aria-hidden="true">
+        <div class="pay-skel__row"><span class="skeleton pay-skel__icon"></span><span class="skel-stack"><span class="skeleton skeleton--w60"></span><span class="skeleton skeleton--w80"></span></span><span class="skeleton skeleton--lg"></span></div>
+        <div class="pay-skel__row"><span class="skeleton pay-skel__icon"></span><span class="skel-stack"><span class="skeleton skeleton--w60"></span><span class="skeleton skeleton--w80"></span></span><span class="skeleton skeleton--lg"></span></div>
+        <div class="pay-skel__row"><span class="skeleton pay-skel__icon"></span><span class="skel-stack"><span class="skeleton skeleton--w60"></span><span class="skeleton skeleton--w80"></span></span><span class="skeleton skeleton--lg"></span></div>
+        <span class="skeleton pay-skel__btn"></span>
+      </div>
+    </div>
+    <aside class="pub-layout__aside" aria-hidden="true">
+      <div class="pay-skel pay-skel--aside"><span class="skeleton skeleton--w80"></span><span class="skeleton skeleton--w80"></span><span class="skeleton skeleton--w80"></span><span class="skeleton skeleton--w80"></span><span class="skeleton skeleton--w80"></span><span class="skeleton skeleton--w80"></span><span class="skeleton skeleton--w80"></span><span class="skeleton skeleton--w80"></span></div>
+    </aside>
+  </div>
+  <div class="pub-layout" data-estado="error-carga" data-estado-label="Error de carga">
+    <div class="pub-task">
+      <h1 class="page-title">Paga tu matrícula</h1>
+      <div class="empty">
+        <span class="empty__icon" aria-hidden="true">{{i20:wifi-off}}</span>
+        <h2 class="empty__title">No pudimos cargar tu estado financiero</h2>
+        <p class="empty__body">Puede ser un problema temporal de conexión. Tus pagos no se ven afectados.</p>
+        <div class="btn-row"><button class="btn btn--primary" type="button">{{i:refresh}}<span>Reintentar</span></button><a class="btn btn--ghost" href="mailto:admision@institutodemo.cl">Escribir a admisión</a></div>
+      </div>
+      <p class="note">{{i:info}}<span>Si el problema es que tu acceso venció, verás <a class="link" href="pub-21-acceso-vencido.html">cómo pedir un enlace nuevo</a>.</span></p>
+    </div>
+  </div>
+</main>
+
+<footer class="pub-foot">
+  <div class="pub-foot__inner">
+    <span>Instituto Demo, Admisión 2027</span>
+    <span class="credit">Powered by <span translate="no">Ticnology</span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></span>
+  </div>
+</footer>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

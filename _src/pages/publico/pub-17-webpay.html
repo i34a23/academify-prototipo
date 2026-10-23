@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<title>Te llevamos a Webpay · Instituto Demo</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body class="is-public">
+<!--SPRITE-->
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="pub-head">
+  <div class="pub-head__inner">
+    <img src="../assets/academify-logo.svg" alt="academify" width="115" height="26" fetchpriority="high" translate="no">
+    <p class="pub-head__inst">Instituto Demo<span class="pub-head__process">Postulación Admisión 2027</span></p>
+    <a class="pub-head__help link" href="mailto:admision@institutodemo.cl">{{i20:mail}}<span class="pub-head__help-long">admision@institutodemo.cl</span><span class="pub-head__help-short">Ayuda</span></a>
+  </div>
+</header>
+
+<main id="contenido" class="pub-main">
+  <div class="bridge-v" data-estado="listo" data-estado-label="Listo para ir">
+
+    <div class="bridge">
+      <h1 class="page-title">Te llevamos a <span translate="no">Webpay</span></h1>
+      <p class="lede">Vas a pagar en el sitio de <span translate="no">Transbank</span>. Al terminar, <span translate="no">Webpay</span> te devuelve a tu postulación.</p>
+      <p class="bridge__amount">$430.276</p>
+      <p class="bridge__amount-note">Pesos chilenos (CLP)</p>
+      <dl class="kv flow-gap">
+        <dt>Matrícula</dt><dd>$37.026</dd>
+        <dt>Arancel, cuota 1</dt><dd>$196.625</dd>
+        <dt>Arancel, cuota 2</dt><dd>$196.625</dd>
+        <dt>Comercio</dt><dd>Instituto Demo</dd>
+        <dt>Código de comercio</dt><dd translate="no">597055555532</dd>
+      </dl>
+      <!-- En el servidor: method="post" action = URL de pago del ambiente del intento, con input hidden token_ws. Sin JavaScript. -->
+      <form class="bridge__form" action="pub-18-resultado-pago.html" method="get">
+        <button class="btn btn--primary btn--lg btn--block" type="submit">{{i20:external}}<span>Ir a pagar a <span translate="no">Webpay</span></span></button>
+        <a class="link bridge__back" href="pub-16-pago.html">Volver sin pagar</a>
+      </form>
+      <p class="total__fine flow-gap">{{i:shield}}<span>Los datos de tu tarjeta los escribes solo en <span translate="no">Transbank</span>. No los vemos ni los guardamos.</span></p>
+    </div>
+  </div>
+  <div class="bridge-v" data-estado="integracion" data-estado-label="Entorno de prueba">
+
+    <div class="bridge">
+    <p class="env-banner bridge__env">{{i:flask}}<span>Entorno de prueba: <span translate="no">Webpay</span> de integración, no se cobra dinero real.</span></p>
+      <h1 class="page-title">Te llevamos a <span translate="no">Webpay</span></h1>
+      <p class="lede">Vas a pagar en el sitio de <span translate="no">Transbank</span>. Al terminar, <span translate="no">Webpay</span> te devuelve a tu postulación.</p>
+      <p class="bridge__amount">$430.276</p>
+      <p class="bridge__amount-note">Pesos chilenos (CLP)</p>
+      <dl class="kv flow-gap">
+        <dt>Matrícula</dt><dd>$37.026</dd>
+        <dt>Arancel, cuota 1</dt><dd>$196.625</dd>
+        <dt>Arancel, cuota 2</dt><dd>$196.625</dd>
+        <dt>Comercio</dt><dd>Instituto Demo</dd>
+        <dt>Código de comercio</dt><dd translate="no">597055555532</dd>
+      </dl>
+      <!-- En el servidor: method="post" action = URL de pago del ambiente del intento, con input hidden token_ws. Sin JavaScript. -->
+      <form class="bridge__form" action="pub-18-resultado-pago.html" method="get">
+        <button class="btn btn--primary btn--lg btn--block" type="submit">{{i20:external}}<span>Ir a pagar a <span translate="no">Webpay</span></span></button>
+        <a class="link bridge__back" href="pub-16-pago.html">Volver sin pagar</a>
+      </form>
+      <p class="total__fine flow-gap">{{i:shield}}<span>Los datos de tu tarjeta los escribes solo en <span translate="no">Transbank</span>. No los vemos ni los guardamos.</span></p>
+    </div>
+  </div>
+  <div class="bridge-v" data-estado="no-disponible" data-estado-label="Pago ya no disponible">
+
+    <div class="bridge">
+      <div class="outcome">
+        <span class="tile tile--system" aria-hidden="true">{{i:ban}}</span>
+        <div class="outcome__body stack stack--tight">
+          <h1 class="page-title">Este pago ya no se puede continuar</h1>
+          <p class="lede">Puede que ya lo hayas pagado, anulado o que haya pasado demasiado tiempo. No se hizo ningún cargo nuevo.</p>
+          <p class="btn-row flow-gap"><a class="btn btn--primary" href="pub-16-pago.html">Ver tu estado financiero</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="pub-foot">
+  <div class="pub-foot__inner">
+    <span>Instituto Demo, Admisión 2027</span>
+    <span class="credit">Powered by <span translate="no">Ticnology</span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></span>
+  </div>
+</footer>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F7F8FA">
+<title>Rechazar postulación · academify</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<!--SPRITE-->
+<div data-estado="confirmar" data-estado-label="Confirmar rechazo">
+<a class="skip-link" href="#contenido--confirmar">Saltar al contenido</a>
+<div class="shell" inert>
+  <header class="shell__topbar">
+    <button class="btn btn--ghost btn--icon" type="button" aria-label="Abrir navegación" aria-expanded="false" aria-controls="sidebar--confirmar">{{i20:menu}}</button>
+    <img src="../assets/academify-logo.svg" alt="academify" width="106" height="24" translate="no">
+  </header>
+
+  <aside class="sidebar" id="sidebar--confirmar" aria-label="Navegación del equipo"><div class="sidebar__inner">
+    <div class="sidebar__brand">
+      <div class="sidebar__head">
+        <img class="sidebar__brand-logo" src="../assets/academify-logo.svg" alt="academify" width="106" height="24" translate="no">
+        <button class="btn btn--ghost btn--icon btn--sm sidebar__toggle" type="button" aria-label="Contraer navegación" aria-expanded="true" aria-controls="sidebar--confirmar">{{i:panel}}</button>
+      </div>
+      <p class="sidebar__inst"><strong>Instituto Demo</strong>Admisión 2027</p>
+    </div>
+    <nav class="sidebar__nav" aria-label="Secciones">
+      <a class="nav-item" href="../vendedor/ven-01-postulaciones.html" aria-current="page">{{i20:inbox}}<span class="nav-item__label">Postulaciones</span><span class="nav-item__count nav-item__count--yours">2<span class="sr-only"> te tocan a ti</span></span><span class="rombo rombo--sm nav-item__dot" aria-hidden="true"></span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <button class="user" type="button" aria-haspopup="menu" aria-expanded="false">
+        <span class="user__avatar" aria-hidden="true">MC</span>
+        <span class="user__text"><span class="user__name">Matías Correa Vidal</span><span class="user__role">Vendedor</span></span>
+        {{i:chev-down}}
+      </button>
+      <p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p>
+    </div>
+  </div></aside>
+
+  <main id="contenido--confirmar" class="main"><div class="main__inner">
+      <nav class="crumbs" aria-label="Ruta">
+        <a class="link link--quiet" href="../vendedor/ven-01-postulaciones.html">Postulaciones</a>
+        {{i14:chev-right}}
+        <span aria-current="page" class="tnum nowrap" translate="no">2026-000109</span>
+      </nav>
+
+      <div class="ficha-title">
+        <h1 class="page-title">Tomás Felipe Pizarro Navarro</h1>
+        <span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span>
+      </div>
+      <dl class="facts">
+        <div class="facts__item"><dt>RUT</dt><dd class="tnum" translate="no">19.234.876-5</dd></div>
+        <div class="facts__item"><dt>Programa</dt><dd>Trabajo Social</dd></div>
+        <div class="facts__item"><dt>Jornada y modalidad</dt><dd>Diurna, a distancia</dd></div>
+        <div class="facts__item"><dt>Vía</dt><dd>Regular</dd></div>
+      </dl>
+
+      <ol class="stages" aria-label="Etapas del caso">
+        <li class="stages__item" aria-current="step">
+          <span class="stages__track"><span class="mark mark--yours" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Venta<span class="sr-only">, etapa actual, te toca a ti</span></span>
+          <span class="stages__note">Revisas documentos</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Contrato y firma</span>
+          <span class="stages__note">Se habilita al aprobar</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Pago</span>
+          <span class="stages__note">Matrícula <span class="tnum">$108.900</span></span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Validación</span>
+          <span class="stages__note">Después del pago</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Matriculado</span>
+          <span class="stages__note">Al validar</span>
+        </li>
+      </ol>
+      <dl class="relay">
+        <dt>Ahora</dt><dd><strong>Tú revisas 1 documento</strong>: la foto.</dd>
+        <dt>Después</dt><dd><strong>Tú apruebas la venta</strong> y el sistema prepara el contrato para que Tomás lo firme.</dd>
+      </dl>
+
+      <div class="decision">
+        <button class="btn btn--primary" type="button" aria-disabled="true" aria-describedby="why-approve--confirmar">Aprobar venta</button>
+        <p class="decision__why" id="why-approve--confirmar">{{i:info}}Para aprobar, acepta la fotografía tipo carnet.</p>
+        <button class="btn btn--danger btn--sm decision__end" type="button" aria-haspopup="dialog" aria-expanded="true">Rechazar</button>
+      </div>
+
+      <nav class="tabs" aria-label="Secciones de la ficha">
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=documentos" aria-current="page">Documentos<span class="tabs__count tabs__count--yours">1<span class="sr-only"> por revisar</span></span></a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=valores">Programa y valores</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=datos">Datos</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=contrato">Contrato</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=historial">Historial</a>
+      </nav>
+
+      <div class="section-head">
+        <h2 class="section-head__title">Documentos</h2>
+        
+      </div>
+      <table class="table density-comfy">
+        <caption class="sr-only">Documentos de la postulación 2026-000109</caption>
+        <thead><tr><th scope="col">Documento</th><th scope="col">Estado</th><th scope="col" class="num"><span class="sr-only">Acción</span></th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:id}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=CED_ANV">Cédula de identidad, anverso</a><span class="cell-sub">JPG, 1,3&nbsp;MB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:id}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=CED_REV">Cédula de identidad, reverso</a><span class="cell-sub">JPG, 1,2&nbsp;MB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:file}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=LICENCIA">Licencia de enseñanza media</a><span class="cell-sub">PDF, 760&nbsp;KB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:image}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=FOTO">Fotografía tipo carnet</a><span class="cell-sub">JPG, 520&nbsp;KB</span></span></span></td>
+            <td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span></td>
+            <td class="num"></td>
+          </tr>
+        </tbody>
+      </table>
+  </div></main>
+</div>
+<div class="scrim" aria-hidden="true"></div>
+<form class="modal" role="dialog" aria-modal="true" aria-labelledby="rch-t--confirmar" method="post" novalidate>
+  <div class="modal__head"><h2 class="modal__title" id="rch-t--confirmar" tabindex="-1">Rechazar la postulación de Tomás Pizarro Navarro</h2><button class="btn btn--ghost btn--icon btn--sm modal__close" type="button" aria-label="Cerrar">{{i20:x}}</button></div>
+  <div class="modal__body">
+    
+    <div class="alert alert--warning">{{i:triangle}}<div><p class="alert__title">No se puede deshacer</p><p class="alert__body">Al rechazar, los enlaces y sesiones de Tomás dejan de servir y le enviamos un correo con el motivo y tu mensaje.</p></div></div>
+    <fieldset class="fieldgroup">
+      <legend class="field__label">Motivo</legend>
+      <div class="radio-row radio-row--stack"><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="No cumple requisitos de la vía de admisión"><span class="radio-card__text">No cumple requisitos de la vía de admisión</span></label><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="Documentación no válida"><span class="radio-card__text">Documentación no válida</span></label><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="El postulante desistió" checked><span class="radio-card__text">El postulante desistió</span></label><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="Otro"><span class="radio-card__text">Otro</span></label></div>
+    </fieldset>
+    <div class="field">
+      <label class="field__label" for="rch-msg--confirmar">Mensaje para Tomás <span class="field__opt">(opcional)</span></label>
+      <textarea class="textarea" id="rch-msg--confirmar" name="mensaje" rows="3" maxlength="1000" autocomplete="off" placeholder="Ej.: Gracias por avisarnos. Puedes volver a postular cuando quieras…" aria-describedby="rch-msg-hint--confirmar">Nos avisaste por teléfono que postularás el próximo año.</textarea>
+      
+      <p class="field__hint" id="rch-msg-hint--confirmar">Va en el correo. Sin enlaces, correos ni números de 7 o más dígitos.</p>
+      <span class="field__count" aria-live="polite">56 de 1000</span>
+    </div>
+  </div>
+  <div class="modal__foot"><button class="btn btn--ghost" type="button">Cancelar</button><button class="btn btn--danger" type="button">Rechazar postulación</button></div>
+</form>
+</div>
+<div data-estado="invalido" data-estado-label="Mensaje inválido">
+<a class="skip-link" href="#contenido--invalido">Saltar al contenido</a>
+<div class="shell" inert>
+  <header class="shell__topbar">
+    <button class="btn btn--ghost btn--icon" type="button" aria-label="Abrir navegación" aria-expanded="false" aria-controls="sidebar--invalido">{{i20:menu}}</button>
+    <img src="../assets/academify-logo.svg" alt="academify" width="106" height="24" translate="no">
+  </header>
+
+  <aside class="sidebar" id="sidebar--invalido" aria-label="Navegación del equipo"><div class="sidebar__inner">
+    <div class="sidebar__brand">
+      <div class="sidebar__head">
+        <img class="sidebar__brand-logo" src="../assets/academify-logo.svg" alt="academify" width="106" height="24" translate="no">
+        <button class="btn btn--ghost btn--icon btn--sm sidebar__toggle" type="button" aria-label="Contraer navegación" aria-expanded="true" aria-controls="sidebar--invalido">{{i:panel}}</button>
+      </div>
+      <p class="sidebar__inst"><strong>Instituto Demo</strong>Admisión 2027</p>
+    </div>
+    <nav class="sidebar__nav" aria-label="Secciones">
+      <a class="nav-item" href="../vendedor/ven-01-postulaciones.html" aria-current="page">{{i20:inbox}}<span class="nav-item__label">Postulaciones</span><span class="nav-item__count nav-item__count--yours">2<span class="sr-only"> te tocan a ti</span></span><span class="rombo rombo--sm nav-item__dot" aria-hidden="true"></span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <button class="user" type="button" aria-haspopup="menu" aria-expanded="false">
+        <span class="user__avatar" aria-hidden="true">MC</span>
+        <span class="user__text"><span class="user__name">Matías Correa Vidal</span><span class="user__role">Vendedor</span></span>
+        {{i:chev-down}}
+      </button>
+      <p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p>
+    </div>
+  </div></aside>
+
+  <main id="contenido--invalido" class="main"><div class="main__inner">
+      <nav class="crumbs" aria-label="Ruta">
+        <a class="link link--quiet" href="../vendedor/ven-01-postulaciones.html">Postulaciones</a>
+        {{i14:chev-right}}
+        <span aria-current="page" class="tnum nowrap" translate="no">2026-000109</span>
+      </nav>
+
+      <div class="ficha-title">
+        <h1 class="page-title">Tomás Felipe Pizarro Navarro</h1>
+        <span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span>
+      </div>
+      <dl class="facts">
+        <div class="facts__item"><dt>RUT</dt><dd class="tnum" translate="no">19.234.876-5</dd></div>
+        <div class="facts__item"><dt>Programa</dt><dd>Trabajo Social</dd></div>
+        <div class="facts__item"><dt>Jornada y modalidad</dt><dd>Diurna, a distancia</dd></div>
+        <div class="facts__item"><dt>Vía</dt><dd>Regular</dd></div>
+      </dl>
+
+      <ol class="stages" aria-label="Etapas del caso">
+        <li class="stages__item" aria-current="step">
+          <span class="stages__track"><span class="mark mark--yours" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Venta<span class="sr-only">, etapa actual, te toca a ti</span></span>
+          <span class="stages__note">Revisas documentos</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Contrato y firma</span>
+          <span class="stages__note">Se habilita al aprobar</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Pago</span>
+          <span class="stages__note">Matrícula <span class="tnum">$108.900</span></span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Validación</span>
+          <span class="stages__note">Después del pago</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Matriculado</span>
+          <span class="stages__note">Al validar</span>
+        </li>
+      </ol>
+      <dl class="relay">
+        <dt>Ahora</dt><dd><strong>Tú revisas 1 documento</strong>: la foto.</dd>
+        <dt>Después</dt><dd><strong>Tú apruebas la venta</strong> y el sistema prepara el contrato para que Tomás lo firme.</dd>
+      </dl>
+
+      <div class="decision">
+        <button class="btn btn--primary" type="button" aria-disabled="true" aria-describedby="why-approve--invalido">Aprobar venta</button>
+        <p class="decision__why" id="why-approve--invalido">{{i:info}}Para aprobar, acepta la fotografía tipo carnet.</p>
+        <button class="btn btn--danger btn--sm decision__end" type="button" aria-haspopup="dialog" aria-expanded="true">Rechazar</button>
+      </div>
+
+      <nav class="tabs" aria-label="Secciones de la ficha">
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=documentos" aria-current="page">Documentos<span class="tabs__count tabs__count--yours">1<span class="sr-only"> por revisar</span></span></a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=valores">Programa y valores</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=datos">Datos</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=contrato">Contrato</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=historial">Historial</a>
+      </nav>
+
+      <div class="section-head">
+        <h2 class="section-head__title">Documentos</h2>
+        
+      </div>
+      <table class="table density-comfy">
+        <caption class="sr-only">Documentos de la postulación 2026-000109</caption>
+        <thead><tr><th scope="col">Documento</th><th scope="col">Estado</th><th scope="col" class="num"><span class="sr-only">Acción</span></th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:id}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=CED_ANV">Cédula de identidad, anverso</a><span class="cell-sub">JPG, 1,3&nbsp;MB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:id}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=CED_REV">Cédula de identidad, reverso</a><span class="cell-sub">JPG, 1,2&nbsp;MB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:file}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=LICENCIA">Licencia de enseñanza media</a><span class="cell-sub">PDF, 760&nbsp;KB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:image}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=FOTO">Fotografía tipo carnet</a><span class="cell-sub">JPG, 520&nbsp;KB</span></span></span></td>
+            <td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span></td>
+            <td class="num"></td>
+          </tr>
+        </tbody>
+      </table>
+  </div></main>
+</div>
+<div class="scrim" aria-hidden="true"></div>
+<form class="modal" role="dialog" aria-modal="true" aria-labelledby="rch-t--invalido" method="post" novalidate>
+  <div class="modal__head"><h2 class="modal__title" id="rch-t--invalido" tabindex="-1">Rechazar la postulación de Tomás Pizarro Navarro</h2><button class="btn btn--ghost btn--icon btn--sm modal__close" type="button" aria-label="Cerrar">{{i20:x}}</button></div>
+  <div class="modal__body">
+    
+    <div class="alert alert--warning">{{i:triangle}}<div><p class="alert__title">No se puede deshacer</p><p class="alert__body">Al rechazar, los enlaces y sesiones de Tomás dejan de servir y le enviamos un correo con el motivo y tu mensaje.</p></div></div>
+    <fieldset class="fieldgroup">
+      <legend class="field__label">Motivo</legend>
+      <div class="radio-row radio-row--stack"><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="No cumple requisitos de la vía de admisión"><span class="radio-card__text">No cumple requisitos de la vía de admisión</span></label><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="Documentación no válida"><span class="radio-card__text">Documentación no válida</span></label><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="El postulante desistió" checked><span class="radio-card__text">El postulante desistió</span></label><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="Otro"><span class="radio-card__text">Otro</span></label></div>
+    </fieldset>
+    <div class="field">
+      <label class="field__label" for="rch-msg--invalido">Mensaje para Tomás <span class="field__opt">(opcional)</span></label>
+      <textarea class="textarea" id="rch-msg--invalido" name="mensaje" rows="3" maxlength="1000" autocomplete="off" placeholder="Ej.: Gracias por avisarnos. Puedes volver a postular cuando quieras…" aria-describedby="rch-msg-err--invalido rch-msg-hint--invalido" aria-invalid="true">Revisa las fechas en www.institutodemo.cl/admision</textarea>
+      <p class="field__error" id="rch-msg-err--invalido">{{i:alert}}Sin direcciones web: los enlaces los pone el sistema.</p>
+      <p class="field__hint" id="rch-msg-hint--invalido">Va en el correo. Sin enlaces, correos ni números de 7 o más dígitos.</p>
+      <span class="field__count" aria-live="polite">50 de 1000</span>
+    </div>
+  </div>
+  <div class="modal__foot"><p class="note note--row" id="rch-why--invalido">{{i:info}}Corrige el mensaje para rechazar.</p><button class="btn btn--ghost" type="button">Cancelar</button><button class="btn btn--danger" type="button" aria-disabled="true" aria-describedby="rch-why--invalido">Rechazar postulación</button></div>
+</form>
+</div>
+<div data-estado="rechazando" data-estado-label="Rechazando">
+<a class="skip-link" href="#contenido--rechazando">Saltar al contenido</a>
+<div class="shell" inert>
+  <header class="shell__topbar">
+    <button class="btn btn--ghost btn--icon" type="button" aria-label="Abrir navegación" aria-expanded="false" aria-controls="sidebar--rechazando">{{i20:menu}}</button>
+    <img src="../assets/academify-logo.svg" alt="academify" width="106" height="24" translate="no">
+  </header>
+
+  <aside class="sidebar" id="sidebar--rechazando" aria-label="Navegación del equipo"><div class="sidebar__inner">
+    <div class="sidebar__brand">
+      <div class="sidebar__head">
+        <img class="sidebar__brand-logo" src="../assets/academify-logo.svg" alt="academify" width="106" height="24" translate="no">
+        <button class="btn btn--ghost btn--icon btn--sm sidebar__toggle" type="button" aria-label="Contraer navegación" aria-expanded="true" aria-controls="sidebar--rechazando">{{i:panel}}</button>
+      </div>
+      <p class="sidebar__inst"><strong>Instituto Demo</strong>Admisión 2027</p>
+    </div>
+    <nav class="sidebar__nav" aria-label="Secciones">
+      <a class="nav-item" href="../vendedor/ven-01-postulaciones.html" aria-current="page">{{i20:inbox}}<span class="nav-item__label">Postulaciones</span><span class="nav-item__count nav-item__count--yours">2<span class="sr-only"> te tocan a ti</span></span><span class="rombo rombo--sm nav-item__dot" aria-hidden="true"></span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <button class="user" type="button" aria-haspopup="menu" aria-expanded="false">
+        <span class="user__avatar" aria-hidden="true">MC</span>
+        <span class="user__text"><span class="user__name">Matías Correa Vidal</span><span class="user__role">Vendedor</span></span>
+        {{i:chev-down}}
+      </button>
+      <p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p>
+    </div>
+  </div></aside>
+
+  <main id="contenido--rechazando" class="main"><div class="main__inner">
+      <nav class="crumbs" aria-label="Ruta">
+        <a class="link link--quiet" href="../vendedor/ven-01-postulaciones.html">Postulaciones</a>
+        {{i14:chev-right}}
+        <span aria-current="page" class="tnum nowrap" translate="no">2026-000109</span>
+      </nav>
+
+      <div class="ficha-title">
+        <h1 class="page-title">Tomás Felipe Pizarro Navarro</h1>
+        <span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span>
+      </div>
+      <dl class="facts">
+        <div class="facts__item"><dt>RUT</dt><dd class="tnum" translate="no">19.234.876-5</dd></div>
+        <div class="facts__item"><dt>Programa</dt><dd>Trabajo Social</dd></div>
+        <div class="facts__item"><dt>Jornada y modalidad</dt><dd>Diurna, a distancia</dd></div>
+        <div class="facts__item"><dt>Vía</dt><dd>Regular</dd></div>
+      </dl>
+
+      <ol class="stages" aria-label="Etapas del caso">
+        <li class="stages__item" aria-current="step">
+          <span class="stages__track"><span class="mark mark--yours" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Venta<span class="sr-only">, etapa actual, te toca a ti</span></span>
+          <span class="stages__note">Revisas documentos</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Contrato y firma</span>
+          <span class="stages__note">Se habilita al aprobar</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Pago</span>
+          <span class="stages__note">Matrícula <span class="tnum">$108.900</span></span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Validación</span>
+          <span class="stages__note">Después del pago</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Matriculado</span>
+          <span class="stages__note">Al validar</span>
+        </li>
+      </ol>
+      <dl class="relay">
+        <dt>Ahora</dt><dd><strong>Tú revisas 1 documento</strong>: la foto.</dd>
+        <dt>Después</dt><dd><strong>Tú apruebas la venta</strong> y el sistema prepara el contrato para que Tomás lo firme.</dd>
+      </dl>
+
+      <div class="decision">
+        <button class="btn btn--primary" type="button" aria-disabled="true" aria-describedby="why-approve--rechazando">Aprobar venta</button>
+        <p class="decision__why" id="why-approve--rechazando">{{i:info}}Para aprobar, acepta la fotografía tipo carnet.</p>
+        <button class="btn btn--danger btn--sm decision__end" type="button" aria-haspopup="dialog" aria-expanded="true">Rechazar</button>
+      </div>
+
+      <nav class="tabs" aria-label="Secciones de la ficha">
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=documentos" aria-current="page">Documentos<span class="tabs__count tabs__count--yours">1<span class="sr-only"> por revisar</span></span></a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=valores">Programa y valores</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=datos">Datos</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=contrato">Contrato</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=historial">Historial</a>
+      </nav>
+
+      <div class="section-head">
+        <h2 class="section-head__title">Documentos</h2>
+        
+      </div>
+      <table class="table density-comfy">
+        <caption class="sr-only">Documentos de la postulación 2026-000109</caption>
+        <thead><tr><th scope="col">Documento</th><th scope="col">Estado</th><th scope="col" class="num"><span class="sr-only">Acción</span></th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:id}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=CED_ANV">Cédula de identidad, anverso</a><span class="cell-sub">JPG, 1,3&nbsp;MB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:id}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=CED_REV">Cédula de identidad, reverso</a><span class="cell-sub">JPG, 1,2&nbsp;MB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:file}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=LICENCIA">Licencia de enseñanza media</a><span class="cell-sub">PDF, 760&nbsp;KB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:image}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=FOTO">Fotografía tipo carnet</a><span class="cell-sub">JPG, 520&nbsp;KB</span></span></span></td>
+            <td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span></td>
+            <td class="num"></td>
+          </tr>
+        </tbody>
+      </table>
+  </div></main>
+</div>
+<div class="scrim" aria-hidden="true"></div>
+<form class="modal" role="dialog" aria-modal="true" aria-labelledby="rch-t--rechazando" method="post" novalidate aria-busy="true">
+  <div class="modal__head"><h2 class="modal__title" id="rch-t--rechazando" tabindex="-1">Rechazar la postulación de Tomás Pizarro Navarro</h2><button class="btn btn--ghost btn--icon btn--sm modal__close" type="button" aria-label="Cerrar">{{i20:x}}</button></div>
+  <div class="modal__body">
+    
+    <div class="alert alert--warning">{{i:triangle}}<div><p class="alert__title">No se puede deshacer</p><p class="alert__body">Al rechazar, los enlaces y sesiones de Tomás dejan de servir y le enviamos un correo con el motivo y tu mensaje.</p></div></div>
+    <fieldset class="fieldgroup">
+      <legend class="field__label">Motivo</legend>
+      <div class="radio-row radio-row--stack"><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="No cumple requisitos de la vía de admisión" disabled><span class="radio-card__text">No cumple requisitos de la vía de admisión</span></label><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="Documentación no válida" disabled><span class="radio-card__text">Documentación no válida</span></label><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="El postulante desistió" checked disabled><span class="radio-card__text">El postulante desistió</span></label><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="Otro" disabled><span class="radio-card__text">Otro</span></label></div>
+    </fieldset>
+    <div class="field">
+      <label class="field__label" for="rch-msg--rechazando">Mensaje para Tomás <span class="field__opt">(opcional)</span></label>
+      <textarea class="textarea" id="rch-msg--rechazando" name="mensaje" rows="3" maxlength="1000" autocomplete="off" placeholder="Ej.: Gracias por avisarnos. Puedes volver a postular cuando quieras…" aria-describedby="rch-msg-hint--rechazando" disabled>Nos avisaste por teléfono que postularás el próximo año.</textarea>
+      
+      <p class="field__hint" id="rch-msg-hint--rechazando">Va en el correo. Sin enlaces, correos ni números de 7 o más dígitos.</p>
+      <span class="field__count" aria-live="polite">56 de 1000</span>
+    </div>
+  </div>
+  <div class="modal__foot"><button class="btn btn--ghost" type="button">Cancelar</button><button class="btn btn--danger" type="button" aria-busy="true">Rechazando…</button></div>
+</form>
+</div>
+<div data-estado="error" data-estado-label="Error de acción">
+<a class="skip-link" href="#contenido--error">Saltar al contenido</a>
+<div class="shell" inert>
+  <header class="shell__topbar">
+    <button class="btn btn--ghost btn--icon" type="button" aria-label="Abrir navegación" aria-expanded="false" aria-controls="sidebar--error">{{i20:menu}}</button>
+    <img src="../assets/academify-logo.svg" alt="academify" width="106" height="24" translate="no">
+  </header>
+
+  <aside class="sidebar" id="sidebar--error" aria-label="Navegación del equipo"><div class="sidebar__inner">
+    <div class="sidebar__brand">
+      <div class="sidebar__head">
+        <img class="sidebar__brand-logo" src="../assets/academify-logo.svg" alt="academify" width="106" height="24" translate="no">
+        <button class="btn btn--ghost btn--icon btn--sm sidebar__toggle" type="button" aria-label="Contraer navegación" aria-expanded="true" aria-controls="sidebar--error">{{i:panel}}</button>
+      </div>
+      <p class="sidebar__inst"><strong>Instituto Demo</strong>Admisión 2027</p>
+    </div>
+    <nav class="sidebar__nav" aria-label="Secciones">
+      <a class="nav-item" href="../vendedor/ven-01-postulaciones.html" aria-current="page">{{i20:inbox}}<span class="nav-item__label">Postulaciones</span><span class="nav-item__count nav-item__count--yours">2<span class="sr-only"> te tocan a ti</span></span><span class="rombo rombo--sm nav-item__dot" aria-hidden="true"></span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <button class="user" type="button" aria-haspopup="menu" aria-expanded="false">
+        <span class="user__avatar" aria-hidden="true">MC</span>
+        <span class="user__text"><span class="user__name">Matías Correa Vidal</span><span class="user__role">Vendedor</span></span>
+        {{i:chev-down}}
+      </button>
+      <p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p>
+    </div>
+  </div></aside>
+
+  <main id="contenido--error" class="main"><div class="main__inner">
+      <nav class="crumbs" aria-label="Ruta">
+        <a class="link link--quiet" href="../vendedor/ven-01-postulaciones.html">Postulaciones</a>
+        {{i14:chev-right}}
+        <span aria-current="page" class="tnum nowrap" translate="no">2026-000109</span>
+      </nav>
+
+      <div class="ficha-title">
+        <h1 class="page-title">Tomás Felipe Pizarro Navarro</h1>
+        <span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span>
+      </div>
+      <dl class="facts">
+        <div class="facts__item"><dt>RUT</dt><dd class="tnum" translate="no">19.234.876-5</dd></div>
+        <div class="facts__item"><dt>Programa</dt><dd>Trabajo Social</dd></div>
+        <div class="facts__item"><dt>Jornada y modalidad</dt><dd>Diurna, a distancia</dd></div>
+        <div class="facts__item"><dt>Vía</dt><dd>Regular</dd></div>
+      </dl>
+
+      <ol class="stages" aria-label="Etapas del caso">
+        <li class="stages__item" aria-current="step">
+          <span class="stages__track"><span class="mark mark--yours" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Venta<span class="sr-only">, etapa actual, te toca a ti</span></span>
+          <span class="stages__note">Revisas documentos</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Contrato y firma</span>
+          <span class="stages__note">Se habilita al aprobar</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Pago</span>
+          <span class="stages__note">Matrícula <span class="tnum">$108.900</span></span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Validación</span>
+          <span class="stages__note">Después del pago</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Matriculado</span>
+          <span class="stages__note">Al validar</span>
+        </li>
+      </ol>
+      <dl class="relay">
+        <dt>Ahora</dt><dd><strong>Tú revisas 1 documento</strong>: la foto.</dd>
+        <dt>Después</dt><dd><strong>Tú apruebas la venta</strong> y el sistema prepara el contrato para que Tomás lo firme.</dd>
+      </dl>
+
+      <div class="decision">
+        <button class="btn btn--primary" type="button" aria-disabled="true" aria-describedby="why-approve--error">Aprobar venta</button>
+        <p class="decision__why" id="why-approve--error">{{i:info}}Para aprobar, acepta la fotografía tipo carnet.</p>
+        <button class="btn btn--danger btn--sm decision__end" type="button" aria-haspopup="dialog" aria-expanded="true">Rechazar</button>
+      </div>
+
+      <nav class="tabs" aria-label="Secciones de la ficha">
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=documentos" aria-current="page">Documentos<span class="tabs__count tabs__count--yours">1<span class="sr-only"> por revisar</span></span></a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=valores">Programa y valores</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=datos">Datos</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=contrato">Contrato</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=historial">Historial</a>
+      </nav>
+
+      <div class="section-head">
+        <h2 class="section-head__title">Documentos</h2>
+        
+      </div>
+      <table class="table density-comfy">
+        <caption class="sr-only">Documentos de la postulación 2026-000109</caption>
+        <thead><tr><th scope="col">Documento</th><th scope="col">Estado</th><th scope="col" class="num"><span class="sr-only">Acción</span></th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:id}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=CED_ANV">Cédula de identidad, anverso</a><span class="cell-sub">JPG, 1,3&nbsp;MB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:id}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=CED_REV">Cédula de identidad, reverso</a><span class="cell-sub">JPG, 1,2&nbsp;MB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:file}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=LICENCIA">Licencia de enseñanza media</a><span class="cell-sub">PDF, 760&nbsp;KB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:image}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=FOTO">Fotografía tipo carnet</a><span class="cell-sub">JPG, 520&nbsp;KB</span></span></span></td>
+            <td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span></td>
+            <td class="num"></td>
+          </tr>
+        </tbody>
+      </table>
+  </div></main>
+</div>
+<div class="scrim" aria-hidden="true"></div>
+<form class="modal" role="dialog" aria-modal="true" aria-labelledby="rch-t--error" method="post" novalidate>
+  <div class="modal__head"><h2 class="modal__title" id="rch-t--error" tabindex="-1">Rechazar la postulación de Tomás Pizarro Navarro</h2><button class="btn btn--ghost btn--icon btn--sm modal__close" type="button" aria-label="Cerrar">{{i20:x}}</button></div>
+  <div class="modal__body">
+    <div class="alert alert--error" role="alert">{{i:alert}}<div><p class="alert__title">No se rechazó la postulación</p><p class="alert__body">La ficha cambió de estado mientras la revisabas. Se actualizó con su estado actual.</p></div></div>
+    <div class="alert alert--warning">{{i:triangle}}<div><p class="alert__title">No se puede deshacer</p><p class="alert__body">Al rechazar, los enlaces y sesiones de Tomás dejan de servir y le enviamos un correo con el motivo y tu mensaje.</p></div></div>
+    <fieldset class="fieldgroup">
+      <legend class="field__label">Motivo</legend>
+      <div class="radio-row radio-row--stack"><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="No cumple requisitos de la vía de admisión"><span class="radio-card__text">No cumple requisitos de la vía de admisión</span></label><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="Documentación no válida"><span class="radio-card__text">Documentación no válida</span></label><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="El postulante desistió" checked><span class="radio-card__text">El postulante desistió</span></label><label class="radio-card"><input class="radio-card__input" type="radio" name="motivo" value="Otro"><span class="radio-card__text">Otro</span></label></div>
+    </fieldset>
+    <div class="field">
+      <label class="field__label" for="rch-msg--error">Mensaje para Tomás <span class="field__opt">(opcional)</span></label>
+      <textarea class="textarea" id="rch-msg--error" name="mensaje" rows="3" maxlength="1000" autocomplete="off" placeholder="Ej.: Gracias por avisarnos. Puedes volver a postular cuando quieras…" aria-describedby="rch-msg-hint--error">Nos avisaste por teléfono que postularás el próximo año.</textarea>
+      
+      <p class="field__hint" id="rch-msg-hint--error">Va en el correo. Sin enlaces, correos ni números de 7 o más dígitos.</p>
+      <span class="field__count" aria-live="polite">56 de 1000</span>
+    </div>
+  </div>
+  <div class="modal__foot"><button class="btn btn--secondary" type="button">Cerrar</button></div>
+</form>
+</div>
+<div data-estado="rechazada" data-estado-label="Rechazada (toast)">
+<a class="skip-link" href="#contenido--rechazada">Saltar al contenido</a>
+<div class="shell">
+  <header class="shell__topbar">
+    <button class="btn btn--ghost btn--icon" type="button" aria-label="Abrir navegación" aria-expanded="false" aria-controls="sidebar--rechazada">{{i20:menu}}</button>
+    <img src="../assets/academify-logo.svg" alt="academify" width="106" height="24" translate="no">
+  </header>
+
+  <aside class="sidebar" id="sidebar--rechazada" aria-label="Navegación del equipo"><div class="sidebar__inner">
+    <div class="sidebar__brand">
+      <div class="sidebar__head">
+        <img class="sidebar__brand-logo" src="../assets/academify-logo.svg" alt="academify" width="106" height="24" translate="no">
+        <button class="btn btn--ghost btn--icon btn--sm sidebar__toggle" type="button" aria-label="Contraer navegación" aria-expanded="true" aria-controls="sidebar--rechazada">{{i:panel}}</button>
+      </div>
+      <p class="sidebar__inst"><strong>Instituto Demo</strong>Admisión 2027</p>
+    </div>
+    <nav class="sidebar__nav" aria-label="Secciones">
+      <a class="nav-item" href="../vendedor/ven-01-postulaciones.html" aria-current="page">{{i20:inbox}}<span class="nav-item__label">Postulaciones</span><span class="nav-item__count nav-item__count--yours">2<span class="sr-only"> te tocan a ti</span></span><span class="rombo rombo--sm nav-item__dot" aria-hidden="true"></span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <button class="user" type="button" aria-haspopup="menu" aria-expanded="false">
+        <span class="user__avatar" aria-hidden="true">MC</span>
+        <span class="user__text"><span class="user__name">Matías Correa Vidal</span><span class="user__role">Vendedor</span></span>
+        {{i:chev-down}}
+      </button>
+      <p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p>
+    </div>
+  </div></aside>
+
+  <main id="contenido--rechazada" class="main"><div class="main__inner">
+      <nav class="crumbs" aria-label="Ruta">
+        <a class="link link--quiet" href="../vendedor/ven-01-postulaciones.html">Postulaciones</a>
+        {{i14:chev-right}}
+        <span aria-current="page" class="tnum nowrap" translate="no">2026-000109</span>
+      </nav>
+
+      <div class="ficha-title">
+        <h1 class="page-title">Tomás Felipe Pizarro Navarro</h1>
+        <span class="badge badge--closed">{{i:x}}Rechazada</span>
+      </div>
+      <dl class="facts">
+        <div class="facts__item"><dt>RUT</dt><dd class="tnum" translate="no">19.234.876-5</dd></div>
+        <div class="facts__item"><dt>Programa</dt><dd>Trabajo Social</dd></div>
+        <div class="facts__item"><dt>Jornada y modalidad</dt><dd>Diurna, a distancia</dd></div>
+        <div class="facts__item"><dt>Vía</dt><dd>Regular</dd></div>
+      </dl>
+
+      <ol class="stages" aria-label="Etapas del caso">
+        <li class="stages__item is-closed" aria-current="step">
+          <span class="stages__track"><span class="mark mark--closed" aria-hidden="true">{{i:x}}</span><span class="stages__line"></span></span>
+          <span class="stages__name">Venta<span class="sr-only">, postulación cerrada</span></span>
+          <span class="stages__note">Rechazada hoy</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Contrato y firma</span>
+          <span class="stages__note">No continúa</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Pago</span>
+          <span class="stages__note">No continúa</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Validación</span>
+          <span class="stages__note">No continúa</span>
+        </li>
+        <li class="stages__item is-future">
+          <span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span>
+          <span class="stages__name">Matriculado</span>
+          <span class="stages__note">No continúa</span>
+        </li>
+      </ol>
+      <dl class="relay">
+        <dt>Ahora</dt><dd><strong>Nadie</strong>: la postulación está cerrada.</dd>
+        <dt>Después</dt><dd>Si Tomás vuelve a postular, entra como una postulación nueva.</dd>
+      </dl>
+
+
+      <div class="form-notice"><div class="alert alert--error">{{i:x}}<div><p class="alert__title">Postulación rechazada</p><p class="alert__body">Motivo: El postulante desistió. «Nos avisaste por teléfono que postularás el próximo año.» Los enlaces y sesiones de Tomás dejaron de servir.</p></div></div></div>      <div class="decision">
+        
+        <p class="decision__why" id="why-approve--rechazada">{{i:info}}Rechazada el 19-10-2026 15:50 por Matías Correa Vidal.</p>
+        
+      </div>
+
+      <nav class="tabs" aria-label="Secciones de la ficha">
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=documentos" aria-current="page">Documentos</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=valores">Programa y valores</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=datos">Datos</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=contrato">Contrato</a>
+        <a class="tabs__tab" href="../vendedor/ven-02-ficha.html?seccion=historial">Historial</a>
+      </nav>
+
+      <div class="section-head">
+        <h2 class="section-head__title">Documentos</h2>
+        
+      </div>
+      <table class="table density-comfy">
+        <caption class="sr-only">Documentos de la postulación 2026-000109</caption>
+        <thead><tr><th scope="col">Documento</th><th scope="col">Estado</th><th scope="col" class="num"><span class="sr-only">Acción</span></th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:id}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=CED_ANV">Cédula de identidad, anverso</a><span class="cell-sub">JPG, 1,3&nbsp;MB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:id}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=CED_REV">Cédula de identidad, reverso</a><span class="cell-sub">JPG, 1,2&nbsp;MB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:file}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=LICENCIA">Licencia de enseñanza media</a><span class="cell-sub">PDF, 760&nbsp;KB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+          <tr>
+            <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true">{{i:image}}</span><span class="doc-name__text"><a class="cell-main link--quiet" href="../vendedor/ven-02-ficha.html?doc=FOTO">Fotografía tipo carnet</a><span class="cell-sub">JPG, 520&nbsp;KB</span></span></span></td>
+            <td><span class="badge badge--done">{{i:check}}Aceptado</span></td>
+            <td class="num"></td>
+          </tr>
+        </tbody>
+      </table>
+  </div></main>
+</div>
+<div class="toast-region" role="status" aria-live="polite"><div class="toast">{{i:x}}<span>Postulación rechazada. Le enviamos el correo a Tomás.</span></div></div>
+</div>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,723 @@
+/* academify · tema A «Azul eléctrico»
+   Se carga DESPUÉS de components.css. Solo tokens + mejoras por clase existente; el HTML no cambia.
+   Idea: el ADN de la marca (navy #0F1B2D + azul #1D4ED8) llevado a luz. El riel es noche que se vuelve
+   azul eléctrico; el color de la interfaz dice QUIÉN ACTÚA: azul = equipo (tú), ámbar = postulante,
+   violeta = sistema, verde = hecho, rojo = cerrado. Cian/violeta/fucsia solo marcan etapas del caso.
+   Contrastes WCAG 2.x calculados con la fórmula de luminancia relativa (script work-a/cr.py). */
+
+/* ═══ Tokens · claro ═══════════════════════════════════════════ */
+:root {
+  /* primitivos propios del tema */
+  --electric-500: #2F6BFF;       /* 4,50:1 sobre blanco · solo gráfico o texto ≥ 18 px */
+  --electric-600: #1D4ED8;       /* azul de marca · 6,70:1 */
+  --electric-700: #1A3FB0;       /* 8,82:1 */
+  --electric-800: #17368F;
+  --violet-600: #7C3AED;         /* 5,70:1 */
+  --violet-700: #6D28D9;
+  --cyan-600: #0891B2;           /* 3,68:1 · solo gráfico */
+  --cyan-800: #0E7490;           /* 5,36:1 · texto */
+  --fuchsia-600: #C026D3;        /* 4,71:1 */
+  --emerald-600: #059669;        /* 3,77:1 · solo gráfico */
+
+  /* tipografía: Figtree sola; jerarquía por peso y tamaño. Piso 13 px, cuerpo del equipo 16 px */
+  --fs-12: 13px;
+  --fs-body: var(--fs-16); --lh-body: var(--lh-16);
+  --fs-cell: var(--fs-15);
+  --fs-label: var(--fs-15);
+  --fs-input: var(--fs-16);
+  --fs-meta: var(--fs-13);
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  /* superficies */
+  --bg: #FFFFFF;
+  --bg-subtle: #F3F6FC;          /* cabecera de tabla, visor */
+  --bg-muted: #E9EEF8;           /* chip, deshabilitado */
+  --bg-hover: #EEF3FF;
+  --bg-inverse: #0F1B2D;
+  --canvas: #FFFFFF;
+
+  --line: #E2E8F3;
+  --line-strong: #C9D3E6;
+  --line-control: #6B7A99;       /* 4,31:1 sobre blanco · 3,42:1 sobre la banda #DAE5FF (≥ 3:1, WCAG 1.4.11) */
+  --line-ink: #0F1B2D;
+
+  --ink: #0F1B2D;                /* 17,28:1 · 14,48:1 sobre la banda #E3EBFF */
+  --text-2: #33415C;             /* 10,24:1 · 8,74:1 sobre banda */
+  --text-muted: #4F5D78;         /* 6,63:1 · 6,12:1 sobre bg-subtle · 5,70:1 sobre bg-muted · 5,96:1 sobre banda */
+  --text-subtle: #5F6C86;        /* 5,28:1 */
+  --text-disabled: #5F6C86;      /* 4,54:1 sobre bg-muted */
+  --text-inverse: #FFFFFF;
+
+  --accent: var(--electric-600); /* 6,70:1 · 5,87:1 sobre accent-subtle · 6,19:1 sobre bg-subtle */
+  --accent-hover: var(--electric-700);
+  --accent-active: var(--electric-800);
+  --accent-subtle: #EAF0FF;
+  --accent-line: #B9CBFA;
+  --on-accent: #FFFFFF;          /* 6,70:1 */
+  --focus-ring: var(--electric-600);
+  --brand-mark: var(--electric-600);
+
+  --btn-bg: var(--electric-600); /* blanco 6,70:1 */
+  --btn-bg-top: #2A5DF0;         /* blanco 5,35:1 (brillo superior) */
+  --btn-bg-hover: var(--electric-700);
+  --btn-glow: rgb(29 78 216 / .38);
+  --on-btn: #FFFFFF;
+
+  --danger: #B42318;             /* 5,46:1 sobre danger-bg */
+  --danger-bg: #FFE4E1;
+  --danger-hover: #FFD6D1;
+  --danger-line: #F0A49C;
+
+  /* estados por actor: fg / bg */
+  --state-team-fg: #1D4ED8;      --state-team-bg: #E3EBFF;       /* 5,61:1 */
+  --state-applicant-fg: #9A3412; --state-applicant-bg: #FFEBD3;  /* 6,29:1 */
+  --state-applicant-mark: #C2410C;                                /* 4,46:1 (icono) */
+  --state-system-fg: #6D28D9;    --state-system-bg: #EFE7FF;     /* 5,94:1 */
+  --state-draft-fg: #475569;     --state-draft-bg: #EDF0F5;      /* 6,63:1 */
+  --state-done-fg: #067647;      --state-done-bg: #D9F7E8;       /* 4,99:1 */
+  --state-closed-fg: #B42318;    --state-closed-bg: #FFE4E1;     /* 5,46:1 */
+  --state-error-fg: #B42318;     --state-error-bg: #FFE4E1;
+
+  /* barras de datos sobre la pista (≥ 3:1 contra #EEF2FA) */
+  --bar-track: #EEF2FA;
+  --bar-team: var(--electric-500);  /* 3,87:1 */
+  --bar-applicant: #C25E00;         /* 3,82:1 */
+  --bar-system: var(--violet-600);  /* 4,90:1 */
+  --bar-done: var(--emerald-600);   /* 3,24:1 */
+  --bar-draft: #64748B;             /* 4,09:1 */
+  --bar-closed: #B42318;
+
+  /* etapas del caso: marcador junto al nombre de la etapa */
+  --stage-1: var(--electric-500);   /* venta 4,50:1 */
+  --stage-2: var(--violet-600);     /* contrato y firma 5,70:1 */
+  --stage-3: var(--cyan-600);       /* pago 3,68:1 */
+  --stage-4: var(--fuchsia-600);    /* validación 4,71:1 */
+  --stage-5: var(--emerald-600);    /* matriculado 3,77:1 */
+
+  /* riel: noche de marca → azul eléctrico (blanco 17,11:1 arriba · 7,59:1 en el extremo inferior) */
+  --rail-bg: radial-gradient(120% 60% at 0% 0%, rgb(127 164 255 / .20), transparent 60%),
+             linear-gradient(180deg, #0B1633 0%, #12286E 55%, #1A3CB0 100%);
+
+  /* banda de color bajo el encabezado de página */
+  --band: radial-gradient(60% 140% at 0% 0%, rgb(47 107 255 / .20), transparent 62%),
+          radial-gradient(45% 120% at 100% 0%, rgb(8 145 178 / .12), transparent 60%),
+          linear-gradient(180deg, #E8EFFF 0%, rgb(255 255 255 / 0) 100%);
+  --band-line: linear-gradient(90deg, #1D4ED8, #0891B2 60%, #7C3AED);
+
+  /* vidrio (cifras clave) */
+  --glass-bg: rgb(255 255 255 / .66);
+  --glass-line: rgb(255 255 255 / .95);
+  --glass-shadow: 0 1px 0 rgb(255 255 255 / .9) inset, 0 10px 28px -14px rgb(29 78 216 / .38), 0 1px 2px rgb(15 27 45 / .06);
+  --hero-bg: linear-gradient(135deg, #0F1B2D 0%, #1D4ED8 100%);   /* blanco ≥ 6,70:1 en todo el degradado */
+  --hero-note: #D6E0FF;                                           /* 5,09:1 sobre #1D4ED8 */
+
+  --mark-done-bg: var(--electric-600);   /* check blanco 6,70:1 */
+  --mark-done-fg: #FFFFFF;
+
+  --elev-1: 0 1px 2px rgb(15 27 45 / .06), 0 2px 6px rgb(29 78 216 / .06);
+  --elev-2: 0 12px 32px rgb(15 27 45 / .16);
+  --overlay: rgb(11 22 51 / .48);
+
+  --logo-swap: normal;
+  --band-mobile: #E4ECFF;
+
+  /* marca de casilla marcada: trazo on-accent sobre accent (6,70:1 claro · 7,70:1 oscuro) */
+  --check-glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23FFFFFF' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4.5 10.5 3.6 3.6 7.4-8'/%3E%3C/svg%3E");
+
+  /* fijos en los dos temas */
+  --rail-menu-bg: #12286E;       /* menú sobre el riel: blanco 13,51:1 · #B9C8F2 8,11:1 · #FF9089 6,18:1 */
+  --paper: #FFFFFF;              /* hoja del contrato: representa el PDF, no se invierte */
+  --paper-ink: #0F1B2D;          /* 17,28:1 */
+  --paper-muted: #4F5D78;        /* 6,63:1 */
+  --paper-line: #6B7A99;
+  --paper-fill: #E9EEF8;         /* skeleton de la hoja */
+  --form-foot-h: 77px;           /* alto medido de .form-foot de una fila (16 + 44 + 16 + borde) */
+  --form-foot-max: 176px;        /* alto máximo medido (adm-09 con aviso, 820 a 1440 px) */
+}
+
+/* ═══ Tokens · oscuro ══════════════════════════════════════════ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    /* superficies: noche navy, nunca negro */
+    --bg: #0B1222;                 /* superficie base */
+    --bg-subtle: #111B31;          /* cabecera de tabla, visor */
+    --bg-muted: #18243F;           /* pista de barra, chip, deshabilitado */
+    --bg-hover: #1A2A4D;
+    --bg-inverse: #EEF3FF;
+    --canvas: #0B1222;
+  
+    --line: #1F2D4A;
+    --line-strong: #2B3D63;
+    --line-control: #6177A6;       /* 4,18:1 sobre bg (≥ 3:1) */
+    --line-ink: #C5D0E8;
+  
+    --ink: #EEF3FF;                /* 16,82:1 sobre bg */
+    --text-2: #C5D0E8;             /* 12,07:1 · 11,07:1 sobre bg-subtle */
+    --text-muted: #9DABC9;         /* 8,10:1 · 6,68:1 sobre bg-muted · 6,14:1 sobre bg-hover */
+    --text-subtle: #8B9AB9;        /* 6,60:1 */
+    --text-disabled: #8B9AB9;      /* 5,44:1 sobre bg-muted */
+    --text-inverse: #0B1222;       /* 16,82:1 sobre bg-inverse */
+  
+    --accent: #7FA4FF;             /* enlaces y texto de acción: 7,70:1 sobre bg · 7,07:1 sobre bg-subtle */
+    --accent-hover: #A3BFFF;
+    --accent-active: #C2D4FF;
+    --accent-subtle: #16264F;      /* accent 6,08:1 encima */
+    --accent-line: #2E4C99;
+    --on-accent: #0B1222;          /* 7,70:1 sobre accent */
+    --focus-ring: #9DBBFF;
+    --brand-mark: #7FA4FF;
+  
+    --btn-bg: #2A55E0;             /* blanco 6,04:1 */
+    --btn-bg-top: #3461F0;         /* blanco 5,10:1 (brillo superior del degradado) */
+    --btn-bg-hover: #2F5BEA;       /* blanco 5,52:1 */
+    --btn-glow: rgb(61 107 255 / .45);
+    --on-btn: #FFFFFF;
+  
+    --danger: #FF9089;             /* 7,28:1 sobre danger-bg */
+    --danger-bg: #3D1518;
+    --danger-hover: #4A1B1F;
+    --danger-line: #8A3A3A;
+  
+    /* estados por actor: fg / bg (relación sobre su propio fondo) */
+    --state-team-fg: #8FB0FF;      --state-team-bg: #172B5C;       /* 6,39:1 */
+    --state-applicant-fg: #FFB869; --state-applicant-bg: #3A2610;  /* 8,41:1 */
+    --state-applicant-mark: #FF9F43;                                /* 7,03:1 */
+    --state-system-fg: #C4B0FF;    --state-system-bg: #2A1F52;     /* 7,77:1 */
+    --state-draft-fg: #B7C2D8;     --state-draft-bg: #1F2A40;      /* 8,01:1 */
+    --state-done-fg: #5EE2A0;      --state-done-bg: #0F3526;       /* 8,26:1 */
+    --state-closed-fg: #FF9089;    --state-closed-bg: #3D1518;     /* 7,28:1 */
+    --state-error-fg: #FF9089;     --state-error-bg: #3D1518;
+  
+    /* barras de datos sobre la pista bg-muted (≥ 3:1) */
+    --bar-track: #18243F;
+    --bar-team: #5B8CFF;           /* 4,87:1 */
+    --bar-applicant: #FFA24C;      /* 7,72:1 */
+    --bar-system: #A78BFA;         /* 5,66:1 */
+    --bar-done: #34D399;           /* 8,01:1 */
+    --bar-draft: #7D8DB0;          /* 4,63:1 */
+    --bar-closed: #FF7B72;         /* 6,11:1 */
+  
+    /* etapas del caso (marcador de etapa; siempre junto a su nombre) */
+    --stage-1: #5B8CFF;            /* venta 5,91:1 */
+    --stage-2: #A78BFA;            /* contrato y firma 6,87:1 */
+    --stage-3: #22D3EE;            /* pago 10,34:1 */
+    --stage-4: #E879F9;            /* validación 7,59:1 */
+    --stage-5: #34D399;            /* matriculado 9,72:1 */
+  
+    /* riel lateral: siempre noche → azul eléctrico */
+    --rail-bg: radial-gradient(120% 60% at 0% 0%, rgb(127 164 255 / .16), transparent 60%),
+               linear-gradient(180deg, #060C1C 0%, #0D1D52 55%, #1733A0 100%);
+  
+    /* banda de color del encabezado */
+    --band: radial-gradient(60% 140% at 0% 0%, rgb(61 107 255 / .30), transparent 62%),
+            radial-gradient(45% 120% at 100% 0%, rgb(34 211 238 / .12), transparent 60%),
+            linear-gradient(180deg, #0F1D3E 0%, rgb(11 18 34 / 0) 100%);
+    --band-line: linear-gradient(90deg, #3D6BFF, #22D3EE 60%, #A78BFA);
+  
+    /* vidrio */
+    --glass-bg: rgb(255 255 255 / .05);
+    --glass-line: rgb(255 255 255 / .10);
+    --glass-shadow: 0 1px 0 rgb(255 255 255 / .06) inset, 0 12px 32px -12px rgb(0 0 0 / .6);
+    --hero-bg: linear-gradient(135deg, #12286E 0%, #2A55E0 100%);   /* blanco 6,04:1 en el extremo claro */
+    --hero-note: #DCE6FF;                                           /* 4,84:1 sobre #2A55E0 */
+  
+    --mark-done-bg: #3461F0;       /* check blanco 5,10:1 */
+    --mark-done-fg: #FFFFFF;
+  
+    --elev-1: 0 1px 2px rgb(0 0 0 / .4), 0 1px 3px rgb(0 0 0 / .3);
+    --elev-2: 0 12px 32px rgb(0 0 0 / .5);
+    --elev-3: -12px 0 32px rgb(0 0 0 / .5);
+    --elev-up: 0 -8px 24px rgb(0 0 0 / .45);
+    --overlay: rgb(2 6 16 / .66);
+  
+    --logo-swap: url("../assets/logo-claro.svg");   /* relativa a css/theme.css */
+    --check-glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%230B1222' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4.5 10.5 3.6 3.6 7.4-8'/%3E%3C/svg%3E");
+    --band-mobile: #13234A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  /* superficies: noche navy, nunca negro */
+  --bg: #0B1222;                 /* superficie base */
+  --bg-subtle: #111B31;          /* cabecera de tabla, visor */
+  --bg-muted: #18243F;           /* pista de barra, chip, deshabilitado */
+  --bg-hover: #1A2A4D;
+  --bg-inverse: #EEF3FF;
+  --canvas: #0B1222;
+
+  --line: #1F2D4A;
+  --line-strong: #2B3D63;
+  --line-control: #6177A6;       /* 4,18:1 sobre bg (≥ 3:1) */
+  --line-ink: #C5D0E8;
+
+  --ink: #EEF3FF;                /* 16,82:1 sobre bg */
+  --text-2: #C5D0E8;             /* 12,07:1 · 11,07:1 sobre bg-subtle */
+  --text-muted: #9DABC9;         /* 8,10:1 · 6,68:1 sobre bg-muted · 6,14:1 sobre bg-hover */
+  --text-subtle: #8B9AB9;        /* 6,60:1 */
+  --text-disabled: #8B9AB9;      /* 5,44:1 sobre bg-muted */
+  --text-inverse: #0B1222;       /* 16,82:1 sobre bg-inverse */
+
+  --accent: #7FA4FF;             /* enlaces y texto de acción: 7,70:1 sobre bg · 7,07:1 sobre bg-subtle */
+  --accent-hover: #A3BFFF;
+  --accent-active: #C2D4FF;
+  --accent-subtle: #16264F;      /* accent 6,08:1 encima */
+  --accent-line: #2E4C99;
+  --on-accent: #0B1222;          /* 7,70:1 sobre accent */
+  --focus-ring: #9DBBFF;
+  --brand-mark: #7FA4FF;
+
+  --btn-bg: #2A55E0;             /* blanco 6,04:1 */
+  --btn-bg-top: #3461F0;         /* blanco 5,10:1 (brillo superior del degradado) */
+  --btn-bg-hover: #2F5BEA;       /* blanco 5,52:1 */
+  --btn-glow: rgb(61 107 255 / .45);
+  --on-btn: #FFFFFF;
+
+  --danger: #FF9089;             /* 7,28:1 sobre danger-bg */
+  --danger-bg: #3D1518;
+  --danger-hover: #4A1B1F;
+  --danger-line: #8A3A3A;
+
+  /* estados por actor: fg / bg (relación sobre su propio fondo) */
+  --state-team-fg: #8FB0FF;      --state-team-bg: #172B5C;       /* 6,39:1 */
+  --state-applicant-fg: #FFB869; --state-applicant-bg: #3A2610;  /* 8,41:1 */
+  --state-applicant-mark: #FF9F43;                                /* 7,03:1 */
+  --state-system-fg: #C4B0FF;    --state-system-bg: #2A1F52;     /* 7,77:1 */
+  --state-draft-fg: #B7C2D8;     --state-draft-bg: #1F2A40;      /* 8,01:1 */
+  --state-done-fg: #5EE2A0;      --state-done-bg: #0F3526;       /* 8,26:1 */
+  --state-closed-fg: #FF9089;    --state-closed-bg: #3D1518;     /* 7,28:1 */
+  --state-error-fg: #FF9089;     --state-error-bg: #3D1518;
+
+  /* barras de datos sobre la pista bg-muted (≥ 3:1) */
+  --bar-track: #18243F;
+  --bar-team: #5B8CFF;           /* 4,87:1 */
+  --bar-applicant: #FFA24C;      /* 7,72:1 */
+  --bar-system: #A78BFA;         /* 5,66:1 */
+  --bar-done: #34D399;           /* 8,01:1 */
+  --bar-draft: #7D8DB0;          /* 4,63:1 */
+  --bar-closed: #FF7B72;         /* 6,11:1 */
+
+  /* etapas del caso (marcador de etapa; siempre junto a su nombre) */
+  --stage-1: #5B8CFF;            /* venta 5,91:1 */
+  --stage-2: #A78BFA;            /* contrato y firma 6,87:1 */
+  --stage-3: #22D3EE;            /* pago 10,34:1 */
+  --stage-4: #E879F9;            /* validación 7,59:1 */
+  --stage-5: #34D399;            /* matriculado 9,72:1 */
+
+  /* riel lateral: siempre noche → azul eléctrico */
+  --rail-bg: radial-gradient(120% 60% at 0% 0%, rgb(127 164 255 / .16), transparent 60%),
+             linear-gradient(180deg, #060C1C 0%, #0D1D52 55%, #1733A0 100%);
+
+  /* banda de color del encabezado */
+  --band: radial-gradient(60% 140% at 0% 0%, rgb(61 107 255 / .30), transparent 62%),
+          radial-gradient(45% 120% at 100% 0%, rgb(34 211 238 / .12), transparent 60%),
+          linear-gradient(180deg, #0F1D3E 0%, rgb(11 18 34 / 0) 100%);
+  --band-line: linear-gradient(90deg, #3D6BFF, #22D3EE 60%, #A78BFA);
+
+  /* vidrio */
+  --glass-bg: rgb(255 255 255 / .05);
+  --glass-line: rgb(255 255 255 / .10);
+  --glass-shadow: 0 1px 0 rgb(255 255 255 / .06) inset, 0 12px 32px -12px rgb(0 0 0 / .6);
+  --hero-bg: linear-gradient(135deg, #12286E 0%, #2A55E0 100%);   /* blanco 6,04:1 en el extremo claro */
+  --hero-note: #DCE6FF;                                           /* 4,84:1 sobre #2A55E0 */
+
+  --mark-done-bg: #3461F0;       /* check blanco 5,10:1 */
+  --mark-done-fg: #FFFFFF;
+
+  --elev-1: 0 1px 2px rgb(0 0 0 / .4), 0 1px 3px rgb(0 0 0 / .3);
+  --elev-2: 0 12px 32px rgb(0 0 0 / .5);
+  --elev-3: -12px 0 32px rgb(0 0 0 / .5);
+  --elev-up: 0 -8px 24px rgb(0 0 0 / .45);
+  --overlay: rgb(2 6 16 / .66);
+
+  --logo-swap: url("../assets/logo-claro.svg");   /* relativa a css/theme.css */
+  --check-glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%230B1222' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4.5 10.5 3.6 3.6 7.4-8'/%3E%3C/svg%3E");
+  --band-mobile: #13234A;
+  color-scheme: dark;
+}
+
+
+/* ═══ Riel y barra superior: siempre oscuros, tokens re-escopados ═ */
+.sidebar, .shell__topbar {
+  --ink: #FFFFFF;                 /* 17,11:1 arriba · 7,59:1 abajo */
+  --text-2: #DCE5FF;              /* 7,20:1 en el extremo inferior */
+  --text-muted: #B9C8F2;          /* 5,44:1 en el extremo inferior */
+  --line: rgb(255 255 255 / .12);
+  --line-strong: rgb(255 255 255 / .22);
+  --line-control: rgb(255 255 255 / .55);
+  --bg: rgb(255 255 255 / .14);
+  --bg-muted: rgb(255 255 255 / .09);
+  --bg-hover: rgb(255 255 255 / .09);
+  --bg-inverse: #FFFFFF;
+  --text-inverse: #0F1B2D;
+  --accent: #9FE8FF;              /* 6,67:1 abajo · 5,41:1 sobre ítem activo */
+  --focus-ring: #FFFFFF;
+  --brand-mark: #9CC0FF;          /* rombo 4,92:1 */
+  --danger: #FF9089;              /* 6,18:1 sobre --rail-menu-bg */
+  color: var(--ink);
+}
+/* menús que abren sobre el riel (usuario): superficie sólida, no el vidrio del riel */
+.sidebar .menu, .shell__topbar .menu { background: var(--rail-menu-bg); border-color: var(--line-strong); }
+.sidebar { background: var(--rail-bg); border-right: 0; box-shadow: 1px 0 0 rgb(15 27 45 / .25); }
+.sidebar__brand-logo, .shell__topbar img { content: url("../assets/logo-claro.svg"); }
+.sidebar__inner { gap: var(--s-4); }
+.sidebar__inst { color: var(--text-muted); }
+.sidebar__group { color: var(--text-muted); letter-spacing: .01em; }
+.nav-item { color: var(--text-2); min-height: 42px; transition: background-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease); }
+.nav-item .i { color: var(--text-muted); }
+.nav-item:hover { color: var(--ink); }
+.nav-item:hover .i { color: var(--ink); }
+.nav-item[aria-current="page"] {
+  background: linear-gradient(90deg, rgb(255 255 255 / .20), rgb(255 255 255 / .08));
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / .18), 0 8px 20px -10px rgb(0 0 0 / .5);
+  color: var(--ink);
+  position: relative;
+}
+.nav-item[aria-current="page"]::before {
+  content: ""; position: absolute; left: -12px; top: 9px; bottom: 9px; width: 3px; border-radius: 0 3px 3px 0; background: var(--accent);
+}
+.nav-item[aria-current="page"] .i { color: var(--accent); }
+.nav-item__count {
+  min-width: 24px; height: 22px; padding: 0 7px; display: inline-grid; place-items: center;
+  border-radius: var(--radius-full); background: rgb(255 255 255 / .12); color: var(--ink);
+}
+.nav-item__count--yours { background: var(--accent); color: #0B1633; }   /* 13,14:1 */
+.sidebar__foot { border-top-color: var(--line); }
+.user:hover { background: var(--bg-hover); }
+.shell__topbar { background: var(--rail-bg); border-bottom: 0; }
+.sidebar[data-open="true"] { background: var(--rail-bg); }
+
+/* ═══ Lienzo y banda de color del encabezado ═══════════════════ */
+body { background: var(--canvas); }
+.main, .split__main { position: relative; isolation: isolate; }
+.main::before, .split__main::before {
+  content: ""; position: absolute; z-index: -1; inset: 0 0 auto 0; height: 440px;
+  background: var(--band); pointer-events: none;
+}
+.main::after, .split__main::after {
+  content: ""; position: absolute; z-index: -1; inset: 0 0 auto 0; height: 3px; background: var(--band-line); pointer-events: none;
+}
+.page-title { font-size: 32px; letter-spacing: -0.02em; }
+.ficha-title .page-title { font-size: 30px; }
+.page-head__sub { color: var(--text-muted); }
+.digest { color: var(--text-2); }
+.digest strong { color: var(--ink); }
+.section-head__title { letter-spacing: -0.015em; }
+
+/* ═══ Cifras del período: vidrio, color por quién actúa ═════════ */
+.tally {
+  gap: var(--s-3); padding: 0; margin-top: var(--s-6); border: 0;
+}
+.tally__sep { background: linear-gradient(180deg, transparent, var(--line-strong), transparent); }
+.tally__item {
+  position: relative; padding: var(--s-4) var(--s-4) var(--s-3); border-radius: var(--radius-lg);
+  background: var(--glass-bg); border: 1px solid var(--glass-line); box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5); backdrop-filter: blur(16px) saturate(1.5);
+  transition: transform var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+a.tally__item:hover { transform: translateY(-2px); }
+.tally__line { flex-direction: column; align-items: flex-start; row-gap: 2px; }
+.tally__value { font-size: 30px; line-height: 1.1; letter-spacing: -0.025em; }
+.tally__item--money .tally__value { font-size: 24px; }
+.tally__label { font-size: var(--fs-15); }
+.tally__note { margin-top: 2px; }
+.tally__share { height: 6px; margin-top: auto; padding-top: 0; background: var(--bar-track); border-radius: var(--radius-full); }
+.tally__item { grid-template-rows: auto auto 1fr; }
+.tally__item > .tally__share { align-self: end; margin-top: var(--s-3); }
+.tally__share > span { border-radius: var(--radius-full); background: var(--bar-draft); }
+.tally__item:nth-child(1) .tally__share > span { background: var(--bar-team); }
+.tally__item:nth-child(3) .tally__share > span { background: var(--bar-system); }
+.tally__item:nth-child(4) .tally__share > span { background: var(--bar-applicant); }
+.tally__share--team > span { background: var(--bar-team); }
+.tally__share--done > span { background: var(--bar-done); }
+/* la cifra que manda: dinero recaudado, en vidrio sobre azul de marca */
+.tally__sep + .tally__item--money {
+  background: var(--hero-bg); border-color: rgb(255 255 255 / .16);
+  box-shadow: 0 1px 0 rgb(255 255 255 / .18) inset, 0 18px 36px -16px rgb(29 78 216 / .7);
+  --ink: #FFFFFF; --text-muted: var(--hero-note);
+  overflow: hidden;
+}
+.tally__sep + .tally__item--money::after {
+  content: ""; position: absolute; inset: -40% -30% auto auto; width: 70%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(127 164 255 / .45), transparent); pointer-events: none;
+}
+
+/* ═══ Dónde están los casos: etapa con color, barra con actor ═══ */
+.where > li:nth-child(1) { --stage: var(--stage-1); }
+.where > li:nth-child(2) { --stage: var(--stage-2); }
+.where > li:nth-child(3) { --stage: var(--stage-3); }
+.where > li:nth-child(4) { --stage: var(--stage-4); }
+.where > li:nth-child(5) { --stage: var(--stage-5); }
+.where > li { padding-left: var(--s-4); position: relative; }
+.where > li::before { content: ""; position: absolute; left: 0; top: var(--s-4); bottom: var(--s-2); width: 3px; border-radius: 3px; background: var(--stage, var(--line-strong)); }
+.where > li:first-child::before { top: 0; }
+.where__stage { border-bottom-color: var(--line); }
+.where__name { display: inline-flex; align-items: center; gap: var(--s-2); }
+.bars__track { height: 10px; border-radius: var(--radius-full); background: var(--bar-track); }
+.bars__fill { border-radius: var(--radius-full); background: var(--bar-draft); }
+.bars__fill--team { background: var(--bar-team); }
+.bars__fill--applicant { background: var(--bar-applicant); }
+.bars__fill--system { background: var(--bar-system); }
+.bars__fill--draft { background: var(--bar-draft); }
+.bars__fill--done { background: var(--bar-done); }
+.bars__fill--closed { background: var(--bar-closed); }
+.bars__row { border-bottom-color: var(--line); border-radius: var(--radius-md); }
+.bars__row:hover { background: var(--bg-hover); }
+.bars__value { font-size: var(--fs-16); }
+
+/* ═══ Alertas y actividad ═══════════════════════════════════════ */
+.alert-list__item { border-bottom-color: var(--line); }
+.tile--error { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--state-error-fg) 22%, transparent); }
+.tile--applicant { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--state-applicant-mark) 24%, transparent); }
+.tile--done, .tile--system, .tile--info { box-shadow: inset 0 0 0 1px color-mix(in srgb, currentColor 20%, transparent); }
+.timeline__item { border-bottom-color: var(--line); }
+
+/* ═══ Botones ═══════════════════════════════════════════════════ */
+.btn { border-radius: var(--radius-md); }
+.btn--primary {
+  background: linear-gradient(180deg, var(--btn-bg-top), var(--btn-bg)); color: var(--on-btn);
+  box-shadow: 0 1px 0 rgb(255 255 255 / .22) inset, 0 8px 18px -8px var(--btn-glow);
+}
+.btn--primary:hover { background: var(--btn-bg-hover); color: var(--on-btn); }
+.btn--primary:active { background: var(--btn-bg); box-shadow: none; }
+.btn--secondary { background: var(--bg); box-shadow: var(--elev-1); }
+.btn--secondary:hover { border-color: var(--accent); color: var(--accent); background: var(--bg); }
+.btn:disabled, .btn[aria-disabled="true"] { background: var(--bg-muted); color: var(--text-disabled); border-color: var(--line-strong); box-shadow: none; }
+
+/* ═══ Estados: más vivos, con anillo del mismo tono ═════════════ */
+.badge { height: 26px; padding: 0 11px 0 9px; font-size: var(--fs-13); box-shadow: inset 0 0 0 1px color-mix(in srgb, currentColor 24%, transparent); }
+.badge--plain { box-shadow: none; }
+.table tr.is-cursor .badge--team { background: var(--bg); }
+
+/* ═══ Pestañas, filtros, segmentos ══════════════════════════════ */
+.tabs { border-bottom-color: var(--line-strong); }
+.tabs__tab[aria-current="page"]::after, .tabs__tab[aria-selected="true"]::after { height: 3px; background: var(--band-line); }
+.tabs__tab { padding: 0 10px; }
+.tabs__tab[aria-current="page"]::after, .tabs__tab[aria-selected="true"]::after { left: 10px; right: 10px; }
+.tabs__count { color: var(--text-muted); }
+.tabs__tab[aria-current="page"] .tabs__count, .tabs__tab[aria-selected="true"] .tabs__count { color: var(--accent); }
+.tabs__count--yours { color: var(--state-team-fg); }
+.filter, .input, .select { background: var(--bg); border-radius: var(--radius-md); }
+.seg { background: var(--bg-subtle); }
+.seg__opt[aria-pressed="true"], .seg__opt[aria-checked="true"] { background: var(--bg); color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+
+/* ═══ Tablas ════════════════════════════════════════════════════ */
+.table-wrap { border-top: 0; border-radius: var(--radius-lg); background: var(--bg); box-shadow: 0 0 0 1px var(--line), var(--elev-1); overflow-x: auto; }
+.table-wrap :is(a, button):focus-visible { outline-offset: -2px; }
+.table th { background: var(--bg-subtle); color: var(--text-muted); border-bottom-color: var(--line); }
+.table td { border-bottom-color: var(--line); }
+.table__group th { background: var(--bg); }
+.table__group:has(.rombo) th { background: var(--accent-subtle); color: var(--accent); border-bottom-color: var(--accent-line); }
+.table__group:has(.rombo) .table__group-count { color: var(--accent); }
+.table tr.is-cursor { background: var(--accent-subtle); }
+.table tr.is-cursor > :first-child { box-shadow: inset 4px 0 0 var(--electric-500, var(--accent)); }
+.docs-count--team { color: var(--state-team-fg); }
+.wait--over { color: var(--state-applicant-fg); }
+.wait--over .i { color: var(--state-applicant-mark); }
+
+/* ═══ Ficha: decisión, etapas con color de etapa ════════════════ */
+.decision {
+  border: 0; padding: var(--s-3) var(--s-4); border-radius: var(--radius-lg);
+  background: var(--glass-bg); box-shadow: 0 0 0 1px var(--line), var(--elev-1);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+.stages__item:nth-child(1) { --stage: var(--stage-1); }
+.stages__item:nth-child(2) { --stage: var(--stage-2); }
+.stages__item:nth-child(3) { --stage: var(--stage-3); }
+.stages__item:nth-child(4) { --stage: var(--stage-4); }
+.stages__item:nth-child(5) { --stage: var(--stage-5); }
+.stages__line { height: 3px; border-radius: 3px; background: var(--line-strong); }
+.stages__item.is-done .stages__line { background: var(--stage); }
+.stages__item[aria-current="step"] .stages__line { background: linear-gradient(90deg, var(--stage), var(--line-strong)); }
+.stages__item .mark:not(.mark--yours):not(.mark--done)::before { border-color: var(--stage); }
+.stages__name { position: relative; }
+.mark--done::before { background: var(--mark-done-bg); }
+.mark--done .i { color: var(--mark-done-fg); }
+.facts__item dd { font-size: var(--fs-15); }
+.doc-name__icon { background: var(--accent-subtle); color: var(--accent); }
+
+/* visor: mesa de luz con retícula de puntos */
+.viewer { background: var(--bg); }
+.viewer__stage {
+  background-color: var(--bg-subtle);
+  background-image: radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--accent) 22%, transparent) 1px, transparent 0);
+  background-size: 18px 18px;
+}
+.viewer__tools { border-radius: var(--radius-md); box-shadow: var(--elev-1); }
+.idcard { border-radius: 16px; box-shadow: 0 24px 48px -20px rgb(15 27 45 / .45), 0 0 0 1px var(--line-strong); }
+.compare__row { border-bottom-color: var(--line); }
+
+/* ═══ Público: pago ═════════════════════════════════════════════ */
+body.is-public {
+  background: var(--band) top / 100% 520px no-repeat, var(--canvas);
+}
+.pub-head {
+  position: relative; background: color-mix(in srgb, var(--bg) 72%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4);
+  border-bottom-color: var(--line);
+}
+.pub-head::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--band-line); }
+/* wordmark navy → claro en oscuro (marco público, acceso, índice y galería) */
+.pub-head__inner > img, .auth__logo, .hub-head__brand > img, .gal-head > div > img, #marca .gal-item > img[src*="academify-logo"] { content: var(--logo-swap); }
+.journey__step.is-done::after { background: var(--accent); }
+.journey__step::after { background: var(--line-strong); }
+.journey__step[aria-current="step"] .journey__name { color: var(--accent); }
+.journey-sum__bars .is-done { background: var(--accent); opacity: .55; }
+.journey-sum__bars .is-now { background: var(--accent); }
+.who { border-top-color: var(--line); }
+.turn {
+  padding: var(--s-3) var(--s-4); border-radius: var(--radius-lg); align-items: baseline;
+  background: var(--state-team-bg); color: var(--text-2); box-shadow: inset 0 0 0 1px var(--accent-line);
+}
+.block__head { border-bottom: 2px solid var(--line-ink); }
+.block__tag { padding: 2px 10px; border-radius: var(--radius-full); background: var(--bg-muted); color: var(--text-2); font-size: var(--fs-13); }
+.line-item__icon { background: var(--accent-subtle); color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent-line); }
+.line-item__amount { font-size: var(--fs-h3); }
+.qty { border-radius: var(--radius-md); background: var(--bg); box-shadow: var(--elev-1); }
+.qty__btn { color: var(--accent); }
+.track__bar { height: 8px; gap: 3px; }
+.track__bar span { border-radius: var(--radius-full); background: var(--bar-track); box-shadow: inset 0 0 0 1px var(--line-control); }
+.track__bar .is-in { background: linear-gradient(90deg, var(--electric-600, var(--accent)), var(--bar-team)); box-shadow: 0 0 0 1px var(--accent) inset; }
+.track__bar .is-paid { background: var(--bar-done); box-shadow: none; }
+/* el total: cifra clave en vidrio */
+.pay-bar {
+  margin-top: var(--s-4); padding: var(--s-5); border-radius: var(--radius-lg);
+  background: var(--glass-bg); border: 1px solid var(--glass-line); box-shadow: var(--glass-shadow), 0 0 0 1px var(--accent-line);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5); backdrop-filter: blur(16px) saturate(1.5);
+}
+.pay-bar .total__sum { margin-top: 0; padding-top: 0; border-top: 0; }
+.total__amount { font-size: 36px; letter-spacing: -0.03em; }
+.total__rows dt, .total__rows dd { border-bottom: 1px solid var(--line); padding: var(--s-3) 0; }
+.pay-bar .btn--primary { min-height: 56px; font-size: var(--fs-h4); }
+
+/* ═══ Interruptor de tema ═══════════════════════════════════════ */
+.theme-fab {
+  position: fixed; z-index: calc(var(--z-drawer) - 1);   /* bajo velo, cajón, modal y toast */
+  right: calc(var(--s-4) + env(safe-area-inset-right));
+  bottom: calc(var(--s-4) + env(safe-area-inset-bottom));
+  display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; padding: 0 var(--s-4) 0 var(--s-3);
+  border: 1px solid var(--glass-line); border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--bg) 78%, transparent); color: var(--ink);
+  -webkit-backdrop-filter: blur(14px) saturate(1.5); backdrop-filter: blur(14px) saturate(1.5);
+  box-shadow: 0 0 0 1px var(--line-control), var(--elev-2);   /* límite ≥ 3:1 en los dos temas */
+  font: var(--fw-semibold) var(--fs-14)/1 var(--font-ui); cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease);
+}
+.theme-fab:hover { transform: translateY(-1px); }
+.theme-fab:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
+.theme-fab__dot {
+  width: 18px; height: 18px; flex: none; border-radius: 50%;
+  background: linear-gradient(90deg, #FFFFFF 50%, #0F1B2D 50%);
+  box-shadow: inset 0 0 0 1.5px var(--line-control);
+}
+.theme-fab[data-mode="light"] .theme-fab__dot { background: radial-gradient(circle, #FFC94D 45%, #F59E0B 46% 100%); box-shadow: 0 0 0 3px rgb(245 158 11 / .22); }
+.theme-fab[data-mode="dark"] .theme-fab__dot { background: radial-gradient(circle at 70% 30%, transparent 38%, #7FA4FF 40%); box-shadow: none; }
+.is-embedded .theme-fab { display: none; }
+/* .main aísla su contexto de apilamiento (banda ::before), así que velos, modales y toasts que viven dentro
+   no pueden tapar al fixed del body: mientras haya uno abierto, el interruptor se retira */
+body:has(:is(.scrim, .modal, .drawer, .veil, .toast):not(.shell-scrim):not([hidden]):not([hidden] *):not(.gal-static *)) .theme-fab { visibility: hidden; }
+/* espacio reservado: el final del contenido nunca queda bajo el interruptor */
+.main, .split__main { padding-bottom: calc(44px + var(--s-4) * 3); }
+body:has(.split) .theme-fab { right: calc(var(--viewer-w) + var(--s-4) + env(safe-area-inset-right)); }   /* fuera del visor y su pie */
+body .hub { padding-bottom: calc(44px + var(--s-4) * 3); }   /* el estilo del índice va después del tema */
+body:has(.hub) .theme-fab { width: 44px; padding: 0; justify-content: center; }   /* índice: solo ícono, cabe en el margen */
+body:has(.hub) .theme-fab [data-theme-label] { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+body.is-public { padding-bottom: calc(44px + var(--s-4) * 2); }   /* franja bajo el pie del marco público */
+@media (min-width: 641px) and (max-width: 1279px) {
+  /* barra de acciones pegajosa del formulario (77 a 175 px según el aviso que lleve). Bajo 1280 cruza todo el ancho:
+     el interruptor sube sobre su alto máximo y el final del formulario deja la franja libre. Desde 1280 la barra
+     queda en la columna del formulario y el interruptor no la toca */
+  body:has(.form-foot:not([hidden] *)) .theme-fab { bottom: calc(var(--form-foot-max) + var(--s-4) + env(safe-area-inset-bottom)); }
+  .main:has(.form-foot:not([hidden] *)), .split__main:has(.form-foot:not([hidden] *)) { padding-bottom: calc(var(--form-foot-max) + 44px + var(--s-4) * 2 + var(--s-2)); }
+}
+@media (max-width: 1024px) {
+  body:has(.split) .theme-fab { right: calc(var(--s-4) + env(safe-area-inset-right)); }
+}
+@media (max-width: 640px) {
+  .theme-fab { width: 44px; padding: 0; justify-content: center; }
+  .theme-fab [data-theme-label] { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  /* en móvil las barras de acción (cta-bar, pay-bar, form-foot, sesión) ocupan el borde inferior:
+     el interruptor va al final del documento, en una franja propia bajo el pie */
+  body { position: relative; padding-bottom: calc(44px + var(--s-4) * 2 + env(safe-area-inset-bottom)); }
+  .theme-fab, .is-public .theme-fab { position: absolute; bottom: calc(var(--s-4) + env(safe-area-inset-bottom)); }
+  body:has([data-estado]:not([hidden]) .session-bar) { padding-bottom: calc(44px + var(--s-4) * 2 + var(--session-bar-m, 96px) + env(safe-area-inset-bottom)); }
+  body:has([data-estado]:not([hidden]) .session-bar) .theme-fab { bottom: calc(var(--s-4) + var(--session-bar-m, 96px) + env(safe-area-inset-bottom)); }
+  .pay-bar {
+    margin: 0 calc(-1 * var(--s-4)); border-radius: var(--radius-lg) var(--radius-lg) 0 0; border-width: 1px 0 0;
+    padding: var(--s-3) var(--s-4) calc(var(--s-3) + env(safe-area-inset-bottom));
+    background: color-mix(in srgb, var(--bg) 82%, transparent); box-shadow: var(--elev-up);
+  }
+  .total__amount { font-size: 28px; }
+  .tally__value { font-size: 26px; }
+  .page-title { font-size: 28px; }
+  .main::before, .split__main::before { height: 320px; }
+  body.is-public { background: linear-gradient(180deg, var(--band-mobile) 0%, var(--canvas) 360px) no-repeat, var(--canvas); }
+}
+
+/* ═══ Controles nativos dibujados con tokens (radio, casilla, aceptación) ═ */
+.radio-card__input, .check__box, .accept__box {
+  appearance: none; -webkit-appearance: none; display: inline-grid; place-content: center;
+  border: 1.5px solid var(--line-control); background: var(--bg) center / 100% no-repeat; cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.radio-card__input { border-radius: 50%; }
+.check__box, .accept__box { border-radius: 5px; }
+.radio-card__input:checked { border-color: var(--accent); background: radial-gradient(circle, var(--on-accent) 0 3.5px, var(--accent) 4.2px); }
+.check__box:checked, .accept__box:checked { border-color: var(--accent); background-color: var(--accent); background-image: var(--check-glyph); }
+.check:hover .check__box:not(:checked):not(:disabled), .radio-card:hover .radio-card__input:not(:checked), .accept:hover .accept__box:not(:checked):not(:disabled) { border-color: var(--text-2); }
+:is(.radio-card__input, .check__box, .accept__box):disabled { background-color: var(--bg-muted); border-color: var(--line-strong); cursor: not-allowed; }
+:is(.radio-card__input, .check__box, .accept__box):checked:disabled { background-color: var(--text-disabled); border-color: var(--text-disabled); }
+:is(.radio-card__input, .check__box, .accept__box)[aria-invalid="true"] { border-color: var(--danger); }
+.check__box:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+
+/* ═══ Campos, hoja del contrato, vista de correo, foco ══════════ */
+.combo__input { color: var(--ink); }
+.combo__input::placeholder { color: var(--text-subtle); }   /* 5,28:1 claro · 6,60:1 oscuro */
+/* la hoja representa el PDF que se firma: papel blanco en los dos temas */
+.pdf__page {
+  --bg: var(--paper); --bg-subtle: var(--paper); --bg-muted: var(--paper-fill);
+  --ink: var(--paper-ink); --text-2: var(--paper-ink); --text-muted: var(--paper-muted); --text-subtle: var(--paper-muted);
+  --line: var(--paper-fill); --line-control: var(--paper-line);
+  background: var(--paper); color: var(--paper-ink); color-scheme: light;
+}
+/* vista previa desactualizada: un escalón de token abajo, sin opacidad (que bajaba el texto a 2,4:1) */
+.mail-view--stale { opacity: 1; }
+.mail-view--stale :is(.mail-view__subject, .mail-view__meta dd) { color: var(--text-2); }
+.mail-view--stale .mail-view__body { color: var(--text-muted); }
+.mail-view--stale :is(.mail-view__meta dt, .mail-view__foot, .mail-view__hidden, .mail-view__fine) { color: var(--text-subtle); }
+/* enlace de salto en el marco del equipo: aparece sobre el riel (siempre oscuro) */
+body:has(.sidebar) .skip-link { --bg-inverse: #FFFFFF; --text-inverse: #0F1B2D; --focus-ring: #FFFFFF; }   /* 15,6:1 sobre el riel */
+
+/* ═══ Galería: estados forzados con los tokens reales del botón ═ */
+:root .btn--primary.is-hover { background: var(--btn-bg-hover); color: var(--on-btn); }
+:root .btn--primary.is-active { background: var(--btn-bg); color: var(--on-btn); box-shadow: none; }
+
+/* ═══ Chrome del prototipo (selector de estados): sigue el tema. No se porta a la app ═ */
+:root .proto-bar { background: color-mix(in srgb, var(--bg) 96%, transparent); color: var(--ink); border-color: var(--line-control); box-shadow: var(--elev-2); }
+:root .proto-bar__btn, :root .proto-bar__hide { background: var(--bg); border-color: var(--line-control); }
+:root .proto-bar__hide { color: var(--text-muted); }
+:root .proto-bar__btn[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--text-inverse); }
+:root .proto-bar__btn:focus-visible, :root .proto-bar__hide:focus-visible { outline-color: var(--focus-ring); }
+@media (min-width: 1025px) { body:has(.sidebar) .proto-bar { left: calc(var(--sidebar-w) + 12px); max-width: min(560px, calc(100vw - var(--sidebar-w) - 24px)); } }
+@media (min-width: 641px) { body:has(.form-foot:not([hidden] *)) .proto-bar { bottom: calc(var(--form-foot-h) + 12px); } }   /* sobre la barra del formulario */
+@media (min-width: 641px) and (max-width: 1024px) { body:has(.sidebar) .proto-bar { left: calc(var(--sidebar-w-collapsed) + 12px); max-width: min(560px, calc(100vw - var(--sidebar-w-collapsed) - 24px)); } }
+/* escritorio: el selector parte plegado a su título y se despliega al pasar el puntero o con el foco.
+   El arreglo de fondo (arrancar con .is-min también en escritorio) es de js/proto.js */
+@media (hover: hover) and (min-width: 641px) {
+  :root .proto-bar:not(.is-min):not(:hover):not(:focus-within) :is(.proto-bar__list, .proto-bar__hide) { display: none; }
+  :root .proto-bar:not(.is-min):not(:hover):not(:focus-within) .proto-bar__title { padding: 4px 6px; }
+  :root .proto-bar:not(.is-min):not(:hover):not(:focus-within) .proto-bar__title::after { content: " ▴"; color: var(--text-muted); }
+}
+@media (max-width: 640px) {
+  /* arriba: abajo están las barras de acción. Público: sobre el logo; equipo: a la derecha de la barra superior */
+  :root .proto-bar { top: 6px; bottom: auto; }
+  body:has(.shell__topbar) .proto-bar { left: auto; right: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.tally__item:hover, .theme-fab:hover { transform: none; }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .nav-item[aria-current="page"]::before { left: -8px; }
+}

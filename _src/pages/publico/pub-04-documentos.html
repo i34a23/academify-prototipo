@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="es-CL" class="has-cta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<title>Tus documentos · Instituto Demo</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body class="is-public">
+<!--SPRITE-->
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="pub-head pub-head--sticky">
+  <div class="pub-head__inner">
+    <img src="../assets/academify-logo.svg" alt="academify" width="115" height="26" fetchpriority="high" translate="no">
+    <p class="pub-head__inst">Instituto Demo<span class="pub-head__process">Postulación Admisión 2027</span></p>
+    <a class="pub-head__help link" href="mailto:admision@institutodemo.cl">{{i20:mail}}<span class="pub-head__help-long">admision@institutodemo.cl</span><span class="pub-head__help-short">Ayuda</span></a>
+  </div>
+  <div class="pub-head__steps pub-narrow-only">
+    <nav class="steps pub-head__steps-inner" aria-label="Avance de la postulación">
+      <div class="steps__row">
+        <span class="steps__now" id="paso-actual">Paso 3 de 4: Documentos</span>
+        <span>Sigue: revisar y enviar</span>
+      </div>
+      <div class="steps__bars" role="img" aria-labelledby="paso-actual"><span class="is-done"></span><span class="is-done"></span><span class="is-now"></span><span></span></div>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido" class="pub-main">
+  <div data-estado="falta-foto" data-estado-label="En curso (falta la foto)">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">3 de 4 listos</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="a-ced_anv-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="a-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf" aria-describedby="a-ced_anv-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-reverso.jpg, 1,1&nbsp;MB</span><p class="upload__status" id="a-ced_rev-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="a-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf" aria-describedby="a-ced_rev-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">licencia-media.pdf, 420&nbsp;KB</span><p class="upload__status" id="a-licencia-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Licencia de enseñanza media</span><input class="upload__file" id="a-licencia" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-describedby="a-licencia-st"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true">{{i20:image}}</span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="a-foto" type="file" name="foto" accept="image/jpeg,image/png"></label>
+        </div>
+          <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="vacio" data-estado-label="Vacío">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">0 de 4 listos</span></div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true">{{i20:id}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="b-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true">{{i20:id}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="b-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true">{{i20:grad}}</span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            
+            <div class="upload__later"><label class="check"><input class="check__box" type="checkbox" name="licencia_posterior"><span>Egreso este año: la entregaré después</span></label></div>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir archivo<span class="sr-only">: Licencia de enseñanza media</span><input class="upload__file" id="b-licencia" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true">{{i20:image}}</span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="b-foto" type="file" name="foto" accept="image/jpeg,image/png"></label>
+        </div>
+          <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="error-archivo" data-estado-label="Error de formato o tamaño">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">2 de 4 listos</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="c-ced_anv-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="c-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf" aria-describedby="c-ced_anv-st"></label>
+        </div>
+        <div class="upload upload--error">
+          <span class="upload__icon" aria-hidden="true">{{i20:alert}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <p class="upload__status" id="c-ced_rev-st">{{i14:alert}}<span>El archivo pesa más de 10 MB. Elige otro o toma una foto con menos resolución.</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir otro archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="c-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf" aria-invalid="true" aria-describedby="c-ced_rev-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">licencia-media.pdf, 420&nbsp;KB</span><p class="upload__status" id="c-licencia-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Licencia de enseñanza media</span><input class="upload__file" id="c-licencia" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-describedby="c-licencia-st"></label>
+        </div>
+        <div class="upload upload--error">
+          <span class="upload__icon" aria-hidden="true">{{i20:alert}}</span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            <p class="upload__status" id="c-foto-st">{{i14:alert}}<span>La fotografía debe ser una imagen JPG o PNG (no PDF). Elige otro archivo.</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir otro archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="c-foto" type="file" name="foto" accept="image/jpeg,image/png" aria-invalid="true" aria-describedby="c-foto-st"></label>
+        </div>
+          <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite">No pudimos usar 2 archivos: cédula de identidad (reverso) y fotografía tipo carnet.</div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="listo" data-estado-label="Listo (con reemplazar)">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">4 de 4 listos</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="d-ced_anv-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="d-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf" aria-describedby="d-ced_anv-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-reverso.jpg, 1,1&nbsp;MB</span><p class="upload__status" id="d-ced_rev-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="d-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf" aria-describedby="d-ced_rev-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">licencia-media.pdf, 420&nbsp;KB</span><p class="upload__status" id="d-licencia-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Licencia de enseñanza media</span><input class="upload__file" id="d-licencia" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-describedby="d-licencia-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">foto-carnet.jpg, 640&nbsp;KB</span><p class="upload__status" id="d-foto-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="d-foto" type="file" name="foto" accept="image/jpeg,image/png" aria-describedby="d-foto-st"></label>
+        </div>
+          <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="despues" data-estado-label="La entregaré después (licencia)">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Ingeniería Comercial</p>
+          <p>Vespertina, a distancia</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Ingeniería Comercial</strong>Vespertina, a distancia, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">3 listos, 1 la entregarás después</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="e-ced_anv-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="e-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf" aria-describedby="e-ced_anv-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-reverso.jpg, 1,1&nbsp;MB</span><p class="upload__status" id="e-ced_rev-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="e-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf" aria-describedby="e-ced_rev-st"></label>
+        </div>
+        <div class="upload upload--later">
+          <span class="upload__icon" aria-hidden="true">{{i20:grad}}</span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <p class="upload__status" id="e-licencia-st">{{i14:clock}}<span>La entregarás después</span></p>
+            <div class="upload__later"><label class="check"><input class="check__box" type="checkbox" name="licencia_posterior" checked><span>Egreso este año: la entregaré después</span></label></div>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir archivo<span class="sr-only">: Licencia de enseñanza media</span><input class="upload__file" id="e-licencia" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-describedby="e-licencia-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">foto-carnet.jpg, 640&nbsp;KB</span><p class="upload__status" id="e-foto-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="e-foto" type="file" name="foto" accept="image/jpeg,image/png" aria-describedby="e-foto-st"></label>
+        </div>
+          <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="subiendo" data-estado-label="Subiendo y en revisión">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">Subiendo documentos (3 de 4)…</span></div>
+        <div class="upload upload--scanning">
+          <span class="upload__icon" aria-hidden="true">{{i20:id}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="f-ced_anv-st">{{i14:shield}}<span>Recibido, en revisión de seguridad…</span></p>
+          </div>
+        </div>
+        <div class="upload upload--scanning">
+          <span class="upload__icon" aria-hidden="true">{{i20:id}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-reverso.jpg, 1,1&nbsp;MB</span><p class="upload__status" id="f-ced_rev-st">{{i14:shield}}<span>Recibido, en revisión de seguridad…</span></p>
+          </div>
+        </div>
+        <div class="upload">
+          <span class="upload__icon" aria-hidden="true">{{i20:grad}}</span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">licencia-media.pdf, 420&nbsp;KB</span><p class="upload__status" id="f-licencia-st">{{i14:upload}}<span>Subiendo… 60&nbsp;%</span></p>
+          </div>
+          <div class="upload__progress" role="progressbar" aria-label="Subida de Licencia de enseñanza media" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><span style="transform: scaleX(0.60)"></span></div>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">foto-carnet.jpg, 640&nbsp;KB</span><p class="upload__status" id="f-foto-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="f-foto" type="file" name="foto" accept="image/jpeg,image/png" aria-describedby="f-foto-st"></label>
+        </div>
+          <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite">Subiendo licencia de enseñanza media, 60 %.</div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="faltan" data-estado-label="Faltan documentos (al continuar)">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <div class="error-summary flow-gap" role="alert" tabindex="-1" aria-labelledby="g-es">
+          <p class="error-summary__title" id="g-es">Faltan 2 documentos para continuar</p>
+          <ul><li><a class="link" href="#g-licencia">Licencia de enseñanza media: súbela o marca que la entregarás después</a></li><li><a class="link" href="#g-foto">Fotografía tipo carnet: falta subirla</a></li></ul>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">2 de 4 listos</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="g-ced_anv-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="g-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf" aria-describedby="g-ced_anv-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-reverso.jpg, 1,1&nbsp;MB</span><p class="upload__status" id="g-ced_rev-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="g-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf" aria-describedby="g-ced_rev-st"></label>
+        </div>
+        <div class="upload upload--error">
+          <span class="upload__icon" aria-hidden="true">{{i20:alert}}</span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <p class="upload__status" id="g-licencia-st">{{i14:alert}}<span>Sube la licencia o marca que la entregarás después.</span></p>
+            <div class="upload__later"><label class="check"><input class="check__box" type="checkbox" name="licencia_posterior"><span>Egreso este año: la entregaré después</span></label></div>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir archivo<span class="sr-only">: Licencia de enseñanza media</span><input class="upload__file" id="g-licencia" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-invalid="true" aria-describedby="g-licencia-st"></label>
+        </div>
+        <div class="upload upload--error">
+          <span class="upload__icon" aria-hidden="true">{{i20:alert}}</span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            <p class="upload__status" id="g-foto-st">{{i14:alert}}<span>Este documento es obligatorio.</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="g-foto" type="file" name="foto" accept="image/jpeg,image/png" aria-invalid="true" aria-describedby="g-foto-st"></label>
+        </div>
+          <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="extraordinaria" data-estado-label="Vía extraordinaria">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Derecho</p>
+          <p>Vespertina, presencial</p>
+          <p>Vía extraordinaria</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Derecho</strong>Vespertina, presencial, vía extraordinaria</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">3 de 5 listos</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="h-ced_anv-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="h-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf" aria-describedby="h-ced_anv-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-reverso.jpg, 1,1&nbsp;MB</span><p class="upload__status" id="h-ced_rev-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="h-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf" aria-describedby="h-ced_rev-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">licencia-media.pdf, 420&nbsp;KB</span><p class="upload__status" id="h-licencia-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Licencia de enseñanza media</span><input class="upload__file" id="h-licencia" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-describedby="h-licencia-st"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true">{{i20:file-text}}</span>
+          <div>
+            <p class="upload__name">Concentración de notas de educación superior (convalidación)</p>
+            <p class="upload__meta">De la institución de educación superior donde aprobaste asignaturas; se usa para convalidar. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir archivo<span class="sr-only">: Concentración de notas de educación superior (convalidación)</span><input class="upload__file" id="h-notas_es" type="file" name="notas_es" accept="image/jpeg,image/png,application/pdf"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true">{{i20:image}}</span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="h-foto" type="file" name="foto" accept="image/jpeg,image/png"></label>
+        </div>
+          <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="prosecucion" data-estado-label="Vía prosecución de estudios">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Auditoría</p>
+          <p>Vespertina, a distancia</p>
+          <p>Vía prosecución de estudios</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Auditoría</strong>Vespertina, a distancia, vía prosecución de estudios</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">2 de 4 listos</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="i-ced_anv-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="i-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf" aria-describedby="i-ced_anv-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-reverso.jpg, 1,1&nbsp;MB</span><p class="upload__status" id="i-ced_rev-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="i-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf" aria-describedby="i-ced_rev-st"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true">{{i20:grad}}</span>
+          <div>
+            <p class="upload__name">Certificado de título profesional y/o grado</p>
+            <p class="upload__meta">Emitido por la institución donde te titulaste o graduaste. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir archivo<span class="sr-only">: Certificado de título profesional y/o grado</span><input class="upload__file" id="i-titulo" type="file" name="titulo" accept="image/jpeg,image/png,application/pdf"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true">{{i20:image}}</span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="i-foto" type="file" name="foto" accept="image/jpeg,image/png"></label>
+        </div>
+          <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="pasaporte" data-estado-label="Pasaporte o DNI">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true">{{i:check}}</span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Trabajo Social</p>
+          <p>Vespertina, a distancia</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Trabajo Social</strong>Vespertina, a distancia, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">1 de 3 listos</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true">{{i20:check-circle}}</span>
+          <div>
+            <p class="upload__name">Pasaporte o DNI (página de datos)</p>
+            <p class="upload__meta">La página con tu foto y tus datos. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">dni-pagina-datos.jpg, 1,8&nbsp;MB</span><p class="upload__status" id="j-pasaporte-st">{{i14:check}}<span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Cambiar archivo<span class="sr-only">: Pasaporte o DNI (página de datos)</span><input class="upload__file" id="j-pasaporte" type="file" name="pasaporte" accept="image/jpeg,image/png,application/pdf" aria-describedby="j-pasaporte-st"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true">{{i20:grad}}</span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media o convalidación</p>
+            <p class="upload__meta">Si terminaste la enseñanza media fuera de Chile, sube el reconocimiento o la convalidación de tus estudios ante el Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            
+            <div class="upload__later"><label class="check"><input class="check__box" type="checkbox" name="licencia_ext_posterior"><span>Egreso este año: la entregaré después</span></label></div>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir archivo<span class="sr-only">: Licencia de enseñanza media o convalidación</span><input class="upload__file" id="j-licencia_ext" type="file" name="licencia_ext" accept="image/jpeg,image/png,application/pdf"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true">{{i20:image}}</span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick">{{i:upload}}Elegir archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="j-foto" type="file" name="foto" accept="image/jpeg,image/png"></label>
+        </div>
+          <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="pub-foot">
+  <div class="pub-foot__inner">
+    <span>Instituto Demo, Admisión 2027</span>
+    <span class="credit">Powered by <span translate="no">Ticnology</span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></span>
+  </div>
+</footer>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<title>Completa tu postulación · Instituto Demo</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body class="is-public">
+<!--SPRITE-->
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="pub-head">
+  <div class="pub-head__inner">
+    <img src="../assets/academify-logo.svg" alt="academify" width="115" height="26" fetchpriority="high" translate="no">
+    <p class="pub-head__inst">Instituto Demo<span class="pub-head__process">Postulación Admisión 2027</span></p>
+    <a class="pub-head__help link" href="mailto:admision@institutodemo.cl">{{i20:mail}}<span class="pub-head__help-long">admision@institutodemo.cl</span><span class="pub-head__help-short">Ayuda</span></a>
+  </div>
+</header>
+
+<main id="contenido" class="pub-main">
+<div data-estado="falta" data-estado-label="Falta 1 documento">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Completa tu postulación</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te falta subir 1 documento.</strong> Cuando lo subas, envía tu postulación para que admisión la revise.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-now"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span>Etapa 1 de 8</span><a class="link" href="#recorrido">Ver tu recorrido</a></p>
+      <div class="prog-line"><p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p></div>
+      
+      <form action="/publico/postulacion/enviar" method="post" novalidate>
+      <section class="block" aria-labelledby="h-docs">
+        <div class="block__head"><h2 class="block__title" id="h-docs">Documentos</h2><span class="block__tag">3 de 4 subidos</span></div>
+        <p class="field__hint terms__note">JPG, PNG o PDF, hasta 10&nbsp;MB cada uno. Que se lea completo y sin reflejos.</p>
+        
+        <ul class="req-list">
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (anverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-anverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_anverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (anverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (reverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-reverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_reverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (reverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Licencia de enseñanza media</p>
+              <p class="upload__status">{{i:check}}Recibido: licencia-media.pdf</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Licencia de enseñanza media"></label>
+          </li>
+          <li class="upload upload--empty" id="doc-foto">
+            <span class="upload__icon" aria-hidden="true">{{i20:image}}</span>
+            <div>
+              <p class="upload__name">Fotografía tipo carnet</p>
+              <p class="upload__meta">Obligatoria. JPG o PNG, hasta 10&nbsp;MB. Fondo claro y la cara completa.</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Elegir archivo<input class="upload__file" type="file" name="foto" accept="image/jpeg,image/png" aria-label="Elegir archivo para Fotografía tipo carnet"></label>
+          </li>
+        </ul>
+        <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos.</span></p>
+      </section>
+      <div class="task-foot">
+        
+        <div class="btn-row"><button class="btn btn--primary btn--lg" type="submit">Enviar postulación</button></div>
+        <p class="note" id="enviar-why">{{i:info}}<span>Al enviarla, admisión revisa tus documentos y te escribe a ca•••@correo.cl.</span></p>
+      </div>
+      </form>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido">
+      <h2 class="journey__title" id="recorrido">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Postulas</span><span class="journey__when">Ahora, te falta 1 documento</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Te avisamos por correo</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">En línea, con tu cédula</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Con <span translate="no">Webpay</span></span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Camila Araya Rojas</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">128-8</span></dd><dt class="sr-only">Programa</dt><dd>Psicología, diurna, presencial</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000101</span></dd></dl>
+    </aside>
+  </div>
+</div>
+<div data-estado="subiendo" data-estado-label="Subiendo">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Completa tu postulación</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te falta subir 1 documento.</strong> Cuando lo subas, envía tu postulación para que admisión la revise.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-now"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span>Etapa 1 de 8</span><a class="link" href="#recorrido--subiendo">Ver tu recorrido</a></p>
+      <div class="prog-line"><p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p></div>
+      
+      <form action="/publico/postulacion/enviar" method="post" novalidate>
+      <section class="block" aria-labelledby="h-docs--subiendo">
+        <div class="block__head"><h2 class="block__title" id="h-docs--subiendo">Documentos</h2><span class="block__tag">3 de 4 subidos</span></div>
+        <p class="field__hint terms__note">JPG, PNG o PDF, hasta 10&nbsp;MB cada uno. Que se lea completo y sin reflejos.</p>
+        
+        <ul class="req-list">
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (anverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-anverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_anverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (anverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (reverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-reverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_reverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (reverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Licencia de enseñanza media</p>
+              <p class="upload__status">{{i:check}}Recibido: licencia-media.pdf</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Licencia de enseñanza media"></label>
+          </li>
+          <li class="upload" id="doc-foto--subiendo">
+            <span class="upload__icon" aria-hidden="true">{{i20:upload}}</span>
+            <div>
+              <p class="upload__name">Fotografía tipo carnet</p>
+              <p class="upload__status" role="status">Subiendo foto-carnet.jpg: 64&nbsp;%</p>
+            </div>
+            <button class="btn btn--ghost btn--sm upload__pick" type="button" aria-label="Cancelar la subida de Fotografía tipo carnet">Cancelar</button>
+            <div class="upload__progress" aria-hidden="true"><span style="transform: scaleX(.64)"></span></div>
+          </li>
+        </ul>
+        <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos.</span></p>
+      </section>
+      <div class="task-foot">
+        
+        <div class="btn-row"><button class="btn btn--primary btn--lg" type="submit">Enviar postulación</button></div>
+        <p class="note" id="enviar-why--subiendo">{{i:info}}<span>Al enviarla, admisión revisa tus documentos y te escribe a ca•••@correo.cl.</span></p>
+      </div>
+      </form>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido--subiendo">
+      <h2 class="journey__title" id="recorrido--subiendo">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Postulas</span><span class="journey__when">Ahora, te falta 1 documento</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Te avisamos por correo</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">En línea, con tu cédula</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Con <span translate="no">Webpay</span></span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Camila Araya Rojas</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">128-8</span></dd><dt class="sr-only">Programa</dt><dd>Psicología, diurna, presencial</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000101</span></dd></dl>
+    </aside>
+  </div>
+</div>
+<div data-estado="analisis" data-estado-label="En análisis">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Completa tu postulación</h1>
+      <p class="lede">Estamos revisando la seguridad de tu fotografía. Normalmente toma unos segundos; después podrás enviar tu postulación.</p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-now"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span>Etapa 1 de 8</span><a class="link" href="#recorrido--analisis">Ver tu recorrido</a></p>
+      <div class="prog-line"><p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p></div>
+      
+      <form action="/publico/postulacion/enviar" method="post" novalidate>
+      <section class="block" aria-labelledby="h-docs--analisis">
+        <div class="block__head"><h2 class="block__title" id="h-docs--analisis">Documentos</h2><span class="block__tag">4 de 4 subidos</span></div>
+        <p class="field__hint terms__note">JPG, PNG o PDF, hasta 10&nbsp;MB cada uno. Que se lea completo y sin reflejos.</p>
+        <div class="task-live"><p class="stamp" role="status" aria-live="polite">{{i:refresh}}Revisando la seguridad de 1 archivo. La lista se actualiza sola.</p></div>
+        <ul class="req-list">
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (anverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-anverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_anverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (anverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (reverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-reverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_reverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (reverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Licencia de enseñanza media</p>
+              <p class="upload__status">{{i:check}}Recibido: licencia-media.pdf</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Licencia de enseñanza media"></label>
+          </li>
+          <li class="upload upload--scanning" id="doc-foto--analisis">
+            <span class="upload__icon" aria-hidden="true">{{i20:shield}}</span>
+            <div>
+              <p class="upload__name">Fotografía tipo carnet</p>
+              <p class="upload__status">{{i:refresh}}Recibido, revisando seguridad</p>
+            </div>
+            <span></span>
+          </li>
+        </ul>
+        <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos.</span></p>
+      </section>
+      <div class="task-foot">
+        
+        <div class="btn-row"><button class="btn btn--primary btn--lg" type="submit" aria-disabled="true" aria-describedby="enviar-why--analisis">Enviar postulación</button></div>
+        <p class="note" id="enviar-why--analisis">{{i:clock}}<span>Podrás enviarla cuando termine la revisión de seguridad. No necesitas subir nada de nuevo.</span></p>
+      </div>
+      </form>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido--analisis">
+      <h2 class="journey__title" id="recorrido--analisis">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step" aria-current="step"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Postulas</span><span class="journey__when">Ahora, revisamos tu foto</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Te avisamos por correo</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">En línea, con tu cédula</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Con <span translate="no">Webpay</span></span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Camila Araya Rojas</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">128-8</span></dd><dt class="sr-only">Programa</dt><dd>Psicología, diurna, presencial</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000101</span></dd></dl>
+    </aside>
+  </div>
+</div>
+<div data-estado="demora" data-estado-label="Demora del antivirus">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Completa tu postulación</h1>
+      <p class="lede">Estamos revisando la seguridad de tu fotografía. Normalmente toma unos segundos; después podrás enviar tu postulación.</p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-now"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span>Etapa 1 de 8</span><a class="link" href="#recorrido--demora">Ver tu recorrido</a></p>
+      <div class="prog-line"><p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p></div>
+      <div class="task-top"><div class="alert alert--info" role="status">{{i:info}}<div><p class="alert__title">La revisión está tardando más de lo normal</p><p class="alert__body">Tus archivos quedaron guardados y no necesitas subirlos de nuevo. Puedes cerrar esta página: te avisamos por correo.</p></div></div></div>
+      <form action="/publico/postulacion/enviar" method="post" novalidate>
+      <section class="block" aria-labelledby="h-docs--demora">
+        <div class="block__head"><h2 class="block__title" id="h-docs--demora">Documentos</h2><span class="block__tag">4 de 4 subidos</span></div>
+        <p class="field__hint terms__note">JPG, PNG o PDF, hasta 10&nbsp;MB cada uno. Que se lea completo y sin reflejos.</p>
+        <div class="task-live"><p class="stamp" role="status" aria-live="polite">{{i:refresh}}Revisando la seguridad de 1 archivo. La lista se actualiza sola.</p></div>
+        <ul class="req-list">
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (anverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-anverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_anverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (anverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (reverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-reverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_reverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (reverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Licencia de enseñanza media</p>
+              <p class="upload__status">{{i:check}}Recibido: licencia-media.pdf</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Licencia de enseñanza media"></label>
+          </li>
+          <li class="upload upload--scanning" id="doc-foto--demora">
+            <span class="upload__icon" aria-hidden="true">{{i20:shield}}</span>
+            <div>
+              <p class="upload__name">Fotografía tipo carnet</p>
+              <p class="upload__status">{{i:refresh}}Recibido, revisando seguridad</p>
+            </div>
+            <span></span>
+          </li>
+        </ul>
+        <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos.</span></p>
+      </section>
+      <div class="task-foot">
+        
+        <div class="btn-row"><button class="btn btn--primary btn--lg" type="submit" aria-disabled="true" aria-describedby="enviar-why--demora">Enviar postulación</button></div>
+        <p class="note" id="enviar-why--demora">{{i:clock}}<span>Podrás enviarla cuando termine la revisión de seguridad. No necesitas subir nada de nuevo.</span></p>
+      </div>
+      </form>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido--demora">
+      <h2 class="journey__title" id="recorrido--demora">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step" aria-current="step"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Postulas</span><span class="journey__when">Ahora, revisamos tu foto</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Te avisamos por correo</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">En línea, con tu cédula</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Con <span translate="no">Webpay</span></span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Camila Araya Rojas</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">128-8</span></dd><dt class="sr-only">Programa</dt><dd>Psicología, diurna, presencial</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000101</span></dd></dl>
+    </aside>
+  </div>
+</div>
+<div data-estado="formato" data-estado-label="Archivo no válido">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Completa tu postulación</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te falta subir 1 documento.</strong> Cuando lo subas, envía tu postulación para que admisión la revise.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-now"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span>Etapa 1 de 8</span><a class="link" href="#recorrido--formato">Ver tu recorrido</a></p>
+      <div class="prog-line"><p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p></div>
+      
+      <form action="/publico/postulacion/enviar" method="post" novalidate>
+      <section class="block" aria-labelledby="h-docs--formato">
+        <div class="block__head"><h2 class="block__title" id="h-docs--formato">Documentos</h2><span class="block__tag">3 de 4 subidos</span></div>
+        <p class="field__hint terms__note">JPG, PNG o PDF, hasta 10&nbsp;MB cada uno. Que se lea completo y sin reflejos.</p>
+        
+        <ul class="req-list">
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (anverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-anverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_anverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (anverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (reverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-reverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_reverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (reverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Licencia de enseñanza media</p>
+              <p class="upload__status">{{i:check}}Recibido: licencia-media.pdf</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Licencia de enseñanza media"></label>
+          </li>
+          <li class="upload upload--error" id="doc-foto--formato">
+            <span class="upload__icon" aria-hidden="true">{{i20:alert}}</span>
+            <div>
+              <p class="upload__name">Fotografía tipo carnet</p>
+              <p class="upload__status" id="foto-err--formato">{{i:x}}La fotografía debe ser una imagen JPG o PNG (no PDF). Elige otro archivo.</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Elegir otro archivo<input class="upload__file" type="file" name="foto" accept="image/jpeg,image/png" aria-label="Elegir otro archivo para Fotografía tipo carnet"></label>
+          </li>
+        </ul>
+        <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos.</span></p>
+      </section>
+      <div class="task-foot">
+        
+        <div class="btn-row"><button class="btn btn--primary btn--lg" type="submit">Enviar postulación</button></div>
+        <p class="note" id="enviar-why--formato">{{i:info}}<span>Al enviarla, admisión revisa tus documentos y te escribe a ca•••@correo.cl.</span></p>
+      </div>
+      </form>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido--formato">
+      <h2 class="journey__title" id="recorrido--formato">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Postulas</span><span class="journey__when">Ahora, te falta 1 documento</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Te avisamos por correo</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">En línea, con tu cédula</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Con <span translate="no">Webpay</span></span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Camila Araya Rojas</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">128-8</span></dd><dt class="sr-only">Programa</dt><dd>Psicología, diurna, presencial</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000101</span></dd></dl>
+    </aside>
+  </div>
+</div>
+<div data-estado="faltan" data-estado-label="Error: falta documento">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Completa tu postulación</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Te falta subir 1 documento.</strong> Cuando lo subas, envía tu postulación para que admisión la revise.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-now"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span>Etapa 1 de 8</span><a class="link" href="#recorrido--faltan">Ver tu recorrido</a></p>
+      <div class="prog-line"><p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p></div>
+      
+      <form action="/publico/postulacion/enviar" method="post" novalidate>
+      <section class="block" aria-labelledby="h-docs--faltan">
+        <div class="block__head"><h2 class="block__title" id="h-docs--faltan">Documentos</h2><span class="block__tag">3 de 4 subidos</span></div>
+        <p class="field__hint terms__note">JPG, PNG o PDF, hasta 10&nbsp;MB cada uno. Que se lea completo y sin reflejos.</p>
+        
+        <ul class="req-list">
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (anverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-anverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_anverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (anverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (reverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-reverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_reverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (reverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Licencia de enseñanza media</p>
+              <p class="upload__status">{{i:check}}Recibido: licencia-media.pdf</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Licencia de enseñanza media"></label>
+          </li>
+          <li class="upload upload--error" id="doc-foto--faltan">
+            <span class="upload__icon" aria-hidden="true">{{i20:alert}}</span>
+            <div>
+              <p class="upload__name">Fotografía tipo carnet</p>
+              <p class="upload__status" id="foto-err--faltan">{{i:x}}Este documento es obligatorio. Súbelo para enviar tu postulación.</p><p class="upload__meta">JPG o PNG, hasta 10&nbsp;MB. Fondo claro y la cara completa.</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Elegir archivo<input class="upload__file" type="file" name="foto" accept="image/jpeg,image/png" aria-label="Elegir archivo para Fotografía tipo carnet"></label>
+          </li>
+        </ul>
+        <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos.</span></p>
+      </section>
+      <div class="task-foot">
+        <div class="alert alert--error" role="alert" tabindex="-1">{{i:alert}}<div><p class="alert__title">Falta 1 documento obligatorio</p><p class="alert__body"><a class="link" href="#doc-foto--faltan">Fotografía tipo carnet</a></p></div></div>
+        <div class="btn-row"><button class="btn btn--primary btn--lg" type="submit">Enviar postulación</button></div>
+        <p class="note" id="enviar-why--faltan">{{i:info}}<span>Al enviarla, admisión revisa tus documentos y te escribe a ca•••@correo.cl.</span></p>
+      </div>
+      </form>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido--faltan">
+      <h2 class="journey__title" id="recorrido--faltan">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Postulas</span><span class="journey__when">Ahora, te falta 1 documento</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Te avisamos por correo</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">En línea, con tu cédula</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Con <span translate="no">Webpay</span></span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Camila Araya Rojas</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">128-8</span></dd><dt class="sr-only">Programa</dt><dd>Psicología, diurna, presencial</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000101</span></dd></dl>
+    </aside>
+  </div>
+</div>
+<div data-estado="lista" data-estado-label="Lista para enviar">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Completa tu postulación</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Ya subiste todo.</strong> Envía tu postulación para que admisión la revise.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-now"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span>Etapa 1 de 8</span><a class="link" href="#recorrido--lista">Ver tu recorrido</a></p>
+      <div class="prog-line"><p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p></div>
+      
+      <form action="/publico/postulacion/enviar" method="post" novalidate>
+      <section class="block" aria-labelledby="h-docs--lista">
+        <div class="block__head"><h2 class="block__title" id="h-docs--lista">Documentos</h2><span class="block__tag">4 de 4 subidos</span></div>
+        <p class="field__hint terms__note">JPG, PNG o PDF, hasta 10&nbsp;MB cada uno. Que se lea completo y sin reflejos.</p>
+        
+        <ul class="req-list">
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (anverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-anverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_anverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (anverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (reverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-reverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_reverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (reverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Licencia de enseñanza media</p>
+              <p class="upload__status">{{i:check}}Recibido: licencia-media.pdf</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Licencia de enseñanza media"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Fotografía tipo carnet</p>
+              <p class="upload__status">{{i:check}}Recibido: foto-carnet.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="foto" accept="image/jpeg,image/png" aria-label="Cambiar archivo para Fotografía tipo carnet"></label>
+          </li>
+        </ul>
+        <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos.</span></p>
+      </section>
+      <div class="task-foot">
+        
+        <div class="btn-row"><button class="btn btn--primary btn--lg" type="submit">Enviar postulación</button></div>
+        <p class="note" id="enviar-why--lista">{{i:info}}<span>Al enviarla, admisión revisa tus documentos y te escribe a ca•••@correo.cl.</span></p>
+      </div>
+      </form>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido--lista">
+      <h2 class="journey__title" id="recorrido--lista">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Postulas</span><span class="journey__when">Ahora, envía tu postulación</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Te avisamos por correo</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">En línea, con tu cédula</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Con <span translate="no">Webpay</span></span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Camila Araya Rojas</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">128-8</span></dd><dt class="sr-only">Programa</dt><dd>Psicología, diurna, presencial</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000101</span></dd></dl>
+    </aside>
+  </div>
+</div>
+<div data-estado="enviando" data-estado-label="Enviando">
+  <div class="pub-layout">
+    <div class="pub-task">
+      <h1 class="page-title">Completa tu postulación</h1>
+      <p class="turn"><span class="rombo" aria-hidden="true"></span><span><strong>Ya subiste todo.</strong> Envía tu postulación para que admisión la revise.</span></p>
+      <p class="journey-sum pub-only-mobile"><span class="journey-sum__bars" aria-hidden="true"><span class="is-now"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span>Etapa 1 de 8</span><a class="link" href="#recorrido--enviando">Ver tu recorrido</a></p>
+      <div class="prog-line"><p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p></div>
+      
+      <form action="/publico/postulacion/enviar" method="post" novalidate>
+      <section class="block" aria-labelledby="h-docs--enviando">
+        <div class="block__head"><h2 class="block__title" id="h-docs--enviando">Documentos</h2><span class="block__tag">4 de 4 subidos</span></div>
+        <p class="field__hint terms__note">JPG, PNG o PDF, hasta 10&nbsp;MB cada uno. Que se lea completo y sin reflejos.</p>
+        
+        <ul class="req-list">
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (anverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-anverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_anverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (anverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Cédula de identidad (reverso)</p>
+              <p class="upload__status">{{i:check}}Recibido: cedula-reverso.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="cedula_reverso" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Cédula de identidad (reverso)"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Licencia de enseñanza media</p>
+              <p class="upload__status">{{i:check}}Recibido: licencia-media.pdf</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-label="Cambiar archivo para Licencia de enseñanza media"></label>
+          </li>
+          <li class="upload upload--ready">
+            <span class="upload__icon" aria-hidden="true">{{i20:check}}</span>
+            <div>
+              <p class="upload__name">Fotografía tipo carnet</p>
+              <p class="upload__status">{{i:check}}Recibido: foto-carnet.jpg</p>
+            </div>
+            <label class="btn btn--secondary btn--sm upload__pick">Cambiar archivo<input class="upload__file" type="file" name="foto" accept="image/jpeg,image/png" aria-label="Cambiar archivo para Fotografía tipo carnet"></label>
+          </li>
+        </ul>
+        <p class="privacy">{{i:lock}}<span>Solo el equipo de admisión de Instituto Demo ve tus documentos.</span></p>
+      </section>
+      <div class="task-foot">
+        
+        <div class="btn-row"><button class="btn btn--primary btn--lg" type="submit" aria-busy="true">Enviando…</button><span class="sr-only" role="status">Enviando tu postulación…</span></div>
+        <p class="note" id="enviar-why--enviando">{{i:info}}<span>Al enviarla, admisión revisa tus documentos y te escribe a ca•••@correo.cl.</span></p>
+      </div>
+      </form>
+    </div>
+    <aside class="pub-layout__aside" aria-labelledby="recorrido--enviando">
+      <h2 class="journey__title" id="recorrido--enviando">Tu recorrido</h2>
+      <ol class="journey">
+        <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Postulas</span><span class="journey__when">Ahora, envía tu postulación</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisamos tus documentos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Aprobamos tu postulación</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Preparamos tu contrato</span><span class="journey__when">Te avisamos por correo</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Firmas tu contrato</span><span class="journey__when">En línea, con tu cédula</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Pagas tu matrícula</span><span class="journey__when">Con <span translate="no">Webpay</span></span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Validamos tus documentos académicos</span><span class="journey__when">Lo hace admisión</span></span></li>
+        <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Quedas matriculado</span><span class="journey__when">Te avisamos por correo</span></span></li>
+      </ol>
+      <dl class="who"><dt class="sr-only">Postulante</dt><dd class="who__name">Camila Araya Rojas</dd><dt class="sr-only">Documento</dt><dd>RUT terminado en <span class="tnum">128-8</span></dd><dt class="sr-only">Programa</dt><dd>Psicología, diurna, presencial</dd><dt class="sr-only">Folio</dt><dd>Folio <span class="tnum" translate="no">2026-000101</span></dd></dl>
+    </aside>
+  </div>
+</div>
+<div data-estado="ya-enviada" data-estado-label="Ya fue enviada">
+  <section class="status" aria-labelledby="t5">
+    <span class="status__icon tile tile--system" aria-hidden="true">{{i20:check-circle}}</span>
+    <h1 class="page-title" id="t5">Tu postulación ya fue enviada</h1>
+    <p><span class="badge badge--team">{{i14:clock}}Por revisar</span></p>
+    <p class="status__body">Folio <strong class="tnum" translate="no">2026-000101</strong>, Psicología. Admisión está revisando tus documentos y te avisa por correo cada novedad. No necesitas hacer nada por ahora.</p>
+    <p class="help-foot">{{i:mail}}<span>¿Tienes dudas? Escríbenos a <a class="link" href="mailto:admision@institutodemo.cl">admision@institutodemo.cl</a>.</span></p>
+  </section>
+</div>
+<div data-estado="vencido" data-estado-label="Acceso vencido">
+  <section class="status" aria-labelledby="t6">
+    <span class="status__icon tile tile--applicant" aria-hidden="true">{{i20:clock}}</span>
+    <h1 class="page-title" id="t6">Tu acceso venció</h1>
+    <p class="status__body">Por seguridad, el acceso desde el enlace del correo dura 60 minutos. Lo que ya subiste o firmaste quedó guardado.</p>
+    <p class="status__body">Para seguir, escríbenos y te enviamos un enlace nuevo.</p>
+    <div class="status__actions btn-row"><a class="btn btn--secondary" href="mailto:admision@institutodemo.cl?subject=Necesito%20un%20enlace%20nuevo">{{i:mail}}Pedir un enlace nuevo</a></div>
+    <p class="help-foot">{{i:mail}}<span>¿Tienes dudas? Escríbenos a <a class="link" href="mailto:admision@institutodemo.cl">admision@institutodemo.cl</a>.</span></p>
+  </section>
+</div>
+<div data-estado="cargando" data-estado-label="Cargando">
+  <section class="status" aria-busy="true">
+    <div role="status" class="sr-only">Cargando tu postulación…</div>
+    <span class="skeleton status__skel-icon"></span>
+    <span class="skeleton skeleton--lg status__skel-title"></span>
+    <span class="skeleton skeleton--w80"></span>
+    <span class="skeleton skeleton--w60"></span>
+    <p class="status__body" aria-hidden="true">Cargando tu postulación…</p>
+  </section>
+</div>
+<div data-estado="error" data-estado-label="Error de carga">
+  <section class="status" aria-labelledby="t7">
+    <span class="status__icon tile tile--error" aria-hidden="true">{{i20:wifi-off}}</span>
+    <h1 class="page-title" id="t7">No pudimos cargar tu postulación</h1>
+    <p class="status__body">Puede ser un problema temporal. Inténtalo de nuevo en unos segundos. Lo que ya subiste sigue guardado.</p>
+    <div class="status__actions btn-row"><button class="btn btn--primary" type="button">{{i:refresh}}Reintentar</button></div>
+    <p class="help-foot">{{i:mail}}<span>¿Tienes dudas? Escríbenos a <a class="link" href="mailto:admision@institutodemo.cl">admision@institutodemo.cl</a>.</span></p>
+  </section>
+</div>
+
+</main>
+
+<footer class="pub-foot">
+  <div class="pub-foot__inner">
+    <span>Instituto Demo, Admisión 2027</span>
+    <span class="credit">Powered by <span translate="no">Ticnology</span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></span>
+  </div>
+</footer>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

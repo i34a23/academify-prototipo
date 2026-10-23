@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F7F8FA">
+<title>Documentos 2026-000102 · academify</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="i-pencil" viewBox="0 0 24 24"><path d="M21.17 6.81a1 1 0 0 0-3.98-3.98L3.84 16.17a2 2 0 0 0-.5.83l-1.32 4.35a.5.5 0 0 0 .62.62l4.35-1.32a2 2 0 0 0 .83-.5z"/><path d="m15 5 4 4"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+<symbol id="i-triangle" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+<symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-chev-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-chev-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+<symbol id="i-chev-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+<symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+<symbol id="i-panel" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></symbol>
+<symbol id="i-inbox" viewBox="0 0 24 24"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></symbol>
+<symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+<symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+<symbol id="i-id" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M5 16c.6-1.5 1.8-2 3-2s2.4.5 3 2"/><path d="M14 10h5"/><path d="M14 14h3"/></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+<symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+<symbol id="i-zoom-in" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></symbol>
+<symbol id="i-zoom-out" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6"/></symbol>
+<symbol id="i-rotate" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-dashboard" viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M10.27 21a2 2 0 0 0 3.46 0"/><path d="M3.26 15.33A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.67C19.41 13.96 18 12.5 18 8A6 6 0 0 0 6 8c0 4.5-1.41 5.96-2.74 7.33"/></symbol>
+<symbol id="i-grad" viewBox="0 0 24 24"><path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+<symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.7 8.7a2.43 2.43 0 0 0 3.42 0l6.58-6.58a2.43 2.43 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5"/></symbol>
+<symbol id="i-server" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></symbol>
+<symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></symbol>
+<symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.53a2 2 0 0 1-.21.9L4.72 20.55A1 1 0 0 0 5.62 22h12.76a1 1 0 0 0 .9-1.45l-5.07-10.12a2 2 0 0 1-.21-.9V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></symbol>
+<symbol id="i-more" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></symbol>
+<symbol id="i-keyboard" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/><path d="M18 8h.01"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/><path d="M7 16h10"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M8.5 16.43a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 4.18-2.65"/><path d="M19 12.86a10 10 0 0 0-2.18-1.42"/><path d="M22 8.82a15 15 0 0 0-11.29-3.76"/><path d="M5 12.86a10 10 0 0 1 5.17-2.69"/><path d="m2 2 20 20"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M14.54 21.69a.5.5 0 0 0 .94-.03l6.5-19a.5.5 0 0 0-.64-.64l-19 6.5a.5.5 0 0 0-.03.94l7.93 3.18a2 2 0 0 1 1.11 1.11z"/><path d="m21.85 2.15-10.94 10.94"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+<symbol id="i-unlink" viewBox="0 0 24 24"><path d="m18.84 12.25 1.72-1.71h-.02a5.004 5.004 0 0 0-.12-7.07 5.006 5.006 0 0 0-6.95 0l-1.72 1.71"/><path d="m5.17 11.75-1.71 1.71a5.004 5.004 0 0 0 .12 7.07 5.006 5.006 0 0 0 6.95 0l1.71-1.71"/><path d="M8 2v3"/><path d="M2 8h3"/><path d="M16 19v3"/><path d="M19 16h3"/></symbol>
+<symbol id="i-pen-line" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></symbol>
+<symbol id="i-file-check" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></symbol>
+<symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></symbol>
+<symbol id="i-circle-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+<symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></symbol>
+<symbol id="i-paperclip" viewBox="0 0 24 24"><path d="m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551"/></symbol>
+<symbol id="i-receipt" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></symbol>
+<symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol>
+<symbol id="i-key" viewBox="0 0 24 24"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5"/></symbol>
+<symbol id="i-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="i-log-in" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/></symbol>
+<symbol id="i-user-x" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m17 8 5 5"/><path d="m22 8-5 5"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></symbol>
+<symbol id="i-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
+<symbol id="i-signature" viewBox="0 0 24 24"><path d="m21 17-2.156-1.868A.5.5 0 0 0 18 15.5v.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1c0-2.545-3.991-3.97-8.5-4a1 1 0 0 0 0 5c4.153 0 4.745-11.295 5.708-13.5a2.5 2.5 0 1 1 3.31 3.284"/><path d="M3 21h18"/></symbol>
+<symbol id="i-mail-x" viewBox="0 0 24 24"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h9"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="m17 17 4 4"/><path d="m21 17-4 4"/></symbol>
+<symbol id="i-file-search" viewBox="0 0 24 24"><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M4.268 21a2 2 0 0 0 1.727 1H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3"/><path d="m9 18-1.5-1.5"/><circle cx="5" cy="14" r="3"/></symbol>
+<symbol id="i-lock-open" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></symbol>
+<symbol id="i-move-horizontal" viewBox="0 0 24 24"><path d="m18 8 4 4-4 4"/><path d="M2 12h20"/><path d="m6 8-4 4 4 4"/></symbol>
+<symbol id="i-file-x" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m14.5 12.5-5 5"/><path d="m9.5 12.5 5 5"/></symbol>
+<symbol id="i-scan-search" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></symbol>
+<symbol id="i-text-cursor" viewBox="0 0 24 24"><path d="M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1"/><path d="M7 22h1a4 4 0 0 0 4-4v-1"/><path d="M7 2h1a4 4 0 0 1 4 4v1"/></symbol>
+<symbol id="i-percent" viewBox="0 0 24 24"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+<symbol id="i-unlock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></symbol>
+<symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+<symbol id="i-braces" viewBox="0 0 24 24"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></symbol>
+<symbol id="i-list" viewBox="0 0 24 24"><path d="M3 12h.01"/><path d="M3 18h.01"/><path d="M3 6h.01"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M8 6h13"/></symbol>
+<symbol id="i-user-plus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></symbol>
+</svg>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<div class="shell">
+  <header class="shell__topbar">
+    <button class="btn btn--ghost btn--icon" type="button" aria-label="Abrir navegación" aria-expanded="false" aria-controls="sidebar"><svg class="i i--20" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    <img src="../assets/academify-logo.svg" alt="academify" width="106" height="24" translate="no">
+  </header>
+
+  <aside class="sidebar" id="sidebar" aria-label="Navegación del equipo"><div class="sidebar__inner">
+    <div class="sidebar__brand">
+      <div class="sidebar__head">
+        <img class="sidebar__brand-logo" src="../assets/academify-logo.svg" alt="academify" width="106" height="24" translate="no">
+        <button class="btn btn--ghost btn--icon btn--sm sidebar__toggle" type="button" aria-label="Contraer navegación" aria-expanded="true" aria-controls="sidebar"><svg class="i" aria-hidden="true"><use href="#i-panel"/></svg></button>
+      </div>
+      <p class="sidebar__inst"><strong>Instituto Demo</strong>Admisión 2027</p>
+    </div>
+    <nav class="sidebar__nav" aria-label="Secciones">
+      <a class="nav-item" href="ven-01-postulaciones.html" aria-current="page"><svg class="i i--20" aria-hidden="true"><use href="#i-inbox"/></svg><span class="nav-item__label">Postulaciones</span><span class="nav-item__count nav-item__count--yours">2<span class="sr-only"> te tocan a ti</span></span><span class="rombo rombo--sm nav-item__dot" aria-hidden="true"></span></a>
+    </nav>
+    <div class="sidebar__foot">
+      <button class="user" type="button" aria-haspopup="menu" aria-expanded="false">
+        <span class="user__avatar" aria-hidden="true">MC</span>
+        <span class="user__text"><span class="user__name">Matías Correa Vidal</span><span class="user__role">Vendedor</span></span>
+        <svg class="i" aria-hidden="true"><use href="#i-chev-down"/></svg>
+      </button>
+      <p class="credit"><span class="credit__text">Powered by <span translate="no">Ticnology</span></span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></p>
+    </div>
+  </div></aside>
+
+  <div class="case-frame" id="contenido" tabindex="-1">
+<div data-estado="visor-imagen" data-estado-label="Por revisar, visor con imagen">
+<div class="split">
+<main class="split__main">
+<nav class="crumbs" aria-label="Ruta">
+  <a class="link link--quiet" href="ven-01-postulaciones.html?estado=por-revisar">Postulaciones</a>
+  <svg class="i i--14" aria-hidden="true"><use href="#i-chev-right"/></svg>
+  <span aria-current="page" class="tnum" translate="no">2026-000102</span>
+  <span class="crumbs__end"><a class="btn btn--ghost btn--sm" href="ven-03-documentos.html?estado=rechazado" aria-keyshortcuts="Shift+J">Siguiente que te toca<svg class="i" aria-hidden="true"><use href="#i-chev-right"/></svg></a></span>
+</nav>
+<div class="ficha-title">
+  <h1 class="page-title">Benjamín Ignacio Soto Valenzuela</h1>
+  <span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span>
+</div>
+<dl class="facts">
+<div class="facts__item"><dt>RUT</dt><dd><span class="tnum" translate="no">21.034.567-1</span></dd></div>
+<div class="facts__item"><dt>Programa</dt><dd>Ingeniería Comercial</dd></div>
+<div class="facts__item"><dt>Jornada y modalidad</dt><dd>Vespertina, a distancia</dd></div>
+<div class="facts__item"><dt>Vía</dt><dd>Regular</dd></div>
+<div class="facts__item"><dt>Beneficio</dt><dd><span translate="no">ADMISION27, 10 %</span></dd></div>
+<div class="facts__item"><dt>Origen</dt><dd>Formulario en línea, 16-10-2026</dd></div>
+</dl>
+<ol class="stages" aria-label="Etapas del caso">
+<li class="stages__item" aria-current="step"><span class="stages__track"><span class="mark mark--yours" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Venta<span class="sr-only">, etapa actual, te toca a ti</span></span><span class="stages__note">Revisas documentos</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Contrato y firma</span><span class="stages__note">Se habilita al aprobar</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Pago</span><span class="stages__note">Matrícula <span class="tnum">$108.900</span></span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Validación</span><span class="stages__note">Después del pago</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Matriculado</span><span class="stages__note">Al validar</span></li>
+</ol>
+<dl class="relay">
+  <dt>Ahora</dt><dd><strong>Tú revisas 3 documentos</strong>: la cédula por ambos lados y la foto.</dd>
+  <dt>Después</dt><dd><strong>Tú apruebas la venta</strong> y el sistema prepara el contrato para que Benjamín lo firme.</dd>
+</dl>
+<div class="decision">
+  <button class="btn btn--primary" type="button" aria-disabled="true" aria-describedby="why-d1">Aprobar venta</button>
+  <p class="decision__why" id="why-d1"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg>Para aprobar, acepta los 3 documentos por revisar. La licencia puede llegar después.</p>
+  <button class="btn btn--danger btn--sm decision__end" type="button" aria-haspopup="dialog">Rechazar</button>
+</div>
+
+<nav class="tabs tabs--tight" aria-label="Secciones de la ficha">
+<a class="tabs__tab" href="ven-03-documentos.html" aria-current="page">Documentos <span class="tabs__count tabs__count--yours">3<span class="sr-only"> por revisar</span></span></a>
+<a class="tabs__tab" href="ven-04-programa.html">Valores</a>
+<a class="tabs__tab" href="ven-05-datos.html">Datos</a>
+<a class="tabs__tab" href="ven-06-contrato.html">Contrato</a>
+<a class="tabs__tab" href="ven-07-sgu.html">SGU</a>
+<a class="tabs__tab" href="ven-08-borrador-2027.html">Borrador 2027</a>
+<a class="tabs__tab" href="ven-09-historial.html">Historial</a>
+</nav>
+<div class="section-head">
+  <h2 class="section-head__title">Documentos</h2>
+  <button class="btn btn--secondary btn--sm" type="button" aria-haspopup="dialog"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptar los 3 por revisar</button>
+</div>
+<table class="table table--stack density-comfy">
+  <caption class="sr-only">Documentos de la postulación 2026-000102. Elige uno para abrirlo en el visor.</caption>
+  <thead><tr><th scope="col">Documento</th><th scope="col">Estado</th><th scope="col" class="num"><span class="sr-only">Acción</span></th></tr></thead>
+  <tbody>
+<tr class="is-cursor">
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><a class="cell-main link--quiet" href="ven-03-documentos.html" aria-current="true">Cédula de identidad, anverso</a><span class="cell-sub">JPG, 1,2&nbsp;MB. Abierto en el visor</span></span></span></td>
+  <td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><a class="cell-main link--quiet" href="ven-03-documentos.html">Cédula de identidad, reverso</a><span class="cell-sub">JPG, 1,1&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-image"/></svg></span><span class="doc-name__text"><a class="cell-main link--quiet" href="ven-03-documentos.html">Fotografía tipo carnet</a><span class="cell-sub">PNG, 640&nbsp;KB</span></span></span></td>
+  <td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg></span><span class="doc-name__text"><span class="cell-main">Licencia de enseñanza media</span><span class="cell-sub">La entregará después: «egreso este año»</span></span></span></td>
+  <td><span class="badge badge--applicant"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Entrega posterior</span></td>
+  <td class="num"><button class="btn btn--secondary btn--sm" type="button" aria-label="Pedir la licencia de enseñanza media">Pedir</button></td>
+</tr>
+  </tbody>
+</table>
+</main>
+<section class="viewer" aria-labelledby="visor-d1"><div class="viewer__inner">
+  <header class="viewer__head">
+    <div class="viewer__title">
+      <h2 class="viewer__name" id="visor-d1">Cédula de identidad, anverso</h2>
+      <p class="viewer__meta">cedula-anverso.jpg, 1,2&nbsp;MB, sin amenazas</p>
+    </div>
+    <span class="viewer__pos">1 de 3 por revisar</span>
+    <a class="btn btn--ghost btn--icon btn--sm" href="ven-03-documentos.html?estado=lista" aria-label="Cerrar visor" aria-keyshortcuts="Escape"><svg class="i i--20" aria-hidden="true"><use href="#i-x"/></svg></a>
+  </header>
+  <div class="viewer__stage" role="region" aria-label="Imagen de la cédula de identidad, anverso. Usa las flechas para desplazarte." tabindex="0">
+    <div class="viewer__tools" role="toolbar" aria-label="Herramientas del visor">
+      <button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Alejar"><svg class="i" aria-hidden="true"><use href="#i-zoom-out"/></svg></button>
+      <span class="viewer__zoom" aria-live="polite">100&nbsp;%</span>
+      <button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Acercar"><svg class="i" aria-hidden="true"><use href="#i-zoom-in"/></svg></button>
+      <button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Girar 90 grados"><svg class="i" aria-hidden="true"><use href="#i-rotate"/></svg></button>
+      <a class="btn btn--ghost btn--icon btn--sm" href="#" target="_blank" rel="noopener" aria-label="Abrir en una pestaña nueva"><svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a>
+    </div>
+    <figure class="idcard" role="img" aria-label="Cédula subida por el postulante: Soto Valenzuela, Benjamín Ignacio, RUN 21.034.567-1, nacido el 22-09-2006, documento 531.204.877">
+      <span class="idcard__top"><span>Cédula de identidad</span><span>Chile</span></span>
+      <span class="idcard__photo"></span>
+      <span class="idcard__data">
+        <span><span class="idcard__k">Apellidos</span><span class="idcard__v">Soto Valenzuela</span></span>
+        <span><span class="idcard__k">Nombres</span><span class="idcard__v">Benjamín Ignacio</span></span>
+        <span><span class="idcard__k">Fecha de nacimiento</span><span class="idcard__v">22 sep 2006</span></span>
+        <span><span class="idcard__k">Número de documento</span><span class="idcard__v">531.204.877</span></span>
+      </span>
+      <span class="idcard__foot"><span>RUN 21.034.567-1</span><span>Vence 2032</span></span>
+    </figure>
+  </div>
+  <div class="viewer__compare">
+    <h3 class="viewer__compare-title">Compara con lo que declaró</h3>
+    <p class="viewer__compare-note">Al aprobar la venta confirmas estos mismos datos.</p>
+    <dl class="compare">
+<div class="compare__row"><dt>Nombres</dt><dd>Benjamín Ignacio</dd><span class="compare__ok"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg>Coincide</span></div>
+<div class="compare__row"><dt>Apellidos</dt><dd>Soto Valenzuela</dd><span class="compare__ok"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg>Coincide</span></div>
+<div class="compare__row"><dt>RUT</dt><dd translate="no">21.034.567-1</dd><span class="compare__ok"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg>Coincide</span></div>
+<div class="compare__row"><dt>Nacimiento</dt><dd>22-09-2006</dd><span class="compare__ok"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg>Coincide</span></div>
+<div class="compare__row"><dt>N.º de serie</dt><dd translate="no">531204877</dd><span class="compare__ok"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg>Coincide</span></div>
+    </dl>
+  </div>
+  <footer>
+    <div class="viewer__actions">
+      <span class="viewer__nav">
+        <button class="btn btn--secondary btn--icon" type="button" aria-label="Documento anterior" aria-keyshortcuts="K" disabled><svg class="i" aria-hidden="true"><use href="#i-chev-left"/></svg></button>
+        <button class="btn btn--secondary btn--icon" type="button" aria-label="Documento siguiente" aria-keyshortcuts="J"><svg class="i" aria-hidden="true"><use href="#i-chev-right"/></svg></button>
+      </span>
+      <button class="btn btn--secondary" type="button" aria-keyshortcuts="O" aria-haspopup="dialog">Observar</button>
+      <button class="btn btn--primary" type="button" aria-keyshortcuts="A">Aceptar y ver el siguiente</button>
+    </div>
+    <p class="viewer__legend" aria-label="Atajos del visor, activos cuando el foco está en el visor">
+      <span class="shortcuts__item"><kbd class="kbd">A</kbd> aceptar</span>
+      <span class="shortcuts__item"><kbd class="kbd">O</kbd> observar</span>
+      <span class="shortcuts__item"><kbd class="kbd">J</kbd><kbd class="kbd">K</kbd> moverte</span>
+      <span class="shortcuts__item"><kbd class="kbd">Esc</kbd> cerrar</span>
+      <button class="btn btn--link" type="button" aria-pressed="true">Desactivar atajos</button>
+    </p>
+  </footer>
+  <div class="sr-only" role="status" aria-live="polite">Cédula de identidad, anverso, abierta en el visor. 1 de 3 por revisar.</div>
+</div></section>
+</div>
+</div>
+
+<div data-estado="lista" data-estado-label="Por revisar y entrega posterior">
+<main class="main"><div class="main__inner">
+<nav class="crumbs" aria-label="Ruta">
+  <a class="link link--quiet" href="ven-01-postulaciones.html?estado=por-revisar">Postulaciones</a>
+  <svg class="i i--14" aria-hidden="true"><use href="#i-chev-right"/></svg>
+  <span aria-current="page" class="tnum" translate="no">2026-000102</span>
+  <span class="crumbs__end"><a class="btn btn--ghost btn--sm" href="ven-03-documentos.html?estado=rechazado" aria-keyshortcuts="Shift+J">Siguiente que te toca<svg class="i" aria-hidden="true"><use href="#i-chev-right"/></svg></a></span>
+</nav>
+<div class="ficha-title">
+  <h1 class="page-title">Benjamín Ignacio Soto Valenzuela</h1>
+  <span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span>
+</div>
+<dl class="facts">
+<div class="facts__item"><dt>RUT</dt><dd><span class="tnum" translate="no">21.034.567-1</span></dd></div>
+<div class="facts__item"><dt>Programa</dt><dd>Ingeniería Comercial</dd></div>
+<div class="facts__item"><dt>Jornada y modalidad</dt><dd>Vespertina, a distancia</dd></div>
+<div class="facts__item"><dt>Vía</dt><dd>Regular</dd></div>
+<div class="facts__item"><dt>Beneficio</dt><dd><span translate="no">ADMISION27, 10 %</span></dd></div>
+<div class="facts__item"><dt>Origen</dt><dd>Formulario en línea, 16-10-2026</dd></div>
+</dl>
+<ol class="stages" aria-label="Etapas del caso">
+<li class="stages__item" aria-current="step"><span class="stages__track"><span class="mark mark--yours" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Venta<span class="sr-only">, etapa actual, te toca a ti</span></span><span class="stages__note">Revisas documentos</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Contrato y firma</span><span class="stages__note">Se habilita al aprobar</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Pago</span><span class="stages__note">Matrícula <span class="tnum">$108.900</span></span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Validación</span><span class="stages__note">Después del pago</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Matriculado</span><span class="stages__note">Al validar</span></li>
+</ol>
+<dl class="relay">
+  <dt>Ahora</dt><dd><strong>Tú revisas 3 documentos</strong>: la cédula por ambos lados y la foto.</dd>
+  <dt>Después</dt><dd><strong>Tú apruebas la venta</strong> y el sistema prepara el contrato para que Benjamín lo firme.</dd>
+</dl>
+<div class="decision">
+  <button class="btn btn--primary" type="button" aria-disabled="true" aria-describedby="why-d2">Aprobar venta</button>
+  <p class="decision__why" id="why-d2"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg>Para aprobar, acepta los 3 documentos por revisar. La licencia puede llegar después.</p>
+  <button class="btn btn--danger btn--sm decision__end" type="button" aria-haspopup="dialog">Rechazar</button>
+</div>
+
+<nav class="tabs" aria-label="Secciones de la ficha">
+<a class="tabs__tab" href="ven-03-documentos.html" aria-current="page">Documentos <span class="tabs__count tabs__count--yours">3<span class="sr-only"> por revisar</span></span></a>
+<a class="tabs__tab" href="ven-04-programa.html">Valores</a>
+<a class="tabs__tab" href="ven-05-datos.html">Datos</a>
+<a class="tabs__tab" href="ven-06-contrato.html">Contrato</a>
+<a class="tabs__tab" href="ven-07-sgu.html">SGU</a>
+<a class="tabs__tab" href="ven-08-borrador-2027.html">Borrador 2027</a>
+<a class="tabs__tab" href="ven-09-historial.html">Historial</a>
+</nav>
+<div class="section-head">
+  <h2 class="section-head__title">Documentos</h2>
+  <button class="btn btn--secondary btn--sm" type="button" aria-haspopup="dialog"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptar los 3 por revisar</button>
+</div>
+<table class="table table--stack density-comfy">
+  <caption class="sr-only">Documentos de la postulación 2026-000102. Elige uno para abrirlo en el visor.</caption>
+  <thead><tr><th scope="col">Documento</th><th scope="col">Estado</th><th scope="col" class="num"><span class="sr-only">Acción</span></th></tr></thead>
+  <tbody>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><a class="cell-main link--quiet" href="ven-03-documentos.html">Cédula de identidad, anverso</a><span class="cell-sub">JPG, 1,2&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><a class="cell-main link--quiet" href="ven-03-documentos.html">Cédula de identidad, reverso</a><span class="cell-sub">JPG, 1,1&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-image"/></svg></span><span class="doc-name__text"><a class="cell-main link--quiet" href="ven-03-documentos.html">Fotografía tipo carnet</a><span class="cell-sub">PNG, 640&nbsp;KB</span></span></span></td>
+  <td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg></span><span class="doc-name__text"><span class="cell-main">Licencia de enseñanza media</span><span class="cell-sub">La entregará después: «egreso este año»</span></span></span></td>
+  <td><span class="badge badge--applicant"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Entrega posterior</span></td>
+  <td class="num"><button class="btn btn--secondary btn--sm" type="button" aria-label="Pedir la licencia de enseñanza media">Pedir</button></td>
+</tr>
+  </tbody>
+</table>
+<p class="note"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg>Elige un documento para abrirlo en el visor. Ahí lo aceptas u observas; la licencia en entrega posterior no frena la aprobación.</p>
+</div></main>
+</div>
+
+<div data-estado="visor-pdf" data-estado-label="Visor con PDF">
+<div class="split">
+<main class="split__main">
+<nav class="crumbs" aria-label="Ruta">
+  <a class="link link--quiet" href="ven-01-postulaciones.html?estado=por-revisar">Postulaciones</a>
+  <svg class="i i--14" aria-hidden="true"><use href="#i-chev-right"/></svg>
+  <span aria-current="page" class="tnum" translate="no">2026-000112</span>
+  
+</nav>
+<div class="ficha-title">
+  <h1 class="page-title">Sebastián Andrés Rojas Cárcamo</h1>
+  <span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span>
+</div>
+<dl class="facts">
+<div class="facts__item"><dt>RUT</dt><dd><span class="tnum" translate="no">15.873.094-4</span></dd></div>
+<div class="facts__item"><dt>Programa</dt><dd>Programa LEDU</dd></div>
+<div class="facts__item"><dt>Jornada y modalidad</dt><dd>Vespertina, a distancia</dd></div>
+<div class="facts__item"><dt>Vía</dt><dd>Regular</dd></div>
+<div class="facts__item"><dt>Beneficio</dt><dd><span translate="no">Convenio CENCO</span></dd></div>
+<div class="facts__item"><dt>Origen</dt><dd>Formulario en línea, 18-10-2026</dd></div>
+</dl>
+<ol class="stages" aria-label="Etapas del caso">
+<li class="stages__item" aria-current="step"><span class="stages__track"><span class="mark mark--yours" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Venta<span class="sr-only">, etapa actual, te toca a ti</span></span><span class="stages__note">Revisas documentos</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Contrato y firma</span><span class="stages__note">Se habilita al aprobar</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Pago</span><span class="stages__note">Matrícula <span class="tnum">$37.026</span></span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Validación</span><span class="stages__note">Después del pago</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Matriculado</span><span class="stages__note">Al validar</span></li>
+</ol>
+<dl class="relay">
+  <dt>Ahora</dt><dd><strong>Tú revisas la licencia</strong> y pides otra fotografía: la que subió no pasó la revisión de seguridad.</dd>
+  <dt>Después</dt><dd><strong>Sebastián sube otra foto</strong> desde el enlace del correo y tú apruebas la venta.</dd>
+</dl>
+<div class="decision">
+  <button class="btn btn--primary" type="button" aria-disabled="true" aria-describedby="why-d3">Aprobar venta</button>
+  <p class="decision__why" id="why-d3"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg>Para aprobar, acepta la licencia y pide otra fotografía a Sebastián.</p>
+  <button class="btn btn--danger btn--sm decision__end" type="button" aria-haspopup="dialog">Rechazar</button>
+</div>
+
+<nav class="tabs tabs--tight" aria-label="Secciones de la ficha">
+<a class="tabs__tab" href="ven-03-documentos.html" aria-current="page">Documentos <span class="tabs__count tabs__count--yours">1<span class="sr-only"> por revisar</span></span></a>
+<a class="tabs__tab" href="ven-04-programa.html">Valores</a>
+<a class="tabs__tab" href="ven-05-datos.html">Datos</a>
+<a class="tabs__tab" href="ven-06-contrato.html">Contrato</a>
+<a class="tabs__tab" href="ven-07-sgu.html">SGU</a>
+<a class="tabs__tab" href="ven-08-borrador-2027.html">Borrador 2027</a>
+<a class="tabs__tab" href="ven-09-historial.html">Historial</a>
+</nav>
+<div class="section-head">
+  <h2 class="section-head__title">Documentos</h2>
+  
+</div>
+<div class="page-alert"><div class="alert alert--warning"><svg class="i" aria-hidden="true"><use href="#i-triangle"/></svg><div><p class="alert__title">La fotografía no pasó la revisión de seguridad.</p><p class="alert__body">Sebastián todavía no lo sabe. Inclúyela en el envío de observaciones para que suba otra.</p><div class="alert__actions btn-row"><button class="btn btn--primary btn--sm" type="button" aria-haspopup="dialog"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg>Enviar observaciones a Sebastián (1)</button></div></div></div></div>
+<table class="table table--stack density-comfy">
+  <caption class="sr-only">Documentos de la postulación 2026-000112. Elige uno para abrirlo en el visor.</caption>
+  <thead><tr><th scope="col">Documento</th><th scope="col">Estado</th><th scope="col" class="num"><span class="sr-only">Acción</span></th></tr></thead>
+  <tbody>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><span class="cell-main">Cédula de identidad, anverso</span><span class="cell-sub">JPG, 1,3&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><span class="cell-main">Cédula de identidad, reverso</span><span class="cell-sub">JPG, 1,2&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr class="is-cursor">
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg></span><span class="doc-name__text"><a class="cell-main link--quiet" href="ven-03-documentos.html?estado=visor-pdf" aria-current="true">Licencia de enseñanza media</a><span class="cell-sub">PDF, 1 página, 480&nbsp;KB. Abierto en el visor</span></span></span></td>
+  <td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-image"/></svg></span><span class="doc-name__text"><span class="cell-main">Fotografía tipo carnet</span><span class="cell-sub">foto-carnet.jpg. El archivo no pasó la revisión de seguridad y se descartó</span></span></span></td>
+  <td><span class="badge badge--error"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>Rechazado por seguridad</span></td>
+  <td class="num"></td>
+</tr>
+  </tbody>
+</table>
+</main>
+<section class="viewer" aria-labelledby="visor-d3"><div class="viewer__inner">
+  <header class="viewer__head">
+    <div class="viewer__title">
+      <h2 class="viewer__name" id="visor-d3">Licencia de enseñanza media</h2>
+      <p class="viewer__meta">licencia-media.pdf, 1 página, 480&nbsp;KB, sin amenazas</p>
+    </div>
+    <span class="viewer__pos">1 de 1 por revisar</span>
+    <a class="btn btn--ghost btn--icon btn--sm" href="ven-03-documentos.html?estado=rechazado" aria-label="Cerrar visor" aria-keyshortcuts="Escape"><svg class="i i--20" aria-hidden="true"><use href="#i-x"/></svg></a>
+  </header>
+  <div class="viewer__stage" role="region" aria-label="PDF de la licencia de enseñanza media, página 1 de 1. Usa las flechas para desplazarte." tabindex="0">
+    <div class="viewer__tools" role="toolbar" aria-label="Herramientas del visor">
+      <button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Alejar"><svg class="i" aria-hidden="true"><use href="#i-zoom-out"/></svg></button>
+      <span class="viewer__zoom" aria-live="polite">100&nbsp;%</span>
+      <button class="btn btn--ghost btn--icon btn--sm" type="button" aria-label="Acercar"><svg class="i" aria-hidden="true"><use href="#i-zoom-in"/></svg></button>
+      <span class="viewer__zoom">Página 1 de 1</span><a class="btn btn--ghost btn--icon btn--sm" href="#" download aria-label="Descargar el PDF, 480 KB"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg></a>
+      <a class="btn btn--ghost btn--icon btn--sm" href="#" target="_blank" rel="noopener" aria-label="Abrir en una pestaña nueva"><svg class="i" aria-hidden="true"><use href="#i-external"/></svg></a>
+    </div>
+    <figure class="docsheet" role="img" aria-label="Página 1 de 1 del PDF de la licencia de enseñanza media de Sebastián Andrés Rojas Cárcamo, RUN 15.873.094-4">
+      <span class="docsheet__title">Licencia de enseñanza media</span>
+      <span class="docsheet__line"></span>
+      <span class="docsheet__line docsheet__line--80"></span>
+      <span class="docsheet__gap"></span>
+      <span class="docsheet__field"><span class="docsheet__k">Nombre</span><span class="docsheet__v">Sebastián Andrés Rojas Cárcamo</span></span>
+      <span class="docsheet__field"><span class="docsheet__k">RUN</span><span class="docsheet__v">15.873.094-4</span></span>
+      <span class="docsheet__gap"></span>
+      <span class="docsheet__line"></span>
+      <span class="docsheet__line docsheet__line--60"></span>
+      <span class="docsheet__line docsheet__line--80"></span>
+      <span class="docsheet__line docsheet__line--40"></span>
+      <span class="docsheet__seal docsheet__seal--end" aria-hidden="true"></span>
+    </figure>
+  </div>
+  <div class="viewer__compare">
+    <h3 class="viewer__compare-title">Compara con lo que declaró</h3>
+    <p class="viewer__compare-note">La licencia debe estar a nombre de quien postula.</p>
+    <dl class="compare">
+<div class="compare__row"><dt>Nombre</dt><dd>Sebastián Andrés Rojas Cárcamo</dd><span class="compare__ok"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg>Coincide</span></div>
+<div class="compare__row"><dt>RUT</dt><dd translate="no">15.873.094-4</dd><span class="compare__ok"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg>Coincide</span></div>
+    </dl>
+  </div>
+  <footer>
+    <div class="viewer__actions">
+      <span class="viewer__nav">
+        <button class="btn btn--secondary btn--icon" type="button" aria-label="Documento anterior" aria-keyshortcuts="K" disabled><svg class="i" aria-hidden="true"><use href="#i-chev-left"/></svg></button>
+        <button class="btn btn--secondary btn--icon" type="button" aria-label="Documento siguiente" aria-keyshortcuts="J"><svg class="i" aria-hidden="true"><use href="#i-chev-right"/></svg></button>
+      </span>
+      <button class="btn btn--secondary" type="button" aria-keyshortcuts="O" aria-haspopup="dialog">Observar</button>
+      <button class="btn btn--primary" type="button" aria-keyshortcuts="A">Aceptar y ver el siguiente</button>
+    </div>
+    <p class="viewer__legend" aria-label="Atajos del visor, activos cuando el foco está en el visor">
+      <span class="shortcuts__item"><kbd class="kbd">A</kbd> aceptar</span>
+      <span class="shortcuts__item"><kbd class="kbd">O</kbd> observar</span>
+      <span class="shortcuts__item"><kbd class="kbd">J</kbd><kbd class="kbd">K</kbd> moverte</span>
+      <span class="shortcuts__item"><kbd class="kbd">Esc</kbd> cerrar</span>
+      <button class="btn btn--link" type="button" aria-pressed="true">Desactivar atajos</button>
+    </p>
+  </footer>
+  <div class="sr-only" role="status" aria-live="polite">Licencia de enseñanza media, PDF de 1 página, abierta en el visor. 1 de 1 por revisar.</div>
+</div></section>
+</div>
+</div>
+
+<div data-estado="rechazado" data-estado-label="Rechazado por seguridad">
+<main class="main"><div class="main__inner">
+<nav class="crumbs" aria-label="Ruta">
+  <a class="link link--quiet" href="ven-01-postulaciones.html?estado=por-revisar">Postulaciones</a>
+  <svg class="i i--14" aria-hidden="true"><use href="#i-chev-right"/></svg>
+  <span aria-current="page" class="tnum" translate="no">2026-000112</span>
+  
+</nav>
+<div class="ficha-title">
+  <h1 class="page-title">Sebastián Andrés Rojas Cárcamo</h1>
+  <span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span>
+</div>
+<dl class="facts">
+<div class="facts__item"><dt>RUT</dt><dd><span class="tnum" translate="no">15.873.094-4</span></dd></div>
+<div class="facts__item"><dt>Programa</dt><dd>Programa LEDU</dd></div>
+<div class="facts__item"><dt>Jornada y modalidad</dt><dd>Vespertina, a distancia</dd></div>
+<div class="facts__item"><dt>Vía</dt><dd>Regular</dd></div>
+<div class="facts__item"><dt>Beneficio</dt><dd><span translate="no">Convenio CENCO</span></dd></div>
+<div class="facts__item"><dt>Origen</dt><dd>Formulario en línea, 18-10-2026</dd></div>
+</dl>
+<ol class="stages" aria-label="Etapas del caso">
+<li class="stages__item" aria-current="step"><span class="stages__track"><span class="mark mark--yours" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Venta<span class="sr-only">, etapa actual, te toca a ti</span></span><span class="stages__note">Revisas documentos</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Contrato y firma</span><span class="stages__note">Se habilita al aprobar</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Pago</span><span class="stages__note">Matrícula <span class="tnum">$37.026</span></span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Validación</span><span class="stages__note">Después del pago</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Matriculado</span><span class="stages__note">Al validar</span></li>
+</ol>
+<dl class="relay">
+  <dt>Ahora</dt><dd><strong>Tú revisas la licencia</strong> y pides otra fotografía: la que subió no pasó la revisión de seguridad.</dd>
+  <dt>Después</dt><dd><strong>Sebastián sube otra foto</strong> desde el enlace del correo y tú apruebas la venta.</dd>
+</dl>
+<div class="decision">
+  <button class="btn btn--primary" type="button" aria-disabled="true" aria-describedby="why-d4">Aprobar venta</button>
+  <p class="decision__why" id="why-d4"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg>Para aprobar, acepta la licencia y pide otra fotografía a Sebastián.</p>
+  <button class="btn btn--danger btn--sm decision__end" type="button" aria-haspopup="dialog">Rechazar</button>
+</div>
+
+<nav class="tabs" aria-label="Secciones de la ficha">
+<a class="tabs__tab" href="ven-03-documentos.html" aria-current="page">Documentos <span class="tabs__count tabs__count--yours">1<span class="sr-only"> por revisar</span></span></a>
+<a class="tabs__tab" href="ven-04-programa.html">Valores</a>
+<a class="tabs__tab" href="ven-05-datos.html">Datos</a>
+<a class="tabs__tab" href="ven-06-contrato.html">Contrato</a>
+<a class="tabs__tab" href="ven-07-sgu.html">SGU</a>
+<a class="tabs__tab" href="ven-08-borrador-2027.html">Borrador 2027</a>
+<a class="tabs__tab" href="ven-09-historial.html">Historial</a>
+</nav>
+<div class="section-head">
+  <h2 class="section-head__title">Documentos</h2>
+  
+</div>
+<div class="page-alert"><div class="alert alert--warning"><svg class="i" aria-hidden="true"><use href="#i-triangle"/></svg><div><p class="alert__title">La fotografía no pasó la revisión de seguridad.</p><p class="alert__body">Sebastián todavía no lo sabe. Inclúyela en el envío de observaciones para que suba otra.</p><div class="alert__actions btn-row"><button class="btn btn--primary btn--sm" type="button" aria-haspopup="dialog"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg>Enviar observaciones a Sebastián (1)</button></div></div></div></div>
+<table class="table table--stack density-comfy">
+  <caption class="sr-only">Documentos de la postulación 2026-000112. Elige uno para abrirlo en el visor.</caption>
+  <thead><tr><th scope="col">Documento</th><th scope="col">Estado</th><th scope="col" class="num"><span class="sr-only">Acción</span></th></tr></thead>
+  <tbody>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><span class="cell-main">Cédula de identidad, anverso</span><span class="cell-sub">JPG, 1,3&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><span class="cell-main">Cédula de identidad, reverso</span><span class="cell-sub">JPG, 1,2&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg></span><span class="doc-name__text"><a class="cell-main link--quiet" href="ven-03-documentos.html?estado=visor-pdf">Licencia de enseñanza media</a><span class="cell-sub">PDF, 1 página, 480&nbsp;KB</span></span></span></td>
+  <td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-image"/></svg></span><span class="doc-name__text"><span class="cell-main">Fotografía tipo carnet</span><span class="cell-sub">foto-carnet.jpg. El archivo no pasó la revisión de seguridad y se descartó</span></span></span></td>
+  <td><span class="badge badge--error"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>Rechazado por seguridad</span></td>
+  <td class="num"></td>
+</tr>
+  </tbody>
+</table>
+</div></main>
+</div>
+
+<div data-estado="en-analisis" data-estado-label="En análisis">
+<main class="main"><div class="main__inner">
+<nav class="crumbs" aria-label="Ruta">
+  <a class="link link--quiet" href="ven-01-postulaciones.html?estado=por-revisar">Postulaciones</a>
+  <svg class="i i--14" aria-hidden="true"><use href="#i-chev-right"/></svg>
+  <span aria-current="page" class="tnum" translate="no">2026-000112</span>
+  
+</nav>
+<div class="ficha-title">
+  <h1 class="page-title">Sebastián Andrés Rojas Cárcamo</h1>
+  <span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span>
+</div>
+<dl class="facts">
+<div class="facts__item"><dt>RUT</dt><dd><span class="tnum" translate="no">15.873.094-4</span></dd></div>
+<div class="facts__item"><dt>Programa</dt><dd>Programa LEDU</dd></div>
+<div class="facts__item"><dt>Jornada y modalidad</dt><dd>Vespertina, a distancia</dd></div>
+<div class="facts__item"><dt>Vía</dt><dd>Regular</dd></div>
+<div class="facts__item"><dt>Beneficio</dt><dd><span translate="no">Convenio CENCO</span></dd></div>
+<div class="facts__item"><dt>Origen</dt><dd>Formulario en línea, 18-10-2026</dd></div>
+</dl>
+<ol class="stages" aria-label="Etapas del caso">
+<li class="stages__item" aria-current="step"><span class="stages__track"><span class="mark mark--yours" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Venta<span class="sr-only">, etapa actual, te toca a ti</span></span><span class="stages__note">Revisas documentos</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Contrato y firma</span><span class="stages__note">Se habilita al aprobar</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Pago</span><span class="stages__note">Matrícula <span class="tnum">$37.026</span></span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Validación</span><span class="stages__note">Después del pago</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Matriculado</span><span class="stages__note">Al validar</span></li>
+</ol>
+<dl class="relay">
+  <dt>Ahora</dt><dd><strong>Tú revisas la licencia</strong> y pides otra fotografía: la que subió no pasó la revisión de seguridad.</dd>
+  <dt>Después</dt><dd><strong>Sebastián sube otra foto</strong> desde el enlace del correo y tú apruebas la venta.</dd>
+</dl>
+<div class="decision">
+  <button class="btn btn--primary" type="button" aria-disabled="true" aria-describedby="why-d5">Aprobar venta</button>
+  <p class="decision__why" id="why-d5"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg>Para aprobar, acepta la licencia y espera el análisis de la nueva fotografía.</p>
+  <button class="btn btn--danger btn--sm decision__end" type="button" aria-haspopup="dialog">Rechazar</button>
+</div>
+
+<nav class="tabs" aria-label="Secciones de la ficha">
+<a class="tabs__tab" href="ven-03-documentos.html" aria-current="page">Documentos <span class="tabs__count tabs__count--yours">1<span class="sr-only"> por revisar</span></span></a>
+<a class="tabs__tab" href="ven-04-programa.html">Valores</a>
+<a class="tabs__tab" href="ven-05-datos.html">Datos</a>
+<a class="tabs__tab" href="ven-06-contrato.html">Contrato</a>
+<a class="tabs__tab" href="ven-07-sgu.html">SGU</a>
+<a class="tabs__tab" href="ven-08-borrador-2027.html">Borrador 2027</a>
+<a class="tabs__tab" href="ven-09-historial.html">Historial</a>
+</nav>
+<div class="section-head">
+  <h2 class="section-head__title">Documentos</h2>
+  <p class="note" role="status" aria-live="polite"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg><span><strong>1 documento en análisis.</strong> Revisamos la seguridad del archivo; la lista se actualiza sola.</span></p>
+</div>
+<table class="table table--stack density-comfy">
+  <caption class="sr-only">Documentos de la postulación 2026-000112. Elige uno para abrirlo en el visor.</caption>
+  <thead><tr><th scope="col">Documento</th><th scope="col">Estado</th><th scope="col" class="num"><span class="sr-only">Acción</span></th></tr></thead>
+  <tbody>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><span class="cell-main">Cédula de identidad, anverso</span><span class="cell-sub">JPG, 1,3&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><span class="cell-main">Cédula de identidad, reverso</span><span class="cell-sub">JPG, 1,2&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg></span><span class="doc-name__text"><a class="cell-main link--quiet" href="ven-03-documentos.html?estado=visor-pdf">Licencia de enseñanza media</a><span class="cell-sub">PDF, 1 página, 480&nbsp;KB</span></span></span></td>
+  <td><span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-image"/></svg></span><span class="doc-name__text"><span class="cell-main">Fotografía tipo carnet</span><span class="cell-sub">foto-carnet-2.jpg, 410&nbsp;KB. Revisando la seguridad del archivo…</span></span></span></td>
+  <td><span class="badge badge--system"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>En análisis</span></td>
+  <td class="num"></td>
+</tr>
+  </tbody>
+</table>
+</div></main>
+</div>
+
+<div data-estado="observado-sin-enviar" data-estado-label="Observado sin enviar">
+<main class="main"><div class="main__inner">
+<nav class="crumbs" aria-label="Ruta">
+  <a class="link link--quiet" href="ven-01-postulaciones.html">Postulaciones</a>
+  <svg class="i i--14" aria-hidden="true"><use href="#i-chev-right"/></svg>
+  <span aria-current="page" class="tnum" translate="no">2026-000103</span>
+  
+</nav>
+<div class="ficha-title">
+  <h1 class="page-title">Valentina Paz Muñoz Contreras</h1>
+  <span class="badge badge--applicant"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Observada</span>
+</div>
+<dl class="facts">
+<div class="facts__item"><dt>RUT</dt><dd><span class="tnum" translate="no">19.876.543-0</span></dd></div>
+<div class="facts__item"><dt>Programa</dt><dd>Derecho</dd></div>
+<div class="facts__item"><dt>Jornada y modalidad</dt><dd>Vespertina, presencial</dd></div>
+<div class="facts__item"><dt>Vía</dt><dd>Extraordinaria</dd></div>
+<div class="facts__item"><dt>Origen</dt><dd>Formulario en línea, 15-10-2026</dd></div>
+</dl>
+<ol class="stages" aria-label="Etapas del caso">
+<li class="stages__item" aria-current="step"><span class="stages__track"><span class="mark mark--yours" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Venta<span class="sr-only">, etapa actual, te toca a ti</span></span><span class="stages__note">Envías la observación</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Contrato y firma</span><span class="stages__note">Se habilita al aprobar</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Pago</span><span class="stages__note">Matrícula <span class="tnum">$108.900</span></span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Validación</span><span class="stages__note">Después del pago</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Matriculado</span><span class="stages__note">Al validar</span></li>
+</ol>
+<dl class="relay">
+  <dt>Ahora</dt><dd><strong>Tú envías la observación a Valentina</strong>: la concentración de notas tiene páginas faltantes.</dd>
+  <dt>Después</dt><dd><strong>Valentina sube de nuevo el documento</strong> desde el enlace del correo y tú revisas la corrección.</dd>
+</dl>
+<div class="decision">
+  <button class="btn btn--primary" type="button" aria-disabled="true" aria-describedby="why-d6">Aprobar venta</button>
+  <p class="decision__why" id="why-d6"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg>Para aprobar, envía la observación y espera la corrección de Valentina.</p>
+  <button class="btn btn--danger btn--sm decision__end" type="button" aria-haspopup="dialog">Rechazar</button>
+</div>
+
+<nav class="tabs" aria-label="Secciones de la ficha">
+<a class="tabs__tab" href="ven-03-documentos.html" aria-current="page">Documentos <span class="tabs__count tabs__count--yours">1<span class="sr-only"> observación sin enviar</span></span></a>
+<a class="tabs__tab" href="ven-04-programa.html">Valores</a>
+<a class="tabs__tab" href="ven-05-datos.html">Datos</a>
+<a class="tabs__tab" href="ven-06-contrato.html">Contrato</a>
+<a class="tabs__tab" href="ven-07-sgu.html">SGU</a>
+<a class="tabs__tab" href="ven-08-borrador-2027.html">Borrador 2027</a>
+<a class="tabs__tab" href="ven-09-historial.html">Historial</a>
+</nav>
+<div class="section-head">
+  <h2 class="section-head__title">Documentos</h2>
+  
+</div>
+<div class="page-alert"><div class="alert alert--warning"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><div><p class="alert__title">1 observación sin enviar.</p><p class="alert__body">Valentina todavía no sabe qué corregir. Enviamos todas las observaciones juntas en un solo correo.</p><div class="alert__actions btn-row"><button class="btn btn--primary btn--sm" type="button" aria-haspopup="dialog"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg>Enviar observaciones a Valentina (1)</button></div></div></div></div>
+<table class="table table--stack density-comfy">
+  <caption class="sr-only">Documentos de la postulación 2026-000103. Elige uno para abrirlo en el visor.</caption>
+  <thead><tr><th scope="col">Documento</th><th scope="col">Estado</th><th scope="col" class="num"><span class="sr-only">Acción</span></th></tr></thead>
+  <tbody>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><span class="cell-main">Cédula de identidad, anverso</span><span class="cell-sub">JPG, 1,2&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><span class="cell-main">Cédula de identidad, reverso</span><span class="cell-sub">JPG, 1,0&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg></span><span class="doc-name__text"><span class="cell-main">Licencia de enseñanza media</span><span class="cell-sub">PDF, 1 página, 450&nbsp;KB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg></span><span class="doc-name__text"><a class="cell-main link--quiet" href="ven-03-documentos.html?estado=observado-sin-enviar">Concentración de notas de educación superior</a><span class="cell-sub">PDF, 2 páginas, 1,1&nbsp;MB. Motivo: faltan páginas, «Falta la página 3 de 3». <span class="badge badge--draft"><svg class="i" aria-hidden="true"><use href="#i-pencil"/></svg>Sin enviar</span></span></span></span></td>
+  <td><span class="badge badge--applicant"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Observado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-image"/></svg></span><span class="doc-name__text"><span class="cell-main">Fotografía tipo carnet</span><span class="cell-sub">PNG, 590&nbsp;KB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+  </tbody>
+</table>
+</div></main>
+</div>
+
+<div data-estado="observado-enviado" data-estado-label="Observado enviado">
+<main class="main"><div class="main__inner">
+<nav class="crumbs" aria-label="Ruta">
+  <a class="link link--quiet" href="ven-01-postulaciones.html">Postulaciones</a>
+  <svg class="i i--14" aria-hidden="true"><use href="#i-chev-right"/></svg>
+  <span aria-current="page" class="tnum" translate="no">2026-000103</span>
+  
+</nav>
+<div class="ficha-title">
+  <h1 class="page-title">Valentina Paz Muñoz Contreras</h1>
+  <span class="badge badge--applicant"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Observada</span>
+</div>
+<dl class="facts">
+<div class="facts__item"><dt>RUT</dt><dd><span class="tnum" translate="no">19.876.543-0</span></dd></div>
+<div class="facts__item"><dt>Programa</dt><dd>Derecho</dd></div>
+<div class="facts__item"><dt>Jornada y modalidad</dt><dd>Vespertina, presencial</dd></div>
+<div class="facts__item"><dt>Vía</dt><dd>Extraordinaria</dd></div>
+<div class="facts__item"><dt>Origen</dt><dd>Formulario en línea, 15-10-2026</dd></div>
+</dl>
+<ol class="stages" aria-label="Etapas del caso">
+<li class="stages__item stages__item--others" aria-current="step"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Venta<span class="sr-only">, etapa actual</span></span><span class="stages__note">Valentina corrige sus notas</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Contrato y firma</span><span class="stages__note">Se habilita al aprobar</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Pago</span><span class="stages__note">Matrícula <span class="tnum">$108.900</span></span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Validación</span><span class="stages__note">Después del pago</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Matriculado</span><span class="stages__note">Al validar</span></li>
+</ol>
+<dl class="relay">
+  <dt>Ahora</dt><dd><strong>Valentina sube de nuevo su concentración de notas</strong>: la observaste porque faltan páginas.</dd>
+  <dt>Después</dt><dd><strong>Tú revisas la corrección</strong> y apruebas la venta.</dd>
+</dl>
+<div class="decision">
+  <button class="btn btn--primary" type="button" aria-disabled="true" aria-describedby="why-d7">Aprobar venta</button>
+  <p class="decision__why" id="why-d7"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg>Para aprobar, Valentina debe corregir la concentración de notas.</p>
+  <button class="btn btn--danger btn--sm decision__end" type="button" aria-haspopup="dialog">Rechazar</button>
+</div>
+
+<nav class="tabs" aria-label="Secciones de la ficha">
+<a class="tabs__tab" href="ven-03-documentos.html" aria-current="page">Documentos</a>
+<a class="tabs__tab" href="ven-04-programa.html">Valores</a>
+<a class="tabs__tab" href="ven-05-datos.html">Datos</a>
+<a class="tabs__tab" href="ven-06-contrato.html">Contrato</a>
+<a class="tabs__tab" href="ven-07-sgu.html">SGU</a>
+<a class="tabs__tab" href="ven-08-borrador-2027.html">Borrador 2027</a>
+<a class="tabs__tab" href="ven-09-historial.html">Historial</a>
+</nav>
+<div class="section-head">
+  <h2 class="section-head__title">Documentos</h2>
+  
+</div>
+<div class="page-alert"><div class="alert alert--info"><svg class="i" aria-hidden="true"><use href="#i-check-circle"/></svg><div><p class="alert__title">Observaciones enviadas el 17-10-2026 11:05 (1 documento).</p><p class="alert__body">Esperando la corrección de Valentina. Si no le llegó el correo, puedes reenviarlas.</p><div class="alert__actions btn-row"><button class="btn btn--secondary btn--sm" type="button">Reenviar observaciones</button></div></div></div></div>
+<table class="table table--stack density-comfy">
+  <caption class="sr-only">Documentos de la postulación 2026-000103. Elige uno para abrirlo en el visor.</caption>
+  <thead><tr><th scope="col">Documento</th><th scope="col">Estado</th><th scope="col" class="num"><span class="sr-only">Acción</span></th></tr></thead>
+  <tbody>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><span class="cell-main">Cédula de identidad, anverso</span><span class="cell-sub">JPG, 1,2&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><span class="cell-main">Cédula de identidad, reverso</span><span class="cell-sub">JPG, 1,0&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg></span><span class="doc-name__text"><span class="cell-main">Licencia de enseñanza media</span><span class="cell-sub">PDF, 1 página, 450&nbsp;KB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-file-text"/></svg></span><span class="doc-name__text"><a class="cell-main link--quiet" href="ven-03-documentos.html?estado=observado-sin-enviar">Concentración de notas de educación superior</a><span class="cell-sub">PDF, 2 páginas, 1,1&nbsp;MB. Motivo: faltan páginas, «Falta la página 3 de 3». Enviada a Valentina el 17-10-2026</span></span></span></td>
+  <td><span class="badge badge--applicant"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Observado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-image"/></svg></span><span class="doc-name__text"><span class="cell-main">Fotografía tipo carnet</span><span class="cell-sub">PNG, 590&nbsp;KB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+  </tbody>
+</table>
+</div></main>
+</div>
+
+<div data-estado="tras-aprobar" data-estado-label="Tras aprobar: solo licencia">
+<main class="main"><div class="main__inner">
+<nav class="crumbs" aria-label="Ruta">
+  <a class="link link--quiet" href="ven-01-postulaciones.html">Postulaciones</a>
+  <svg class="i i--14" aria-hidden="true"><use href="#i-chev-right"/></svg>
+  <span aria-current="page" class="tnum" translate="no">2026-000110</span>
+  
+</nav>
+<div class="ficha-title">
+  <h1 class="page-title">Carlos Eduardo Ramírez Quintero</h1>
+  <span class="badge badge--system"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>Aprobada</span>
+</div>
+<dl class="facts">
+<div class="facts__item"><dt>RUT</dt><dd><span class="tnum" translate="no">24.867.531-4</span></dd></div>
+<div class="facts__item"><dt>Programa</dt><dd>Ingeniería Comercial</dd></div>
+<div class="facts__item"><dt>Jornada y modalidad</dt><dd>Vespertina, a distancia</dd></div>
+<div class="facts__item"><dt>Vía</dt><dd>Regular</dd></div>
+<div class="facts__item"><dt>Origen</dt><dd>Formulario en línea, 17-10-2026</dd></div>
+</dl>
+<ol class="stages" aria-label="Etapas del caso">
+<li class="stages__item is-done"><span class="stages__track"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span class="stages__line"></span></span><span class="stages__name">Venta<span class="sr-only">, hecha</span></span><span class="stages__note">Aprobada el <span class="tnum">19-10-2026</span></span></li>
+<li class="stages__item stages__item--others" aria-current="step"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Contrato y firma<span class="sr-only">, etapa actual</span></span><span class="stages__note">Sistema prepara el contrato</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Pago</span><span class="stages__note">Matrícula <span class="tnum">$108.900</span></span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Validación</span><span class="stages__note">Después del pago</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Matriculado</span><span class="stages__note">Al validar</span></li>
+</ol>
+<dl class="relay">
+  <dt>Ahora</dt><dd><strong>Sistema prepara el contrato</strong> con las condiciones aprobadas.</dd>
+  <dt>Después</dt><dd><strong>Carlos lo revisa y lo firma</strong> desde el enlace que le llega por correo.</dd>
+</dl>
+
+
+<nav class="tabs" aria-label="Secciones de la ficha">
+<a class="tabs__tab" href="ven-03-documentos.html" aria-current="page">Documentos</a>
+<a class="tabs__tab" href="ven-04-programa.html">Valores</a>
+<a class="tabs__tab" href="ven-05-datos.html">Datos</a>
+<a class="tabs__tab" href="ven-06-contrato.html">Contrato</a>
+<a class="tabs__tab" href="ven-07-sgu.html">SGU</a>
+<a class="tabs__tab" href="ven-08-borrador-2027.html">Borrador 2027</a>
+<a class="tabs__tab" href="ven-09-historial.html">Historial</a>
+</nav>
+<div class="section-head">
+  <h2 class="section-head__title">Documentos</h2>
+  
+</div>
+<div class="page-alert"><p class="note"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span><strong>La venta está aprobada:</strong> los documentos de identidad y la foto quedaron fijos. Solo la licencia de enseñanza media se puede abrir para observar o pedir de nuevo.</span></p></div>
+<table class="table table--stack density-comfy">
+  <caption class="sr-only">Documentos de la postulación 2026-000110. Solo la licencia admite acciones.</caption>
+  <thead><tr><th scope="col">Documento</th><th scope="col">Estado</th><th scope="col" class="num"><span class="sr-only">Acción</span></th></tr></thead>
+  <tbody>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><span class="cell-main">Cédula de identidad, anverso</span><span class="cell-sub">JPG, 1,2&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-id"/></svg></span><span class="doc-name__text"><span class="cell-main">Cédula de identidad, reverso</span><span class="cell-sub">JPG, 1,1&nbsp;MB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg></span><span class="doc-name__text"><a class="cell-main link--quiet" href="ven-03-documentos.html?estado=tras-aprobar">Licencia de enseñanza media</a><span class="cell-sub">PDF, 1 página, 480&nbsp;KB. Se puede observar hasta la matrícula</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+<tr>
+  <td><span class="doc-name"><span class="doc-name__icon" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-image"/></svg></span><span class="doc-name__text"><span class="cell-main">Fotografía tipo carnet</span><span class="cell-sub">PNG, 610&nbsp;KB</span></span></span></td>
+  <td><span class="badge badge--done"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Aceptado</span></td>
+  <td class="num"></td>
+</tr>
+  </tbody>
+</table>
+</div></main>
+</div>
+
+<div data-estado="cargando" data-estado-label="Cargando">
+<main class="main"><div class="main__inner">
+<nav class="crumbs" aria-label="Ruta">
+  <a class="link link--quiet" href="ven-01-postulaciones.html?estado=por-revisar">Postulaciones</a>
+  <svg class="i i--14" aria-hidden="true"><use href="#i-chev-right"/></svg>
+  <span aria-current="page" class="tnum" translate="no">2026-000102</span>
+  
+</nav>
+<div class="ficha-title">
+  <h1 class="page-title">Benjamín Ignacio Soto Valenzuela</h1>
+  <span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span>
+</div>
+<dl class="facts">
+<div class="facts__item"><dt>RUT</dt><dd><span class="tnum" translate="no">21.034.567-1</span></dd></div>
+<div class="facts__item"><dt>Programa</dt><dd>Ingeniería Comercial</dd></div>
+<div class="facts__item"><dt>Jornada y modalidad</dt><dd>Vespertina, a distancia</dd></div>
+<div class="facts__item"><dt>Vía</dt><dd>Regular</dd></div>
+<div class="facts__item"><dt>Beneficio</dt><dd><span translate="no">ADMISION27, 10 %</span></dd></div>
+<div class="facts__item"><dt>Origen</dt><dd>Formulario en línea, 16-10-2026</dd></div>
+</dl>
+<ol class="stages" aria-label="Etapas del caso">
+<li class="stages__item" aria-current="step"><span class="stages__track"><span class="mark mark--yours" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Venta<span class="sr-only">, etapa actual, te toca a ti</span></span><span class="stages__note">Revisas documentos</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Contrato y firma</span><span class="stages__note">Se habilita al aprobar</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Pago</span><span class="stages__note">Matrícula <span class="tnum">$108.900</span></span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Validación</span><span class="stages__note">Después del pago</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Matriculado</span><span class="stages__note">Al validar</span></li>
+</ol>
+<dl class="relay">
+  <dt>Ahora</dt><dd><strong>Tú revisas 3 documentos</strong>: la cédula por ambos lados y la foto.</dd>
+  <dt>Después</dt><dd><strong>Tú apruebas la venta</strong> y el sistema prepara el contrato para que Benjamín lo firme.</dd>
+</dl>
+<div class="decision">
+  <button class="btn btn--primary" type="button" aria-disabled="true" aria-describedby="why-d9">Aprobar venta</button>
+  <p class="decision__why" id="why-d9"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg>Para aprobar, acepta los 3 documentos por revisar. La licencia puede llegar después.</p>
+  <button class="btn btn--danger btn--sm decision__end" type="button" aria-haspopup="dialog">Rechazar</button>
+</div>
+
+<nav class="tabs" aria-label="Secciones de la ficha">
+<a class="tabs__tab" href="ven-03-documentos.html" aria-current="page">Documentos <span class="tabs__count">…</span></a>
+<a class="tabs__tab" href="ven-04-programa.html">Valores</a>
+<a class="tabs__tab" href="ven-05-datos.html">Datos</a>
+<a class="tabs__tab" href="ven-06-contrato.html">Contrato</a>
+<a class="tabs__tab" href="ven-07-sgu.html">SGU</a>
+<a class="tabs__tab" href="ven-08-borrador-2027.html">Borrador 2027</a>
+<a class="tabs__tab" href="ven-09-historial.html">Historial</a>
+</nav>
+<div class="section-head">
+  <h2 class="section-head__title">Documentos</h2>
+  
+</div>
+<div class="sr-only" role="status" aria-live="polite">Cargando documentos…</div>
+<div class="skel-rows skel-rows--doc" aria-hidden="true">
+<div class="skel-rows__row"><span class="skeleton"></span><span class="skeleton"></span><span class="skeleton skeleton--pill"></span></div>
+<div class="skel-rows__row"><span class="skeleton"></span><span class="skeleton"></span><span class="skeleton skeleton--pill"></span></div>
+<div class="skel-rows__row"><span class="skeleton"></span><span class="skeleton"></span><span class="skeleton skeleton--pill"></span></div>
+<div class="skel-rows__row"><span class="skeleton"></span><span class="skeleton"></span><span class="skeleton skeleton--pill"></span></div>
+</div>
+</div></main>
+</div>
+
+<div data-estado="error" data-estado-label="Error de carga">
+<main class="main"><div class="main__inner">
+<nav class="crumbs" aria-label="Ruta">
+  <a class="link link--quiet" href="ven-01-postulaciones.html?estado=por-revisar">Postulaciones</a>
+  <svg class="i i--14" aria-hidden="true"><use href="#i-chev-right"/></svg>
+  <span aria-current="page" class="tnum" translate="no">2026-000102</span>
+  
+</nav>
+<div class="ficha-title">
+  <h1 class="page-title">Benjamín Ignacio Soto Valenzuela</h1>
+  <span class="badge badge--team"><span class="rombo" aria-hidden="true"></span>Por revisar<span class="sr-only">, te toca a ti</span></span>
+</div>
+<dl class="facts">
+<div class="facts__item"><dt>RUT</dt><dd><span class="tnum" translate="no">21.034.567-1</span></dd></div>
+<div class="facts__item"><dt>Programa</dt><dd>Ingeniería Comercial</dd></div>
+<div class="facts__item"><dt>Jornada y modalidad</dt><dd>Vespertina, a distancia</dd></div>
+<div class="facts__item"><dt>Vía</dt><dd>Regular</dd></div>
+<div class="facts__item"><dt>Beneficio</dt><dd><span translate="no">ADMISION27, 10 %</span></dd></div>
+<div class="facts__item"><dt>Origen</dt><dd>Formulario en línea, 16-10-2026</dd></div>
+</dl>
+<ol class="stages" aria-label="Etapas del caso">
+<li class="stages__item" aria-current="step"><span class="stages__track"><span class="mark mark--yours" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Venta<span class="sr-only">, etapa actual, te toca a ti</span></span><span class="stages__note">Revisas documentos</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Contrato y firma</span><span class="stages__note">Se habilita al aprobar</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Pago</span><span class="stages__note">Matrícula <span class="tnum">$108.900</span></span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Validación</span><span class="stages__note">Después del pago</span></li>
+<li class="stages__item is-future"><span class="stages__track"><span class="mark" aria-hidden="true"></span><span class="stages__line"></span></span><span class="stages__name">Matriculado</span><span class="stages__note">Al validar</span></li>
+</ol>
+<dl class="relay">
+  <dt>Ahora</dt><dd><strong>Tú revisas 3 documentos</strong>: la cédula por ambos lados y la foto.</dd>
+  <dt>Después</dt><dd><strong>Tú apruebas la venta</strong> y el sistema prepara el contrato para que Benjamín lo firme.</dd>
+</dl>
+<div class="decision">
+  <button class="btn btn--primary" type="button" aria-disabled="true" aria-describedby="why-d10">Aprobar venta</button>
+  <p class="decision__why" id="why-d10"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg>Para aprobar, acepta los 3 documentos por revisar. La licencia puede llegar después.</p>
+  <button class="btn btn--danger btn--sm decision__end" type="button" aria-haspopup="dialog">Rechazar</button>
+</div>
+
+<nav class="tabs" aria-label="Secciones de la ficha">
+<a class="tabs__tab" href="ven-03-documentos.html" aria-current="page">Documentos</a>
+<a class="tabs__tab" href="ven-04-programa.html">Valores</a>
+<a class="tabs__tab" href="ven-05-datos.html">Datos</a>
+<a class="tabs__tab" href="ven-06-contrato.html">Contrato</a>
+<a class="tabs__tab" href="ven-07-sgu.html">SGU</a>
+<a class="tabs__tab" href="ven-08-borrador-2027.html">Borrador 2027</a>
+<a class="tabs__tab" href="ven-09-historial.html">Historial</a>
+</nav>
+<div class="section-head">
+  <h2 class="section-head__title">Documentos</h2>
+  
+</div>
+<div class="load-error" role="alert"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg><span>No pudimos cargar los documentos. Tus revisiones anteriores están guardadas.</span><button class="btn btn--secondary btn--sm" type="button"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg>Reintentar</button></div>
+</div></main>
+</div>
+
+  </div>
+</div>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

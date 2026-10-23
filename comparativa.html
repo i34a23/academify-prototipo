@@ -1,0 +1,177 @@
+<title>academify: tres colores</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+<style>
+  /* Hoja de comparación: tres columnas de decisión, capturas grandes, conmutador claro/oscuro por dirección */
+  :root {
+    --bg: #F4F6FB; --surface: #FFFFFF; --ink: #0F1B2D; --muted: #4F5D78; --line: #DCE3EF;
+    --accent: #1D4ED8; --accent-ink: #FFFFFF; --chip: #E8EEFB;
+    --font: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #0B1222; --surface: #111B31; --ink: #EEF3FF; --muted: #A7B4CF; --line: #22314F;
+    --accent: #7FA4FF; --accent-ink: #0B1222; --chip: #18243F; color-scheme: dark } }
+  :root[data-theme="dark"] {
+    --bg: #0B1222; --surface: #111B31; --ink: #EEF3FF; --muted: #A7B4CF; --line: #22314F;
+    --accent: #7FA4FF; --accent-ink: #0B1222; --chip: #18243F; color-scheme: dark }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.55 var(--font); }
+  .wrap { max-width: 1360px; margin: 0 auto; padding-block: 40px 72px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  header { display: grid; gap: 10px; max-width: 70ch; }
+  .logo { height: 26px; width: auto; }
+  h1 { margin: 12px 0 0; font-size: clamp(28px, 4vw, 40px); line-height: 1.1; font-weight: 800; letter-spacing: -.02em; text-wrap: balance; }
+  .lede { margin: 0; color: var(--muted); font-size: 17px; }
+  .dirs { display: grid; gap: 28px; margin-top: 36px; }
+  .dir { display: grid; gap: 18px; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; min-width: 0; }
+  .dir__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+  .dir__name { margin: 0; font-size: 24px; font-weight: 800; letter-spacing: -.01em; }
+  .dir__tag { color: var(--muted); font-size: 15px; }
+  .dir__body { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 28px; align-items: start; }
+  .dir__text { display: grid; gap: 14px; min-width: 0; }
+  .dir__text p { margin: 0; }
+  .pal { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .pal li { display: flex; align-items: center; gap: 8px; padding: 4px 10px 4px 4px; border-radius: 999px; background: var(--chip); font-size: 14px; }
+  .pal i { width: 22px; height: 22px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgb(0 0 0 / .12); }
+  .facts { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; font-size: 15px; color: var(--muted); }
+  .facts strong { color: var(--ink); font-weight: 600; }
+  .warn { padding: 10px 12px; border-radius: 10px; background: var(--chip); font-size: 15px; }
+  .warn strong { font-weight: 700; }
+  .live { display: flex; flex-wrap: wrap; gap: 8px; }
+  .live a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 15px; }
+  .live a:hover { border-color: var(--accent); }
+  .shots { display: grid; gap: 12px; min-width: 0; }
+  .ctrl { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+  .seg { display: inline-flex; padding: 3px; border-radius: 10px; background: var(--chip); }
+  .seg button { min-height: 36px; padding: 0 14px; border: 0; border-radius: 8px; background: transparent; color: var(--ink); font: 600 14px var(--font); cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+  .frame { margin: 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--bg); }
+  .frame img { display: block; width: 100%; height: auto; }
+  .frame--phone { max-width: 300px; justify-self: center; }
+  .thumbs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .thumbs button { padding: 0; border: 2px solid transparent; border-radius: 10px; overflow: hidden; background: none; cursor: pointer; }
+  .thumbs button[aria-pressed="true"] { border-color: var(--accent); }
+  .thumbs img { display: block; width: 100%; height: auto; }
+  .thumbs span { display: block; padding: 6px 8px; background: var(--chip); color: var(--ink); font: 600 13px var(--font); text-align: left; }
+  button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  footer { margin-top: 36px; color: var(--muted); font-size: 15px; max-width: 75ch; }
+  @media (max-width: 900px) { .dir__body { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 520px) { .thumbs { grid-template-columns: repeat(2, minmax(0, 1fr)); } .dir { padding: 16px; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <img class="logo" src="assets/academify-logo.svg" alt="academify" width="115" height="26">
+    <h1>Tres direcciones de color para elegir</h1>
+    <p class="lede">Mismas cuatro pantallas, mismo contenido y mismo sistema de componentes. Solo cambia la identidad visual. Cada una funciona en claro y en oscuro; abre las pantallas en vivo y usa el botón de tema abajo a la derecha.</p>
+  </header>
+
+  <div class="dirs">
+    <section class="dir" data-dir="a-electrico" aria-labelledby="a-t">
+      <div class="dir__head"><h2 class="dir__name" id="a-t">A. Azul eléctrico</h2><span class="dir__tag">Stripe, Revolut, HubSpot</span></div>
+      <div class="dir__body">
+        <div class="dir__text">
+          <p>El navy y el azul de academify llevados a luz. Riel lateral en degradado noche → azul eléctrico, banda de color al abrir cada página y la cifra que manda (lo recaudado) en un bloque azul de marca. Las demás cifras van en vidrio.</p>
+          <p>El color dice quién actúa: azul el equipo, ámbar el postulante, violeta el sistema, verde lo hecho, rojo lo cerrado. Las 5 etapas del caso usan azul, violeta, cian, fucsia y verde.</p>
+          <ul class="pal" aria-label="Paleta">
+            <li><i style="background:#0F1B2D"></i>Navy</li><li><i style="background:#1D4ED8"></i>Azul marca</li><li><i style="background:#2F6BFF"></i>Eléctrico</li><li><i style="background:#7C3AED"></i>Violeta</li><li><i style="background:#0891B2"></i>Cian</li><li><i style="background:#C2410C"></i>Ámbar</li>
+          </ul>
+          <ul class="facts">
+            <li><strong>Lo más fuerte:</strong> es la más fiel a la marca y la más segura de implementar.</li>
+            <li><strong>Tipografía:</strong> solo Figtree.</li>
+            <li><strong>Contraste:</strong> texto mínimo 4,54:1 (AA) en ambos temas.</li>
+          </ul>
+          <p class="warn"><strong>Ojo:</strong> mantiene el sidebar ancho; el riel de íconos con panel flotante se agrega al aplicarla. La franja de cifras tiene 7 bloques en escritorio y hay que llevarla a tu regla de 2 columnas.</p>
+          <div class="live"><a href="temas/a-electrico/adm-01-panel.html">Panel en vivo</a><a href="temas/a-electrico/ven-01-postulaciones.html">Bandeja</a><a href="temas/a-electrico/ven-02-ficha.html">Ficha</a><a href="temas/a-electrico/pub-16-pago.html">Pago</a></div>
+        </div>
+        <div class="shots"></div>
+      </div>
+    </section>
+
+    <section class="dir" data-dir="b-campus" aria-labelledby="b-t">
+      <div class="dir__head"><h2 class="dir__name" id="b-t">B. Campus vivo</h2><span class="dir__tag">Monday.com, Clientify, Notion</span></div>
+      <div class="dir__body">
+        <div class="dir__text">
+          <p>Un color por etapa del caso, como Monday.com usa color por estado: Venta fucsia, Contrato y firma turquesa, Pago mandarina, Validación violeta, Matriculado verde. Ese color va en barras, línea de etapas, filtros y un borde en cada fila.</p>
+          <p>El color dice dónde está el caso y la forma dice quién actúa: relleno pleno con rombo si te toca, tinte con reloj si espera a otro. Fondo lila niebla y riel de íconos azul noche que se abre al pasar el mouse.</p>
+          <ul class="pal" aria-label="Paleta">
+            <li><i style="background:#C026D3"></i>Venta</li><li><i style="background:#0D9488"></i>Contrato</li><li><i style="background:#EA580C"></i>Pago</li><li><i style="background:#7C3AED"></i>Validación</li><li><i style="background:#16A34A"></i>Matrícula</li><li><i style="background:#1D4ED8"></i>Acción</li>
+          </ul>
+          <ul class="facts">
+            <li><strong>Lo más fuerte:</strong> la más colorida y alegre; ya trae el riel con panel flotante que te gusta y las cifras clave en vidrio.</li>
+            <li><strong>Contraste:</strong> texto mínimo 4,57:1 (AA) en ambos temas.</li>
+          </ul>
+          <p class="warn"><strong>Ojo:</strong> usa Bricolage Grotesque en títulos y cifras (la descartaste en el panel UMC por poco amigable) y una «a» como logo en el riel, que no es la marca. Ambas se corrigen al aplicarla.</p>
+          <div class="live"><a href="temas/b-campus/adm-01-panel.html">Panel en vivo</a><a href="temas/b-campus/ven-01-postulaciones.html">Bandeja</a><a href="temas/b-campus/ven-02-ficha.html">Ficha</a><a href="temas/b-campus/pub-16-pago.html">Pago</a></div>
+        </div>
+        <div class="shots"></div>
+      </div>
+    </section>
+
+    <section class="dir" data-dir="c-premium" aria-labelledby="c-t">
+      <div class="dir__head"><h2 class="dir__name" id="c-t">C. Oscuro premium</h2><span class="dir__tag">Linear, Vercel, Raycast</span></div>
+      <div class="dir__body">
+        <div class="dir__text">
+          <p>Pensada primero en oscuro: navy casi negro en capas y un espectro azul → cian → menta que acompaña el avance del caso. Los cálidos tienen un solo uso: ámbar cuando se espera al postulante y coral cuando algo está cerrado o falla.</p>
+          <p>La audacia está en una sola cosa: la cifra clave en una isla de vidrio navy en ambos temas (lo recaudado en el panel, el total a pagar en el pago). El claro es su derivado cuidado.</p>
+          <ul class="pal" aria-label="Paleta">
+            <li><i style="background:#080F1E"></i>Noche</li><li><i style="background:#5B8CFF"></i>Azul</li><li><i style="background:#22D3EE"></i>Cian</li><li><i style="background:#5EEAB0"></i>Menta</li><li><i style="background:#FFB547"></i>Ámbar</li><li><i style="background:#FF8A7A"></i>Coral</li>
+          </ul>
+          <ul class="facts">
+            <li><strong>Lo más fuerte:</strong> la más sofisticada; el oscuro es de nivel producto internacional.</li>
+            <li><strong>Contraste:</strong> texto mínimo 4,74:1 en claro y 5,07:1 en oscuro.</li>
+          </ul>
+          <p class="warn"><strong>Ojo:</strong> en claro es la menos colorida de las tres. También usa Bricolage Grotesque y la «a» en el riel; se corrigen al aplicarla.</p>
+          <div class="live"><a href="temas/c-premium/adm-01-panel.html">Panel en vivo</a><a href="temas/c-premium/ven-01-postulaciones.html">Bandeja</a><a href="temas/c-premium/ven-02-ficha.html">Ficha</a><a href="temas/c-premium/pub-16-pago.html">Pago</a></div>
+        </div>
+        <div class="shots"></div>
+      </div>
+    </section>
+  </div>
+
+  <footer>Las tres comparten estados, datos y accesibilidad del prototipo (58 pantallas). La elegida se aplica a todas, con interruptor claro, oscuro o según el sistema.</footer>
+</div>
+
+<script>
+  const SCREENS = [
+    { k: 'adm-01-panel-1440', n: 'Panel' },
+    { k: 'ven-01-postulaciones-1440', n: 'Bandeja' },
+    { k: 'ven-02-ficha-1440', n: 'Ficha' },
+    { k: 'pub-16-pago-1440', n: 'Pago' },
+    { k: 'pub-16-pago-390', n: 'Pago móvil', phone: true },
+  ];
+  document.querySelectorAll('.dir').forEach(sec => {
+    const dir = sec.dataset.dir, box = sec.querySelector('.shots');
+    let scheme = 'light', cur = 0;
+    const ctrl = document.createElement('div'); ctrl.className = 'ctrl';
+    const seg = document.createElement('div'); seg.className = 'seg'; seg.setAttribute('role', 'group'); seg.setAttribute('aria-label', 'Tema de las capturas');
+    [['light', 'Claro'], ['dark', 'Oscuro']].forEach(([v, t]) => {
+      const b = document.createElement('button'); b.type = 'button'; b.textContent = t; b.dataset.v = v;
+      b.addEventListener('click', () => { scheme = v; render(); }); seg.append(b);
+    });
+    const cap = document.createElement('span'); cap.style.cssText = 'font-weight:600';
+    ctrl.append(cap, seg);
+    const fig = document.createElement('figure'); fig.className = 'frame';
+    const img = document.createElement('img'); img.loading = 'lazy'; img.decoding = 'async'; fig.append(img);
+    const thumbs = document.createElement('div'); thumbs.className = 'thumbs'; thumbs.setAttribute('aria-label', 'Pantallas');
+    SCREENS.forEach((s, i) => {
+      const b = document.createElement('button'); b.type = 'button';
+      b.innerHTML = `<img alt="" loading="lazy"><span>${s.n}</span>`;
+      b.addEventListener('click', () => { cur = i; render(); }); thumbs.append(b);
+    });
+    box.append(ctrl, fig, thumbs);
+    function src(k) { return `temas/${dir}/shots/${k}-${scheme}.png`; }
+    function render() {
+      const s = SCREENS[cur];
+      img.src = src(s.k); img.alt = `${s.n}, tema ${scheme === 'light' ? 'claro' : 'oscuro'}`;
+      img.width = s.phone ? 390 : 1440; img.height = s.phone ? 844 : 900;
+      fig.classList.toggle('frame--phone', !!s.phone);
+      cap.textContent = s.n;
+      seg.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v === scheme)));
+      thumbs.querySelectorAll('button').forEach((b, i) => { b.setAttribute('aria-pressed', String(i === cur)); b.querySelector('img').src = src(SCREENS[i].k); });
+    }
+    render();
+  });
+</script>

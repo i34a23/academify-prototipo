@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="es-CL" class="has-cta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<title>Tus documentos · Instituto Demo</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body class="is-public">
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="i-pencil" viewBox="0 0 24 24"><path d="M21.17 6.81a1 1 0 0 0-3.98-3.98L3.84 16.17a2 2 0 0 0-.5.83l-1.32 4.35a.5.5 0 0 0 .62.62l4.35-1.32a2 2 0 0 0 .83-.5z"/><path d="m15 5 4 4"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+<symbol id="i-triangle" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+<symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-chev-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-chev-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+<symbol id="i-chev-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+<symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+<symbol id="i-panel" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></symbol>
+<symbol id="i-inbox" viewBox="0 0 24 24"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></symbol>
+<symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+<symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+<symbol id="i-id" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M5 16c.6-1.5 1.8-2 3-2s2.4.5 3 2"/><path d="M14 10h5"/><path d="M14 14h3"/></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+<symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+<symbol id="i-zoom-in" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></symbol>
+<symbol id="i-zoom-out" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6"/></symbol>
+<symbol id="i-rotate" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-dashboard" viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M10.27 21a2 2 0 0 0 3.46 0"/><path d="M3.26 15.33A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.67C19.41 13.96 18 12.5 18 8A6 6 0 0 0 6 8c0 4.5-1.41 5.96-2.74 7.33"/></symbol>
+<symbol id="i-grad" viewBox="0 0 24 24"><path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+<symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.7 8.7a2.43 2.43 0 0 0 3.42 0l6.58-6.58a2.43 2.43 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5"/></symbol>
+<symbol id="i-server" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></symbol>
+<symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></symbol>
+<symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.53a2 2 0 0 1-.21.9L4.72 20.55A1 1 0 0 0 5.62 22h12.76a1 1 0 0 0 .9-1.45l-5.07-10.12a2 2 0 0 1-.21-.9V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></symbol>
+<symbol id="i-more" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></symbol>
+<symbol id="i-keyboard" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/><path d="M18 8h.01"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/><path d="M7 16h10"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M8.5 16.43a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 4.18-2.65"/><path d="M19 12.86a10 10 0 0 0-2.18-1.42"/><path d="M22 8.82a15 15 0 0 0-11.29-3.76"/><path d="M5 12.86a10 10 0 0 1 5.17-2.69"/><path d="m2 2 20 20"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M14.54 21.69a.5.5 0 0 0 .94-.03l6.5-19a.5.5 0 0 0-.64-.64l-19 6.5a.5.5 0 0 0-.03.94l7.93 3.18a2 2 0 0 1 1.11 1.11z"/><path d="m21.85 2.15-10.94 10.94"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+<symbol id="i-unlink" viewBox="0 0 24 24"><path d="m18.84 12.25 1.72-1.71h-.02a5.004 5.004 0 0 0-.12-7.07 5.006 5.006 0 0 0-6.95 0l-1.72 1.71"/><path d="m5.17 11.75-1.71 1.71a5.004 5.004 0 0 0 .12 7.07 5.006 5.006 0 0 0 6.95 0l1.71-1.71"/><path d="M8 2v3"/><path d="M2 8h3"/><path d="M16 19v3"/><path d="M19 16h3"/></symbol>
+<symbol id="i-pen-line" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></symbol>
+<symbol id="i-file-check" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></symbol>
+<symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></symbol>
+<symbol id="i-circle-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+<symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></symbol>
+<symbol id="i-paperclip" viewBox="0 0 24 24"><path d="m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551"/></symbol>
+<symbol id="i-receipt" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></symbol>
+<symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol>
+<symbol id="i-key" viewBox="0 0 24 24"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5"/></symbol>
+<symbol id="i-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="i-log-in" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/></symbol>
+<symbol id="i-user-x" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m17 8 5 5"/><path d="m22 8-5 5"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></symbol>
+<symbol id="i-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
+<symbol id="i-signature" viewBox="0 0 24 24"><path d="m21 17-2.156-1.868A.5.5 0 0 0 18 15.5v.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1c0-2.545-3.991-3.97-8.5-4a1 1 0 0 0 0 5c4.153 0 4.745-11.295 5.708-13.5a2.5 2.5 0 1 1 3.31 3.284"/><path d="M3 21h18"/></symbol>
+<symbol id="i-mail-x" viewBox="0 0 24 24"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h9"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="m17 17 4 4"/><path d="m21 17-4 4"/></symbol>
+<symbol id="i-file-search" viewBox="0 0 24 24"><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M4.268 21a2 2 0 0 0 1.727 1H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3"/><path d="m9 18-1.5-1.5"/><circle cx="5" cy="14" r="3"/></symbol>
+<symbol id="i-lock-open" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></symbol>
+<symbol id="i-move-horizontal" viewBox="0 0 24 24"><path d="m18 8 4 4-4 4"/><path d="M2 12h20"/><path d="m6 8-4 4 4 4"/></symbol>
+<symbol id="i-file-x" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m14.5 12.5-5 5"/><path d="m9.5 12.5 5 5"/></symbol>
+<symbol id="i-scan-search" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></symbol>
+<symbol id="i-text-cursor" viewBox="0 0 24 24"><path d="M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1"/><path d="M7 22h1a4 4 0 0 0 4-4v-1"/><path d="M7 2h1a4 4 0 0 1 4 4v1"/></symbol>
+<symbol id="i-percent" viewBox="0 0 24 24"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+<symbol id="i-unlock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></symbol>
+<symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+<symbol id="i-braces" viewBox="0 0 24 24"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></symbol>
+<symbol id="i-list" viewBox="0 0 24 24"><path d="M3 12h.01"/><path d="M3 18h.01"/><path d="M3 6h.01"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M8 6h13"/></symbol>
+<symbol id="i-user-plus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></symbol>
+</svg>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="pub-head pub-head--sticky">
+  <div class="pub-head__inner">
+    <img src="../assets/academify-logo.svg" alt="academify" width="115" height="26" fetchpriority="high" translate="no">
+    <p class="pub-head__inst">Instituto Demo<span class="pub-head__process">Postulación Admisión 2027</span></p>
+    <a class="pub-head__help link" href="mailto:admision@institutodemo.cl"><svg class="i i--20" aria-hidden="true"><use href="#i-mail"/></svg><span class="pub-head__help-long">admision@institutodemo.cl</span><span class="pub-head__help-short">Ayuda</span></a>
+  </div>
+  <div class="pub-head__steps pub-narrow-only">
+    <nav class="steps pub-head__steps-inner" aria-label="Avance de la postulación">
+      <div class="steps__row">
+        <span class="steps__now" id="paso-actual">Paso 3 de 4: Documentos</span>
+        <span>Sigue: revisar y enviar</span>
+      </div>
+      <div class="steps__bars" role="img" aria-labelledby="paso-actual"><span class="is-done"></span><span class="is-done"></span><span class="is-now"></span><span></span></div>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido" class="pub-main">
+  <div data-estado="falta-foto" data-estado-label="En curso (falta la foto)">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">3 de 4 listos</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="a-ced_anv-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="a-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf" aria-describedby="a-ced_anv-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-reverso.jpg, 1,1&nbsp;MB</span><p class="upload__status" id="a-ced_rev-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="a-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf" aria-describedby="a-ced_rev-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">licencia-media.pdf, 420&nbsp;KB</span><p class="upload__status" id="a-licencia-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Licencia de enseñanza media</span><input class="upload__file" id="a-licencia" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-describedby="a-licencia-st"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-image"/></svg></span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="a-foto" type="file" name="foto" accept="image/jpeg,image/png"></label>
+        </div>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="vacio" data-estado-label="Vacío">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">0 de 4 listos</span></div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-id"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="b-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-id"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="b-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-grad"/></svg></span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            
+            <div class="upload__later"><label class="check"><input class="check__box" type="checkbox" name="licencia_posterior"><span>Egreso este año: la entregaré después</span></label></div>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir archivo<span class="sr-only">: Licencia de enseñanza media</span><input class="upload__file" id="b-licencia" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-image"/></svg></span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="b-foto" type="file" name="foto" accept="image/jpeg,image/png"></label>
+        </div>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="error-archivo" data-estado-label="Error de formato o tamaño">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">2 de 4 listos</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="c-ced_anv-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="c-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf" aria-describedby="c-ced_anv-st"></label>
+        </div>
+        <div class="upload upload--error">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-alert"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <p class="upload__status" id="c-ced_rev-st"><svg class="i i--14" aria-hidden="true"><use href="#i-alert"/></svg><span>El archivo pesa más de 10 MB. Elige otro o toma una foto con menos resolución.</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir otro archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="c-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf" aria-invalid="true" aria-describedby="c-ced_rev-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">licencia-media.pdf, 420&nbsp;KB</span><p class="upload__status" id="c-licencia-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Licencia de enseñanza media</span><input class="upload__file" id="c-licencia" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-describedby="c-licencia-st"></label>
+        </div>
+        <div class="upload upload--error">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-alert"/></svg></span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            <p class="upload__status" id="c-foto-st"><svg class="i i--14" aria-hidden="true"><use href="#i-alert"/></svg><span>La fotografía debe ser una imagen JPG o PNG (no PDF). Elige otro archivo.</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir otro archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="c-foto" type="file" name="foto" accept="image/jpeg,image/png" aria-invalid="true" aria-describedby="c-foto-st"></label>
+        </div>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite">No pudimos usar 2 archivos: cédula de identidad (reverso) y fotografía tipo carnet.</div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="listo" data-estado-label="Listo (con reemplazar)">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">4 de 4 listos</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="d-ced_anv-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="d-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf" aria-describedby="d-ced_anv-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-reverso.jpg, 1,1&nbsp;MB</span><p class="upload__status" id="d-ced_rev-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="d-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf" aria-describedby="d-ced_rev-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">licencia-media.pdf, 420&nbsp;KB</span><p class="upload__status" id="d-licencia-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Licencia de enseñanza media</span><input class="upload__file" id="d-licencia" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-describedby="d-licencia-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">foto-carnet.jpg, 640&nbsp;KB</span><p class="upload__status" id="d-foto-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="d-foto" type="file" name="foto" accept="image/jpeg,image/png" aria-describedby="d-foto-st"></label>
+        </div>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="despues" data-estado-label="La entregaré después (licencia)">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Ingeniería Comercial</p>
+          <p>Vespertina, a distancia</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Ingeniería Comercial</strong>Vespertina, a distancia, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">3 listos, 1 la entregarás después</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="e-ced_anv-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="e-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf" aria-describedby="e-ced_anv-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-reverso.jpg, 1,1&nbsp;MB</span><p class="upload__status" id="e-ced_rev-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="e-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf" aria-describedby="e-ced_rev-st"></label>
+        </div>
+        <div class="upload upload--later">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-grad"/></svg></span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <p class="upload__status" id="e-licencia-st"><svg class="i i--14" aria-hidden="true"><use href="#i-clock"/></svg><span>La entregarás después</span></p>
+            <div class="upload__later"><label class="check"><input class="check__box" type="checkbox" name="licencia_posterior" checked><span>Egreso este año: la entregaré después</span></label></div>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir archivo<span class="sr-only">: Licencia de enseñanza media</span><input class="upload__file" id="e-licencia" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-describedby="e-licencia-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">foto-carnet.jpg, 640&nbsp;KB</span><p class="upload__status" id="e-foto-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="e-foto" type="file" name="foto" accept="image/jpeg,image/png" aria-describedby="e-foto-st"></label>
+        </div>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="subiendo" data-estado-label="Subiendo y en revisión">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">Subiendo documentos (3 de 4)…</span></div>
+        <div class="upload upload--scanning">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-id"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="f-ced_anv-st"><svg class="i i--14" aria-hidden="true"><use href="#i-shield"/></svg><span>Recibido, en revisión de seguridad…</span></p>
+          </div>
+        </div>
+        <div class="upload upload--scanning">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-id"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-reverso.jpg, 1,1&nbsp;MB</span><p class="upload__status" id="f-ced_rev-st"><svg class="i i--14" aria-hidden="true"><use href="#i-shield"/></svg><span>Recibido, en revisión de seguridad…</span></p>
+          </div>
+        </div>
+        <div class="upload">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-grad"/></svg></span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">licencia-media.pdf, 420&nbsp;KB</span><p class="upload__status" id="f-licencia-st"><svg class="i i--14" aria-hidden="true"><use href="#i-upload"/></svg><span>Subiendo… 60&nbsp;%</span></p>
+          </div>
+          <div class="upload__progress" role="progressbar" aria-label="Subida de Licencia de enseñanza media" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"><span style="transform: scaleX(0.60)"></span></div>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">foto-carnet.jpg, 640&nbsp;KB</span><p class="upload__status" id="f-foto-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="f-foto" type="file" name="foto" accept="image/jpeg,image/png" aria-describedby="f-foto-st"></label>
+        </div>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite">Subiendo licencia de enseñanza media, 60 %.</div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="faltan" data-estado-label="Faltan documentos (al continuar)">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <div class="error-summary flow-gap" role="alert" tabindex="-1" aria-labelledby="g-es">
+          <p class="error-summary__title" id="g-es">Faltan 2 documentos para continuar</p>
+          <ul><li><a class="link" href="#g-licencia">Licencia de enseñanza media: súbela o marca que la entregarás después</a></li><li><a class="link" href="#g-foto">Fotografía tipo carnet: falta subirla</a></li></ul>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">2 de 4 listos</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="g-ced_anv-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="g-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf" aria-describedby="g-ced_anv-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-reverso.jpg, 1,1&nbsp;MB</span><p class="upload__status" id="g-ced_rev-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="g-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf" aria-describedby="g-ced_rev-st"></label>
+        </div>
+        <div class="upload upload--error">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-alert"/></svg></span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <p class="upload__status" id="g-licencia-st"><svg class="i i--14" aria-hidden="true"><use href="#i-alert"/></svg><span>Sube la licencia o marca que la entregarás después.</span></p>
+            <div class="upload__later"><label class="check"><input class="check__box" type="checkbox" name="licencia_posterior"><span>Egreso este año: la entregaré después</span></label></div>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir archivo<span class="sr-only">: Licencia de enseñanza media</span><input class="upload__file" id="g-licencia" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-invalid="true" aria-describedby="g-licencia-st"></label>
+        </div>
+        <div class="upload upload--error">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-alert"/></svg></span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            <p class="upload__status" id="g-foto-st"><svg class="i i--14" aria-hidden="true"><use href="#i-alert"/></svg><span>Este documento es obligatorio.</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="g-foto" type="file" name="foto" accept="image/jpeg,image/png" aria-invalid="true" aria-describedby="g-foto-st"></label>
+        </div>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="extraordinaria" data-estado-label="Vía extraordinaria">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Derecho</p>
+          <p>Vespertina, presencial</p>
+          <p>Vía extraordinaria</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Derecho</strong>Vespertina, presencial, vía extraordinaria</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">3 de 5 listos</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="h-ced_anv-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="h-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf" aria-describedby="h-ced_anv-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-reverso.jpg, 1,1&nbsp;MB</span><p class="upload__status" id="h-ced_rev-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="h-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf" aria-describedby="h-ced_rev-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media</p>
+            <p class="upload__meta">Puedes descargarla gratis en el sitio de certificados en línea del Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">licencia-media.pdf, 420&nbsp;KB</span><p class="upload__status" id="h-licencia-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Licencia de enseñanza media</span><input class="upload__file" id="h-licencia" type="file" name="licencia" accept="image/jpeg,image/png,application/pdf" aria-describedby="h-licencia-st"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-file-text"/></svg></span>
+          <div>
+            <p class="upload__name">Concentración de notas de educación superior (convalidación)</p>
+            <p class="upload__meta">De la institución de educación superior donde aprobaste asignaturas; se usa para convalidar. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir archivo<span class="sr-only">: Concentración de notas de educación superior (convalidación)</span><input class="upload__file" id="h-notas_es" type="file" name="notas_es" accept="image/jpeg,image/png,application/pdf"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-image"/></svg></span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="h-foto" type="file" name="foto" accept="image/jpeg,image/png"></label>
+        </div>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="prosecucion" data-estado-label="Vía prosecución de estudios">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Auditoría</p>
+          <p>Vespertina, a distancia</p>
+          <p>Vía prosecución de estudios</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Auditoría</strong>Vespertina, a distancia, vía prosecución de estudios</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">2 de 4 listos</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (anverso)</p>
+            <p class="upload__meta">El lado con tu foto. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-anverso.jpg, 1,2&nbsp;MB</span><p class="upload__status" id="i-ced_anv-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Cédula de identidad (anverso)</span><input class="upload__file" id="i-ced_anv" type="file" name="ced_anv" accept="image/jpeg,image/png,application/pdf" aria-describedby="i-ced_anv-st"></label>
+        </div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Cédula de identidad (reverso)</p>
+            <p class="upload__meta">El lado con el código de barras. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">cedula-reverso.jpg, 1,1&nbsp;MB</span><p class="upload__status" id="i-ced_rev-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Cédula de identidad (reverso)</span><input class="upload__file" id="i-ced_rev" type="file" name="ced_rev" accept="image/jpeg,image/png,application/pdf" aria-describedby="i-ced_rev-st"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-grad"/></svg></span>
+          <div>
+            <p class="upload__name">Certificado de título profesional y/o grado</p>
+            <p class="upload__meta">Emitido por la institución donde te titulaste o graduaste. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir archivo<span class="sr-only">: Certificado de título profesional y/o grado</span><input class="upload__file" id="i-titulo" type="file" name="titulo" accept="image/jpeg,image/png,application/pdf"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-image"/></svg></span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="i-foto" type="file" name="foto" accept="image/jpeg,image/png"></label>
+        </div>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="pasaporte" data-estado-label="Pasaporte o DNI">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-03-tus-datos.html">Tus datos</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Trabajo Social</p>
+          <p>Vespertina, a distancia</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Sube tus documentos</h1>
+        <p class="lede">Una foto o PDF por documento, hasta 10&nbsp;MB cada uno. Que se lea completo, sin reflejos ni partes cortadas.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Trabajo Social</strong>Vespertina, a distancia, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-05-revisar-y-enviar.html" method="post" enctype="multipart/form-data" novalidate>
+          <div class="doc-count"><h2 class="doc-count__title">Documentos obligatorios</h2><span class="doc-count__meta" aria-live="polite">1 de 3 listos</span></div>
+        <div class="upload upload--ready">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+          <div>
+            <p class="upload__name">Pasaporte o DNI (página de datos)</p>
+            <p class="upload__meta">La página con tu foto y tus datos. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            <span class="upload__fname" translate="no">dni-pagina-datos.jpg, 1,8&nbsp;MB</span><p class="upload__status" id="j-pasaporte-st"><svg class="i i--14" aria-hidden="true"><use href="#i-check"/></svg><span>Listo para enviar</span></p>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Cambiar archivo<span class="sr-only">: Pasaporte o DNI (página de datos)</span><input class="upload__file" id="j-pasaporte" type="file" name="pasaporte" accept="image/jpeg,image/png,application/pdf" aria-describedby="j-pasaporte-st"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-grad"/></svg></span>
+          <div>
+            <p class="upload__name">Licencia de enseñanza media o convalidación</p>
+            <p class="upload__meta">Si terminaste la enseñanza media fuera de Chile, sube el reconocimiento o la convalidación de tus estudios ante el Mineduc. JPG, PNG o PDF, hasta 10&nbsp;MB.</p>
+            
+            <div class="upload__later"><label class="check"><input class="check__box" type="checkbox" name="licencia_ext_posterior"><span>Egreso este año: la entregaré después</span></label></div>
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir archivo<span class="sr-only">: Licencia de enseñanza media o convalidación</span><input class="upload__file" id="j-licencia_ext" type="file" name="licencia_ext" accept="image/jpeg,image/png,application/pdf"></label>
+        </div>
+        <div class="upload upload--empty">
+          <span class="upload__icon" aria-hidden="true"><svg class="i i--20" aria-hidden="true"><use href="#i-image"/></svg></span>
+          <div>
+            <p class="upload__name">Fotografía tipo carnet</p>
+            <p class="upload__meta">Una imagen de tu rostro, de frente. Solo JPG o PNG (no PDF), hasta 10&nbsp;MB.</p>
+            
+          </div>
+          <label class="btn btn--secondary btn--sm upload__pick"><svg class="i" aria-hidden="true"><use href="#i-upload"/></svg>Elegir archivo<span class="sr-only">: Fotografía tipo carnet</span><input class="upload__file" id="j-foto" type="file" name="foto" accept="image/jpeg,image/png"></label>
+        </div>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve tus documentos. Los revisamos por seguridad antes de abrirlos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: revisas todo y envías.</strong> Ahí aplicas tu convenio o código de descuento.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-03-tus-datos.html">Volver</a>
+          <a class="btn btn--primary" href="pub-05-revisar-y-enviar.html">Continuar a revisar</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="pub-foot">
+  <div class="pub-foot__inner">
+    <span>Instituto Demo, Admisión 2027</span>
+    <span class="credit">Powered by <span translate="no">Ticnology</span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></span>
+  </div>
+</footer>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

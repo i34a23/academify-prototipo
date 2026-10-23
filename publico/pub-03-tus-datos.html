@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="es-CL" class="has-cta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<title>Tus datos · Instituto Demo</title>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/theme.css">
+<script src="../js/theme.js"></script>
+</head>
+<body class="is-public">
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="i-pencil" viewBox="0 0 24 24"><path d="M21.17 6.81a1 1 0 0 0-3.98-3.98L3.84 16.17a2 2 0 0 0-.5.83l-1.32 4.35a.5.5 0 0 0 .62.62l4.35-1.32a2 2 0 0 0 .83-.5z"/><path d="m15 5 4 4"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></symbol>
+<symbol id="i-triangle" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+<symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-chev-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-chev-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+<symbol id="i-chev-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+<symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+<symbol id="i-panel" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></symbol>
+<symbol id="i-inbox" viewBox="0 0 24 24"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></symbol>
+<symbol id="i-file-text" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+<symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+<symbol id="i-id" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M5 16c.6-1.5 1.8-2 3-2s2.4.5 3 2"/><path d="M14 10h5"/><path d="M14 14h3"/></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+<symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+<symbol id="i-zoom-in" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></symbol>
+<symbol id="i-zoom-out" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6"/></symbol>
+<symbol id="i-rotate" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-dashboard" viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M10.27 21a2 2 0 0 0 3.46 0"/><path d="M3.26 15.33A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.67C19.41 13.96 18 12.5 18 8A6 6 0 0 0 6 8c0 4.5-1.41 5.96-2.74 7.33"/></symbol>
+<symbol id="i-grad" viewBox="0 0 24 24"><path d="M21.42 10.92a1 1 0 0 0-.02-1.84L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.83l8.57 3.91a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+<symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.7 8.7a2.43 2.43 0 0 0 3.42 0l6.58-6.58a2.43 2.43 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5"/></symbol>
+<symbol id="i-server" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></symbol>
+<symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></symbol>
+<symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.53a2 2 0 0 1-.21.9L4.72 20.55A1 1 0 0 0 5.62 22h12.76a1 1 0 0 0 .9-1.45l-5.07-10.12a2 2 0 0 1-.21-.9V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></symbol>
+<symbol id="i-more" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></symbol>
+<symbol id="i-keyboard" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/><path d="M18 8h.01"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/><path d="M7 16h10"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M8.5 16.43a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 4.18-2.65"/><path d="M19 12.86a10 10 0 0 0-2.18-1.42"/><path d="M22 8.82a15 15 0 0 0-11.29-3.76"/><path d="M5 12.86a10 10 0 0 1 5.17-2.69"/><path d="m2 2 20 20"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M14.54 21.69a.5.5 0 0 0 .94-.03l6.5-19a.5.5 0 0 0-.64-.64l-19 6.5a.5.5 0 0 0-.03.94l7.93 3.18a2 2 0 0 1 1.11 1.11z"/><path d="m21.85 2.15-10.94 10.94"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+<symbol id="i-unlink" viewBox="0 0 24 24"><path d="m18.84 12.25 1.72-1.71h-.02a5.004 5.004 0 0 0-.12-7.07 5.006 5.006 0 0 0-6.95 0l-1.72 1.71"/><path d="m5.17 11.75-1.71 1.71a5.004 5.004 0 0 0 .12 7.07 5.006 5.006 0 0 0 6.95 0l1.71-1.71"/><path d="M8 2v3"/><path d="M2 8h3"/><path d="M16 19v3"/><path d="M19 16h3"/></symbol>
+<symbol id="i-pen-line" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></symbol>
+<symbol id="i-file-check" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></symbol>
+<symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></symbol>
+<symbol id="i-circle-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+<symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></symbol>
+<symbol id="i-paperclip" viewBox="0 0 24 24"><path d="m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551"/></symbol>
+<symbol id="i-receipt" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></symbol>
+<symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></symbol>
+<symbol id="i-key" viewBox="0 0 24 24"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5"/></symbol>
+<symbol id="i-smartphone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="i-log-in" viewBox="0 0 24 24"><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/></symbol>
+<symbol id="i-user-x" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m17 8 5 5"/><path d="m22 8-5 5"/></symbol>
+<symbol id="i-compass" viewBox="0 0 24 24"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></symbol>
+<symbol id="i-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></symbol>
+<symbol id="i-signature" viewBox="0 0 24 24"><path d="m21 17-2.156-1.868A.5.5 0 0 0 18 15.5v.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1c0-2.545-3.991-3.97-8.5-4a1 1 0 0 0 0 5c4.153 0 4.745-11.295 5.708-13.5a2.5 2.5 0 1 1 3.31 3.284"/><path d="M3 21h18"/></symbol>
+<symbol id="i-mail-x" viewBox="0 0 24 24"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h9"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="m17 17 4 4"/><path d="m21 17-4 4"/></symbol>
+<symbol id="i-file-search" viewBox="0 0 24 24"><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M4.268 21a2 2 0 0 0 1.727 1H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3"/><path d="m9 18-1.5-1.5"/><circle cx="5" cy="14" r="3"/></symbol>
+<symbol id="i-lock-open" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></symbol>
+<symbol id="i-move-horizontal" viewBox="0 0 24 24"><path d="m18 8 4 4-4 4"/><path d="M2 12h20"/><path d="m6 8-4 4 4 4"/></symbol>
+<symbol id="i-file-x" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m14.5 12.5-5 5"/><path d="m9.5 12.5 5 5"/></symbol>
+<symbol id="i-scan-search" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></symbol>
+<symbol id="i-text-cursor" viewBox="0 0 24 24"><path d="M17 22h-1a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h1"/><path d="M7 22h1a4 4 0 0 0 4-4v-1"/><path d="M7 2h1a4 4 0 0 1 4 4v1"/></symbol>
+<symbol id="i-percent" viewBox="0 0 24 24"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+<symbol id="i-unlock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></symbol>
+<symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></symbol>
+<symbol id="i-braces" viewBox="0 0 24 24"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></symbol>
+<symbol id="i-list" viewBox="0 0 24 24"><path d="M3 12h.01"/><path d="M3 18h.01"/><path d="M3 6h.01"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M8 6h13"/></symbol>
+<symbol id="i-user-plus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></symbol>
+</svg>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="pub-head pub-head--sticky">
+  <div class="pub-head__inner">
+    <img src="../assets/academify-logo.svg" alt="academify" width="115" height="26" fetchpriority="high" translate="no">
+    <p class="pub-head__inst">Instituto Demo<span class="pub-head__process">Postulación Admisión 2027</span></p>
+    <a class="pub-head__help link" href="mailto:admision@institutodemo.cl"><svg class="i i--20" aria-hidden="true"><use href="#i-mail"/></svg><span class="pub-head__help-long">admision@institutodemo.cl</span><span class="pub-head__help-short">Ayuda</span></a>
+  </div>
+  <div class="pub-head__steps pub-narrow-only">
+    <nav class="steps pub-head__steps-inner" aria-label="Avance de la postulación">
+      <div class="steps__row">
+        <span class="steps__now" id="paso-actual">Paso 2 de 4: Tus datos</span>
+        <span>Sigue: documentos</span>
+      </div>
+      <div class="steps__bars" role="img" aria-labelledby="paso-actual"><span class="is-done"></span><span class="is-now"></span><span></span><span></span></div>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido" class="pub-main">
+  <div data-estado="chileno" data-estado-label="Chileno, en curso">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Tus datos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Paso 3 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Tus datos</h1>
+        <p class="lede">Escríbelos tal como aparecen en tu cédula de identidad.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-04-documentos.html" method="post" novalidate>
+          <fieldset class="section">
+          <legend>Identidad</legend>
+          <fieldset class="fieldgroup">
+            <legend class="field__label">Nacionalidad</legend>
+            <div class="radio-row"><label class="radio-card"><input class="radio-card__input" type="radio" name="nacionalidad" value="Chilena" checked> Chilena</label><label class="radio-card"><input class="radio-card__input" type="radio" name="nacionalidad" value="Extranjera"> Extranjera</label></div>
+          </fieldset>
+          <div class="field">
+            <label class="field__label" for="a-rut">RUT</label>
+            <input class="input input--code" id="a-rut" name="rut" type="text" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false" translate="no" value="20.345.128-8" placeholder="Ej.: 12.345.678-5…" aria-describedby="a-rut-hint">
+            <p class="field__hint" id="a-rut-hint">Con o sin puntos. Si termina en K, escríbela.</p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="a-serie">Número de serie de la cédula</label>
+            <input class="input input--code" id="a-serie" name="serie" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" translate="no" value="527381946" placeholder="Ej.: 527381946…" aria-describedby="a-serie-hint">
+            <p class="field__hint" id="a-serie-hint">Está en el anverso como «Número documento». Lo revisamos con la foto de tu cédula y lo usarás al firmar tu contrato.</p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="a-nombres">Nombres</label>
+            <input class="input" id="a-nombres" name="nombres" type="text" autocomplete="given-name" value="Camila Andrea">
+          </div>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="a-ap1">Primer apellido</label>
+            <input class="input" id="a-ap1" name="apellido1" type="text" autocomplete="family-name" value="Araya">
+          </div>
+          <div class="field">
+            <label class="field__label" for="a-ap2">Segundo apellido <span class="field__opt">(opcional)</span></label>
+            <input class="input" id="a-ap2" name="apellido2" type="text" autocomplete="additional-name" value="Rojas">
+          </div>
+          </div>
+          <fieldset class="fieldgroup" aria-describedby="a-fecha-hint">
+            <legend class="field__label">Fecha de nacimiento</legend>
+            <div class="date3">
+              <div class="field"><label class="field__label" for="a-dia">Día</label><input class="input tnum" id="a-dia" name="nacimiento_dia" inputmode="numeric" autocomplete="bday-day" maxlength="2" value="14" placeholder="14…"></div>
+              <div class="field"><label class="field__label" for="a-mes">Mes</label><input class="input tnum" id="a-mes" name="nacimiento_mes" inputmode="numeric" autocomplete="bday-month" maxlength="2" value="05" placeholder="05…"></div>
+              <div class="field"><label class="field__label" for="a-fecha">Año</label><input class="input tnum" id="a-fecha" name="nacimiento_anio" inputmode="numeric" autocomplete="bday-year" maxlength="4" value="2005" placeholder="2005…"></div>
+            </div>
+            <p class="field__hint" id="a-fecha-hint">Debes tener 18 años o más.</p>
+          </fieldset>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="a-genero">Género</label>
+            <select class="select" id="a-genero" name="genero" autocomplete="sex"><option value="">Elige una opción</option><option selected>Femenino</option><option>Masculino</option><option>No binario</option><option>Prefiero no decirlo</option></select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="a-civil">Estado civil</label>
+            <select class="select" id="a-civil" name="estado_civil" autocomplete="off"><option value="">Elige una opción</option><option selected>Soltero/a</option><option>Casado/a</option><option>Conviviente civil</option><option>Divorciado/a</option><option>Viudo/a</option></select>
+          </div>
+          </div>
+          </fieldset>
+          <fieldset class="section">
+          <legend>Contacto</legend>
+          <div class="field">
+            <label class="field__label" for="a-correo">Correo electrónico</label>
+            <input class="input" id="a-correo" name="correo" type="email" autocomplete="email" spellcheck="false" value="camila.araya@correo.cl" placeholder="Ej.: nombre@correo.cl…" aria-describedby="a-correo-hint">
+            <p class="field__hint" id="a-correo-hint">Aquí te llegan el folio, tu contrato y el enlace de pago.</p>
+          </div>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="a-cel">Celular</label>
+            <div class="combo"><span class="combo__prefix" aria-hidden="true">+56</span><input class="combo__input tnum" id="a-cel" name="celular" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="9 1234 5678…"></div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="a-fijo">Teléfono fijo <span class="field__opt">(opcional)</span></label>
+            <div class="combo"><span class="combo__prefix" aria-hidden="true">+56</span><input class="combo__input tnum" id="a-fijo" name="fijo" type="tel" inputmode="tel" autocomplete="off" placeholder="2 2345 6789…"></div>
+          </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="a-nacionalidad_texto">Nacionalidad <span class="field__opt">(opcional)</span></label>
+            <input class="input" id="a-nacionalidad_texto" name="nacionalidad_texto" type="text" autocomplete="off" placeholder="Ej.: chilena…" aria-describedby="a-nacionalidad_texto-hint">
+            <p class="field__hint" id="a-nacionalidad_texto-hint">Tal como aparecerá en tu contrato.</p>
+          </div>
+          </fieldset>
+          <fieldset class="section">
+          <legend>Dirección</legend>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="a-region">Región</label>
+            <select class="select" id="a-region" name="region" autocomplete="address-level1"><option value="">Elige tu región</option><option>Metropolitana de Santiago</option><option>Valparaíso</option><option>Biobío</option><option>La Araucanía</option><option>Antofagasta</option></select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="a-comuna">Comuna</label>
+            <select class="select" id="a-comuna" name="comuna" autocomplete="address-level2" disabled aria-describedby="a-comuna-wait"><option>Elige primero la región</option></select>
+            <p class="note" id="a-comuna-wait"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span>Se habilita al elegir la región.</span></p>
+          </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="a-calle">Calle, número y depto.</label>
+            <input class="input" id="a-calle" name="direccion" type="text" autocomplete="street-address" placeholder="Ej.: Av. Irarrázaval 3120, depto. 402…">
+          </div>
+          </fieldset>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve estos datos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: subes tus documentos.</strong> Ten a mano tu cédula.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-02-programa.html">Volver</a>
+          <a class="btn btn--primary" href="pub-04-documentos.html">Continuar a documentos</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="extranjero-rut" data-estado-label="Extranjero con residencia (RUT)">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Tus datos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Paso 3 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Ingeniería Comercial</p>
+          <p>Vespertina, a distancia</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Tus datos</h1>
+        <p class="lede">Escríbelos tal como aparecen en tu cédula de extranjero.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Ingeniería Comercial</strong>Vespertina, a distancia, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-04-documentos.html" method="post" novalidate>
+          <fieldset class="section">
+          <legend>Identidad</legend>
+          <fieldset class="fieldgroup">
+            <legend class="field__label">Nacionalidad</legend>
+            <div class="radio-row"><label class="radio-card"><input class="radio-card__input" type="radio" name="nacionalidad" value="Chilena"> Chilena</label><label class="radio-card"><input class="radio-card__input" type="radio" name="nacionalidad" value="Extranjera" checked> Extranjera</label></div>
+          </fieldset>
+          <fieldset class="fieldgroup" aria-describedby="b-residencia-hint">
+            <legend class="field__label">¿Tienes residencia en Chile?</legend>
+            <div class="radio-stack"><label class="radio-card"><input class="radio-card__input" type="radio" name="residencia" value="Sí, tengo cédula de extranjero" checked> Sí, tengo cédula de extranjero</label><label class="radio-card"><input class="radio-card__input" type="radio" name="residencia" value="Está en trámite"> Está en trámite</label><label class="radio-card"><input class="radio-card__input" type="radio" name="residencia" value="No"> No</label></div>
+            <p class="field__hint" id="b-residencia-hint">Con cédula de extranjero usas tu RUT. Si está en trámite o no tienes residencia, usas tu pasaporte o DNI.</p>
+          </fieldset>
+          <div class="field">
+            <label class="field__label" for="b-rut">RUT (cédula de extranjero)</label>
+            <input class="input input--code" id="b-rut" name="rut" type="text" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false" translate="no" value="24.867.531-4" placeholder="Ej.: 12.345.678-5…" aria-describedby="b-rut-hint">
+            <p class="field__hint" id="b-rut-hint">Con o sin puntos. Si termina en K, escríbela.</p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="b-serie">Número de serie de la cédula</label>
+            <input class="input input--code" id="b-serie" name="serie" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" translate="no" value="601457328" placeholder="Ej.: 527381946…" aria-describedby="b-serie-hint">
+            <p class="field__hint" id="b-serie-hint">Está en el anverso como «Número documento». Lo revisamos con la foto de tu cédula y lo usarás al firmar tu contrato.</p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="b-nombres">Nombres</label>
+            <input class="input" id="b-nombres" name="nombres" type="text" autocomplete="given-name" value="Carlos Eduardo">
+          </div>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="b-ap1">Primer apellido</label>
+            <input class="input" id="b-ap1" name="apellido1" type="text" autocomplete="family-name" value="Ramírez">
+          </div>
+          <div class="field">
+            <label class="field__label" for="b-ap2">Segundo apellido <span class="field__opt">(opcional)</span></label>
+            <input class="input" id="b-ap2" name="apellido2" type="text" autocomplete="additional-name" value="Quintero">
+          </div>
+          </div>
+          <fieldset class="fieldgroup" aria-describedby="b-fecha-hint">
+            <legend class="field__label">Fecha de nacimiento</legend>
+            <div class="date3">
+              <div class="field"><label class="field__label" for="b-dia">Día</label><input class="input tnum" id="b-dia" name="nacimiento_dia" inputmode="numeric" autocomplete="bday-day" maxlength="2" placeholder="14…"></div>
+              <div class="field"><label class="field__label" for="b-mes">Mes</label><input class="input tnum" id="b-mes" name="nacimiento_mes" inputmode="numeric" autocomplete="bday-month" maxlength="2" placeholder="05…"></div>
+              <div class="field"><label class="field__label" for="b-fecha">Año</label><input class="input tnum" id="b-fecha" name="nacimiento_anio" inputmode="numeric" autocomplete="bday-year" maxlength="4" placeholder="2005…"></div>
+            </div>
+            <p class="field__hint" id="b-fecha-hint">Debes tener 18 años o más.</p>
+          </fieldset>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="b-genero">Género</label>
+            <select class="select" id="b-genero" name="genero" autocomplete="sex"><option value="">Elige una opción</option><option>Femenino</option><option>Masculino</option><option>No binario</option><option>Prefiero no decirlo</option></select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="b-civil">Estado civil</label>
+            <select class="select" id="b-civil" name="estado_civil" autocomplete="off"><option value="">Elige una opción</option><option>Soltero/a</option><option>Casado/a</option><option>Conviviente civil</option><option>Divorciado/a</option><option>Viudo/a</option></select>
+          </div>
+          </div>
+          </fieldset>
+          <fieldset class="section">
+          <legend>Contacto</legend>
+          <div class="field">
+            <label class="field__label" for="b-correo">Correo electrónico</label>
+            <input class="input" id="b-correo" name="correo" type="email" autocomplete="email" spellcheck="false" value="carlos.ramirez@correo.cl" placeholder="Ej.: nombre@correo.cl…" aria-describedby="b-correo-hint">
+            <p class="field__hint" id="b-correo-hint">Aquí te llegan el folio, tu contrato y el enlace de pago.</p>
+          </div>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="b-cel">Celular</label>
+            <div class="combo"><span class="combo__prefix" aria-hidden="true">+56</span><input class="combo__input tnum" id="b-cel" name="celular" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="9 1234 5678…"></div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="b-fijo">Teléfono fijo <span class="field__opt">(opcional)</span></label>
+            <div class="combo"><span class="combo__prefix" aria-hidden="true">+56</span><input class="combo__input tnum" id="b-fijo" name="fijo" type="tel" inputmode="tel" autocomplete="off" placeholder="2 2345 6789…"></div>
+          </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="b-nacionalidad_texto">Nacionalidad <span class="field__opt">(opcional)</span></label>
+            <input class="input" id="b-nacionalidad_texto" name="nacionalidad_texto" type="text" autocomplete="off" placeholder="Ej.: chilena…" aria-describedby="b-nacionalidad_texto-hint">
+            <p class="field__hint" id="b-nacionalidad_texto-hint">Tal como aparecerá en tu contrato.</p>
+          </div>
+          </fieldset>
+          <fieldset class="section">
+          <legend>Dirección</legend>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="b-region">Región</label>
+            <select class="select" id="b-region" name="region" autocomplete="address-level1"><option value="">Elige tu región</option><option>Metropolitana de Santiago</option><option>Valparaíso</option><option>Biobío</option><option>La Araucanía</option><option>Antofagasta</option></select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="b-comuna">Comuna</label>
+            <select class="select" id="b-comuna" name="comuna" autocomplete="address-level2" disabled aria-describedby="b-comuna-wait"><option>Elige primero la región</option></select>
+            <p class="note" id="b-comuna-wait"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span>Se habilita al elegir la región.</span></p>
+          </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="b-calle">Calle, número y depto.</label>
+            <input class="input" id="b-calle" name="direccion" type="text" autocomplete="street-address" placeholder="Ej.: Av. Irarrázaval 3120, depto. 402…">
+          </div>
+          </fieldset>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve estos datos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: subes tus documentos.</strong> Ten a mano tu cédula.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-02-programa.html">Volver</a>
+          <a class="btn btn--primary" href="pub-04-documentos.html">Continuar a documentos</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="extranjero-dni" data-estado-label="Extranjero sin residencia (DNI)">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Tus datos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Paso 3 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Trabajo Social</p>
+          <p>Vespertina, a distancia</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Tus datos</h1>
+        <p class="lede">Escríbelos tal como aparecen en tu pasaporte o DNI.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Trabajo Social</strong>Vespertina, a distancia, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-04-documentos.html" method="post" novalidate>
+          <fieldset class="section">
+          <legend>Identidad</legend>
+          <fieldset class="fieldgroup">
+            <legend class="field__label">Nacionalidad</legend>
+            <div class="radio-row"><label class="radio-card"><input class="radio-card__input" type="radio" name="nacionalidad" value="Chilena"> Chilena</label><label class="radio-card"><input class="radio-card__input" type="radio" name="nacionalidad" value="Extranjera" checked> Extranjera</label></div>
+          </fieldset>
+          <fieldset class="fieldgroup" aria-describedby="c-residencia-hint">
+            <legend class="field__label">¿Tienes residencia en Chile?</legend>
+            <div class="radio-stack"><label class="radio-card"><input class="radio-card__input" type="radio" name="residencia" value="Sí, tengo cédula de extranjero"> Sí, tengo cédula de extranjero</label><label class="radio-card"><input class="radio-card__input" type="radio" name="residencia" value="Está en trámite"> Está en trámite</label><label class="radio-card"><input class="radio-card__input" type="radio" name="residencia" value="No" checked> No</label></div>
+            <p class="field__hint" id="c-residencia-hint">Con cédula de extranjero usas tu RUT. Si está en trámite o no tienes residencia, usas tu pasaporte o DNI.</p>
+          </fieldset>
+          <fieldset class="fieldgroup">
+            <legend class="field__label">Documento</legend>
+            <div class="radio-row"><label class="radio-card"><input class="radio-card__input" type="radio" name="doctipo" value="Pasaporte"> Pasaporte</label><label class="radio-card"><input class="radio-card__input" type="radio" name="doctipo" value="DNI" checked> DNI</label></div>
+          </fieldset>
+          <div class="field">
+            <label class="field__label" for="c-docnum">Número de documento</label>
+            <input class="input input--code" id="c-docnum" name="documento" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" translate="no" value="47281936" placeholder="Ej.: 47281936…" aria-describedby="c-docnum-hint">
+            <p class="field__hint" id="c-docnum-hint">Solo letras, números o guiones, tal como aparece en tu documento.</p>
+          </div>
+          <div class="alert alert--info">
+            <svg class="i i--20" aria-hidden="true"><use href="#i-info"/></svg>
+            <div><p class="alert__title">Tu contrato no se firma en línea</p><p class="alert__body">Sin cédula chilena no podemos verificar tu identidad para la firma en línea. Cuando aprobemos tu postulación, te contamos cómo firmarlo con admisión.</p></div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="c-nombres">Nombres</label>
+            <input class="input" id="c-nombres" name="nombres" type="text" autocomplete="given-name" value="Lucía Fernanda">
+          </div>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="c-ap1">Primer apellido</label>
+            <input class="input" id="c-ap1" name="apellido1" type="text" autocomplete="family-name" value="Mendoza">
+          </div>
+          <div class="field">
+            <label class="field__label" for="c-ap2">Segundo apellido <span class="field__opt">(opcional)</span></label>
+            <input class="input" id="c-ap2" name="apellido2" type="text" autocomplete="additional-name" value="Paredes">
+          </div>
+          </div>
+          <fieldset class="fieldgroup" aria-describedby="c-fecha-hint">
+            <legend class="field__label">Fecha de nacimiento</legend>
+            <div class="date3">
+              <div class="field"><label class="field__label" for="c-dia">Día</label><input class="input tnum" id="c-dia" name="nacimiento_dia" inputmode="numeric" autocomplete="bday-day" maxlength="2" placeholder="14…"></div>
+              <div class="field"><label class="field__label" for="c-mes">Mes</label><input class="input tnum" id="c-mes" name="nacimiento_mes" inputmode="numeric" autocomplete="bday-month" maxlength="2" placeholder="05…"></div>
+              <div class="field"><label class="field__label" for="c-fecha">Año</label><input class="input tnum" id="c-fecha" name="nacimiento_anio" inputmode="numeric" autocomplete="bday-year" maxlength="4" placeholder="2005…"></div>
+            </div>
+            <p class="field__hint" id="c-fecha-hint">Debes tener 18 años o más.</p>
+          </fieldset>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="c-genero">Género</label>
+            <select class="select" id="c-genero" name="genero" autocomplete="sex"><option value="">Elige una opción</option><option>Femenino</option><option>Masculino</option><option>No binario</option><option>Prefiero no decirlo</option></select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="c-civil">Estado civil</label>
+            <select class="select" id="c-civil" name="estado_civil" autocomplete="off"><option value="">Elige una opción</option><option>Soltero/a</option><option>Casado/a</option><option>Conviviente civil</option><option>Divorciado/a</option><option>Viudo/a</option></select>
+          </div>
+          </div>
+          </fieldset>
+          <fieldset class="section">
+          <legend>Contacto</legend>
+          <div class="field">
+            <label class="field__label" for="c-correo">Correo electrónico</label>
+            <input class="input" id="c-correo" name="correo" type="email" autocomplete="email" spellcheck="false" value="lucia.mendoza@correo.cl" placeholder="Ej.: nombre@correo.cl…" aria-describedby="c-correo-hint">
+            <p class="field__hint" id="c-correo-hint">Aquí te llegan el folio, tu contrato y el enlace de pago.</p>
+          </div>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="c-cel">Celular</label>
+            <div class="combo"><span class="combo__prefix" aria-hidden="true">+56</span><input class="combo__input tnum" id="c-cel" name="celular" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="9 1234 5678…"></div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="c-fijo">Teléfono fijo <span class="field__opt">(opcional)</span></label>
+            <div class="combo"><span class="combo__prefix" aria-hidden="true">+56</span><input class="combo__input tnum" id="c-fijo" name="fijo" type="tel" inputmode="tel" autocomplete="off" placeholder="2 2345 6789…"></div>
+          </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="c-nacionalidad_texto">Nacionalidad <span class="field__opt">(opcional)</span></label>
+            <input class="input" id="c-nacionalidad_texto" name="nacionalidad_texto" type="text" autocomplete="off" value="peruana" placeholder="Ej.: chilena…" aria-describedby="c-nacionalidad_texto-hint">
+            <p class="field__hint" id="c-nacionalidad_texto-hint">Tal como aparecerá en tu contrato.</p>
+          </div>
+          </fieldset>
+          <fieldset class="section">
+          <legend>Dirección</legend>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="c-region">Región</label>
+            <select class="select" id="c-region" name="region" autocomplete="address-level1"><option value="">Elige tu región</option><option>Metropolitana de Santiago</option><option>Valparaíso</option><option>Biobío</option><option>La Araucanía</option><option>Antofagasta</option></select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="c-comuna">Comuna</label>
+            <select class="select" id="c-comuna" name="comuna" autocomplete="address-level2" disabled aria-describedby="c-comuna-wait"><option>Elige primero la región</option></select>
+            <p class="note" id="c-comuna-wait"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span>Se habilita al elegir la región.</span></p>
+          </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="c-calle">Calle, número y depto.</label>
+            <input class="input" id="c-calle" name="direccion" type="text" autocomplete="street-address" placeholder="Ej.: Av. Irarrázaval 3120, depto. 402…">
+          </div>
+          </fieldset>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve estos datos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: subes tus documentos.</strong> Ten a mano tu cédula.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-02-programa.html">Volver</a>
+          <a class="btn btn--primary" href="pub-04-documentos.html">Continuar a documentos</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="errores" data-estado-label="Errores por campo">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Tus datos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Paso 3 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Tus datos</h1>
+        <p class="lede">Escríbelos tal como aparecen en tu cédula de identidad.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <div class="error-summary flow-gap" role="alert" tabindex="-1" aria-labelledby="d-es-title">
+          <p class="error-summary__title" id="d-es-title">Revisa 4 datos para continuar</p>
+          <ul><li><a class="link" href="#d-rut">RUT: el dígito verificador no coincide</a></li><li><a class="link" href="#d-fecha">Fecha de nacimiento: debes tener 18 años o más</a></li><li><a class="link" href="#d-cel">Celular: faltan dígitos</a></li><li><a class="link" href="#d-comuna">Comuna: no pertenece a la región elegida</a></li></ul>
+        </div>
+        <form action="pub-04-documentos.html" method="post" novalidate>
+          <fieldset class="section">
+          <legend>Identidad</legend>
+          <fieldset class="fieldgroup">
+            <legend class="field__label">Nacionalidad</legend>
+            <div class="radio-row"><label class="radio-card"><input class="radio-card__input" type="radio" name="nacionalidad" value="Chilena" checked> Chilena</label><label class="radio-card"><input class="radio-card__input" type="radio" name="nacionalidad" value="Extranjera"> Extranjera</label></div>
+          </fieldset>
+          <div class="field">
+            <label class="field__label" for="d-rut">RUT</label>
+            <input class="input input--code" id="d-rut" name="rut" type="text" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false" translate="no" value="20.345.128-7" placeholder="Ej.: 12.345.678-5…" aria-invalid="true" aria-describedby="d-rut-error d-rut-hint">
+            <p class="field__error" id="d-rut-error"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg><span>Este RUT no es válido: el dígito después del guion no coincide. Revísalo en tu cédula.</span></p>
+            <p class="field__hint" id="d-rut-hint">Con o sin puntos. Si termina en K, escríbela.</p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="d-serie">Número de serie de la cédula</label>
+            <input class="input input--code" id="d-serie" name="serie" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" translate="no" value="527381946" placeholder="Ej.: 527381946…" aria-describedby="d-serie-hint">
+            <p class="field__hint" id="d-serie-hint">Está en el anverso como «Número documento». Lo revisamos con la foto de tu cédula y lo usarás al firmar tu contrato.</p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="d-nombres">Nombres</label>
+            <input class="input" id="d-nombres" name="nombres" type="text" autocomplete="given-name" value="Camila Andrea">
+          </div>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="d-ap1">Primer apellido</label>
+            <input class="input" id="d-ap1" name="apellido1" type="text" autocomplete="family-name" value="Araya">
+          </div>
+          <div class="field">
+            <label class="field__label" for="d-ap2">Segundo apellido <span class="field__opt">(opcional)</span></label>
+            <input class="input" id="d-ap2" name="apellido2" type="text" autocomplete="additional-name" value="Rojas">
+          </div>
+          </div>
+          <fieldset class="fieldgroup" aria-describedby="d-fecha-error d-fecha-hint">
+            <legend class="field__label">Fecha de nacimiento</legend>
+            <div class="date3">
+              <div class="field"><label class="field__label" for="d-dia">Día</label><input class="input tnum" id="d-dia" name="nacimiento_dia" inputmode="numeric" autocomplete="bday-day" maxlength="2" value="14" placeholder="14…"></div>
+              <div class="field"><label class="field__label" for="d-mes">Mes</label><input class="input tnum" id="d-mes" name="nacimiento_mes" inputmode="numeric" autocomplete="bday-month" maxlength="2" value="05" placeholder="05…"></div>
+              <div class="field"><label class="field__label" for="d-fecha">Año</label><input class="input tnum" id="d-fecha" name="nacimiento_anio" inputmode="numeric" autocomplete="bday-year" maxlength="4" value="2010" placeholder="2005…" aria-invalid="true"></div>
+            </div>
+            <p class="field__error" id="d-fecha-error"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg><span>Para postular debes tener 18 años o más. Revisa el año de nacimiento.</span></p>
+            <p class="field__hint" id="d-fecha-hint">Debes tener 18 años o más.</p>
+          </fieldset>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="d-genero">Género</label>
+            <select class="select" id="d-genero" name="genero" autocomplete="sex"><option value="">Elige una opción</option><option selected>Femenino</option><option>Masculino</option><option>No binario</option><option>Prefiero no decirlo</option></select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="d-civil">Estado civil</label>
+            <select class="select" id="d-civil" name="estado_civil" autocomplete="off"><option value="">Elige una opción</option><option selected>Soltero/a</option><option>Casado/a</option><option>Conviviente civil</option><option>Divorciado/a</option><option>Viudo/a</option></select>
+          </div>
+          </div>
+          </fieldset>
+          <fieldset class="section">
+          <legend>Contacto</legend>
+          <div class="field">
+            <label class="field__label" for="d-correo">Correo electrónico</label>
+            <input class="input" id="d-correo" name="correo" type="email" autocomplete="email" spellcheck="false" value="camila.araya@correo.cl" placeholder="Ej.: nombre@correo.cl…" aria-describedby="d-correo-hint">
+            <p class="field__hint" id="d-correo-hint">Aquí te llegan el folio, tu contrato y el enlace de pago.</p>
+          </div>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="d-cel">Celular</label>
+            <div class="combo"><span class="combo__prefix" aria-hidden="true">+56</span><input class="combo__input tnum" id="d-cel" name="celular" type="tel" inputmode="tel" autocomplete="tel-national" value="9 6123 45" placeholder="9 1234 5678…" aria-invalid="true" aria-describedby="d-cel-error"></div>
+            <p class="field__error" id="d-cel-error"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg><span>Faltan dígitos: el celular tiene 9, por ejemplo 9 5521 0934.</span></p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="d-fijo">Teléfono fijo <span class="field__opt">(opcional)</span></label>
+            <div class="combo"><span class="combo__prefix" aria-hidden="true">+56</span><input class="combo__input tnum" id="d-fijo" name="fijo" type="tel" inputmode="tel" autocomplete="off" placeholder="2 2345 6789…"></div>
+          </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="d-nacionalidad_texto">Nacionalidad <span class="field__opt">(opcional)</span></label>
+            <input class="input" id="d-nacionalidad_texto" name="nacionalidad_texto" type="text" autocomplete="off" placeholder="Ej.: chilena…" aria-describedby="d-nacionalidad_texto-hint">
+            <p class="field__hint" id="d-nacionalidad_texto-hint">Tal como aparecerá en tu contrato.</p>
+          </div>
+          </fieldset>
+          <fieldset class="section">
+          <legend>Dirección</legend>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="d-region">Región</label>
+            <select class="select" id="d-region" name="region" autocomplete="address-level1"><option value="">Elige tu región</option><option>Metropolitana de Santiago</option><option selected>Valparaíso</option><option>Biobío</option><option>La Araucanía</option><option>Antofagasta</option></select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="d-comuna">Comuna</label>
+            <select class="select" id="d-comuna" name="comuna" autocomplete="address-level2" aria-invalid="true" aria-describedby="d-comuna-error"><option value="">Elige tu comuna</option><option selected>Ñuñoa</option><option>Valparaíso</option><option>Viña del Mar</option></select>
+            <p class="field__error" id="d-comuna-error"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg><span>Ñuñoa no pertenece a la región de Valparaíso. Elige tu comuna de nuevo.</span></p>
+          </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="d-calle">Calle, número y depto.</label>
+            <input class="input" id="d-calle" name="direccion" type="text" autocomplete="street-address" value="Av. Irarrázaval 3120, depto. 402" placeholder="Ej.: Av. Irarrázaval 3120, depto. 402…">
+          </div>
+          </fieldset>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve estos datos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: subes tus documentos.</strong> Ten a mano tu cédula.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-02-programa.html">Volver</a>
+          <a class="btn btn--primary" href="pub-04-documentos.html">Continuar a documentos</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite">Hay 4 datos por corregir: RUT, fecha de nacimiento, celular y comuna.</div>
+      </div>
+    </div>
+  </div>
+  <div data-estado="completado" data-estado-label="Completado">
+    <div class="pub-layout">
+      <nav class="pub-layout__aside pub-wide-only" aria-label="Pasos de la postulación">
+        <h2 class="journey__title">Tu postulación</h2>
+        <ol class="journey">
+          <li class="journey__step is-done"><span class="mark mark--done" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span><a class="journey__name link link--quiet" href="pub-02-programa.html">Programa</a><span class="journey__when">Listo</span></span></li>
+          <li class="journey__step" aria-current="step"><span class="mark mark--yours" aria-hidden="true"></span><span><span class="journey__name">Tus datos</span><span class="journey__when">Estás aquí</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Documentos</span><span class="journey__when">Paso 3 de 4</span></span></li>
+          <li class="journey__step is-future"><span class="mark" aria-hidden="true"></span><span><span class="journey__name">Revisar y enviar</span><span class="journey__when">Paso 4 de 4</span></span></li>
+        </ol>
+        <div class="wizard-sum">
+          <p class="wizard-sum__title">Postulas a</p>
+          <p class="wizard-sum__name">Psicología</p>
+          <p>Diurna, presencial</p>
+          <p>Vía regular</p>
+          <a class="link wizard-sum__link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+      </nav>
+      <div class="pub-task">
+        <h1 class="page-title">Tus datos</h1>
+        <p class="lede">Escríbelos tal como aparecen en tu cédula de identidad.</p>
+        <div class="prog-line pub-narrow-only">
+          <p class="prog-line__text"><strong>Psicología</strong>Diurna, presencial, vía regular</p>
+          <a class="link" href="pub-02-programa.html" aria-label="Cambiar carrera, jornada o vía">Cambiar</a>
+        </div>
+        <form action="pub-04-documentos.html" method="post" novalidate>
+          <fieldset class="section">
+          <legend>Identidad</legend>
+          <fieldset class="fieldgroup">
+            <legend class="field__label">Nacionalidad</legend>
+            <div class="radio-row"><label class="radio-card"><input class="radio-card__input" type="radio" name="nacionalidad" value="Chilena" checked> Chilena</label><label class="radio-card"><input class="radio-card__input" type="radio" name="nacionalidad" value="Extranjera"> Extranjera</label></div>
+          </fieldset>
+          <div class="field">
+            <label class="field__label" for="e-rut">RUT</label>
+            <input class="input input--code" id="e-rut" name="rut" type="text" inputmode="text" autocomplete="off" autocapitalize="characters" spellcheck="false" translate="no" value="20.345.128-8" placeholder="Ej.: 12.345.678-5…" aria-describedby="e-rut-hint">
+            <p class="field__hint" id="e-rut-hint">Con o sin puntos. Si termina en K, escríbela.</p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="e-serie">Número de serie de la cédula</label>
+            <input class="input input--code" id="e-serie" name="serie" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" translate="no" value="527381946" placeholder="Ej.: 527381946…" aria-describedby="e-serie-hint">
+            <p class="field__hint" id="e-serie-hint">Está en el anverso como «Número documento». Lo revisamos con la foto de tu cédula y lo usarás al firmar tu contrato.</p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="e-nombres">Nombres</label>
+            <input class="input" id="e-nombres" name="nombres" type="text" autocomplete="given-name" value="Camila Andrea">
+          </div>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="e-ap1">Primer apellido</label>
+            <input class="input" id="e-ap1" name="apellido1" type="text" autocomplete="family-name" value="Araya">
+          </div>
+          <div class="field">
+            <label class="field__label" for="e-ap2">Segundo apellido <span class="field__opt">(opcional)</span></label>
+            <input class="input" id="e-ap2" name="apellido2" type="text" autocomplete="additional-name" value="Rojas">
+          </div>
+          </div>
+          <fieldset class="fieldgroup" aria-describedby="e-fecha-hint">
+            <legend class="field__label">Fecha de nacimiento</legend>
+            <div class="date3">
+              <div class="field"><label class="field__label" for="e-dia">Día</label><input class="input tnum" id="e-dia" name="nacimiento_dia" inputmode="numeric" autocomplete="bday-day" maxlength="2" value="14" placeholder="14…"></div>
+              <div class="field"><label class="field__label" for="e-mes">Mes</label><input class="input tnum" id="e-mes" name="nacimiento_mes" inputmode="numeric" autocomplete="bday-month" maxlength="2" value="05" placeholder="05…"></div>
+              <div class="field"><label class="field__label" for="e-fecha">Año</label><input class="input tnum" id="e-fecha" name="nacimiento_anio" inputmode="numeric" autocomplete="bday-year" maxlength="4" value="2005" placeholder="2005…"></div>
+            </div>
+            <p class="field__hint" id="e-fecha-hint">Debes tener 18 años o más.</p>
+          </fieldset>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="e-genero">Género</label>
+            <select class="select" id="e-genero" name="genero" autocomplete="sex"><option value="">Elige una opción</option><option selected>Femenino</option><option>Masculino</option><option>No binario</option><option>Prefiero no decirlo</option></select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="e-civil">Estado civil</label>
+            <select class="select" id="e-civil" name="estado_civil" autocomplete="off"><option value="">Elige una opción</option><option selected>Soltero/a</option><option>Casado/a</option><option>Conviviente civil</option><option>Divorciado/a</option><option>Viudo/a</option></select>
+          </div>
+          </div>
+          </fieldset>
+          <fieldset class="section">
+          <legend>Contacto</legend>
+          <div class="field">
+            <label class="field__label" for="e-correo">Correo electrónico</label>
+            <input class="input" id="e-correo" name="correo" type="email" autocomplete="email" spellcheck="false" value="camila.araya@correo.cl" placeholder="Ej.: nombre@correo.cl…" aria-describedby="e-correo-hint">
+            <p class="field__hint" id="e-correo-hint">Aquí te llegan el folio, tu contrato y el enlace de pago.</p>
+          </div>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="e-cel">Celular</label>
+            <div class="combo"><span class="combo__prefix" aria-hidden="true">+56</span><input class="combo__input tnum" id="e-cel" name="celular" type="tel" inputmode="tel" autocomplete="tel-national" value="9 6123 4587" placeholder="9 1234 5678…"></div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="e-fijo">Teléfono fijo <span class="field__opt">(opcional)</span></label>
+            <div class="combo"><span class="combo__prefix" aria-hidden="true">+56</span><input class="combo__input tnum" id="e-fijo" name="fijo" type="tel" inputmode="tel" autocomplete="off" placeholder="2 2345 6789…"></div>
+          </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="e-nacionalidad_texto">Nacionalidad <span class="field__opt">(opcional)</span></label>
+            <input class="input" id="e-nacionalidad_texto" name="nacionalidad_texto" type="text" autocomplete="off" placeholder="Ej.: chilena…" aria-describedby="e-nacionalidad_texto-hint">
+            <p class="field__hint" id="e-nacionalidad_texto-hint">Tal como aparecerá en tu contrato.</p>
+          </div>
+          </fieldset>
+          <fieldset class="section">
+          <legend>Dirección</legend>
+          <div class="form-grid">
+          <div class="field">
+            <label class="field__label" for="e-region">Región</label>
+            <select class="select" id="e-region" name="region" autocomplete="address-level1"><option value="">Elige tu región</option><option selected>Metropolitana de Santiago</option><option>Valparaíso</option><option>Biobío</option><option>La Araucanía</option><option>Antofagasta</option></select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="e-comuna">Comuna</label>
+            <select class="select" id="e-comuna" name="comuna" autocomplete="address-level2"><option value="">Elige tu comuna</option><option selected>Ñuñoa</option><option>Providencia</option><option>Santiago</option></select>
+          </div>
+          </div>
+          <div class="field">
+            <label class="field__label" for="e-calle">Calle, número y depto.</label>
+            <input class="input" id="e-calle" name="direccion" type="text" autocomplete="street-address" value="Av. Irarrázaval 3120, depto. 402" placeholder="Ej.: Av. Irarrázaval 3120, depto. 402…">
+          </div>
+          </fieldset>
+          <p class="privacy"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Solo el equipo de admisión de Instituto Demo ve estos datos.</span></p>
+        <div class="cta-bar cta-bar--flow">
+          <p class="cta-bar__next"><strong>Después: subes tus documentos.</strong> Ten a mano tu cédula.</p>
+          <div class="cta-bar__actions">
+          <a class="btn btn--secondary" href="pub-02-programa.html">Volver</a>
+          <a class="btn btn--primary" href="pub-04-documentos.html">Continuar a documentos</a>
+          </div>
+        </div>
+        </form>
+        <div class="sr-only" role="status" aria-live="polite">Tus datos están completos. Puedes continuar a documentos.</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="pub-foot">
+  <div class="pub-foot__inner">
+    <span>Instituto Demo, Admisión 2027</span>
+    <span class="credit">Powered by <span translate="no">Ticnology</span><img class="credit__icon" src="../assets/ticnology-icono.svg" alt="" width="14" height="14"></span>
+  </div>
+</footer>
+<link rel="stylesheet" href="../css/proto.css"><script src="../js/proto.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+/* academify · tokens del sistema de diseño
+   Tres capas: primitivos (--navy-*, --blue-*…) → semánticos (--ink, --state-*…) → componente (--btn-*, --row-*…).
+   Los componentes solo leen semánticos o de componente; nunca primitivos ni hex.
+   Contrastes WCAG 2.x calculados sobre blanco salvo indicación. Ver README.md § Tokens. */
+
+@font-face {
+  font-family: "Figtree";
+  src: url("../assets/figtree.woff2") format("woff2-variations"),
+       url("../assets/figtree.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+
+  /* ── 1. Primitivos ─────────────────────────────────────────── */
+  /* neutros teñidos al navy de la marca */
+  --white: #FFFFFF;
+  --navy-25:  #F7F8FA;
+  --navy-50:  #F1F3F6;
+  --navy-100: #E3E7EC;
+  --navy-200: #CDD3DC;
+  --navy-400: #7A8597;   /* 3,73:1 · 3,51:1 sobre navy-25 · 3,36:1 sobre navy-50 */
+  --navy-500: #5E6A7D;   /* 5,48:1 · 4,93:1 sobre navy-50 */
+  --navy-600: #505B6D;   /* 6,87:1 */
+  --navy-700: #3B4658;   /* 9,53:1 */
+  --navy-950: #0F1B2D;   /* 17,28:1 · tinta de marca */
+
+  --blue-50:  #EEF3FE;
+  --blue-100: #DCE6FC;
+  --blue-200: #BFD0F7;
+  --blue-600: #1D4ED8;   /* 6,70:1 · azul de acción y rombo */
+  --blue-700: #1A3FB0;   /* 8,82:1 */
+  --blue-800: #17368F;
+
+  --amber-50:  #FEF3E2;
+  --amber-600: #B45309;  /* solo icono o marca: 5,02:1 */
+  --amber-800: #92400E;  /* texto: 6,46:1 sobre amber-50 */
+
+  --green-50:  #ECFDF3;
+  --green-800: #166534;  /* 6,76:1 sobre green-50 */
+
+  --red-50:  #FEF2F2;
+  --red-100: #FDE7E5;
+  --red-200: #F3B4AE;
+  --red-700: #B42318;    /* 6,57:1 · 6,01:1 sobre red-50 */
+
+  /* ── 2. Semánticos ─────────────────────────────────────────── */
+  /* superficies */
+  --bg: var(--white);
+  --bg-subtle: var(--navy-25);   /* sidebar, cabecera de tabla, fondo del visor */
+  --bg-muted: var(--navy-50);    /* skeleton, chip neutro, hover, deshabilitado */
+  --bg-hover: var(--navy-50);
+  --bg-inverse: var(--navy-950);
+
+  /* líneas */
+  --line: var(--navy-100);           /* divisor decorativo (no delimita controles) */
+  --line-strong: var(--navy-200);    /* divisor de grupo, kbd */
+  --line-control: var(--navy-400);   /* contorno de todo control: ≥ 3:1 (WCAG 1.4.11) */
+  --line-ink: var(--navy-950);       /* regla de libro contable (total, encabezado de bloque) */
+
+  /* texto */
+  --ink: var(--navy-950);
+  --text-2: var(--navy-700);
+  --text-muted: var(--navy-600);
+  --text-subtle: var(--navy-500);
+  --text-disabled: var(--navy-500);  /* 4,93:1 sobre bg-muted; siempre con motivo visible */
+  --text-inverse: var(--white);
+
+  /* acción */
+  --accent: var(--blue-600);
+  --accent-hover: var(--blue-700);
+  --accent-active: var(--blue-800);
+  --accent-subtle: var(--blue-50);
+  --accent-line: var(--blue-200);
+  --on-accent: var(--white);
+  --focus-ring: var(--blue-600);     /* 6,70:1 blanco · 6,31:1 sobre bg-subtle */
+  --brand-mark: var(--blue-600);     /* el rombo de la «i»: único gesto de marca */
+
+  /* peligro / error (rojo solo cierre y error, nunca urgencia) */
+  --danger: var(--red-700);
+  --danger-bg: var(--red-50);
+  --danger-hover: var(--red-100);
+  --danger-line: var(--red-200);
+
+  /* ── 2b. Estados canónicos por actor (brief §6.1) ──
+     grupo        fg / bg                    icono          estados
+     team         azul / azul tenue          reloj          enviada «Por revisar», por_validar
+     applicant    ámbar 800 / ámbar 50       reloj          observada, por_firmar, por_pagar
+     system       pizarra / muted            flecha circular aprobada «Aprobada, contrato en preparación»
+     draft        pizarra / muted            lápiz          borrador
+     done         verde 800 / verde 50       check          matriculada
+     closed       rojo 700 / rojo 50         x              rechazada
+     Si el actor es quien mira, el punto del badge pasa a rombo (.badge--yours). */
+  --state-team-fg: var(--blue-600);        --state-team-bg: var(--blue-50);        /* 6,03:1 */
+  --state-applicant-fg: var(--amber-800);  --state-applicant-bg: var(--amber-50);  /* 6,46:1 */
+  --state-applicant-mark: var(--amber-600);
+  --state-system-fg: var(--navy-700);      --state-system-bg: var(--navy-50);      /* 8,58:1 */
+  --state-draft-fg: var(--navy-700);       --state-draft-bg: var(--navy-50);
+  --state-done-fg: var(--green-800);       --state-done-bg: var(--green-50);       /* 6,76:1 */
+  --state-closed-fg: var(--red-700);       --state-closed-bg: var(--red-50);       /* 6,01:1 */
+  --state-error-fg: var(--red-700);        --state-error-bg: var(--red-50);
+
+  /* tipografía: una familia. Escala del brief §7: 30/28/20/18/16/15/14/13/12 */
+  --font-ui: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-display: 30px; --lh-display: 1.15;
+  --fs-h1: 28px;      --lh-h1: 1.2;
+  --fs-h2: 20px;      --lh-h2: 1.3;
+  --fs-h3: 18px;      --lh-h3: 1.35;
+  --fs-h4: 16px;      --lh-h4: 1.4;
+  --fs-16: 16px;      --lh-16: 1.5;
+  --fs-15: 15px;      --lh-15: 1.5;
+  --fs-14: 14px;      --lh-14: 1.45;
+  --fs-13: 13px;      --lh-13: 1.4;
+  --fs-12: 12px;      --lh-12: 1.35;   /* piso absoluto: nada bajo 12 px */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-heavy: 800;
+  --tracking-tight: -0.01em;   /* solo ≥ 20 px */
+
+  /* roles tipográficos por contexto (equipo por defecto; .is-public los sube) */
+  --fs-body: var(--fs-15);   --lh-body: var(--lh-15);
+  --fs-cell: var(--fs-14);
+  --fs-label: var(--fs-14);
+  --fs-help: var(--fs-13);
+  --fs-error: var(--fs-13);
+  --fs-input: var(--fs-15);
+  --fs-meta: var(--fs-12);
+
+  /* espacio (base 4) */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px; --s-5: 20px;
+  --s-6: 24px; --s-8: 32px; --s-10: 40px; --s-12: 48px; --s-16: 64px;
+
+  /* radios: 8 control, 12 contenedor, pill badge */
+  --radius-xs: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 999px;
+
+  /* elevación: tinta navy con alfa, nunca negro */
+  --elev-1: 0 1px 2px rgb(15 27 45 / .08), 0 1px 3px rgb(15 27 45 / .06);
+  --elev-2: 0 8px 24px rgb(15 27 45 / .14);
+  --elev-3: -12px 0 32px rgb(15 27 45 / .14);
+  --elev-up: 0 -6px 20px rgb(15 27 45 / .07);
+  --overlay: rgb(15 27 45 / .40);
+
+  /* movimiento: solo transform y opacity en desplazamientos */
+  --dur-fast: 120ms;   /* feedback */
+  --dur-base: 200ms;   /* drawer, popover, modal */
+  --ease: cubic-bezier(.2, 0, 0, 1);
+
+  /* capas */
+  --z-sticky: 10;
+  --z-cta: 20;
+  --z-drawer: 40;
+  --z-modal: 50;
+  --z-toast: 60;
+  --z-skip: 100;
+
+  /* breakpoints (referencia; CSS no los acepta en @media):
+     móvil ≤ 640 · tablet 641–1024 (sidebar colapsada) · escritorio ≥ 1025 */
+  --bp-mobile: 640px;
+  --bp-tablet: 1024px;
+
+  /* ── 3. Componente ─────────────────────────────────────────── */
+  --control-h: 44px;          /* escritorio */
+  --control-h-touch: 48px;    /* público y táctil */
+  --control-h-sm: 36px;       /* solo escritorio */
+  --badge-h: 24px;
+  --kbd-h: 20px;
+  --row-comfy: 52px;          /* fichas, público */
+  --row-compact: 40px;        /* bandejas, correos, actividad */
+  --row-h: var(--row-compact);
+  --sidebar-w: 240px;
+  --sidebar-w-collapsed: 64px;
+  --viewer-w: 520px;
+  --drawer-w: 560px;
+  --modal-w: 560px;
+  --public-max: 1080px;
+  --form-max: 640px;
+  --team-max: 1320px;
+  --cta-h: 72px;              /* alto de la barra fija móvil (para scroll-padding) */
+  --rombo: 8px;
+  --tile-lg: 48px;            /* baldosa de icono: cierres y mensajes (40 en ≤ 640) */
+  --tile-lg-icon: 24px;
+  --tile-md: 40px;            /* acceso, grupo de alerta */
+  --tile-sm: 32px;            /* lista de alertas */
+  --auth-w: 420px;            /* panel de acceso */
+  --auth-w-wide: 600px;       /* panel de acceso con QR y códigos */
+  --drawer-w-wide: 640px;     /* detalle de matrícula */
+  --band-env-h: 32px;         /* banda de entorno de prueba sobre el marco */
+  --band-session-h: 52px;     /* aviso de sesión por vencer */
+}
+
+/* contexto público: mismos componentes, roles tipográficos más grandes */
+.is-public {
+  --fs-body: var(--fs-16);   --lh-body: var(--lh-16);
+  --fs-cell: var(--fs-15);
+  --fs-label: var(--fs-16);
+  --fs-help: var(--fs-14);
+  --fs-error: var(--fs-14);
+  --fs-input: var(--fs-16);   /* 16 px: evita el zoom de iOS */
+  --control-h: var(--control-h-touch);
+  --row-h: var(--row-comfy);
+}
+
+/* densidad cómoda de tabla (la compacta es el default del equipo) */
+.density-comfy { --row-h: var(--row-comfy); }
+
+@media (max-width: 640px) {
+  :root { --tile-lg: 40px; --tile-lg-icon: 20px; }
+}
+
+@media (pointer: coarse) {
+  :root { --control-h: var(--control-h-touch); --control-h-sm: var(--control-h); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 1ms; --dur-base: 1ms; }
+}
+
+/* Público en pantallas angostas: el control chico no baja de la altura táctil (QA 19-10-2026) */
+@media (max-width: 640px) {
+  .is-public { --control-h-sm: var(--control-h); }
+}
